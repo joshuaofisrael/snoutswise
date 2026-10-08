@@ -68,7 +68,7 @@ def home(page):
 <li><a href="{R}blog/alpha-dog-myth.html">Is the "alpha dog" idea true? What the research says</a></li>
 <li><a href="{R}blog/is-my-dog-overweight.html">Is my dog overweight? How to use the 9 point body condition score</a></li>
 </ul></section>
-<p class="note">Dog Field Guide is general education, not veterinary advice. If your dog may have eaten something toxic or seems unwell, contact your vet or an emergency vet now. In the US and Canada, the ASPCA Animal Poison Control Center is on (888) 426-4435 (a fee may apply).</p>
+<p class="note">Dog Field Guide is general education, not veterinary advice. If your dog may have eaten something toxic or seems unwell, contact your vet or an emergency vet now. In the US, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p>
 """
     page("index.html", "Dog Field Guide: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
@@ -190,7 +190,7 @@ def health(page):
 </tbody></table></div>
 <p>These are US guidelines; schedules and legal rules differ by country, and your vet will tailor them to your dog. Read more in <a href="{R}blog/dog-vaccine-schedule.html">How often do dogs need vaccines?</a></p></section>
 <section id="poisoning"><h2>Poisoning</h2>
-<p>If you think your dog has eaten something toxic, note what it was and how much, then call your vet or a pet poison line straight away; do not wait for symptoms. In the US and Canada the ASPCA Animal Poison Control Center number is (888) 426-4435. The Merck Veterinary Manual advises against trying to make a dog vomit at home after xylitol, because blood sugar can fall fast. Check foods in our <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table, and use the <a href="{R}blog/dog-ate-chocolate.html">chocolate dose estimator</a> while you phone the vet.</p></section>
+<p>If you think your dog has eaten something toxic, note what it was and how much, then call your vet or a pet poison line straight away; do not wait for symptoms. In the US the ASPCA Animal Poison Control Center number is (888) 426-4435. The Merck Veterinary Manual advises against trying to make a dog vomit at home after xylitol, because blood sugar can fall fast. Check foods in our <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table, and use the <a href="{R}blog/dog-ate-chocolate.html">chocolate dose estimator</a> while you phone the vet.</p></section>
 <section id="heatstroke"><h2>Heatstroke</h2>
 <p>The RSPCA's rule is <b>cool first, transport second</b>: stop activity, move the dog into shade, pour water cooler than the dog over its body (avoiding the head), fan it, then drive to a vet in a cool, ventilated car. Do not cover the dog with wet towels. See <a href="{R}care.html#heat">hot weather care</a> for risk factors and warning signs.</p></section>
 <section id="teeth"><h2>Teeth</h2>
@@ -372,15 +372,15 @@ FOODS = [
 LABEL = {"no": "Toxic or dangerous", "caution": "Caution: small amounts or avoid", "yes": "Safe: plain, in moderation"}
 SHORT = {"no": "Toxic", "caution": "Caution", "yes": "Safe in moderation"}
 IF_EATEN = {
- "no": "Call your vet, an emergency vet or the ASPCA Animal Poison Control Center ((888) 426-4435, US/Canada) now, even if your dog seems fine. Note the amount, time and your dog's weight.",
- "caution": "A small amount is usually not an emergency. Call your vet if your dog ate a lot, has a health condition, or shows vomiting, diarrhea, lethargy or pain.",
+ "no": "Call even if your dog seems fine; signs can be delayed. Have the amount, the time and your dog's weight ready. Do not make your dog vomit unless a vet tells you to.",
+ "caution": "Many small amounts cause no problem or only mild stomach upset, but a vet or poison line can tell you whether your dog's amount needs treatment. Get help straight away for vomiting, diarrhea, weakness or pain.",
  "yes": "No action needed for a small, plain amount. Call your vet if it contained xylitol, onion, garlic or raisins, or your dog becomes unwell.",
 }
 IF_EATEN_OVERRIDE = {
- "Bones (cooked poultry bones, raw bones)": "Do not try to make your dog vomit. Call your vet for advice and watch for vomiting, straining, a painful belly or not eating, which need urgent care.",
- "Corn on the cob": "Call your vet for advice; a swallowed cob can cause a blockage. Vomiting, not eating or a painful belly need urgent care.",
- "Xylitol (sugar free gum, sweets, some peanut butters, baked goods, toothpaste)": "Go to a vet immediately; blood sugar can drop within 30 to 60 minutes. Do not make your dog vomit at home. US/Canada: ASPCA Animal Poison Control (888) 426-4435.",
- "Raw yeast bread dough": "Go to a vet immediately: bloating and alcohol poisoning are both possible. US/Canada: ASPCA Animal Poison Control (888) 426-4435.",
+ "Bones (cooked poultry bones, raw bones)": "Do not try to make your dog vomit. Watch for vomiting, straining, a painful belly or not eating, which need urgent care.",
+ "Corn on the cob": "A swallowed cob can cause a blockage. Vomiting, not eating or a painful belly need urgent care.",
+ "Xylitol (sugar free gum, sweets, some peanut butters, baked goods, toothpaste)": "Go to a vet immediately; blood sugar can drop within 30 to 60 minutes. Do not make your dog vomit at home.",
+ "Raw yeast bread dough": "Go to a vet immediately: bloating and alcohol poisoning are both possible.",
 }
 
 def slug(s):
@@ -395,19 +395,20 @@ def can_dogs_eat(page):
     n = len(FOODS)
     rows = []
     for c in cats:
-        rows.append('<tr class="cat" id="%s"><th colspan="4">%s</th></tr>' % (slug(c), c))
+        rows.append('<tr class="cat" id="%s"><th colspan="3">%s</th></tr>' % (slug(c), c))
         for cat, food, v, why, keys in FOODS:
             if cat != c:
                 continue
-            refs = ", ".join('<a href="%s" rel="noopener">%s</a>' % (S[k][2], S[k][1].replace("American Kennel Club", "AKC").replace("ASPCA Animal Poison Control", "ASPCA")) for k in keys.split())
-            rows.append('<tr id="%s" data-v="%s"><td><b>%s</b></td><td class="%s">%s</td><td>%s <span class="note">Source: %s</span></td><td>%s</td></tr>' % (slug(food), v, food, v, SHORT[v], why, refs, IF_EATEN_OVERRIDE.get(food, IF_EATEN[v])))
+            refs = "; ".join('<a href="%s" rel="noopener">%s, %s</a>' % (S[k][2], S[k][1], S[k][0]) for k in keys.split())
+            call = '<p class="call"><b>Call your vet or ASPCA Animal Poison Control now: <a href="tel:+18884264435">(888) 426-4435</a></b>. Outside the US, call your vet or emergency vet.</p>' if v != "yes" else ""
+            rows.append('<tr id="%s" data-v="%s"><td><b>%s</b></td><td class="%s">%s</td><td>%s<p>%s</p><p><b>If eaten:</b> %s</p><p class="note">Last reviewed 8 Oct 2026 &middot; Sources: %s</p></td></tr>' % (slug(food), v, food, v, SHORT[v], call, why, IF_EATEN_OVERRIDE.get(food, IF_EATEN[v]), refs))
     counts = {k: sum(1 for f in FOODS if f[2] == k) for k in LABEL}
     body = """
-<p class="note" style="font-style:normal"><b>Emergency?</b> If your dog has eaten something marked <span class="no">Toxic</span>, call your vet or emergency vet now, with the food, amount and your dog's weight to hand. In the US and Canada you can also call the ASPCA Animal Poison Control Center on (888) 426-4435.</p>
+<p class="note" style="font-style:normal"><b>Emergency?</b> If your dog has eaten something marked <span class="no">Toxic</span>, call your vet or emergency vet now, with the food, amount and your dog's weight to hand. In the US you can also call the ASPCA Animal Poison Control Center on (888) 426-4435.</p>
 <div class="tool"><label for="q">Search %d foods</label><input id="q" class="search" type="search" placeholder="Type a food, e.g. grapes, cheese, peanut butter" autocomplete="off">
 <div class="row" style="margin-top:.6rem" role="group" aria-label="Filter by verdict"><button class="btn" data-f="all">All</button> <button class="btn alt" data-f="no">Toxic (%d)</button> <button class="btn alt" data-f="caution">Caution (%d)</button> <button class="btn alt" data-f="yes">Safe (%d)</button></div><p id="count" class="note" aria-live="polite"></p></div>
 <nav class="jump" aria-label="Jump to category"><b>Jump to:</b> %s</nav>
-<div class="tablewrap"><table id="foods"><thead><tr><th>Food</th><th>Verdict</th><th>Why, and the source</th><th>If your dog ate it</th></tr></thead><tbody>%s</tbody></table></div>
+<div class="tablewrap"><table id="foods"><thead><tr><th>Food</th><th>Verdict</th><th>What to do, why, and sources</th></tr></thead><tbody>%s</tbody></table></div>
 <section class="card"><h2>How to read this table</h2><ul>
 <li><span class="no">Toxic</span>: poisonous or physically dangerous. Keep it out of reach; if eaten, call a vet.</li>
 <li><span class="caution">Caution</span>: not usually poisonous, but risky in larger amounts, for some dogs, or when prepared the wrong way. Our sources advise small amounts or avoiding it.</li>
@@ -638,7 +639,7 @@ def blog(page):
 <div id="pctrow" hidden><label for="cpct">Cocoa %</label><input id="cpct" type="number" min="0" max="100" value="70" style="width:6rem"></div>
 <div><label for="ca">Amount eaten</label><input id="ca" type="number" min="0" step="1" value="50" style="width:7rem"> <select id="cau" aria-label="Amount unit"><option value="g">grams</option><option value="oz">ounces</option></select></div></div>
 <p class="result" id="cout" aria-live="polite"></p>
-<p class="note">An estimate only, using average methylxanthine levels from the Merck Veterinary Manual. Real products vary, and some dogs react at lower doses. It does not replace a vet. In the US and Canada, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p></div>
+<p class="note">An estimate only, using average methylxanthine levels from the Merck Veterinary Manual. Real products vary, and some dogs react at lower doses. It does not replace a vet. In the US, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p></div>
 <h2>What to do right now</h2>
 <ol><li><b>Work out what and how much.</b> Find the wrapper. Note the type of chocolate (or the cocoa percentage), roughly how much is missing, and when it was eaten.</li>
 <li><b>Weigh your dog</b> or use its last weight from the vet.</li>
