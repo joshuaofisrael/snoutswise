@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static site builder for Dog Field Guide (Joshua Israel Ventures LLC).
+"""Static site builder for SnoutsWise (Joshua Israel Ventures LLC).
 
 Run:  python3 _build.py
 Outputs plain HTML at the repo root (GitHub Pages, deploy from branch main /).
@@ -9,8 +9,8 @@ containing the bare domain, rebuild, commit, push. All internal links are relati
 """
 import json, math, os, re, html, datetime
 
-SITE_URL = "https://joshuaofisrael.github.io/dogfieldguide/"   # <- the ONE line to change for a custom domain
-SITE_NAME = "Dog Field Guide"
+SITE_URL = "https://joshuaofisrael.github.io/snoutswise/"   # <- the ONE line to change for a custom domain (later "https://snoutswise.com/")
+SITE_NAME = "SnoutsWise"
 LEGAL_NAME = "Joshua Israel Ventures LLC"
 CONTACT_EMAIL = "joshuaofisrael@gmail.com"
 GSC_TOKEN = ""          # Google Search Console HTML tag token (content="..."); empty = no tag
@@ -25,7 +25,7 @@ NAV = [("index.html", "Home"), ("breeds.html", "Breeds"), ("care.html", "Care"),
        ("training.html", "Training"), ("behavior.html", "Behavior"), ("can-dogs-eat.html", "Can My Dog Eat This?"),
        ("dog-age-calculator.html", "Age Calculator"), ("blog/", "Blog"), ("faq.html", "FAQ"), ("glossary.html", "Glossary")]
 
-LOGO = ('<svg role="img" width="34" height="34" viewBox="0 0 64 64" aria-labelledby="logo-t"><title id="logo-t">Dog Field Guide logo</title>'
+LOGO = ('<svg role="img" width="34" height="34" viewBox="0 0 64 64" aria-labelledby="logo-t"><title id="logo-t">SnoutsWise logo</title>'
         '<ellipse cx="32" cy="42" rx="14" ry="11" fill="#f0a640"/><ellipse cx="14" cy="27" rx="6" ry="8" fill="#f0a640"/>'
         '<ellipse cx="25" cy="16" rx="6" ry="8" fill="#f0a640"/><ellipse cx="39" cy="16" rx="6" ry="8" fill="#f0a640"/>'
         '<ellipse cx="50" cy="27" rx="6" ry="8" fill="#f0a640"/></svg>')

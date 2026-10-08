@@ -1,4 +1,4 @@
-"""Page content for Dog Field Guide. Original writing; every factual claim is tied to a listed source."""
+"""Page content for SnoutsWise. Original writing; every factual claim is tied to a listed source."""
 import math
 
 S = {
@@ -43,8 +43,8 @@ def register(page):
 # ------------------------------------------------------------------ HOME
 def home(page):
     body = """
-<section class="hero"><h1>Dog Field Guide: plain answers about breeds, care, health, training and behavior</h1>
-<p class="lead">Dog Field Guide is a free, independent guide for dog owners. It explains breed groups, everyday care, health basics such as vaccines and normal vital signs, reward based training and dog behavior, and every page lists the veterinary and kennel club sources it relies on. Start with the tools below if you have an urgent question.</p>
+<section class="hero"><h1>SnoutsWise: plain answers about breeds, care, health, training and behavior</h1>
+<p class="lead">SnoutsWise is a free, independent guide for dog owners. It explains breed groups, everyday care, health basics such as vaccines and normal vital signs, reward based training and dog behavior, and every page lists the veterinary and kennel club sources it relies on. Start with the tools below if you have an urgent question.</p>
 <a class="btn" href="{R}can-dogs-eat.html">Can my dog eat this? Food lookup</a> <a class="btn alt" href="{R}dog-age-calculator.html">Dog age calculator</a></section>
 <h2>Tools</h2>
 <div class="grid">
@@ -77,9 +77,9 @@ def home(page):
 <li><a href="{R}blog/alpha-dog-myth.html">Is the "alpha dog" idea true? What the research says</a></li>
 <li><a href="{R}blog/is-my-dog-overweight.html">Is my dog overweight? How to use the 9 point body condition score</a></li>
 </ul></section>
-<p class="note">Dog Field Guide is general education, not veterinary advice. If your dog may have eaten something toxic or seems unwell, contact your vet or an emergency vet now. In the US, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p>
+<p class="note">SnoutsWise is general education, not veterinary advice. If your dog may have eaten something toxic or seems unwell, contact your vet or an emergency vet now. In the US, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p>
 """
-    page("index.html", "Dog Field Guide: Dog Breeds, Care, Health, Training & Behavior",
+    page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
          body, kind="home")
 
@@ -124,7 +124,7 @@ def breeds(page):
 <section id="mixed"><h2>Mixed breeds and rescue dogs</h2>
 <p>Breed groups describe tendencies, not guarantees: individual dogs vary, and many wonderful dogs are mixes. When you meet a rescue dog, the rescue's notes on how that particular dog behaves with people, other dogs, children and being left alone usually tell you more than a guess at its ancestry. Whatever dog you choose, early <a href="{R}behavior.html#socialization">socialization</a> and <a href="{R}training.html">reward based training</a> matter more than the label.</p></section>
 """
-    page("breeds.html", "Dog Breed Groups Explained: AKC vs Royal Kennel Club | Dog Field Guide",
+    page("breeds.html", "Dog Breed Groups Explained: AKC vs Royal Kennel Club | SnoutsWise",
          "The seven AKC and seven Royal Kennel Club dog breed groups compared side by side, what each was bred for, and a practical checklist for choosing a breed.",
          body, h1="Dog breeds and breed groups explained",
          lead="Kennel clubs sort dog breeds into groups based on the work they were originally bred to do. The American Kennel Club uses seven groups (Sporting, Hound, Working, Terrier, Toy, Non-Sporting and Herding) and The Royal Kennel Club in the UK also uses seven (Gundog, Hound, Pastoral, Terrier, Toy, Utility and Working). A breed's original job is one of the best clues to how much exercise, training and company it will need.",
@@ -162,7 +162,7 @@ def care(page):
 <li>Bins containing bones, corn cobs, fruit pits or grapes; the AKC warns that cobs, pits and cooked poultry bones can cause blockages or injuries.</li>
 <li>Raw bread dough, which can expand in the stomach and produce alcohol, according to the ASPCA.</li></ul></section>
 """
-    page("care.html", "Dog Care Basics: Feeding, Weight, Teeth, Grooming & Safety | Dog Field Guide",
+    page("care.html", "Dog Care Basics: Feeding, Weight, Teeth, Grooming & Safety | SnoutsWise",
          "Everyday dog care with sources: what to feed, keeping a healthy weight, exercise, brushing teeth, grooming, microchip rules and how to cool a dog with heatstroke.",
          body, h1="Dog care basics",
          lead="Good everyday care comes down to a complete and balanced diet, keeping your dog lean, daily exercise and mental stimulation, regular tooth brushing, grooming suited to the coat, permanent ID, and protecting your dog from heat and household toxins. The sections below explain each one and link to the veterinary sources behind the advice.",
@@ -209,7 +209,7 @@ def health(page):
 <section id="checkups"><h2>Routine checkups</h2>
 <p>Regular checkups let your vet review vaccines, parasite prevention, teeth, weight and any lumps or changes you have noticed. The AAHA guidelines say each dog's vaccine needs should be reassessed at least once a year. Write down questions beforehand, and mention changes in appetite, thirst, energy, toileting or behavior; behavior changes can be a sign of pain or illness.</p></section>
 """
-    page("health.html", "Dog Health Basics: Normal Vital Signs, Vaccines & Warning Signs | Dog Field Guide",
+    page("health.html", "Dog Health Basics: Normal Vital Signs, Vaccines & Warning Signs | SnoutsWise",
          "Normal dog temperature, heart rate and breathing rate, core vaccines and booster schedule, emergency warning signs, poisoning and heatstroke first steps.",
          body, h1="Dog health basics",
          lead="A healthy adult dog has an average body temperature of 101 to 102.5&deg;F (38.3 to 39.2&deg;C), a heart rate of 70 to 120 beats per minute and a resting breathing rate of 18 to 34 breaths per minute, according to the Merck Veterinary Manual. The basics of keeping a dog healthy are core vaccines, a lean body weight, dental care, regular checkups and knowing which warning signs mean you should call a vet immediately.",
@@ -256,7 +256,7 @@ def training(page):
 <section id="trainer"><h2>Choosing a trainer</h2>
 <p>AVSAB recommends trainers who are certified, humane and effective, and suggests watching a class before signing up. It specifically advises against hiring trainers who talk about "dominance", "leader of the pack" or "alpha" theories. For serious problems such as aggression or severe fear, start with your vet, who can rule out pain or illness and refer you to a veterinary behaviorist.</p></section>
 """
-    page("training.html", "Reward Based Dog Training: How It Works & First Skills | Dog Field Guide",
+    page("training.html", "Reward Based Dog Training: How It Works & First Skills | SnoutsWise",
          "Why vets recommend reward based dog training, how markers, luring and shaping work, step by step first skills (sit, recall, loose lead) and what tools to avoid.",
          body, h1="Dog training: the reward based approach",
          lead="Veterinary behavior experts recommend reward based training for all dogs: you teach the behavior you want and reward it, instead of punishing mistakes. The American Veterinary Society of Animal Behavior says the evidence shows reward based methods are more effective than aversive ones and better for welfare and the dog and owner relationship, and that there is no evidence aversive training is ever necessary.",
@@ -296,7 +296,7 @@ def behavior(page):
 <section id="help"><h2>When to get professional help</h2>
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
 """
-    page("behavior.html", "Dog Behavior Explained: Stress Signals, Socialization & Dominance | Dog Field Guide",
+    page("behavior.html", "Dog Behavior Explained: Stress Signals, Socialization & Dominance | SnoutsWise",
          "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
@@ -438,7 +438,7 @@ var h=location.hash.slice(1);if(h){var e=document.getElementById(h);if(e&&!e.cla
         ("Is a little garlic or onion OK for dogs?", "No. Onions, garlic, chives and leeks belong to the Allium family, which can damage a dog's red blood cells. The AKC says garlic is significantly more toxic to dogs than the other Alliums and that signs can be delayed for days."),
         ("What should I do if my dog ate something toxic?", "Call your vet, an emergency vet or a pet poison line straight away, even if your dog seems well. Note what was eaten, how much and when, and your dog's weight. Do not try to make your dog vomit unless a vet tells you to."),
     ]
-    page("can-dogs-eat.html", "Can My Dog Eat This? %d Foods Rated Safe, Caution or Toxic | Dog Field Guide" % n,
+    page("can-dogs-eat.html", "Can My Dog Eat This? %d Foods Rated Safe, Caution or Toxic | SnoutsWise" % n,
          "Look up %d foods: which are toxic to dogs (grapes, chocolate, xylitol, onions), which need caution and which are safe, with sources and what to do if eaten." % n,
          body, h1="Can my dog eat this? %d foods rated Safe, Caution or Toxic" % n,
          lead="The foods most dangerous to dogs are chocolate and cocoa, grapes and raisins, onions, garlic and other Alliums, xylitol (in sugar free products), macadamia nuts, alcohol, raw yeast dough and caffeine. Many plain fruits and vegetables, such as apples, blueberries, carrots and green beans, are fine as occasional treats. Search the table below for a verdict and the veterinary or kennel club source behind it.",
@@ -478,7 +478,7 @@ document.getElementById('go').addEventListener('click',calc);y.addEventListener(
         ("How old is a 10 year old dog in human years?", "About 68, using the epigenetic clock formula human age = 16 ln(10) + 31. The old times seven rule would say 70."),
         ("Does the formula work for small and giant breeds?", "It was built from Labrador retrievers only, so it is most reliable for medium to large dogs with a similar lifespan. Smaller breeds usually live longer and giant breeds shorter, so treat the result as a rough guide."),
     ]
-    page("dog-age-calculator.html", "Dog Age Calculator: Dog Years to Human Years (Science Based) | Dog Field Guide",
+    page("dog-age-calculator.html", "Dog Age Calculator: Dog Years to Human Years (Science Based) | SnoutsWise",
          "Convert dog years to human years with the epigenetic clock formula from the 2020 Cell Systems study (16 ln(age) + 31), plus a full table and the limits of the method.",
          body, h1="Dog age calculator: dog years to human years",
          lead="The best evidence based conversion comes from a 2020 study of DNA methylation in 104 Labrador retrievers, which found that human age is roughly 16 &times; ln(dog age) + 31. By that formula a 1 year old dog is about 31 in human years, a 4 year old about 53, a 10 year old about 68 and a 14 year old about 73. Dogs age very quickly early in life and more slowly later, so the old times 7 rule is wrong at both ends.",
@@ -502,7 +502,7 @@ def faq(page):
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
-    page("faq.html", "Dog FAQ: Quick, Sourced Answers to Common Dog Questions | Dog Field Guide",
+    page("faq.html", "Dog FAQ: Quick, Sourced Answers to Common Dog Questions | SnoutsWise",
          "Short, sourced answers to common dog questions: normal temperature, toxic foods, chocolate, vaccine schedules, socialization, alpha training, weight, teeth and heatstroke.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
@@ -537,7 +537,7 @@ def glossary(page):
         ("Xylitol", "A sugar alcohol sweetener that triggers a dangerous insulin release and low blood sugar in dogs."),
     ]
     body = '<dl class="card">' + "".join('<dt id="%s">%s</dt><dd>%s</dd>' % (slug(t), t, d) for t, d in terms) + "</dl>"
-    page("glossary.html", "Dog Glossary: Plain English Dog & Vet Terms | Dog Field Guide",
+    page("glossary.html", "Dog Glossary: Plain English Dog & Vet Terms | SnoutsWise",
          "Plain English definitions of dog care, health, training and breed terms: core vaccine, body condition score, brachycephalic, methylxanthines, shaping, xylitol and more.",
          body, h1="Dog glossary",
          lead="Short, plain English definitions of terms you will meet on vet visits, in training classes and on kennel club sites, each linked to the page that explains it in more depth.",
@@ -547,15 +547,15 @@ def glossary(page):
 
 # ------------------------------------------------------------------ TRUST PAGES
 def trust(page):
-    page("about.html", "About Dog Field Guide: Who We Are & How We Write | Dog Field Guide",
-         "Who runs Dog Field Guide, what it covers, how the content is researched and sourced, and how to report a correction.",
+    page("about.html", "About SnoutsWise: Who We Are & How We Write | SnoutsWise",
+         "Who runs SnoutsWise, what it covers, how the content is researched and sourced, and how to report a correction.",
          """
 <h2>Who runs this site</h2>
-<p>Dog Field Guide is operated by Joshua Israel Ventures LLC. It is an independent publication and is not affiliated with any kennel club, veterinary organization, pet food company or retailer named on the site.</p>
+<p>SnoutsWise is operated by Joshua Israel Ventures LLC. It is an independent publication and is not affiliated with any kennel club, veterinary organization, pet food company or retailer named on the site.</p>
 <h2>What we cover</h2>
 <p>Practical, plain English information for dog owners: <a href="{R}breeds.html">breed groups</a>, <a href="{R}care.html">everyday care</a>, <a href="{R}health.html">health basics</a>, <a href="{R}training.html">training</a> and <a href="{R}behavior.html">behavior</a>, plus tools such as the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table and the <a href="{R}dog-age-calculator.html">dog age calculator</a>.</p>
 <h2>How content is produced</h2>
-<ul><li>Pages are researched and written by the Dog Field Guide editorial team with the help of AI tools, then checked against primary and authoritative sources such as the Merck Veterinary Manual, the American Animal Hospital Association, the American Veterinary Society of Animal Behavior, the American Veterinary Medical Association, the ASPCA, the RSPCA, the American Kennel Club, The Royal Kennel Club, university veterinary schools and peer reviewed studies.</li>
+<ul><li>Pages are researched and written by the SnoutsWise editorial team with the help of AI tools, then checked against primary and authoritative sources such as the Merck Veterinary Manual, the American Animal Hospital Association, the American Veterinary Society of Animal Behavior, the American Veterinary Medical Association, the ASPCA, the RSPCA, the American Kennel Club, The Royal Kennel Club, university veterinary schools and peer reviewed studies.</li>
 <li>Every page lists its sources, and facts and figures are attributed to the organization that published them. We do not invent statistics, quotes, experts or personal experiences.</li>
 <li>We are not veterinarians, and nothing here replaces an examination by a vet who knows your dog. Health and safety pages say so and point to emergency help.</li>
 <li>Each page shows when it was last updated. We review pages when guidelines change.</li></ul>
@@ -563,17 +563,17 @@ def trust(page):
 <p>The site is free to read. It currently carries no advertising, sponsored content or affiliate links. If that changes, we will say so clearly on the affected pages and in our <a href="{R}privacy.html">privacy policy</a>.</p>
 <h2>Corrections</h2>
 <p>Spotted an error or an outdated guideline? Please email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> or use the <a href="{R}contact.html">contact form</a> with the page and the source, and we will check and correct it.</p>
-""", h1="About Dog Field Guide", kind="webpage",
-         lead="Dog Field Guide is a free, independent reference for dog owners, operated by Joshua Israel Ventures LLC. We turn veterinary and kennel club guidance into clear, practical pages and show the sources behind every claim.",
+""", h1="About SnoutsWise", kind="webpage",
+         lead="SnoutsWise is a free, independent reference for dog owners, operated by Joshua Israel Ventures LLC. We turn veterinary and kennel club guidance into clear, practical pages and show the sources behind every claim.",
          crumbs=[("index.html", "Home"), ("about.html", "About")])
 
-    page("contact.html", "Contact Dog Field Guide | Dog Field Guide",
-         "Contact Dog Field Guide by email or form with questions, corrections or suggestions. Operated by Joshua Israel Ventures LLC.",
+    page("contact.html", "Contact SnoutsWise | SnoutsWise",
+         "Contact SnoutsWise by email or form with questions, corrections or suggestions. Operated by Joshua Israel Ventures LLC.",
          """
 <p>Email us at <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>, or send a message with the form below. We read every message, although we cannot always reply individually.</p>
 <p class="note" style="font-style:normal"><b>We cannot give veterinary advice for individual dogs.</b> If your dog is unwell, injured or may have eaten something toxic, contact your vet or an emergency vet now.</p>
 <form class="card" action="https://formsubmit.co/joshuaofisrael@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="[Contact: Dog Field Guide]">
+<input type="hidden" name="_subject" value="[Contact: SnoutsWise]">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="SITE_URL_PLACEHOLDERcontact-thanks.html">
@@ -586,18 +586,18 @@ def trust(page):
 <button class="btn" type="submit">Send message</button>
 </form>
 """, h1="Contact us", kind="webpage",
-         lead="Questions, corrections and suggestions are welcome. The quickest way to reach Dog Field Guide is email: joshuaofisrael@gmail.com.",
+         lead="Questions, corrections and suggestions are welcome. The quickest way to reach SnoutsWise is email: joshuaofisrael@gmail.com.",
          crumbs=[("index.html", "Home"), ("contact.html", "Contact")])
 
-    page("contact-thanks.html", "Message sent | Dog Field Guide", "Thank you for contacting Dog Field Guide.",
+    page("contact-thanks.html", "Message sent | SnoutsWise", "Thank you for contacting SnoutsWise.",
          '<p>Thank you, your message has been sent. If it needs a reply, we will answer by email.</p><p><a class="btn" href="{R}index.html">Back to the home page</a></p>',
          h1="Thanks for your message", kind="webpage", index=False, nav="contact.html")
 
-    page("privacy.html", "Privacy Policy | Dog Field Guide",
-         "How Dog Field Guide handles data: no accounts, no advertising cookies, contact form messages processed by FormSubmit, and how to reach us.",
+    page("privacy.html", "Privacy Policy | SnoutsWise",
+         "How SnoutsWise handles data: no accounts, no advertising cookies, contact form messages processed by FormSubmit, and how to reach us.",
          """
 <p class="meta">Last updated 8 October 2026</p>
-<h2>Who we are</h2><p>Dog Field Guide is operated by Joshua Israel Ventures LLC. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
+<h2>Who we are</h2><p>SnoutsWise is operated by Joshua Israel Ventures LLC. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
 <h2>What we collect</h2>
 <ul><li><b>Browsing.</b> The site has no user accounts and sets no advertising or tracking cookies. It is hosted on GitHub Pages, and GitHub may log technical information such as IP addresses for security and operation; see GitHub's privacy statement.</li>
 <li><b>Analytics.</b> We may use Cloudflare Web Analytics, a privacy focused, cookieless service, to count page views in aggregate. It does not use cookies or build profiles of individual visitors. If and when it is enabled, it loads a small script from static.cloudflareinsights.com.</li>
@@ -611,7 +611,7 @@ def trust(page):
 """, h1="Privacy policy", kind="webpage",
          crumbs=[("index.html", "Home"), ("privacy.html", "Privacy")])
 
-    page("404.html", "Page Not Found | Dog Field Guide", "That page could not be found.",
+    page("404.html", "Page Not Found | SnoutsWise", "That page could not be found.",
          '<p>We could not find that page. Try the <a href="{R}index.html">home page</a>, the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table or the <a href="{R}faq.html">dog FAQ</a>.</p>',
          h1="This page wandered off", kind="webpage", index=False, abs_links=True, nav="")
 
@@ -637,7 +637,7 @@ o.innerHTML='Estimated dose: <b>'+Math.round(d)+' mg of methylxanthines per kg</
 
 def blog(page):
     # 1 chocolate
-    post(page, "dog-ate-chocolate", "My Dog Ate Chocolate: How Much Is Dangerous? (Dose Estimator) | Dog Field Guide",
+    post(page, "dog-ate-chocolate", "My Dog Ate Chocolate: How Much Is Dangerous? (Dose Estimator) | SnoutsWise",
          "Dog ate chocolate? Estimate the theobromine dose by chocolate type and your dog's weight using Merck Veterinary Manual figures, learn the warning signs and what to do now.",
          "My dog ate chocolate: how much is dangerous?",
          "Chocolate is dangerous because it contains theobromine and caffeine, and the risk depends on the type of chocolate and your dog's weight. The Merck Veterinary Manual says mild signs can appear at about 20 mg of these compounds per kg of body weight, heart problems at 40 to 50 mg/kg and seizures at 60 mg/kg or more; cocoa powder and baking chocolate are by far the most concentrated. If your dog has eaten chocolate, call your vet now and use the estimator below to give them the numbers.",
@@ -686,7 +686,7 @@ def blog(page):
          script=CHOC_JS)
 
     # 2 socialization
-    post(page, "puppy-socialization-window", "Puppy Socialization Window: When It Closes & What to Do | Dog Field Guide",
+    post(page, "puppy-socialization-window", "Puppy Socialization Window: When It Closes & What to Do | SnoutsWise",
          "Why the first three months matter most for puppy socialization, when puppy classes can start before vaccinations finish, and a safe week by week socialization checklist.",
          "The puppy socialization window: when it closes and what to do",
          "The American Veterinary Society of Animal Behavior (AVSAB) says the first three months of a puppy's life are the primary and most important window for socialization, because sociability outweighs fear during this period. It recommends starting puppy classes as early as 7 to 8 weeks, as long as the puppy has had at least one set of vaccines at least 7 days before the first class and a first deworming, rather than waiting until vaccinations are complete.",
@@ -729,7 +729,7 @@ def blog(page):
          related=[("behavior.html#socialization", "Behavior: socialization"), ("training.html", "Reward based training"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("blog/alpha-dog-myth.html", "The alpha dog myth")])
 
     # 3 vaccines
-    post(page, "dog-vaccine-schedule", "How Often Do Dogs Need Vaccines? Core vs Non Core Explained | Dog Field Guide",
+    post(page, "dog-vaccine-schedule", "How Often Do Dogs Need Vaccines? Core vs Non Core Explained | SnoutsWise",
          "Do dogs need yearly vaccines? What the AAHA guidelines say about core vaccines (distemper, parvo, adenovirus, leptospirosis, rabies), puppy series timing and booster intervals.",
          "How often do dogs need vaccines? Core and non core vaccines explained",
          "Not every vaccine is yearly. Under the American Animal Hospital Association (AAHA) guidelines, after the puppy series and one booster within a year, the distemper, adenovirus and parvovirus combination vaccine is boosted every 3 years, the leptospirosis vaccine every year, and rabies as local law requires. Non core vaccines such as kennel cough, Lyme disease and canine influenza are given, usually yearly, only to dogs whose lifestyle or location puts them at risk.",
@@ -764,7 +764,7 @@ def blog(page):
          related=[("health.html#vaccines", "Health: vaccines"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("health.html#checkups", "Routine checkups"), ("glossary.html#core-vaccine", "Glossary: core vaccine")])
 
     # 4 alpha
-    post(page, "alpha-dog-myth", "Is the Alpha Dog Idea True? What Research Says About Dominance | Dog Field Guide",
+    post(page, "alpha-dog-myth", "Is the Alpha Dog Idea True? What Research Says About Dominance | SnoutsWise",
          "Do you need to be the alpha or pack leader? Where the dominance idea came from, what wolf research by L. David Mech found, and why veterinary behaviorists reject alpha training.",
          "Is the \"alpha dog\" idea true? What the research says about dominance",
          "No. The popular idea that your dog is trying to dominate you, and that you must act as the \"alpha\", is not supported by modern research. Wolf biologist L. David Mech found that wild wolf packs are families led by the parents rather than groups fighting for rank, and the American Veterinary Society of Animal Behavior advises against trainers who rely on dominance, pack leader or alpha theories and against forceful techniques such as alpha rolls.",
@@ -801,7 +801,7 @@ def blog(page):
          related=[("training.html", "Reward based training"), ("behavior.html#dominance", "Behavior: the dominance myth"), ("behavior.html#problems", "Problem behaviors"), ("blog/puppy-socialization-window.html", "Puppy socialization window")])
 
     # 5 weight
-    post(page, "is-my-dog-overweight", "Is My Dog Overweight? How to Use the 9 Point Body Condition Score | Dog Field Guide",
+    post(page, "is-my-dog-overweight", "Is My Dog Overweight? How to Use the 9 Point Body Condition Score | SnoutsWise",
          "Check your dog's weight at home with the 9 point body condition score used on the WSAVA chart: ribs, waist and belly tuck explained, plus what a lifetime study found about lean dogs.",
          "Is my dog overweight? How to use the 9 point body condition score",
          "Your dog is probably at a healthy weight if you can easily feel its ribs under a thin layer of fat, see a waist behind the ribs when you look down from above, and see the belly tuck up when you look from the side. That is a score of 4 to 5 on the 9 point body condition score used on the World Small Animal Veterinary Association (WSAVA) chart; 6 and above is over ideal. It matters: in a 14 year study, Labradors kept lean lived a median 1.8 years longer than their heavier littermates.",
@@ -846,7 +846,7 @@ def blog(page):
          related=[("care.html#weight", "Care: healthy weight"), ("health.html#weight", "Health: weight"), ("can-dogs-eat.html", "Low calorie treat ideas"), ("dog-age-calculator.html", "Dog age calculator")])
 
     # 6 daily fact: color vision (8 Oct 2026)
-    post(page, "can-dogs-see-color", "Can Dogs See Color? Yes, Mostly Blues and Yellows | Dog Field Guide",
+    post(page, "can-dogs-see-color", "Can Dogs See Color? Yes, Mostly Blues and Yellows | SnoutsWise",
          "Dogs are not color blind in the black and white sense. They have two types of cone and see mainly blues and yellows, like a person with red green color blindness. What the research shows and what it means for toys.",
          "Can dogs see color? Yes, mostly blues and yellows",
          "Yes. Dogs do not see the world in black and white. Their eyes have two types of color sensing cone cells instead of the three most people have, so they see mainly blues and yellows, much like a person with red green color blindness. Reds, oranges and greens are hard for them to tell apart, which is why a yellow or blue ball is easier for a dog to spot on grass than a red one.",
@@ -873,8 +873,8 @@ def blog(page):
 
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
-    page("blog/index.html", "Dog Field Guide Blog: Answer First Dog Care Articles | Dog Field Guide",
+    page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
          "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth, body condition scoring and how dogs see color.",
-         items, h1="Dog Field Guide blog", kind="webpage",
+         items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
          crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/")
