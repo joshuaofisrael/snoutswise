@@ -5,29 +5,29 @@
 The content is general education, not veterinary advice; readers are told to contact a vet for individual dogs and emergencies.
 
 ## Guides
-- [Dog breeds and breed groups](https://joshuaofisrael.github.io/snoutswise/breeds.html): the seven AKC groups and seven Royal Kennel Club groups compared, and a checklist for choosing a breed
-- [Dog care basics](https://joshuaofisrael.github.io/snoutswise/care.html): feeding, healthy weight, exercise, tooth brushing, grooming, UK microchip law and heatstroke first aid
-- [Dog health basics](https://joshuaofisrael.github.io/snoutswise/health.html): normal temperature, heart and breathing rates, core vaccines and booster intervals, emergency warning signs, poisoning
-- [Dog training](https://joshuaofisrael.github.io/snoutswise/training.html): why vets recommend reward based training, how markers, luring and shaping work, first skills, tools to avoid
-- [Dog behavior](https://joshuaofisrael.github.io/snoutswise/behavior.html): stress signals, puppy socialization, the dominance myth and a general approach to problem behavior
-- [Dog FAQ](https://joshuaofisrael.github.io/snoutswise/faq.html): short sourced answers to common dog questions
-- [Dog glossary](https://joshuaofisrael.github.io/snoutswise/glossary.html): plain English definitions of dog care, health and training terms
+- [Dog breeds and breed groups](https://snoutswise.com/breeds.html): the seven AKC groups and seven Royal Kennel Club groups compared, and a checklist for choosing a breed
+- [Dog care basics](https://snoutswise.com/care.html): feeding, healthy weight, exercise, tooth brushing, grooming, UK microchip law and heatstroke first aid
+- [Dog health basics](https://snoutswise.com/health.html): normal temperature, heart and breathing rates, core vaccines and booster intervals, emergency warning signs, poisoning
+- [Dog training](https://snoutswise.com/training.html): why vets recommend reward based training, how markers, luring and shaping work, first skills, tools to avoid
+- [Dog behavior](https://snoutswise.com/behavior.html): stress signals, puppy socialization, the dominance myth and a general approach to problem behavior
+- [Dog FAQ](https://snoutswise.com/faq.html): short sourced answers to common dog questions
+- [Dog glossary](https://snoutswise.com/glossary.html): plain English definitions of dog care, health and training terms
 
 ## Tools
-- [Can dogs eat this? food table](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html): searchable verdicts (toxic, caution, safe in moderation) with reasons, sources and what to do if eaten for about 70 foods
-  - Categories: [Sweets and snacks](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#sweets-and-snacks), [Drinks](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#drinks), [Fruit](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#fruit), [Vegetables](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#vegetables), [Nuts and seeds](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#nuts-and-seeds), [Meat, fish and eggs](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#meat-fish-and-eggs), [Dairy](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#dairy), [Grains and baking](https://joshuaofisrael.github.io/snoutswise/can-dogs-eat.html#grains-and-baking)
-- [Dog age calculator](https://joshuaofisrael.github.io/snoutswise/dog-age-calculator.html): dog years to human years using human age = 16 ln(dog age) + 31 (Wang et al., Cell Systems 2020), with a table and limitations
-- [Chocolate dose estimator](https://joshuaofisrael.github.io/snoutswise/blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
+- [Can dogs eat this? food table](https://snoutswise.com/can-dogs-eat.html): searchable verdicts (toxic, caution, safe in moderation) with reasons, sources and what to do if eaten for about 70 foods
+  - Categories: [Sweets and snacks](https://snoutswise.com/can-dogs-eat.html#sweets-and-snacks), [Drinks](https://snoutswise.com/can-dogs-eat.html#drinks), [Fruit](https://snoutswise.com/can-dogs-eat.html#fruit), [Vegetables](https://snoutswise.com/can-dogs-eat.html#vegetables), [Nuts and seeds](https://snoutswise.com/can-dogs-eat.html#nuts-and-seeds), [Meat, fish and eggs](https://snoutswise.com/can-dogs-eat.html#meat-fish-and-eggs), [Dairy](https://snoutswise.com/can-dogs-eat.html#dairy), [Grains and baking](https://snoutswise.com/can-dogs-eat.html#grains-and-baking)
+- [Dog age calculator](https://snoutswise.com/dog-age-calculator.html): dog years to human years using human age = 16 ln(dog age) + 31 (Wang et al., Cell Systems 2020), with a table and limitations
+- [Chocolate dose estimator](https://snoutswise.com/blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
 
 ## Blog
-- [Can dogs see color? Yes, mostly blues and yellows](https://joshuaofisrael.github.io/snoutswise/blog/can-dogs-see-color.html)
-- [My dog ate chocolate: how much is dangerous?](https://joshuaofisrael.github.io/snoutswise/blog/dog-ate-chocolate.html)
-- [The puppy socialization window: when it closes and what to do](https://joshuaofisrael.github.io/snoutswise/blog/puppy-socialization-window.html)
-- [How often do dogs need vaccines? Core and non core vaccines explained](https://joshuaofisrael.github.io/snoutswise/blog/dog-vaccine-schedule.html)
-- [Is the "alpha dog" idea true? What the research says about dominance](https://joshuaofisrael.github.io/snoutswise/blog/alpha-dog-myth.html)
-- [Is my dog overweight? How to use the 9 point body condition score](https://joshuaofisrael.github.io/snoutswise/blog/is-my-dog-overweight.html)
+- [Can dogs see color? Yes, mostly blues and yellows](https://snoutswise.com/blog/can-dogs-see-color.html)
+- [My dog ate chocolate: how much is dangerous?](https://snoutswise.com/blog/dog-ate-chocolate.html)
+- [The puppy socialization window: when it closes and what to do](https://snoutswise.com/blog/puppy-socialization-window.html)
+- [How often do dogs need vaccines? Core and non core vaccines explained](https://snoutswise.com/blog/dog-vaccine-schedule.html)
+- [Is the "alpha dog" idea true? What the research says about dominance](https://snoutswise.com/blog/alpha-dog-myth.html)
+- [Is my dog overweight? How to use the 9 point body condition score](https://snoutswise.com/blog/is-my-dog-overweight.html)
 
 ## Optional
-- [About](https://joshuaofisrael.github.io/snoutswise/about.html): who operates the site and how content is researched and sourced
-- [Contact](https://joshuaofisrael.github.io/snoutswise/contact.html): email joshuaofisrael@gmail.com or use the contact form
-- [Privacy](https://joshuaofisrael.github.io/snoutswise/privacy.html)
+- [About](https://snoutswise.com/about.html): who operates the site and how content is researched and sourced
+- [Contact](https://snoutswise.com/contact.html): email joshuaofisrael@gmail.com or use the contact form
+- [Privacy](https://snoutswise.com/privacy.html)

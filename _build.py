@@ -9,7 +9,7 @@ containing the bare domain, rebuild, commit, push. All internal links are relati
 """
 import json, math, os, re, html, datetime
 
-SITE_URL = "https://joshuaofisrael.github.io/snoutswise/"   # <- the ONE line to change for a custom domain (later "https://snoutswise.com/")
+SITE_URL = "https://snoutswise.com/"   # <- the ONE line that sets the base URL (was https://joshuaofisrael.github.io/snoutswise/ before the domain)
 SITE_NAME = "SnoutsWise"
 LEGAL_NAME = "Joshua Israel Ventures LLC"
 CONTACT_EMAIL = "joshuaofisrael@gmail.com"
