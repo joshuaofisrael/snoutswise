@@ -1,0 +1,23 @@
+/* SnoutsWise games: shared styles (original, 2026 Joshua Israel Ventures LLC) */
+.game{background:#fff;border-radius:26px;padding:1rem;margin:1.2rem 0;box-shadow:0 0 0 3px #2F4BEB,0 0 26px rgba(47,75,235,.4)}
+.gbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between;margin-bottom:.6rem;font-weight:700}
+.gbar .pill{background:#FFF7B8;border-radius:999px;padding:.15rem .7rem;box-shadow:0 0 10px rgba(255,214,0,.7)}
+.gstage{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,#E9F0FF,#FFFDF7)}
+.gstage svg{display:block;width:100%;height:auto}
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin-top:.8rem}
+.choices .btn{width:100%;text-align:center}
+.btn.ghost{background:#fff;color:#1A1633;box-shadow:0 0 0 2px #2F4BEB,0 0 12px rgba(47,75,235,.35)}
+.btn[disabled]{opacity:.55;cursor:default;transform:none}
+.factcard{margin-top:.9rem;padding:.8rem 1rem;border-radius:18px;background:#FFF4E5;box-shadow:0 0 0 2px #FF8A1F,0 0 16px rgba(255,138,31,.4)}
+.factcard h3{margin:.1rem 0 .3rem}.factcard p{margin:.3rem 0}.factcard .src{font-size:.88rem;color:#4A4566}
+.ok{color:#0A7A3A}.bad{color:#B3001E}
+.foodcard{text-align:center;padding:1rem .6rem}.foodcard .food{font-family:Fredoka,Nunito,sans-serif;font-weight:600;font-size:1.6rem;color:#2A2BD1;line-height:1.25;margin:.4rem 0}
+.gnote{font-size:.9rem;color:#4A4566}
+.kbd{display:inline-block;border:2px solid #9AA6F5;border-radius:6px;padding:0 .35rem;font-size:.85rem;background:#fff}
+.gamegrid .tile .gicon{width:100%;height:auto;max-height:120px;display:block;margin-bottom:.5rem}
+.copyline{font-weight:700;color:#1A1633}
+@keyframes sw-wag{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+@keyframes sw-spin{to{transform:rotate(360deg)}}
+.wag{animation:sw-wag .45s ease-in-out infinite alternate}.wag.slow{animation-duration:.8s}.wag.stiff{animation-duration:.14s}
+.heli{animation:sw-spin .5s linear infinite}
+@media(prefers-reduced-motion:reduce){.wag,.heli{animation:none}}

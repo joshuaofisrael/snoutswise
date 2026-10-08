@@ -71,3 +71,17 @@ footer a{color:var(--lemon);font-weight:700}footer p{max-width:720px;margin:.6re
 .hero h1{font-size:1.75rem}.hero .doodle{width:48px;height:48px;bottom:.7rem;right:.8rem}.hero{padding:1.3rem 1.1rem}
 .hero figure.photo{float:none;width:auto;margin:.4rem 0 1rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.btn:hover,.tile:hover{transform:none}}
+/* Teachers, research and citations */
+.cite p{margin:.4rem 0;overflow-wrap:anywhere}
+dl dt{font-weight:700;margin-top:.6rem;color:var(--heading,#2A2BD1)}
+dl dd{margin:.1rem 0 0 1rem}
+.printable h3{margin-top:1.1rem}
+@media print{
+  header,nav.crumbs,.menu,.noprint,.related,.cite,footer svg,figure,.contact-us{display:none!important}
+  body{background:#fff!important;color:#000!important;font-size:12pt}
+  main{max-width:none;padding:0}
+  .card{box-shadow:none!important;border:1px solid #999!important;background:#fff!important;break-inside:avoid}
+  a{color:#000!important;text-decoration:underline}
+  footer{background:#fff!important;color:#000!important;padding:.5rem 0}
+  footer a{color:#000!important}
+}

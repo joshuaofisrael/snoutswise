@@ -24,7 +24,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 NAV = [("index.html", "Home"), ("breeds.html", "Breeds"), ("care.html", "Care"), ("health.html", "Health"),
        ("training.html", "Training"), ("behavior.html", "Behavior"), ("can-dogs-eat.html", "Can My Dog Eat This?"),
-       ("dog-age-calculator.html", "Age Calculator"), ("blog/", "Blog"), ("faq.html", "FAQ"), ("glossary.html", "Glossary")]
+       ("dog-age-calculator.html", "Age Calculator"), ("games/", "Games"), ("blog/", "Blog"), ("faq.html", "FAQ"), ("glossary.html", "Glossary")]
 
 # Logo: electric blue paw on a laser lemon badge with a tangerine ring (neon theme, 9 Oct 2026)
 PAW = ('<ellipse cx="32" cy="41" rx="12" ry="10" fill="#2A2BD1"/><ellipse cx="17" cy="29" rx="5" ry="6.5" fill="#2A2BD1"/>'
@@ -110,7 +110,7 @@ def render(p):
     for g in graphs:
         json.loads(json.dumps(g))
 
-    nav = "".join('<a href="%s%s"%s>%s</a>' % (R, u, ' aria-current="page"' if (p["nav"] == u or (u == "blog/" and p["nav"].startswith("blog/"))) else "", esc(n)) for u, n in NAV)
+    nav = "".join('<a href="%s%s"%s>%s</a>' % (R, u, ' aria-current="page"' if (p["nav"] == u or (u.endswith("/") and p["nav"].startswith(u))) else "", esc(n)) for u, n in NAV)
     head = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">']
     if GSC_TOKEN and p["path"] == "index.html":
         head.append('<meta name="google-site-verification" content="%s">' % GSC_TOKEN)
@@ -136,7 +136,7 @@ def render(p):
     if p["h1"]:
         out.append("<h1>%s</h1>" % p["h1"])
     if p["kind"] in ("article", "post"):
-        meta = "Last updated %s" % nice_date(p["updated"])
+        meta = "Last reviewed %s" % nice_date(p["updated"])
         if p["kind"] == "post":
             meta = "Published %s &middot; %s" % (nice_date(p["published"]), meta)
         out.append('<p class="meta">%s &middot; By the %s team</p>' % (meta, SITE_NAME))
@@ -157,13 +157,25 @@ def render(p):
     if p["sources"]:
         out.append('<section class="sources"><h2>Sources</h2><ol>' + "".join(
             '<li><a href="%s" rel="noopener">%s</a>, %s</li>' % (esc(u), esc(t), esc(pub)) for t, pub, u in p["sources"]) + "</ol></section>")
+    if p["kind"] in ("article", "post"):
+        d = datetime.date.fromisoformat(p["updated"])
+        t = esc(p["headline"]) if p["kind"] == "post" else esc(p["h1"] or p["headline"])
+        u = url_of(p["path"])
+        out.append('<aside class="card cite" id="cite"><h2>Cite this page</h2>'
+                   '<p><b>APA:</b> %s. (%d, %s %d). <i>%s</i>. %s. %s</p>'
+                   '<p><b>MLA:</b> &ldquo;%s.&rdquo; <i>%s</i>, %s, %d %s %d, %s.</p>'
+                   '<p><b>Chicago:</b> %s. &ldquo;%s.&rdquo; %s. Last modified %s %d, %d. %s.</p>'
+                   '<p class="gnote">Add the date you accessed the page if your teacher or style guide asks for it.</p></aside>' % (
+                       SITE_NAME, d.year, d.strftime("%B"), d.day, t, LEGAL_NAME, u,
+                       t, SITE_NAME, LEGAL_NAME, d.day, (d.strftime("%b") + "." if d.month not in (5, 6, 7) else d.strftime("%B")) if d.month != 9 else "Sept.", d.year, u.replace("https://", ""),
+                       SITE_NAME, t, LEGAL_NAME, d.strftime("%B"), d.day, d.year, u))
     if p["kind"] in ("article", "post") and p["path"] not in ("about.html",):
         out.append('<p class="note">General education only, not veterinary advice. If you are worried about your dog, contact your vet; in an emergency, contact an emergency vet straight away.</p>')
     out.append("</main>")
     out.append('<footer>' + DOODLE_BONE + '<section class="contact-us" aria-labelledby="cu"><h2 id="cu">Contact us</h2><p>Email <a href="mailto:%s">%s</a> or use our <a href="%scontact.html">contact form</a>.</p></section>'
-               '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; <a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a></p>'
+               '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; %s<a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a></p>'
                '<p>%s: original educational content about dogs. All text and illustrations are original. Not a substitute for advice from your vet.</p>'
-               '<p class="op">&copy; 2026 %s. All rights reserved. %s is owned and operated by %s.</p></footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, R, R, R, SITE_NAME, LEGAL_NAME, SITE_NAME, LEGAL_NAME))
+               '<p class="op">&copy; 2026 %s. All rights reserved. %s is owned and operated by %s.</p></footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, SITE_NAME, LEGAL_NAME, SITE_NAME, LEGAL_NAME))
     if p["script"]:
         out.append("<script>%s</script>" % p["script"])
     if CF_BEACON_TOKEN:
@@ -213,6 +225,11 @@ cat /tmp/indexnow.out; echo
 if __name__ == "__main__":
     import _content
     _content.register(page)
+    import _games
+    _games.register(page, ORG, SITE_URL, _content.FOODS, _content.S)
+    if not os.environ.get("SW_NO_EDU"):
+        import _edu
+        _edu.register(page, ORG, SITE_URL, _content.S)
     _photos.register(page, [p["path"] for p in PAGES])
     for p in PAGES:
         render(p)

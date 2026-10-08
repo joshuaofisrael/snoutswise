@@ -51,6 +51,7 @@ def home(page):
 <a class="tile" href="{R}can-dogs-eat.html"><h3>Can my dog eat this?</h3><p>Our signature lookup: about 70 foods rated Safe, Caution or Toxic, with the reason, the source and what to do if eaten.</p></a>
 <a class="tile" href="{R}dog-age-calculator.html"><h3>Dog age in human years</h3><p>Calculator based on the 2020 epigenetic clock study, not the old "times seven" rule.</p></a>
 <a class="tile" href="{R}blog/dog-ate-chocolate.html"><h3>Dog ate chocolate?</h3><p>Estimate the dose from the type and amount, then call your vet.</p></a>
+<a class="tile" href="{R}games/"><h3>Dog games</h3><p>Three free, original games: sort safe and toxic snacks, read dog body language and play fetch.</p></a>""" + ("" if __import__("os").environ.get("SW_NO_EDU") else "<a class=\"tile\" href=\"{R}teachers/\"><h3>For teachers</h3><p>Free printable dog worksheets and fact sheets with answer keys, lesson ideas and classroom games.</p></a>") + """
 </div>
 <h2>Guides</h2>
 <div class="grid">
@@ -609,6 +610,7 @@ def trust(page):
 <h2>Third party links</h2><p>Pages link to outside sources such as veterinary manuals and kennel clubs. Their own privacy policies apply when you visit them.</p>
 <h2>Children</h2><p>The site is general information for a general audience and does not knowingly collect personal information from children under 13.</p>
 <h2>Your rights</h2><p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you, or to object to how we use it. Email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> and we will respond.</p>
+<h2>Games</h2><p>Our <a href="{R}games/">games</a> save your best score in your own browser (localStorage) so you can try to beat it. It stays on your device, is never sent to us, and contains no personal information. Clear your browser's site data to remove it.</p>
 <h2>Photos</h2><p>Photos on the site are stored on our own pages (self hosted), so viewing them does not contact any other service. See <a href="{R}credits/">photo credits</a>.</p>
 <h2>Changes and governing law</h2><p>We will post any changes on this page with a new date. This policy forms part of our <a href="{R}terms.html">terms of use</a>, which are governed by the laws of the State of Florida.</p>
 """, h1="Privacy policy", kind="webpage",

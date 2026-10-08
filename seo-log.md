@@ -54,3 +54,23 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Logo/favicon/logo.png: electric blue paw on lemon badge with tangerine ring. OG image regenerated (19 KB).
 - Photos: 8 live (home, breeds, care, health, training, behavior, can-dogs-eat, age calculator) + 2 staged for games/teachers. All from Wikimedia Commons; licence verified on each file page 9 Oct 2026 (CC BY 3.0/4.0, CC BY-SA 3.0/4.0, one public domain); no NC/ND, no people, no logos. Two Timothy A. Gonsalves photos rejected because the author asks to be contacted before commercial use. Self-hosted WebP 900x600 + 450x300 srcset, width/height set, lazy except home hero, real alt text, caption attribution + new /credits/ page (footer link).
 - privacy.html: photo self-hosting note + "governed by the laws of the State of Florida"; disclaimer.html: Florida line.
+
+## 2026-10-09 London: Dog games (/games/)
+- New: /games/ hub, /games/snack-or-nope/, /games/wag-signals/, /games/fetch-spotter/ (+ games/games.css, games/dog.js, games/CREDITS.md). Linked from home Tools grid and main nav; in sitemap and llms.txt.
+- All assets original (inline SVG and code by SnoutsWise; sounds generated with WebAudio). Hub photo: Wikimedia Commons "Viljo koirarannalla 11.jpg" by kallerna, CC BY-SA 3.0, credited on /credits/.
+- Privacy: no sign up, ads, cookies, trackers or data collection; best score only in localStorage on the device; sound off by default with mute toggle; keyboard + touch; prefers-reduced-motion respected. privacy.html updated with a games paragraph.
+- JSON-LD: VideoGame (author/publisher/copyrightHolder Joshua Israel Ventures LLC) + BreadcrumbList; hub ItemList. Line "Games are original works © 2026 Joshua Israel Ventures LLC." on hub and each game.
+- Facts: Snack or Nope? uses the food table's sources (ASPCA, AKC, Merck); Wag Signals uses RSPCA body language page and ASPCApro Canine Body Language Tips (both opened 8 Oct); Fetch Spotter uses AKC "Can Dogs See Color?" and ASPCApro (opened 8 Oct).
+- Trademark checks (USPTO tmsearch wordmark search + web search, 8 Oct 2026):
+  - "Snack or Nope?": USPTO "snack or nope" 0 records; snack* AND nope* 0 records; web: no game or product of that name found.
+  - "Wag Signals": USPTO "wag signals" 0; wag* AND signal* 0; web: no match.
+  - "Fetch Spotter": USPTO "fetch spotter" 0; fetch* AND spot* finds SEE SPOT FETCH (dead, IC 044), FETCH YOUR NEW BEST FRIEND AT PUPPYSPOT (dead, IC 035), SPOT. TRACK. FETCH! (live, IC 035, services, different wording); web: only a fictional app in a design case study.
+  - Rejected: "Snack Sorter" (live USPTO mark SORT & SNACK, IC 021); "Bowl Patrol" (existing junior bowling program; echoes PAW Patrol).
+  - Not legal advice; a knockout search only.
+
+## 2026-10-09 London: Teachers hub, research page, citations
+- New: /teachers/ (lesson ideas by grade band, vocabulary, games as activities), /teachers/dog-needs-worksheet.html (K-2, K-LS1-1), /teachers/dog-senses-fact-sheet.html (3-5, 4-LS1-2), /teachers/dog-traits-worksheet.html (3-8, 3-LS3-1 + MS-LS4-5), /research/ (5 papers, DOIs checked on Crossref; 4 guidelines). Print CSS; no ads. NGSS text quoted from nextgenscience.org (opened 8 Oct).
+- LearningResource JSON-LD with educationalLevel, educationalAlignment (NGSS) and publisher Joshua Israel Ventures LLC. Research page: ItemList of ScholarlyArticle with DOI sameAs.
+- Fact articles and posts: "Last reviewed" date shown; "Cite this page" box (APA, MLA, Chicago).
+- Footer gains Teachers and Research links; home Tools grid gains "For teachers".
+- Outreach (local only, gitignored, NOTHING SENT): outreach/edu-targets.csv (18 rows), edu-template.md, teacher-directories.md, pinterest-drafts.md.

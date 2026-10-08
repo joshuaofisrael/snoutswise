@@ -19,6 +19,12 @@ The content is general education, not veterinary advice; readers are told to con
 - [Dog age calculator](https://snoutswise.com/dog-age-calculator.html): dog years to human years using human age = 16 ln(dog age) + 31 (Wang et al., Cell Systems 2020), with a table and limitations
 - [Chocolate dose estimator](https://snoutswise.com/blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
 
+## Games
+- [Dog games hub](https://snoutswise.com/games/): three free original games, no sign up, no ads, no cookies
+- [Snack or Nope?](https://snoutswise.com/games/snack-or-nope/): sort people foods into Safe, Caution or Toxic for dogs, with sources
+- [Wag Signals](https://snoutswise.com/games/wag-signals/): dog body language quiz based on RSPCA and ASPCApro guidance
+- [Fetch Spotter](https://snoutswise.com/games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
+
 ## Blog
 - [Can dogs see color? Yes, mostly blues and yellows](https://snoutswise.com/blog/can-dogs-see-color.html)
 - [My dog ate chocolate: how much is dangerous?](https://snoutswise.com/blog/dog-ate-chocolate.html)

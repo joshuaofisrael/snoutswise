@@ -1,4 +1,20 @@
+import os
+
+EDU = """
+## Teachers and research
+- [Dog science for teachers]({u}teachers/): free printable worksheets and fact sheets with answer keys, lesson ideas by grade band (NGSS K-LS1-1, 3-LS3-1, 4-LS1-2, MS-LS4-5), vocabulary and classroom games; no ads, no sign up
+- [Worksheet: What does a dog need? (K to 2)]({u}teachers/dog-needs-worksheet.html)
+- [Fact sheet: Dog senses and body language (grades 3 to 5)]({u}teachers/dog-senses-fact-sheet.html)
+- [Worksheet: Traits, breeds and selective breeding (grades 3 to 8)]({u}teachers/dog-traits-worksheet.html)
+- [Research behind SnoutsWise]({u}research/): peer reviewed papers with DOIs and veterinary guidelines used across the site
+"""
+
+
 def text(u, name, legal):
+    return _text(u, name, legal).replace("\n## Blog\n", ("" if os.environ.get("SW_NO_EDU") else EDU.format(u=u)) + "\n## Blog\n", 1)
+
+
+def _text(u, name, legal):
     return f"""# {name}
 
 > {name} is a free, independent, sourced guide for dog owners. It explains dog breed groups (AKC and Royal Kennel Club), everyday care, health basics such as normal vital signs and vaccine schedules, reward based training and dog behavior, and offers a searchable table of foods dogs can and cannot eat, a science based dog age calculator and a chocolate dose estimator. Every page lists its veterinary, welfare or kennel club sources. {name} is a brand of {legal}, which owns and operates the site.
@@ -19,6 +35,12 @@ The content is general education, not veterinary advice; readers are told to con
   - Categories: [Sweets and snacks]({u}can-dogs-eat.html#sweets-and-snacks), [Drinks]({u}can-dogs-eat.html#drinks), [Fruit]({u}can-dogs-eat.html#fruit), [Vegetables]({u}can-dogs-eat.html#vegetables), [Nuts and seeds]({u}can-dogs-eat.html#nuts-and-seeds), [Meat, fish and eggs]({u}can-dogs-eat.html#meat-fish-and-eggs), [Dairy]({u}can-dogs-eat.html#dairy), [Grains and baking]({u}can-dogs-eat.html#grains-and-baking)
 - [Dog age calculator]({u}dog-age-calculator.html): dog years to human years using human age = 16 ln(dog age) + 31 (Wang et al., Cell Systems 2020), with a table and limitations
 - [Chocolate dose estimator]({u}blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
+
+## Games
+- [Dog games hub]({u}games/): three free original games, no sign up, no ads, no cookies
+- [Snack or Nope?]({u}games/snack-or-nope/): sort people foods into Safe, Caution or Toxic for dogs, with sources
+- [Wag Signals]({u}games/wag-signals/): dog body language quiz based on RSPCA and ASPCApro guidance
+- [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
 - [Can dogs see color? Yes, mostly blues and yellows]({u}blog/can-dogs-see-color.html)
