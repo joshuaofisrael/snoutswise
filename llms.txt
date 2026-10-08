@@ -25,6 +25,13 @@ The content is general education, not veterinary advice; readers are told to con
 - [Wag Signals](https://snoutswise.com/games/wag-signals/): dog body language quiz based on RSPCA and ASPCApro guidance
 - [Fetch Spotter](https://snoutswise.com/games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
+## Teachers and research
+- [Dog science for teachers](https://snoutswise.com/teachers/): free printable worksheets and fact sheets with answer keys, lesson ideas by grade band (NGSS K-LS1-1, 3-LS3-1, 4-LS1-2, MS-LS4-5), vocabulary and classroom games; no ads, no sign up
+- [Worksheet: What does a dog need? (K to 2)](https://snoutswise.com/teachers/dog-needs-worksheet.html)
+- [Fact sheet: Dog senses and body language (grades 3 to 5)](https://snoutswise.com/teachers/dog-senses-fact-sheet.html)
+- [Worksheet: Traits, breeds and selective breeding (grades 3 to 8)](https://snoutswise.com/teachers/dog-traits-worksheet.html)
+- [Research behind SnoutsWise](https://snoutswise.com/research/): peer reviewed papers with DOIs and veterinary guidelines used across the site
+
 ## Blog
 - [Can dogs see color? Yes, mostly blues and yellows](https://snoutswise.com/blog/can-dogs-see-color.html)
 - [My dog ate chocolate: how much is dangerous?](https://snoutswise.com/blog/dog-ate-chocolate.html)

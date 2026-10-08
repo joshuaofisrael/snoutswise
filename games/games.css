@@ -13,7 +13,7 @@
 .ok{color:#0A7A3A}.bad{color:#B3001E}
 .foodcard{text-align:center;padding:1rem .6rem}.foodcard .food{font-family:Fredoka,Nunito,sans-serif;font-weight:600;font-size:1.6rem;color:#2A2BD1;line-height:1.25;margin:.4rem 0}
 .gnote{font-size:.9rem;color:#4A4566}
-.kbd{display:inline-block;border:2px solid #9AA6F5;border-radius:6px;padding:0 .35rem;font-size:.85rem;background:#fff}
+.kbd{display:inline-block;border:2px solid #9AA6F5;border-radius:6px;padding:0 .35rem;font-size:.85rem;background:#fff;color:#1A1633}
 .gamegrid .tile .gicon{width:100%;height:auto;max-height:120px;display:block;margin-bottom:.5rem}
 .copyline{font-weight:700;color:#1A1633}
 @keyframes sw-wag{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
