@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Ping IndexNow. Usage: ./indexnow.sh URL [URL...]   (no args = every URL in the live sitemap)
+# Ping IndexNow for https://snoutswise.com (host + keyLocation derived from SITE_URL). Usage: ./indexnow.sh URL [URL...]   (no args = every URL in the live sitemap)
+# Rule: after every publish/update, add URLs to the sitemap (rebuild), push, wait for Pages, then ping the changed https://snoutswise.com/ URLs.
 # Reads SITE_URL and INDEXNOW_KEY from _build.py so a domain switch needs no edit here.
 cd "$(dirname "$0")"
 SITE=$(python3 -c 'import re;print(re.search(r"^SITE_URL = \"([^\"]+)",open("_build.py").read(),re.M).group(1))')

@@ -24,3 +24,11 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Site renamed Dog Field Guide -> SnoutsWise (titles, logo, copy, JSON-LD, OG/Twitter, OG image regenerated, llms.txt, footer, 404). Repo renamed joshuaofisrael/dogfieldguide -> joshuaofisrael/snoutswise; base URL now https://joshuaofisrael.github.io/snoutswise/ (old github.io path returns 404; GitHub does not redirect project Pages).
 - Domain snoutswise.com pending purchase; no CNAME yet.
 - IndexNow: all 21 sitemap URLs at the new base submitted: HTTP 202.
+
+## 2026-10-08 12:35 London: custom domain snoutswise.com live
+- DNS verified: apex A 185.199.108.153/109/110/111, www CNAME joshuaofisrael.github.io.
+- CNAME file added; Pages custom domain set to snoutswise.com via API; SITE_URL = https://snoutswise.com/ and site rebuilt (canonicals, sitemap, robots Sitemap line, llms.txt, OG URLs, JSON-LD all on https://snoutswise.com/).
+- Certificate approved about 12:32; https_enforced = true. http -> https, www -> apex and old github.io URLs all 301 to https://snoutswise.com/.
+- robots.txt now effective at the host root.
+- IndexNow: 21 sitemap URLs submitted for host snoutswise.com, keyLocation https://snoutswise.com/f82447b1414b64e38975376b34f684d7.txt: HTTP 202.
+- FormSubmit: one setup test from https://snoutswise.com/contact.html; response "This form needs Activation", activation email sent to joshuaofisrael@gmail.com (pending click).

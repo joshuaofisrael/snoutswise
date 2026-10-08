@@ -170,11 +170,11 @@ def extras():
           "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (u, d) for u, d in SITEMAP + [(SITE_URL + "llms.txt", TODAY)]) + "</urlset>\n")
     bots = ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User", "ClaudeBot",
             "Claude-SearchBot", "Claude-User", "Google-Extended", "Applebot", "Applebot-Extended", "DuckAssistBot", "Amazonbot"]
-    # NOTE: on github.io a project-site robots.txt is not at the host root, so crawlers only honour it once a custom domain is live.
+    # robots.txt is served at the custom domain root (https://snoutswise.com/robots.txt).
     write("robots.txt", "User-agent: *\nAllow: /\n\n" + "".join("User-agent: %s\nAllow: /\n\n" % b for b in bots) + "Sitemap: %ssitemap.xml\n" % SITE_URL)
     write(INDEXNOW_KEY + ".txt", INDEXNOW_KEY)
     write("indexnow.sh", """#!/usr/bin/env bash
-# Ping IndexNow. Usage: ./indexnow.sh URL [URL...]   (no args = every URL in the live sitemap)
+# Ping IndexNow for https://snoutswise.com (host + keyLocation derived from SITE_URL). Usage: ./indexnow.sh URL [URL...]   (no args = every URL in the live sitemap)\n# Rule: after every publish/update, add URLs to the sitemap (rebuild), push, wait for Pages, then ping the changed https://snoutswise.com/ URLs.
 # Reads SITE_URL and INDEXNOW_KEY from _build.py so a domain switch needs no edit here.
 cd "$(dirname "$0")"
 SITE=$(python3 -c 'import re;print(re.search(r"^SITE_URL = \\"([^\\"]+)",open("_build.py").read(),re.M).group(1))')
