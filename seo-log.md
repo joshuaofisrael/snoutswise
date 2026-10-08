@@ -32,3 +32,18 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - robots.txt now effective at the host root.
 - IndexNow: 21 sitemap URLs submitted for host snoutswise.com, keyLocation https://snoutswise.com/f82447b1414b64e38975376b34f684d7.txt: HTTP 202.
 - FormSubmit: one setup test from https://snoutswise.com/contact.html; response "This form needs Activation", activation email sent to joshuaofisrael@gmail.com (pending click).
+
+## 2026-10-08 14:30 London: light "cute" restyle + LLC legal pages
+- Restyle (no URL, content or structure changes): cream #FFF8EC page, white #FFFFFF cards, peach #FFA27F and sunny yellow #FFD166 accents, header #FFE8D6, footer #FFEEDB, text #3B2A1F, muted #6B5444, headings #8F3A12, links #A13D14. Rounded 22px cards, pill buttons, soft shadows, dotted peach borders.
+- Fonts: Google Fonts Fredoka 600 (headings) + Nunito 400/700 (body), display=swap, preconnect to fonts.googleapis.com and fonts.gstatic.com.
+- New logo (brown paw on yellow badge with peach ring), favicon.svg, logo.png (9.9 KB), og-image.png (15 KB). Inline SVG paw and bone doodles (aria-hidden) in hero and footer.
+- Food table: verdict cells now pill badges with icon + word + colour (Toxic #A1201A on #FFE0DA 6.18:1, Caution #7A4A00 on #FFF0BF 6.58:1, Safe #1D6A35 on #DCF3E2 5.67:1); poison-control call-out has a red left bar, phone icon, pink panel.
+- WCAG check (/workspace/dog-site/contrast_check.py): every text/link/button pair passes AA; lowest 5.56:1 (link on header).
+- Weight: style.css 4.0 -> 7.3 KB; home HTML 7.8 -> 10.1 KB; plus Google Fonts (2 families, 3 weights).
+- LLC rule (SnoutsWise is a brand of Joshua Israel Ventures LLC, not a DBA): footer on every page "© 2026 Joshua Israel Ventures LLC. All rights reserved. SnoutsWise is owned and operated by Joshua Israel Ventures LLC." with Terms, Privacy, Disclaimer, Contact links; Contact us block kept.
+- New pages: terms.html (LLC contracting party, general info only, as-is warranty disclaimer, limitation of liability, Florida law, brand owned by LLC) and disclaimer.html (accuracy, no vet relationship, emergency/APCC, no affiliate or ad links, FTC disclosure if that changes). Both in sitemap.xml and llms.txt.
+- privacy.html rewritten: LLC is data controller; only GitHub Pages server logs, Google Fonts requests, FormSubmit contact form, email; no analytics, ads or affiliate cookies.
+- About: "SnoutsWise is a brand of Joshua Israel Ventures LLC."
+- JSON-LD: Organization name/legalName Joshua Israel Ventures LLC with brand {Brand: SnoutsWise}; WebSite publisher and Article author/publisher = the LLC.
+- 8 Oct 14:30 London: governing law corrected to Florida (LLC is a Florida LLC, per Joshua via Personal assistant); venue state or federal courts located in Florida; no county named.
+- Committed/pushed 9 Oct 2026 ~00:25 London (box freeze delayed the push). Pastel restyle ships as an interim look; neon photo redesign follows in a separate commit.

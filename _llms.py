@@ -1,7 +1,7 @@
 def text(u, name, legal):
     return f"""# {name}
 
-> {name} is a free, independent, sourced guide for dog owners. It explains dog breed groups (AKC and Royal Kennel Club), everyday care, health basics such as normal vital signs and vaccine schedules, reward based training and dog behavior, and offers a searchable table of foods dogs can and cannot eat, a science based dog age calculator and a chocolate dose estimator. Every page lists its veterinary, welfare or kennel club sources. Operated by {legal}.
+> {name} is a free, independent, sourced guide for dog owners. It explains dog breed groups (AKC and Royal Kennel Club), everyday care, health basics such as normal vital signs and vaccine schedules, reward based training and dog behavior, and offers a searchable table of foods dogs can and cannot eat, a science based dog age calculator and a chocolate dose estimator. Every page lists its veterinary, welfare or kennel club sources. {name} is a brand of {legal}, which owns and operates the site.
 
 The content is general education, not veterinary advice; readers are told to contact a vet for individual dogs and emergencies.
 
@@ -31,5 +31,7 @@ The content is general education, not veterinary advice; readers are told to con
 ## Optional
 - [About]({u}about.html): who operates the site and how content is researched and sourced
 - [Contact]({u}contact.html): email joshuaofisrael@gmail.com or use the contact form
-- [Privacy]({u}privacy.html)
+- [Privacy]({u}privacy.html): data controller Joshua Israel Ventures LLC; hosting logs, Google Fonts and the FormSubmit contact form only
+- [Terms of use]({u}terms.html): Joshua Israel Ventures LLC is the contracting party; general information only; Florida law
+- [Disclaimer]({u}disclaimer.html): not veterinary advice, emergency contacts, no affiliate or advertising links
 """

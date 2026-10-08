@@ -410,7 +410,7 @@ def can_dogs_eat(page):
                 continue
             refs = "; ".join('<a href="%s" rel="noopener">%s, %s</a>' % (S[k][2], S[k][1], S[k][0]) for k in keys.split())
             call = '<p class="call"><b>Call your vet or ASPCA Animal Poison Control now: <a href="tel:+18884264435">(888) 426-4435</a></b>. Outside the US, call your vet or emergency vet.</p>' if v != "yes" else ""
-            rows.append('<tr id="%s" data-v="%s"><td><b>%s</b></td><td class="%s">%s</td><td>%s<p>%s</p><p><b>If eaten:</b> %s</p><p class="note">Last reviewed 8 Oct 2026 &middot; Sources: %s</p></td></tr>' % (slug(food), v, food, v, SHORT[v], call, why, IF_EATEN_OVERRIDE.get(food, IF_EATEN[v]), refs))
+            rows.append('<tr id="%s" data-v="%s"><td><b>%s</b></td><td class="%s"><span class="%s">%s</span></td><td>%s<p>%s</p><p><b>If eaten:</b> %s</p><p class="note">Last reviewed 8 Oct 2026 &middot; Sources: %s</p></td></tr>' % (slug(food), v, food, v, v, SHORT[v], call, why, IF_EATEN_OVERRIDE.get(food, IF_EATEN[v]), refs))
     counts = {k: sum(1 for f in FOODS if f[2] == k) for k in LABEL}
     body = """
 <p class="note" style="font-style:normal"><b>Emergency?</b> If your dog has eaten something marked <span class="no">Toxic</span>, call your vet or emergency vet now, with the food, amount and your dog's weight to hand. In the US you can also call the ASPCA Animal Poison Control Center on (888) 426-4435.</p>
@@ -427,7 +427,7 @@ def can_dogs_eat(page):
     script = """(function(){var q=document.getElementById('q'),f='all',rows=[].slice.call(document.querySelectorAll('#foods tbody tr')),c=document.getElementById('count');
 function run(){var t=q.value.trim().toLowerCase(),shown=0;rows.forEach(function(r){if(r.classList.contains('cat')){r.hidden=!!t||f!='all';return}var ok=(!t||r.textContent.toLowerCase().indexOf(t)>-1)&&(f=='all'||r.dataset.v==f);r.hidden=!ok;if(ok)shown++});c.textContent=shown+' food'+(shown==1?'':'s')+' shown'}
 q.addEventListener('input',run);[].forEach.call(document.querySelectorAll('[data-f]'),function(b){b.addEventListener('click',function(){f=b.dataset.f;[].forEach.call(document.querySelectorAll('[data-f]'),function(x){x.className='btn'+(x==b?'':' alt')});run()})});
-var h=location.hash.slice(1);if(h){var e=document.getElementById(h);if(e&&!e.classList.contains('cat'))e.style.outline='2px solid #f0a640'}run()})();"""
+var h=location.hash.slice(1);if(h){var e=document.getElementById(h);if(e&&!e.classList.contains('cat'))e.style.outline='3px solid #A13D14'}run()})();"""
     faq = [
         ("Can dogs eat grapes or raisins?", "No. The ASPCA says grapes and raisins can cause kidney damage in dogs, and the AKC says no amount has been proven safe. Call your vet if your dog eats any, even a few."),
         ("Can dogs eat peanut butter?", "Yes, in small amounts, as long as the label shows it does not contain xylitol. Xylitol can cause a dangerous drop in blood sugar in dogs."),
@@ -551,7 +551,7 @@ def trust(page):
          "Who runs SnoutsWise, what it covers, how the content is researched and sourced, and how to report a correction.",
          """
 <h2>Who runs this site</h2>
-<p>SnoutsWise is operated by Joshua Israel Ventures LLC. It is an independent publication and is not affiliated with any kennel club, veterinary organization, pet food company or retailer named on the site.</p>
+<p>SnoutsWise is a brand of Joshua Israel Ventures LLC. The site is owned and operated by Joshua Israel Ventures LLC. It is an independent publication and is not affiliated with any kennel club, veterinary organization, pet food company or retailer named on the site.</p>
 <h2>What we cover</h2>
 <p>Practical, plain English information for dog owners: <a href="{R}breeds.html">breed groups</a>, <a href="{R}care.html">everyday care</a>, <a href="{R}health.html">health basics</a>, <a href="{R}training.html">training</a> and <a href="{R}behavior.html">behavior</a>, plus tools such as the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table and the <a href="{R}dog-age-calculator.html">dog age calculator</a>.</p>
 <h2>How content is produced</h2>
@@ -560,7 +560,7 @@ def trust(page):
 <li>We are not veterinarians, and nothing here replaces an examination by a vet who knows your dog. Health and safety pages say so and point to emergency help.</li>
 <li>Each page shows when it was last updated. We review pages when guidelines change.</li></ul>
 <h2>Money</h2>
-<p>The site is free to read. It currently carries no advertising, sponsored content or affiliate links. If that changes, we will say so clearly on the affected pages and in our <a href="{R}privacy.html">privacy policy</a>.</p>
+<p>The site is free to read. It currently carries no advertising, sponsored content or affiliate links. If that changes, we will say so clearly on the affected pages, in our <a href="{R}disclaimer.html">disclaimer</a> and in our <a href="{R}privacy.html">privacy policy</a>. See also our <a href="{R}terms.html">terms of use</a>.</p>
 <h2>Corrections</h2>
 <p>Spotted an error or an outdated guideline? Please email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> or use the <a href="{R}contact.html">contact form</a> with the page and the source, and we will check and correct it.</p>
 """, h1="About SnoutsWise", kind="webpage",
@@ -594,22 +594,57 @@ def trust(page):
          h1="Thanks for your message", kind="webpage", index=False, nav="contact.html")
 
     page("privacy.html", "Privacy Policy | SnoutsWise",
-         "How SnoutsWise handles data: no accounts, no advertising cookies, contact form messages processed by FormSubmit, and how to reach us.",
+         "How Joshua Israel Ventures LLC handles data on SnoutsWise: hosting logs, Google Fonts, the FormSubmit contact form, no analytics, ads or affiliate cookies.",
          """
 <p class="meta">Last updated 8 October 2026</p>
-<h2>Who we are</h2><p>SnoutsWise is operated by Joshua Israel Ventures LLC. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
-<h2>What we collect</h2>
-<ul><li><b>Browsing.</b> The site has no user accounts and sets no advertising or tracking cookies. It is hosted on GitHub Pages, and GitHub may log technical information such as IP addresses for security and operation; see GitHub's privacy statement.</li>
-<li><b>Analytics.</b> We may use Cloudflare Web Analytics, a privacy focused, cookieless service, to count page views in aggregate. It does not use cookies or build profiles of individual visitors. If and when it is enabled, it loads a small script from static.cloudflareinsights.com.</li>
-<li><b>Contact form.</b> If you use the contact form, your name, email address and message are sent through FormSubmit (formsubmit.co) to our email inbox. We use them only to read and reply to your message. Email us at any time to ask us to delete your message.</li>
-<li><b>Email.</b> If you email us directly, we keep your message and address only as long as needed to deal with it.</li></ul>
-<h2>Advertising and affiliates</h2><p>The site currently shows no ads and contains no affiliate links. We will update this policy before that changes.</p>
+<h2>Who we are</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC. Joshua Israel Ventures LLC owns and operates snoutswise.com and is the data controller for personal information collected through it ("we", "us"). Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
+<h2>What we collect today</h2>
+<ul><li><b>Hosting server logs.</b> The site is hosted on GitHub Pages, run by GitHub, Inc. When you visit, GitHub's servers may automatically log technical information such as your IP address, browser type, the page requested and the time, for security and to keep the service running. We do not receive these logs. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.</li>
+<li><b>Fonts.</b> Pages load the Fredoka and Nunito fonts from Google Fonts (fonts.googleapis.com and fonts.gstatic.com). To deliver them, your browser connects to Google's servers, which receive your IP address and browser information. See <a href="https://developers.google.com/fonts/faq/privacy" rel="noopener">Google Fonts privacy information</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</li>
+<li><b>Contact form.</b> If you use the <a href="{R}contact.html">contact form</a>, your name, email address, chosen topic and message are sent through FormSubmit (formsubmit.co) to our email inbox, which is a Gmail account provided by Google. We use them only to read and reply to your message.</li>
+<li><b>Email.</b> If you email us directly, we receive your email address and whatever you include in the message.</li></ul>
+<h2>What we do not use</h2><p>The site has no user accounts and sets no cookies of its own. It currently uses no analytics, no advertising and no affiliate links or affiliate cookies. If we add any of these, we will update this policy before they go live.</p>
+<h2>How we use and share information</h2><p>We use contact form messages and emails only to respond to you and to improve or correct the site. We do not sell personal information or share it for advertising. The service providers named above (GitHub, Google and FormSubmit) process data on our behalf or as part of delivering their services, under their own privacy terms.</p>
+<h2>How long we keep it</h2><p>We keep messages only as long as needed to deal with them and then delete them. Email us at any time to ask us to delete your message.</p>
 <h2>Third party links</h2><p>Pages link to outside sources such as veterinary manuals and kennel clubs. Their own privacy policies apply when you visit them.</p>
-<h2>Children</h2><p>The site is general information for a general audience and does not knowingly collect personal information from children.</p>
-<h2>Your rights</h2><p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you. Email us and we will respond.</p>
+<h2>Children</h2><p>The site is general information for a general audience and does not knowingly collect personal information from children under 13.</p>
+<h2>Your rights</h2><p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you, or to object to how we use it. Email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> and we will respond.</p>
 <h2>Changes</h2><p>We will post any changes on this page with a new date.</p>
 """, h1="Privacy policy", kind="webpage",
+         related=[("terms.html", "Terms of use"), ("disclaimer.html", "Disclaimer"), ("contact.html", "Contact us")],
          crumbs=[("index.html", "Home"), ("privacy.html", "Privacy")])
+
+    page("terms.html", "Terms of Use | SnoutsWise",
+         "Terms of use for SnoutsWise, owned and operated by Joshua Israel Ventures LLC: general information only, no warranties, limitation of liability, Florida law.",
+         """
+<p class="meta">Last updated 8 October 2026</p>
+<h2>Who you are dealing with</h2><p>These terms of use govern your use of snoutswise.com (the "site"). The site is owned and operated by Joshua Israel Ventures LLC ("we", "us", "our"), which is the contracting party for everything on the site. SnoutsWise is a brand owned by Joshua Israel Ventures LLC; it is not a separate company. By using the site you agree to these terms. If you do not agree, please do not use the site.</p>
+<h2>General information only, not professional advice</h2><p>Everything on the site, including articles, the food table, the dog age calculator and the chocolate dose estimator, is general educational information about dogs. It is not veterinary, medical or other professional advice, and it is not a substitute for an examination by a vet who knows your dog. Using the site does not create a veterinarian, client and patient relationship or any other professional relationship. If your dog may be ill, injured or poisoned, contact your vet or an emergency vet straight away. See our <a href="{R}disclaimer.html">disclaimer</a>.</p>
+<h2>Our content</h2><p>The text, illustrations, design, and the SnoutsWise name and logo are owned by Joshua Israel Ventures LLC unless stated otherwise. You are welcome to link to any page and to quote short passages with a credit and a link back. Please do not republish substantial parts of the site without our written permission.</p>
+<h2>Using the site</h2><p>Do not use the site for any unlawful purpose or try to disrupt it or the services that host it.</p>
+<h2>Links to other sites</h2><p>We link to outside sources so you can check our facts. We do not control those sites and are not responsible for their content, availability or privacy practices.</p>
+<h2>No warranties</h2><p>The site and all its content are provided "as is" and "as available". To the fullest extent permitted by law, Joshua Israel Ventures LLC disclaims all warranties, express or implied, including warranties of accuracy, completeness, merchantability, fitness for a particular purpose and non-infringement. We do not promise that the site will be error free, up to date or always available.</p>
+<h2>Limitation of liability</h2><p>To the fullest extent permitted by law, Joshua Israel Ventures LLC and its members, managers and contributors will not be liable for any indirect, incidental, special, consequential or punitive damages, or for any loss or harm (including harm to any animal) arising from your use of, or reliance on, the site or its content. Our total liability for any claim relating to the site is limited to one hundred US dollars (US$100). Some jurisdictions do not allow certain limits on liability, so some of these limits may not apply to you.</p>
+<h2>Governing law</h2><p>These terms are governed by the laws of the State of Florida, United States, without regard to its conflict of law rules. Any dispute will be resolved in the state or federal courts located in Florida.</p>
+<h2>Changes to these terms</h2><p>We may update these terms from time to time. The date at the top shows the latest version, and continuing to use the site means you accept the updated terms.</p>
+<h2>Contact</h2><p>Questions about these terms: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
+""", h1="Terms of use", kind="webpage",
+         related=[("privacy.html", "Privacy policy"), ("disclaimer.html", "Disclaimer"), ("about.html", "About SnoutsWise")],
+         crumbs=[("index.html", "Home"), ("terms.html", "Terms")])
+
+    page("disclaimer.html", "Disclaimer | SnoutsWise",
+         "SnoutsWise disclaimer: general information only, no vet relationship, what to do in an emergency, and our no affiliate or advertising links statement.",
+         """
+<p class="meta">Last updated 8 October 2026</p>
+<p class="call"><b>Emergency? Call your vet, an emergency vet, or the ASPCA Animal Poison Control Center: <a href="tel:+18884264435">(888) 426-4435</a></b>. Outside the US, call your vet or local emergency vet.</p>
+<h2>Accuracy</h2><p>We research every page and link the veterinary, welfare and kennel club sources it relies on, and we review pages when guidance changes. Even so, information can be incomplete, out of date or wrong, guidelines differ between organizations and countries, and every dog is different. Joshua Israel Ventures LLC makes no guarantee that the content is accurate, complete or suitable for your dog. Please check the linked sources and ask your vet before acting on anything you read here. If you spot an error, <a href="{R}contact.html">tell us</a>.</p>
+<h2>No vet or professional relationship</h2><p>We are not veterinarians. Reading the site, using its tools or contacting us does not create a veterinarian, client and patient relationship or any other professional relationship. Do not delay getting veterinary care, or ignore advice from your vet, because of something you read on SnoutsWise. For behavior problems such as aggression, ask your vet or a qualified veterinary behaviorist.</p>
+<h2>Tools and calculators</h2><p>The food table, dog age calculator and chocolate dose estimator give general estimates for information only. They cannot account for your dog's health, the exact product eaten or other factors a vet would consider.</p>
+<h2>Affiliate and advertising disclosure</h2><p>SnoutsWise currently has no affiliate links, advertising or sponsored content, and we are not paid to mention any product, organization or website. If that changes, we will add a clear disclosure, as required by the US Federal Trade Commission, on the affected pages and update this page and our <a href="{R}privacy.html">privacy policy</a>.</p>
+<h2>Who is responsible</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC, which owns and operates the site. Use of the site is also governed by our <a href="{R}terms.html">terms of use</a>. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
+""", h1="Disclaimer", kind="webpage",
+         related=[("terms.html", "Terms of use"), ("privacy.html", "Privacy policy"), ("health.html", "Dog health basics")],
+         crumbs=[("index.html", "Home"), ("disclaimer.html", "Disclaimer")])
 
     page("404.html", "Page Not Found | SnoutsWise", "That page could not be found.",
          '<p>We could not find that page. Try the <a href="{R}index.html">home page</a>, the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table or the <a href="{R}faq.html">dog FAQ</a>.</p>',
