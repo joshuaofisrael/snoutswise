@@ -32,4 +32,5 @@ The content is general education, not veterinary advice; readers are told to con
 - [Contact](https://snoutswise.com/contact.html): email joshuaofisrael@gmail.com or use the contact form
 - [Privacy](https://snoutswise.com/privacy.html): data controller Joshua Israel Ventures LLC; hosting logs, Google Fonts and the FormSubmit contact form only
 - [Terms of use](https://snoutswise.com/terms.html): Joshua Israel Ventures LLC is the contracting party; general information only; Florida law
+- [Photo credits](https://snoutswise.com/credits/): source, author and licence for every photo (Wikimedia Commons, CC BY, CC BY-SA, public domain)
 - [Disclaimer](https://snoutswise.com/disclaimer.html): not veterinary advice, emergency contacts, no affiliate or advertising links

@@ -609,7 +609,8 @@ def trust(page):
 <h2>Third party links</h2><p>Pages link to outside sources such as veterinary manuals and kennel clubs. Their own privacy policies apply when you visit them.</p>
 <h2>Children</h2><p>The site is general information for a general audience and does not knowingly collect personal information from children under 13.</p>
 <h2>Your rights</h2><p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you, or to object to how we use it. Email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> and we will respond.</p>
-<h2>Changes</h2><p>We will post any changes on this page with a new date.</p>
+<h2>Photos</h2><p>Photos on the site are stored on our own pages (self hosted), so viewing them does not contact any other service. See <a href="{R}credits/">photo credits</a>.</p>
+<h2>Changes and governing law</h2><p>We will post any changes on this page with a new date. This policy forms part of our <a href="{R}terms.html">terms of use</a>, which are governed by the laws of the State of Florida.</p>
 """, h1="Privacy policy", kind="webpage",
          related=[("terms.html", "Terms of use"), ("disclaimer.html", "Disclaimer"), ("contact.html", "Contact us")],
          crumbs=[("index.html", "Home"), ("privacy.html", "Privacy")])
@@ -641,7 +642,7 @@ def trust(page):
 <h2>No vet or professional relationship</h2><p>We are not veterinarians. Reading the site, using its tools or contacting us does not create a veterinarian, client and patient relationship or any other professional relationship. Do not delay getting veterinary care, or ignore advice from your vet, because of something you read on SnoutsWise. For behavior problems such as aggression, ask your vet or a qualified veterinary behaviorist.</p>
 <h2>Tools and calculators</h2><p>The food table, dog age calculator and chocolate dose estimator give general estimates for information only. They cannot account for your dog's health, the exact product eaten or other factors a vet would consider.</p>
 <h2>Affiliate and advertising disclosure</h2><p>SnoutsWise currently has no affiliate links, advertising or sponsored content, and we are not paid to mention any product, organization or website. If that changes, we will add a clear disclosure, as required by the US Federal Trade Commission, on the affected pages and update this page and our <a href="{R}privacy.html">privacy policy</a>.</p>
-<h2>Who is responsible</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC, which owns and operates the site. Use of the site is also governed by our <a href="{R}terms.html">terms of use</a>. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
+<h2>Who is responsible</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC, which owns and operates the site. Use of the site is also governed by our <a href="{R}terms.html">terms of use</a>, under the laws of the State of Florida. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
 """, h1="Disclaimer", kind="webpage",
          related=[("terms.html", "Terms of use"), ("privacy.html", "Privacy policy"), ("health.html", "Dog health basics")],
          crumbs=[("index.html", "Home"), ("disclaimer.html", "Disclaimer")])
