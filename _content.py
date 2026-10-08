@@ -24,7 +24,15 @@ S = {
  "rspca_heat": ("Heatstroke in dogs", "RSPCA", "https://www.rspca.org.uk/adviceandwelfare/pets/dogs/health/heatstroke"),
  "gov_chip": ("Get your dog or cat microchipped", "GOV.UK", "https://www.gov.uk/get-your-dog-microchipped"),
  "wang2020": ("Wang T, et al. (2020). Quantitative Translation of Dog-to-Human Aging by Conserved Remodeling of the DNA Methylome. Cell Systems 11:176 to 185", "PubMed Central (open access)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7484147/"),
+ "neitz1989": ("Neitz J, Geist T, Jacobs GH (1989). Color vision in the dog. Visual Neuroscience 3(2):119 to 125", "Cambridge University Press", "https://doi.org/10.1017/s0952523800004430"),
+ "kasparson2013": ("Kasparson AA, Badridze J, Maximov VV (2013). Colour cues proved to be more informative for dogs than brightness. Proceedings of the Royal Society B 280:20131356", "PubMed Central (open access)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3730601/"),
+ "miller1995": ("Miller PE, Murphy CJ (1995). Vision in dogs. Journal of the American Veterinary Medical Association 207(12):1623 to 1634", "Europe PMC record", "https://europepmc.org/article/MED/7493905"),
+ "akc_color": ("Can Dogs See Color?", "American Kennel Club", "https://www.akc.org/expert-advice/health/are-dogs-color-blind/"),
 }
+import datetime
+def nice(d):
+    return datetime.date.fromisoformat(d).strftime("%-d %B %Y")
+
 def src(*keys):
     return [S[k] for k in keys]
 
@@ -62,6 +70,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/can-dogs-see-color.html">Can dogs see color? Yes, mostly blues and yellows</a></li>
 <li><a href="{R}blog/dog-ate-chocolate.html">My dog ate chocolate: how much is dangerous?</a></li>
 <li><a href="{R}blog/puppy-socialization-window.html">The puppy socialization window: when it closes and what to do</a></li>
 <li><a href="{R}blog/dog-vaccine-schedule.html">How often do dogs need vaccines? Core and non core vaccines explained</a></li>
@@ -609,10 +618,10 @@ def trust(page):
 # ------------------------------------------------------------------ BLOG
 POSTS = []
 
-def post(page, slug_, title, desc, h1, lead, body, faq=None, sources=None, related=None, script=""):
-    POSTS.append((slug_, h1, desc))
+def post(page, slug_, title, desc, h1, lead, body, faq=None, sources=None, related=None, script="", published="2026-10-08"):
+    POSTS.append((slug_, h1, desc, published))
     page("blog/%s.html" % slug_, title, desc, body, h1=h1, lead=lead, kind="post", faq=faq, sources=sources,
-         related=related, script=script, crumbs=[("index.html", "Home"), ("blog/index.html", "Blog"), ("blog/%s.html" % slug_, h1)])
+         related=related, script=script, published=published, updated=published, crumbs=[("index.html", "Home"), ("blog/index.html", "Blog"), ("blog/%s.html" % slug_, h1)])
 
 CHOC_JS = """(function(){var C={cocoa:28.5,baking:15.5,dark:5.6,milk:2.3,white:0.04};
 var w=document.getElementById('cw'),wu=document.getElementById('cwu'),t=document.getElementById('ct'),pc=document.getElementById('cpct'),a=document.getElementById('ca'),au=document.getElementById('cau'),o=document.getElementById('cout'),pr=document.getElementById('pctrow');
@@ -836,10 +845,36 @@ def blog(page):
          sources=src("wsava_bcs", "penn_kealy"),
          related=[("care.html#weight", "Care: healthy weight"), ("health.html#weight", "Health: weight"), ("can-dogs-eat.html", "Low calorie treat ideas"), ("dog-age-calculator.html", "Dog age calculator")])
 
+    # 6 daily fact: color vision (8 Oct 2026)
+    post(page, "can-dogs-see-color", "Can Dogs See Color? Yes, Mostly Blues and Yellows | Dog Field Guide",
+         "Dogs are not color blind in the black and white sense. They have two types of cone and see mainly blues and yellows, like a person with red green color blindness. What the research shows and what it means for toys.",
+         "Can dogs see color? Yes, mostly blues and yellows",
+         "Yes. Dogs do not see the world in black and white. Their eyes have two types of color sensing cone cells instead of the three most people have, so they see mainly blues and yellows, much like a person with red green color blindness. Reds, oranges and greens are hard for them to tell apart, which is why a yellow or blue ball is easier for a dog to spot on grass than a red one.",
+         """
+<h2>Where the black and white myth came from</h2>
+<p>The American Kennel Club traces the idea that dogs see only black and gray to Will Judy, a dog writer and publisher, who wrote in his 1937 manual <i>Training the Dog</i> that the outside world probably appears to dogs as "varying highlights of black and gray". The AKC notes there was little research to back the claim, but it stuck for decades.</p>
+<h2>What the research found</h2>
+<p>In 1989, Jay Neitz, Timothy Geist and Gerald Jacobs tested the color vision of three dogs in a series of behavioral experiments, published in <i>Visual Neuroscience</i>. Their results showed that the dog retina contains two classes of cone pigment, with peak sensitivities at about 429 nanometers (short, bluish wavelengths) and about 555 nanometers (longer wavelengths). They concluded that dogs have dichromatic color vision: real color vision, but built on two cone types rather than three. The AKC summarizes the practical result: a dog's color vision is similar to that of a person with red green color blindness, so dogs can make out yellow and blue and combinations of them, while a green lawn or a red cushion looks more like a dull brownish gray.</p>
+<h2>Do dogs actually use color?</h2>
+<p>For a long time scientists assumed color mattered little to dogs. A 2013 study in <i>Proceedings of the Royal Society B</i> by Anna Kasparson and colleagues tested that. Eight untrained dogs, working outdoors in daylight, learned to pick a paper card that differed from the other card in both color and brightness, for example dark yellow versus light blue, to find food. In test trials the researchers swapped the brightness, offering light yellow versus dark blue. The dogs kept choosing by color rather than by brightness, and half of them chose by color in all ten tests. The authors concluded that in normal daylight, color can be the main visual cue even for animals with only two cone types.</p>
+<h2>What dogs see better than we do</h2>
+<p>A 1995 review of canine vision in the <i>Journal of the American Veterinary Medical Association</i> by Paul Miller and Christopher Murphy found that dogs fall short of people in color perception, sharpness of vision, focusing range and the overlap between the two eyes. But dogs probably beat us at seeing in dim light, telling apart shades of gray, noticing how fast an image changes (flicker), and width of view, and perhaps at detecting motion. The AKC's chief veterinary officer, Dr. Jerry Klein, explains that dogs have more rods, the light sensitive cells used in low light, plus a reflective layer behind the retina called the tapetum that boosts night vision.</p>
+<h2>What it means for you and your dog</h2>
+<ul><li><b>Pick blue or yellow toys</b> for fetch on grass. The AKC points out that red and orange, the most popular toy colors, are hard for dogs to pick out against a green lawn.</li>
+<li><b>Use blue and yellow to teach "which one".</b> If you are teaching your dog to tell two toys apart, the AKC suggests making one blue and one yellow.</li>
+<li><b>Do not blame stubbornness</b> if your dog runs straight past a red ball. It may simply be hard to see.</li></ul>
+""",
+         faq=[("Are dogs color blind?", "Not completely. Dogs have two types of cone cells and see color mostly in blues and yellows. Their vision is often compared to a person with red green color blindness."),
+              ("What colors can dogs see best?", "Blue and yellow. Reds, oranges and greens tend to look similar to a dog, closer to brownish or grayish tones."),
+              ("Can dogs see better in the dark than people?", "Probably yes. A 1995 review in the Journal of the American Veterinary Medical Association concluded that dogs likely function better than people in dim light, helped by more rod cells and a reflective tapetum behind the retina.")],
+         sources=src("neitz1989", "kasparson2013", "miller1995", "akc_color"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("care.html", "Everyday care"), ("blog/puppy-socialization-window.html", "Puppy socialization window")],
+         published="2026-10-08")
+
     # blog index
-    items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published 8 October 2026</p></article>' % (s, h, d) for s, h, d in POSTS)
+    items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "Dog Field Guide Blog: Answer First Dog Care Articles | Dog Field Guide",
-         "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth and body condition scoring.",
+         "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth, body condition scoring and how dogs see color.",
          items, h1="Dog Field Guide blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
          crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/")

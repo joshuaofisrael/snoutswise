@@ -21,6 +21,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Chocolate dose estimator]({u}blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
 
 ## Blog
+- [Can dogs see color? Yes, mostly blues and yellows]({u}blog/can-dogs-see-color.html)
 - [My dog ate chocolate: how much is dangerous?]({u}blog/dog-ate-chocolate.html)
 - [The puppy socialization window: when it closes and what to do]({u}blog/puppy-socialization-window.html)
 - [How often do dogs need vaccines? Core and non core vaccines explained]({u}blog/dog-vaccine-schedule.html)
