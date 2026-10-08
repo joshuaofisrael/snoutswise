@@ -19,3 +19,8 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - IndexNow: all 20 sitemap URLs submitted to api.indexnow.org, host joshuaofisrael.github.io, keyLocation /dogfieldguide/<key>.txt: HTTP 202 (accepted, key validation pending).
 - Food lookup upgraded per mentor: Safe/Caution/Toxic verdicts, "Call your vet or ASPCA Animal Poison Control now: (888) 426-4435" (number verified on aspca.org) at top of every Caution and Toxic entry, "If eaten" advice, per entry "Last reviewed 8 Oct 2026" and sources.
 - FormSubmit: one setup test submitted from the contact page; FormSubmit replied "This form needs Activation"; activation email sent to joshuaofisrael@gmail.com, pending click.
+
+## 2026-10-08 12:05 London: rebrand to SnoutsWise
+- Site renamed Dog Field Guide -> SnoutsWise (titles, logo, copy, JSON-LD, OG/Twitter, OG image regenerated, llms.txt, footer, 404). Repo renamed joshuaofisrael/dogfieldguide -> joshuaofisrael/snoutswise; base URL now https://joshuaofisrael.github.io/snoutswise/ (old github.io path returns 404; GitHub does not redirect project Pages).
+- Domain snoutswise.com pending purchase; no CNAME yet.
+- IndexNow: all 21 sitemap URLs at the new base submitted: HTTP 202.
