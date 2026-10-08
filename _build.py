@@ -22,7 +22,7 @@ OG_IMAGE = "og-image.png"
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 NAV = [("index.html", "Home"), ("breeds.html", "Breeds"), ("care.html", "Care"), ("health.html", "Health"),
-       ("training.html", "Training"), ("behavior.html", "Behavior"), ("can-dogs-eat.html", "Can Dogs Eat This?"),
+       ("training.html", "Training"), ("behavior.html", "Behavior"), ("can-dogs-eat.html", "Can My Dog Eat This?"),
        ("dog-age-calculator.html", "Age Calculator"), ("blog/", "Blog"), ("faq.html", "FAQ"), ("glossary.html", "Glossary")]
 
 LOGO = ('<svg role="img" width="34" height="34" viewBox="0 0 64 64" aria-labelledby="logo-t"><title id="logo-t">Dog Field Guide logo</title>'

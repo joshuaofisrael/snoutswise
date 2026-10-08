@@ -37,10 +37,10 @@ def home(page):
     body = """
 <section class="hero"><h1>Dog Field Guide: plain answers about breeds, care, health, training and behavior</h1>
 <p class="lead">Dog Field Guide is a free, independent guide for dog owners. It explains breed groups, everyday care, health basics such as vaccines and normal vital signs, reward based training and dog behavior, and every page lists the veterinary and kennel club sources it relies on. Start with the tools below if you have an urgent question.</p>
-<a class="btn" href="{R}can-dogs-eat.html">Can my dog eat this?</a> <a class="btn alt" href="{R}dog-age-calculator.html">Dog age calculator</a></section>
+<a class="btn" href="{R}can-dogs-eat.html">Can my dog eat this? Food lookup</a> <a class="btn alt" href="{R}dog-age-calculator.html">Dog age calculator</a></section>
 <h2>Tools</h2>
 <div class="grid">
-<a class="tile" href="{R}can-dogs-eat.html"><h3>Can dogs eat this?</h3><p>Searchable table of 50+ foods: toxic, caution or OK in moderation, with the reason and the source.</p></a>
+<a class="tile" href="{R}can-dogs-eat.html"><h3>Can my dog eat this?</h3><p>Our signature lookup: about 70 foods rated Safe, Caution or Toxic, with the reason, the source and what to do if eaten.</p></a>
 <a class="tile" href="{R}dog-age-calculator.html"><h3>Dog age in human years</h3><p>Calculator based on the 2020 epigenetic clock study, not the old "times seven" rule.</p></a>
 <a class="tile" href="{R}blog/dog-ate-chocolate.html"><h3>Dog ate chocolate?</h3><p>Estimate the dose from the type and amount, then call your vet.</p></a>
 </div>
@@ -369,8 +369,19 @@ FOODS = [
  ("Grains and baking", "Quinoa", "yes", "Found in some dog foods and fine plain (AKC).", "akc_food"),
  ("Grains and baking", "Cinnamon", "caution", "Not toxic, but the AKC advises avoiding it: it can irritate the mouth and stomach, and inhaled powder can cause coughing.", "akc_food"),
 ]
-LABEL = {"no": "No: toxic or dangerous", "caution": "Caution: small amounts or avoid", "yes": "Yes: plain, in moderation"}
-SHORT = {"no": "No", "caution": "Caution", "yes": "Yes, in moderation"}
+LABEL = {"no": "Toxic or dangerous", "caution": "Caution: small amounts or avoid", "yes": "Safe: plain, in moderation"}
+SHORT = {"no": "Toxic", "caution": "Caution", "yes": "Safe in moderation"}
+IF_EATEN = {
+ "no": "Call your vet, an emergency vet or the ASPCA Animal Poison Control Center ((888) 426-4435, US/Canada) now, even if your dog seems fine. Note the amount, time and your dog's weight.",
+ "caution": "A small amount is usually not an emergency. Call your vet if your dog ate a lot, has a health condition, or shows vomiting, diarrhea, lethargy or pain.",
+ "yes": "No action needed for a small, plain amount. Call your vet if it contained xylitol, onion, garlic or raisins, or your dog becomes unwell.",
+}
+IF_EATEN_OVERRIDE = {
+ "Bones (cooked poultry bones, raw bones)": "Do not try to make your dog vomit. Call your vet for advice and watch for vomiting, straining, a painful belly or not eating, which need urgent care.",
+ "Corn on the cob": "Call your vet for advice; a swallowed cob can cause a blockage. Vomiting, not eating or a painful belly need urgent care.",
+ "Xylitol (sugar free gum, sweets, some peanut butters, baked goods, toothpaste)": "Go to a vet immediately; blood sugar can drop within 30 to 60 minutes. Do not make your dog vomit at home. US/Canada: ASPCA Animal Poison Control (888) 426-4435.",
+ "Raw yeast bread dough": "Go to a vet immediately: bloating and alcohol poisoning are both possible. US/Canada: ASPCA Animal Poison Control (888) 426-4435.",
+}
 
 def slug(s):
     import re
@@ -384,23 +395,23 @@ def can_dogs_eat(page):
     n = len(FOODS)
     rows = []
     for c in cats:
-        rows.append('<tr class="cat" id="%s"><th colspan="3">%s</th></tr>' % (slug(c), c))
+        rows.append('<tr class="cat" id="%s"><th colspan="4">%s</th></tr>' % (slug(c), c))
         for cat, food, v, why, keys in FOODS:
             if cat != c:
                 continue
             refs = ", ".join('<a href="%s" rel="noopener">%s</a>' % (S[k][2], S[k][1].replace("American Kennel Club", "AKC").replace("ASPCA Animal Poison Control", "ASPCA")) for k in keys.split())
-            rows.append('<tr id="%s" data-v="%s"><td><b>%s</b></td><td class="%s">%s</td><td>%s <span class="note">Source: %s</span></td></tr>' % (slug(food), v, food, v, SHORT[v], why, refs))
+            rows.append('<tr id="%s" data-v="%s"><td><b>%s</b></td><td class="%s">%s</td><td>%s <span class="note">Source: %s</span></td><td>%s</td></tr>' % (slug(food), v, food, v, SHORT[v], why, refs, IF_EATEN_OVERRIDE.get(food, IF_EATEN[v])))
     counts = {k: sum(1 for f in FOODS if f[2] == k) for k in LABEL}
     body = """
-<p class="note" style="font-style:normal"><b>Emergency?</b> If your dog has eaten something marked <span class="no">No</span>, call your vet or emergency vet now, with the food, amount and your dog's weight to hand. In the US and Canada you can also call the ASPCA Animal Poison Control Center on (888) 426-4435.</p>
+<p class="note" style="font-style:normal"><b>Emergency?</b> If your dog has eaten something marked <span class="no">Toxic</span>, call your vet or emergency vet now, with the food, amount and your dog's weight to hand. In the US and Canada you can also call the ASPCA Animal Poison Control Center on (888) 426-4435.</p>
 <div class="tool"><label for="q">Search %d foods</label><input id="q" class="search" type="search" placeholder="Type a food, e.g. grapes, cheese, peanut butter" autocomplete="off">
-<div class="row" style="margin-top:.6rem" role="group" aria-label="Filter by verdict"><button class="btn" data-f="all">All</button> <button class="btn alt" data-f="no">No (%d)</button> <button class="btn alt" data-f="caution">Caution (%d)</button> <button class="btn alt" data-f="yes">Yes (%d)</button></div><p id="count" class="note" aria-live="polite"></p></div>
+<div class="row" style="margin-top:.6rem" role="group" aria-label="Filter by verdict"><button class="btn" data-f="all">All</button> <button class="btn alt" data-f="no">Toxic (%d)</button> <button class="btn alt" data-f="caution">Caution (%d)</button> <button class="btn alt" data-f="yes">Safe (%d)</button></div><p id="count" class="note" aria-live="polite"></p></div>
 <nav class="jump" aria-label="Jump to category"><b>Jump to:</b> %s</nav>
-<div class="tablewrap"><table id="foods"><thead><tr><th>Food</th><th>Can dogs eat it?</th><th>Why, and the source</th></tr></thead><tbody>%s</tbody></table></div>
+<div class="tablewrap"><table id="foods"><thead><tr><th>Food</th><th>Verdict</th><th>Why, and the source</th><th>If your dog ate it</th></tr></thead><tbody>%s</tbody></table></div>
 <section class="card"><h2>How to read this table</h2><ul>
-<li><span class="no">No</span>: toxic or physically dangerous. Keep it out of reach; if eaten, call a vet.</li>
+<li><span class="no">Toxic</span>: poisonous or physically dangerous. Keep it out of reach; if eaten, call a vet.</li>
 <li><span class="caution">Caution</span>: not usually poisonous, but risky in larger amounts, for some dogs, or when prepared the wrong way. Our sources advise small amounts or avoiding it.</li>
-<li><span class="yes">Yes, in moderation</span>: generally safe as an occasional treat when plain (no salt, sugar, butter, onion, garlic or seasoning) and cut into bite sized pieces.</li></ul>
+<li><span class="yes">Safe in moderation</span>: generally safe as an occasional treat when plain (no salt, sugar, butter, onion, garlic or seasoning) and cut into bite sized pieces.</li></ul>
 <p>Treats of any kind should be a small part of the diet, and new foods should be introduced one at a time. Dogs with health conditions, such as pancreatitis, diabetes, kidney disease or food allergies, may need stricter rules; ask your vet. Every verdict above comes from the ASPCA, the American Kennel Club, the Merck Veterinary Manual or Cornell University College of Veterinary Medicine, linked on each row.</p></section>
 """ % (n, counts["no"], counts["caution"], counts["yes"], " &middot; ".join('<a href="#%s">%s</a>' % (slug(c), c) for c in cats), "".join(rows))
     script = """(function(){var q=document.getElementById('q'),f='all',rows=[].slice.call(document.querySelectorAll('#foods tbody tr')),c=document.getElementById('count');
@@ -411,13 +422,15 @@ var h=location.hash.slice(1);if(h){var e=document.getElementById(h);if(e&&!e.cla
         ("Can dogs eat grapes or raisins?", "No. The ASPCA says grapes and raisins can cause kidney damage in dogs, and the AKC says no amount has been proven safe. Call your vet if your dog eats any, even a few."),
         ("Can dogs eat peanut butter?", "Yes, in small amounts, as long as the label shows it does not contain xylitol. Xylitol can cause a dangerous drop in blood sugar in dogs."),
         ("Can dogs eat cheese?", "Most dogs can have small amounts of cheese. The AKC suggests lower fat types such as mozzarella or cottage cheese, and some dogs do not digest dairy well."),
+        ("Can dogs eat avocado?", "The AKC advises against it: the pit, skin and leaves contain persin, which can cause vomiting and diarrhea, the flesh is high in fat, and the pit can cause a blockage. The ASPCA notes avocado is most dangerous to birds, rabbits, horses and ruminants."),
+        ("Can dogs eat bones?", "Bones are best avoided. The ASPCA warns that bones can injure or block the digestive tract, sometimes needing surgery, and the AKC notes cooked poultry bones splinter."),
         ("Can dogs eat bananas, apples and blueberries?", "Yes. The AKC lists all three as safe treats in moderation. Remove apple cores and seeds, and remember bananas are high in sugar."),
         ("Is a little garlic or onion OK for dogs?", "No. Onions, garlic, chives and leeks belong to the Allium family, which can damage a dog's red blood cells. The AKC says garlic is significantly more toxic to dogs than the other Alliums and that signs can be delayed for days."),
         ("What should I do if my dog ate something toxic?", "Call your vet, an emergency vet or a pet poison line straight away, even if your dog seems well. Note what was eaten, how much and when, and your dog's weight. Do not try to make your dog vomit unless a vet tells you to."),
     ]
-    page("can-dogs-eat.html", "Can Dogs Eat This? Searchable Table of %d Foods (Toxic vs Safe) | Dog Field Guide" % n,
-         "Searchable list of %d human foods: which are toxic to dogs (grapes, chocolate, xylitol, onions), which need caution and which are safe treats, with the source for each." % n,
-         body, h1="Can dogs eat this? %d foods checked" % n,
+    page("can-dogs-eat.html", "Can My Dog Eat This? %d Foods Rated Safe, Caution or Toxic | Dog Field Guide" % n,
+         "Look up %d foods: which are toxic to dogs (grapes, chocolate, xylitol, onions), which need caution and which are safe, with sources and what to do if eaten." % n,
+         body, h1="Can my dog eat this? %d foods rated Safe, Caution or Toxic" % n,
          lead="The foods most dangerous to dogs are chocolate and cocoa, grapes and raisins, onions, garlic and other Alliums, xylitol (in sugar free products), macadamia nuts, alcohol, raw yeast dough and caffeine. Many plain fruits and vegetables, such as apples, blueberries, carrots and green beans, are fine as occasional treats. Search the table below for a verdict and the veterinary or kennel club source behind it.",
          faq=faq, sources=src("aspca_foods", "akc_food", "akc_fruit", "merck_choc", "merck_xyl", "merck_foodpet", "cornell_xyl"),
          related=[("blog/dog-ate-chocolate.html", "Dog ate chocolate? Dose estimator"), ("health.html#poisoning", "Poisoning: first steps"), ("care.html#feeding", "Feeding your dog"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("faq.html", "Dog FAQ")],
