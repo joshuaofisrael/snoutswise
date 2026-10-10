@@ -88,7 +88,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home")
+         body, kind="home", updated="2026-10-11")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -221,8 +221,8 @@ def health(page):
          body, h1="Dog health basics",
          lead="A healthy adult dog has an average body temperature of 101 to 102.5&deg;F (38.3 to 39.2&deg;C), a heart rate of 70 to 120 beats per minute and a resting breathing rate of 18 to 34 breaths per minute, according to the Merck Veterinary Manual. The basics of keeping a dog healthy are core vaccines, a lean body weight, dental care, regular checkups and knowing which warning signs mean you should call a vet immediately.",
          sources=src("merck_vitals", "aaha_vax", "aaha_table", "aspca_foods", "merck_foodpet", "rspca_heat", "avma_dental", "penn_kealy"),
-         related=[("care.html", "Everyday care"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("can-dogs-eat.html", "Can dogs eat this?"), ("blog/dog-ate-chocolate.html", "Dog ate chocolate"), ("dog-age-calculator.html", "Dog age calculator")],
-         crumbs=[("index.html", "Home"), ("health.html", "Health")])
+         related=[("care.html", "Everyday care"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("can-dogs-eat.html", "Can dogs eat this?"), ("blog/dog-ate-chocolate.html", "Dog ate chocolate"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("dog-age-calculator.html", "Dog age calculator")],
+         crumbs=[("index.html", "Home"), ("health.html", "Health")], updated="2026-10-11")
 
 # ------------------------------------------------------------------ TRAINING
 def training(page):
@@ -299,6 +299,7 @@ def behavior(page):
 <li><b>Manage it.</b> Prevent rehearsal with gates, leads, closed doors or by putting temptations away.</li>
 <li><b>Teach and reward an alternative.</b> Sit to greet instead of jumping; go to the mat when the doorbell rings; chew a toy instead of the sofa.</li>
 <li><b>Meet the underlying need.</b> More exercise, sniffing, chewing outlets or company, depending on the cause.</li></ol>
+<p>Not every odd habit is a problem. Eating grass, for example, is common and usually normal: in a survey of 1,571 plant eating dogs, most did not seem ill beforehand or vomit afterwards (<a href="{R}blog/why-do-dogs-eat-grass.html">why dogs eat grass and when to call a vet</a>).</p>
 <p>AVSAB also recommends teaching puppies to enjoy short periods alone with a stuffed food toy, and offering a wide variety of experiences in the first year, which it links to a lower risk of separation related behavior.</p></section>
 <section id="help"><h2>When to get professional help</h2>
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
@@ -307,9 +308,9 @@ def behavior(page):
          "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
-         sources=src("avsab_train", "avsab_puppy", "mech"),
-         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")])
+         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008"),
+         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-11")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
 FOODS = [
@@ -504,18 +505,20 @@ def faq(page):
         ("When should I start socializing my puppy?", "Straight away. The AVSAB calls the first three months the primary socialization window and says puppy classes can start at 7 to 8 weeks once the puppy has had a first set of vaccines at least 7 days earlier and a first deworming. <a href=\"{R}blog/puppy-socialization-window.html\">How to do it safely</a>."),
         ("Is dominance or alpha training a good idea?", "No. Veterinary behaviorists at the AVSAB advise against dominance based and aversive methods, and wolf research shows wild packs are families rather than groups fighting for alpha status. <a href=\"{R}blog/alpha-dog-myth.html\">What the research says</a>."),
         ("How do I know if my dog is overweight?", "Use a body condition score: at an ideal weight you can feel the ribs without excess fat and see a waist from above. <a href=\"{R}blog/is-my-dog-overweight.html\">Step by step guide</a>."),
+        ("Why does my dog eat grass?", "Usually because it is normal dog behavior. In a 2008 survey of 1,571 plant eating dogs, 68% ate plants daily or weekly, only 9% often seemed ill beforehand and only 22% often vomited afterwards. See a vet if it suddenly increases or comes with vomiting, diarrhea or lethargy. <a href=\"{R}blog/why-do-dogs-eat-grass.html\">What the research says</a>."),
+        ("Can dogs see color?", "Yes, mostly blues and yellows. Dogs have two types of cone cells instead of the three most people have, so their color vision is similar to a person with red green color blindness. <a href=\"{R}blog/can-dogs-see-color.html\">How dogs see color</a>."),
         ("How old is my dog in human years?", "By the 2020 epigenetic clock formula, human age is about 16 &times; ln(dog age) + 31, so a 1 year old dog is about 31 and a 10 year old about 68. Try the <a href=\"{R}dog-age-calculator.html\">dog age calculator</a>."),
         ("How often should I brush my dog's teeth?", "The AVMA says daily brushing is best, but several times a week can be effective, alongside a dental check by your vet at least once a year."),
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
     page("faq.html", "Dog FAQ: Quick, Sourced Answers to Common Dog Questions | SnoutsWise",
-         "Short, sourced answers to common dog questions: normal temperature, toxic foods, chocolate, vaccine schedules, socialization, alpha training, weight, teeth and heatstroke.",
+         "Short, sourced answers to common dog questions: normal temperature, toxic foods, chocolate, vaccines, socialization, grass eating, color vision, weight and heatstroke.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
-         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
+         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
          related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")])
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-11")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -917,7 +920,7 @@ def blog(page):
 
     # 7 daily fact: grass eating (11 Oct 2026)
     post(page, "why-do-dogs-eat-grass", "Why Do Dogs Eat Grass? What a 1,571 Dog Study Found | SnoutsWise",
-         "Why do dogs eat grass? In the largest owner survey, 68% of plant eating dogs ate plants daily or weekly, only 9% often seemed ill first and 22% often vomited after. What it means and when to call a vet.",
+         "Why do dogs eat grass? A study of 1,571 dogs found 68% ate plants daily or weekly and most were not sick first. What it means and when to call a vet.",
          "Why do dogs eat grass? Usually because it is normal",
          "Most dogs eat grass simply because it is normal dog behavior, not because they are sick. In the largest study so far, a survey of 1,571 owners of plant eating dogs published in <i>Applied Animal Behaviour Science</i> in 2008, 68% of the dogs ate plants daily or weekly, only 9% often seemed unwell beforehand and only 22% often vomited afterwards. Researchers think the habit may be inherited from wild ancestors, since wolves eat grass too. A dog that suddenly eats grass frantically, vomits repeatedly or seems unwell should still see a vet.",
          """
@@ -965,4 +968,4 @@ def blog(page):
          "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth, body condition scoring, how dogs see color and why dogs eat grass.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-11")
