@@ -33,6 +33,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Research behind SnoutsWise](https://snoutswise.com/research/): peer reviewed papers with DOIs and veterinary guidelines used across the site
 
 ## Blog
+- [Why do dogs eat grass? Usually because it is normal](https://snoutswise.com/blog/why-do-dogs-eat-grass.html)
 - [Can dogs see color? Yes, mostly blues and yellows](https://snoutswise.com/blog/can-dogs-see-color.html)
 - [My dog ate chocolate: how much is dangerous?](https://snoutswise.com/blog/dog-ate-chocolate.html)
 - [The puppy socialization window: when it closes and what to do](https://snoutswise.com/blog/puppy-socialization-window.html)

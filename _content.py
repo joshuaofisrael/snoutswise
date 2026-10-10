@@ -28,6 +28,11 @@ S = {
  "kasparson2013": ("Kasparson AA, Badridze J, Maximov VV (2013). Colour cues proved to be more informative for dogs than brightness. Proceedings of the Royal Society B 280:20131356", "PubMed Central (open access)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3730601/"),
  "miller1995": ("Miller PE, Murphy CJ (1995). Vision in dogs. Journal of the American Veterinary Medical Association 207(12):1623 to 1634", "Europe PMC record", "https://europepmc.org/article/MED/7493905"),
  "akc_color": ("Can Dogs See Color?", "American Kennel Club", "https://www.akc.org/expert-advice/health/are-dogs-color-blind/"),
+ "sueda2008": ("Sueda KLC, Hart BL, Cliff KD (2008). Characterisation of plant eating in dogs. Applied Animal Behaviour Science 111(1-2):120 to 132. DOI 10.1016/j.applanim.2007.05.018", "Elsevier", "https://doi.org/10.1016/j.applanim.2007.05.018"),
+ "stahler2006": ("Stahler DR, Smith DW, Guernsey DS (2006). Foraging and feeding ecology of the gray wolf (Canis lupus): lessons from Yellowstone National Park, Wyoming, USA. The Journal of Nutrition 136(7):1923S to 1926S. DOI 10.1093/jn/136.7.1923S", "PubMed record", "https://pubmed.ncbi.nlm.nih.gov/16772460/"),
+ "hart2021": ("Hart BL, Hart LA, Thigpen AP, Willits NH (2021). Characteristics of plant eating in domestic cats. Animals 11(7):1853. DOI 10.3390/ani11071853", "PubMed Central (open access)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC8300339/"),
+ "becuwe2012": ("Bécuwe-Bonnet V, Bélanger MC, Frank D, Parent J, Hélie P (2012). Gastrointestinal disorders in dogs with excessive licking of surfaces. Journal of Veterinary Behavior 7(4):194 to 204. DOI 10.1016/j.jveb.2011.07.003", "Elsevier", "https://doi.org/10.1016/j.jveb.2011.07.003"),
+ "aspca_plants": ("Toxic and Non-Toxic Plants", "ASPCA Animal Poison Control", "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants"),
 }
 import datetime
 def nice(d):
@@ -71,6 +76,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/why-do-dogs-eat-grass.html">Why do dogs eat grass? Usually because it is normal</a></li>
 <li><a href="{R}blog/can-dogs-see-color.html">Can dogs see color? Yes, mostly blues and yellows</a></li>
 <li><a href="{R}blog/dog-ate-chocolate.html">My dog ate chocolate: how much is dangerous?</a></li>
 <li><a href="{R}blog/puppy-socialization-window.html">The puppy socialization window: when it closes and what to do</a></li>
@@ -909,10 +915,54 @@ def blog(page):
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("care.html", "Everyday care"), ("blog/puppy-socialization-window.html", "Puppy socialization window")],
          published="2026-10-08")
 
+    # 7 daily fact: grass eating (11 Oct 2026)
+    post(page, "why-do-dogs-eat-grass", "Why Do Dogs Eat Grass? What a 1,571 Dog Study Found | SnoutsWise",
+         "Why do dogs eat grass? In the largest owner survey, 68% of plant eating dogs ate plants daily or weekly, only 9% often seemed ill first and 22% often vomited after. What it means and when to call a vet.",
+         "Why do dogs eat grass? Usually because it is normal",
+         "Most dogs eat grass simply because it is normal dog behavior, not because they are sick. In the largest study so far, a survey of 1,571 owners of plant eating dogs published in <i>Applied Animal Behaviour Science</i> in 2008, 68% of the dogs ate plants daily or weekly, only 9% often seemed unwell beforehand and only 22% often vomited afterwards. Researchers think the habit may be inherited from wild ancestors, since wolves eat grass too. A dog that suddenly eats grass frantically, vomits repeatedly or seems unwell should still see a vet.",
+         """
+<h2>What the biggest study found</h2>
+<p>Researchers at the University of California, Davis, School of Veterinary Medicine, Karen Sueda, Benjamin Hart and Kelly Cliff, set out to test the common explanations for grass eating. They ran three surveys. In a pilot survey of 25 veterinary students who had dogs, every student said their dog ate grass. In a survey of 47 owners of healthy dogs visiting a teaching hospital whose dogs had daily access to plants, 79% said their dog had eaten grass or other plants. Then an internet survey gathered 3,340 replies, of which 1,571 met the study's criteria.</p>
+<p>In that large group:</p>
+<ul><li><b>68%</b> of dogs ate plants daily or weekly; the rest did so once a month or less.</li>
+<li><b>Grass</b> was the plant most often eaten for 79% of dogs, and 98% of owners said their dog ate grass at least sometimes. Other plants included berries, sticks and leaves.</li>
+<li><b>92%</b> of owners said their dog rarely showed signs of illness before or after eating plants.</li>
+<li><b>78%</b> said their dog rarely vomited afterwards. Only 22% reported frequent vomiting.</li>
+<li><b>Younger dogs</b> ate plants more often than older dogs, and were less likely to look ill before or vomit after.</li>
+<li>Sex, neutering status, breed group and type of diet showed no link with how often dogs ate plants.</li></ul>
+<p>The authors concluded that plant eating, and grass eating in particular, appears to be a normal behavior of domestic dogs across all breed groups.</p>
+<h2>Do dogs eat grass because they feel sick?</h2>
+<p>Sometimes, but not usually. The study found that dogs that did look ill before eating plants were more likely to vomit afterwards than dogs that looked fine. The authors suggest stomach or gut discomfort may sometimes trigger plant eating, and that grass may irritate the stomach enough to cause vomiting. But that was the minority pattern. Most dogs looked normal before and kept the grass down.</p>
+<h2>Is it a sign of a missing nutrient?</h2>
+<p>The evidence so far says probably not. In the large survey, the type of diet (commercial, home cooked or raw) made no difference to how often dogs ate plants. In the clinic survey, none of the dogs that did not eat plants were given extra vegetables or fruit, while 10 of the 37 plant eaters were, which suggests that adding plant food to the diet does not stop the habit. The authors called this a provisional conclusion and said a detailed study of specific nutrients, such as fiber, vitamins or minerals, is still needed.</p>
+<h2>Why would dogs have this habit at all?</h2>
+<p>Dogs share it with their wild relatives. A study of gray wolves in Yellowstone National Park, published in <i>The Journal of Nutrition</i> in 2006 by Daniel Stahler, Douglas Smith and Debra Guernsey, found that summer scat samples showed a more varied diet than winter kills, including vegetation; the Davis team notes that plant matter turned up in roughly 74% of those summer samples. Some grass gets swallowed by accident with prey, but deliberate grass eating by wolves has also been recorded.</p>
+<p>One idea is that grass helps flush out intestinal worms. The naturalist Adolph Murie reported in 1944 that he saw blades of grass wrapped around worms in wolf droppings. Sueda and colleagues point out that young canids tend to carry more intestinal parasites, and young dogs eat grass most often, which fits this idea. It is still a hypothesis: nobody has yet shown in controlled studies that grass eating reduces worms in pet dogs.</p>
+<p>Cats show a similar pattern. A 2021 study in <i>Animals</i> by Benjamin Hart and colleagues, based on two surveys of cat owners, found that very few cats looked ill before eating plants, and concluded that plant eating in cats, as in dogs, mostly reflects normal behavior.</p>
+<h2>When grass eating is a reason to call the vet</h2>
+<p>Occasional grazing in a healthy dog is common. Talk to your vet if you notice any of these:</p>
+<ul><li>A sudden change: your dog starts eating grass much more often, or frantically.</li>
+<li>Repeated vomiting, diarrhea, blood in vomit or stool, a poor appetite, weight loss or tiredness (see our <a href="{R}health.html#emergency">signs that need a vet</a>).</li>
+<li>Grass eating together with constant licking of floors, carpets or walls. In a 2012 study in the <i>Journal of Veterinary Behavior</i>, Bécuwe-Bonnet and colleagues examined 19 dogs that licked surfaces excessively and found gastrointestinal problems in 14 of them, including gut inflammation, delayed stomach emptying, chronic pancreatitis and giardia. After treatment, the licking improved significantly in 10 of 17 dogs followed up. Odd eating and licking habits can be a sign of a hidden stomach problem rather than just a behavior quirk.</li></ul>
+<h2>How to keep grass eating safe</h2>
+<ul><li><b>Know your plants.</b> Grass is not the only thing dogs nibble. Check garden and house plants against the ASPCA's list of toxic and non toxic plants, and see our <a href="{R}care.html#home">common hazards at home</a>.</li>
+<li><b>Avoid treated lawns.</b> Keep your dog off grass that has just been sprayed or fertilized, and follow the product label on when pets can go back on it.</li>
+<li><b>Stay on top of parasite control.</b> Ask your vet what worming and parasite prevention suits your dog's age and lifestyle.</li>
+<li><b>Do not punish it.</b> For a healthy dog, grazing is normal behavior. If you would rather it stopped, redirect with a reward based cue such as "leave it" (see <a href="{R}training.html">reward based training</a>).</li></ul>
+""",
+         faq=[("Is it OK for my dog to eat grass?", "For most healthy dogs, yes. A 2008 study of 1,571 plant eating dogs found grass eating is common and usually not linked to illness. Keep your dog off lawns treated with chemicals and away from toxic plants, and see a vet if the habit suddenly increases or comes with vomiting, diarrhea or lethargy."),
+              ("Do dogs eat grass to make themselves sick?", "Usually not. In the 2008 survey only 22% of owners said their dog frequently vomited after eating plants, and only 9% said their dog often seemed ill beforehand."),
+              ("Does eating grass mean my dog is missing something in its diet?", "There is no good evidence for that. In the 2008 study, diet type made no difference to how often dogs ate plants, although the authors said specific nutrients such as fiber have not yet been studied in detail."),
+              ("Why do puppies eat more grass than older dogs?", "Younger dogs ate plants more often in the 2008 study. One idea is that grass eating evolved to help expel intestinal worms, which are more common in young canids, but this has not been proven in pet dogs."),
+              ("When should I worry about my dog eating grass?", "Call your vet if your dog suddenly eats grass frantically or much more often, vomits repeatedly, has diarrhea, stops eating, loses weight or also licks floors and surfaces excessively, which a 2012 study linked to gastrointestinal disease.")],
+         sources=src("sueda2008", "stahler2006", "hart2021", "becuwe2012", "aspca_plants"),
+         related=[("health.html", "Dog health basics"), ("behavior.html", "Dog behavior"), ("care.html", "Everyday care"), ("can-dogs-eat.html", "Can my dog eat this?"), ("blog/can-dogs-see-color.html", "Can dogs see color?")],
+         published="2026-10-11")
+
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth, body condition scoring and how dogs see color.",
+         "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth, body condition scoring, how dogs see color and why dogs eat grass.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
          crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/")
