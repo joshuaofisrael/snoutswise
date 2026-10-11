@@ -33,6 +33,10 @@ S = {
  "hart2021": ("Hart BL, Hart LA, Thigpen AP, Willits NH (2021). Characteristics of plant eating in domestic cats. Animals 11(7):1853. DOI 10.3390/ani11071853", "PubMed Central (open access)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC8300339/"),
  "becuwe2012": ("Bécuwe-Bonnet V, Bélanger MC, Frank D, Parent J, Hélie P (2012). Gastrointestinal disorders in dogs with excessive licking of surfaces. Journal of Veterinary Behavior 7(4):194 to 204. DOI 10.1016/j.jveb.2011.07.003", "Elsevier", "https://doi.org/10.1016/j.jveb.2011.07.003"),
  "aspca_plants": ("Toxic and Non-Toxic Plants", "ASPCA Animal Poison Control", "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants"),
+ "sommese2022": ("Sommese A, Miklósi Á, Pogány Á, Temesi A, Dror S, Fugazza C (2022; online 2021). An exploratory analysis of head-tilting in dogs. Animal Cognition 25(3):701 to 705. DOI 10.1007/s10071-021-01571-8", "Springer Nature (open access)", "https://doi.org/10.1007/s10071-021-01571-8"),
+ "fugazza2021": ("Fugazza C, Dror S, Sommese A, Temesi A, Miklósi Á (2021). Word learning dogs (Canis familiaris) provide an animal model for studying exceptional performance. Scientific Reports 11:14070. DOI 10.1038/s41598-021-93581-2", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-021-93581-2"),
+ "ratcliffe2014": ("Ratcliffe VF, Reby D (2014). Orienting asymmetries in dogs' responses to different communicatory components of human speech. Current Biology 24(24):2908 to 2912. DOI 10.1016/j.cub.2014.10.030", "PubMed record", "https://pubmed.ncbi.nlm.nih.gov/25454584/"),
+ "mertens2023": ("Mertens A, Schenk H, Volk H (2023). Current definition, diagnosis, and treatment of canine and feline idiopathic vestibular syndrome. Frontiers in Veterinary Science 10:1263976. DOI 10.3389/fvets.2023.1263976", "Frontiers (open access)", "https://doi.org/10.3389/fvets.2023.1263976"),
 }
 import datetime
 def nice(d):
@@ -76,6 +80,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/why-do-dogs-tilt-their-heads.html">Why do dogs tilt their heads? It may mean they are listening hard</a></li>
 <li><a href="{R}blog/why-do-dogs-eat-grass.html">Why do dogs eat grass? Usually because it is normal</a></li>
 <li><a href="{R}blog/can-dogs-see-color.html">Can dogs see color? Yes, mostly blues and yellows</a></li>
 <li><a href="{R}blog/dog-ate-chocolate.html">My dog ate chocolate: how much is dangerous?</a></li>
@@ -88,7 +93,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-11")
+         body, kind="home", updated="2026-10-12")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -300,6 +305,7 @@ def behavior(page):
 <li><b>Teach and reward an alternative.</b> Sit to greet instead of jumping; go to the mat when the doorbell rings; chew a toy instead of the sofa.</li>
 <li><b>Meet the underlying need.</b> More exercise, sniffing, chewing outlets or company, depending on the cause.</li></ol>
 <p>Not every odd habit is a problem. Eating grass, for example, is common and usually normal: in a survey of 1,571 plant eating dogs, most did not seem ill beforehand or vomit afterwards (<a href="{R}blog/why-do-dogs-eat-grass.html">why dogs eat grass and when to call a vet</a>).</p>
+<p>Head tilting is another everyday habit. In a 2021 study of 40 dogs, dogs that knew the names of their toys tilted their heads on 43% of requests, against 2% for typical dogs, which suggests the tilt goes with listening closely to meaningful words. A tilt that stays, or comes with stumbling or circling, is a reason to see a vet (<a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</p>
 <p>AVSAB also recommends teaching puppies to enjoy short periods alone with a stuffed food toy, and offering a wide variety of experiences in the first year, which it links to a lower risk of separation related behavior.</p></section>
 <section id="help"><h2>When to get professional help</h2>
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
@@ -308,9 +314,9 @@ def behavior(page):
          "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
-         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008"),
-         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-11")
+         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022"),
+         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-12")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
 FOODS = [
@@ -685,7 +691,7 @@ o.innerHTML='Estimated dose: <b>'+Math.round(d)+' mg of methylxanthines per kg</
 def blog(page):
     # 1 chocolate
     post(page, "dog-ate-chocolate", "My Dog Ate Chocolate: How Much Is Dangerous? (Dose Estimator) | SnoutsWise",
-         "Dog ate chocolate? Estimate the theobromine dose by chocolate type and your dog's weight using Merck Veterinary Manual figures, learn the warning signs and what to do now.",
+         "Dog ate chocolate? Estimate the theobromine dose from chocolate type and your dog's weight with Merck Veterinary Manual figures, plus warning signs.",
          "My dog ate chocolate: how much is dangerous?",
          "Chocolate is dangerous because it contains theobromine and caffeine, and the risk depends on the type of chocolate and your dog's weight. The Merck Veterinary Manual says mild signs can appear at about 20 mg of these compounds per kg of body weight, heart problems at 40 to 50 mg/kg and seizures at 60 mg/kg or more; cocoa powder and baking chocolate are by far the most concentrated. If your dog has eaten chocolate, call your vet now and use the estimator below to give them the numbers.",
          """
@@ -734,7 +740,7 @@ def blog(page):
 
     # 2 socialization
     post(page, "puppy-socialization-window", "Puppy Socialization Window: When It Closes & What to Do | SnoutsWise",
-         "Why the first three months matter most for puppy socialization, when puppy classes can start before vaccinations finish, and a safe week by week socialization checklist.",
+         "The puppy socialization window is the first three months. When classes can start before vaccines finish, plus a safe week by week checklist.",
          "The puppy socialization window: when it closes and what to do",
          "The American Veterinary Society of Animal Behavior (AVSAB) says the first three months of a puppy's life are the primary and most important window for socialization, because sociability outweighs fear during this period. It recommends starting puppy classes as early as 7 to 8 weeks, as long as the puppy has had at least one set of vaccines at least 7 days before the first class and a first deworming, rather than waiting until vaccinations are complete.",
          """
@@ -777,7 +783,7 @@ def blog(page):
 
     # 3 vaccines
     post(page, "dog-vaccine-schedule", "How Often Do Dogs Need Vaccines? Core vs Non Core Explained | SnoutsWise",
-         "Do dogs need yearly vaccines? What the AAHA guidelines say about core vaccines (distemper, parvo, adenovirus, leptospirosis, rabies), puppy series timing and booster intervals.",
+         "Do dogs need yearly vaccines? What AAHA guidelines say about core vaccines (distemper, parvo, adenovirus, lepto, rabies), puppy shots and boosters.",
          "How often do dogs need vaccines? Core and non core vaccines explained",
          "Not every vaccine is yearly. Under the American Animal Hospital Association (AAHA) guidelines, after the puppy series and one booster within a year, the distemper, adenovirus and parvovirus combination vaccine is boosted every 3 years, the leptospirosis vaccine every year, and rabies as local law requires. Non core vaccines such as kennel cough, Lyme disease and canine influenza are given, usually yearly, only to dogs whose lifestyle or location puts them at risk.",
          """
@@ -812,7 +818,7 @@ def blog(page):
 
     # 4 alpha
     post(page, "alpha-dog-myth", "Is the Alpha Dog Idea True? What Research Says About Dominance | SnoutsWise",
-         "Do you need to be the alpha or pack leader? Where the dominance idea came from, what wolf research by L. David Mech found, and why veterinary behaviorists reject alpha training.",
+         "Do you need to be the alpha? Where the dominance idea came from, what L. David Mech's wolf research found and why vet behaviorists reject it.",
          "Is the \"alpha dog\" idea true? What the research says about dominance",
          "No. The popular idea that your dog is trying to dominate you, and that you must act as the \"alpha\", is not supported by modern research. Wolf biologist L. David Mech found that wild wolf packs are families led by the parents rather than groups fighting for rank, and the American Veterinary Society of Animal Behavior advises against trainers who rely on dominance, pack leader or alpha theories and against forceful techniques such as alpha rolls.",
          """
@@ -849,7 +855,7 @@ def blog(page):
 
     # 5 weight
     post(page, "is-my-dog-overweight", "Is My Dog Overweight? How to Use the 9 Point Body Condition Score | SnoutsWise",
-         "Check your dog's weight at home with the 9 point body condition score used on the WSAVA chart: ribs, waist and belly tuck explained, plus what a lifetime study found about lean dogs.",
+         "Is your dog overweight? Use the WSAVA 9 point body condition score at home: ribs, waist and tuck explained, plus why lean dogs lived longer.",
          "Is my dog overweight? How to use the 9 point body condition score",
          "Your dog is probably at a healthy weight if you can easily feel its ribs under a thin layer of fat, see a waist behind the ribs when you look down from above, and see the belly tuck up when you look from the side. That is a score of 4 to 5 on the 9 point body condition score used on the World Small Animal Veterinary Association (WSAVA) chart; 6 and above is over ideal. It matters: in a 14 year study, Labradors kept lean lived a median 1.8 years longer than their heavier littermates.",
          """
@@ -894,7 +900,7 @@ def blog(page):
 
     # 6 daily fact: color vision (8 Oct 2026)
     post(page, "can-dogs-see-color", "Can Dogs See Color? Yes, Mostly Blues and Yellows | SnoutsWise",
-         "Dogs are not color blind in the black and white sense. They have two types of cone and see mainly blues and yellows, like a person with red green color blindness. What the research shows and what it means for toys.",
+         "Can dogs see color? Yes. Dogs have two cone types and see mainly blues and yellows, like red green color blind people. What it means for toys.",
          "Can dogs see color? Yes, mostly blues and yellows",
          "Yes. Dogs do not see the world in black and white. Their eyes have two types of color sensing cone cells instead of the three most people have, so they see mainly blues and yellows, much like a person with red green color blindness. Reds, oranges and greens are hard for them to tell apart, which is why a yellow or blue ball is easier for a dog to spot on grass than a red one.",
          """
@@ -962,10 +968,53 @@ def blog(page):
          related=[("health.html", "Dog health basics"), ("behavior.html", "Dog behavior"), ("care.html", "Everyday care"), ("can-dogs-eat.html", "Can my dog eat this?"), ("blog/can-dogs-see-color.html", "Can dogs see color?")],
          published="2026-10-11")
 
+    # 8 daily fact: head tilting (12 Oct 2026)
+    post(page, "why-do-dogs-tilt-their-heads", "Why Do Dogs Tilt Their Heads? What the Research Found | SnoutsWise",
+         "Why do dogs tilt their heads? In a 2021 study, dogs that knew toy names tilted on 43% of requests vs 2% for other dogs. Plus when a tilt needs a vet.",
+         "Why do dogs tilt their heads? It may mean they are listening hard",
+         "Dogs often tilt their heads when they hear a word that means something to them. In a 2021 study of 40 dogs in <i>Animal Cognition</i>, dogs that had learned the names of their toys tilted their heads on 43% of requests to fetch a toy, compared with just 2% for typical dogs given the same training. The researchers think the tilt may be linked to paying close attention to meaningful speech, and each dog tended to tilt to the same side every time. A tilt that does not go away, or comes with stumbling, circling or flicking eyes, is different: that can be a balance (vestibular) problem and needs a vet.",
+         """
+<h2>The first study of head tilting in dogs</h2>
+<p>Head tilting is one of the most familiar dog behaviors, yet until recently no study had described it. A team at the Department of Ethology at Eötvös Loránd University in Budapest, led by Andrea Sommese and Claudia Fugazza, filmed 40 dogs during tests in which owners asked their dog to fetch a particular toy by name, for example "bring rope!". The toys were in another room, so the dog had to rely on the word alone.</p>
+<p>The dogs fell into two groups. Seven were "gifted word learners", rare dogs that pick up the names of toys quickly. The other 33 were typical family dogs that loved toys. All of them went through the same three month training program to learn the names of two new toys, with the same weekly coaching for their owners.</p>
+<p>What the researchers found:</p>
+<ul><li><b>43% vs 2%.</b> Across the monthly tests, the gifted word learners tilted their heads on 43% of trials. The typical dogs tilted on only 2%.</li>
+<li><b>Familiar is not enough.</b> The typical dogs had heard the toy names just as often over three months, so simply knowing the sound of a word did not trigger tilting. The authors suggest the tilt is linked to hearing a word that is meaningful to the dog, and may be a sign of increased attention.</li>
+<li><b>Each dog has a side.</b> A dog's tilt direction stayed consistent across tests months apart, so the authors treat it as a stable individual trait, a bit like paw preference.</li>
+<li><b>It is not about where the sound comes from.</b> Whether the owner stood to the left, right or in front made no difference to the direction of the tilt.</li></ul>
+<p>The study was small and exploratory. All six gifted dogs that took part in the later tests were Border collies, but so were 18 of the typical dogs that rarely tilted, so the authors warn against linking frequent tilting to that breed.</p>
+<h2>How rare are dogs that learn words?</h2>
+<p>Very rare. In a companion study in <i>Scientific Reports</i>, the same team gave 34 ordinary family dogs (puppies and adults, all keen on toys) three months of intensive play based training to learn two toy names. Only one of them passed the tests. The six already "word knowledgeable" dogs, found after a two year search around the world, all passed and went on to learn between 2 and 13 new toy names a month. Most dogs respond to tone of voice, routines and gestures rather than to the names of objects, and that is completely normal (see our guide to <a href="{R}behavior.html">dog behavior</a>).</p>
+<h2>Do dogs process speech on one side of the brain?</h2>
+<p>There are clues that they might. In a 2014 study in <i>Current Biology</i>, Victoria Ratcliffe and David Reby at the University of Sussex played dogs recordings of a familiar command from speakers on both sides and noted which way each dog turned its head. Dogs turned one way when the meaningful sounds of the words were made more noticeable, and the other way when the tone of voice and speaker cues were boosted. Because each side of the head is wired mainly to the opposite side of the brain, the authors concluded that dogs may, like people, handle the words and the emotional tone of speech in different brain hemispheres. Head turning is not the same movement as head tilting, but the Budapest team cites this work as one reason to think the side a dog tilts to could reflect how its brain processes speech. That link has not been proven yet.</p>
+<h2>Other ideas you may have heard</h2>
+<p>You will often read that dogs tilt their heads to see past their muzzle or to work out where a sound is coming from. These are reasonable guesses, but we have not found published studies that test them, so treat them as unproven. The one thing the 2021 study did check, the owner's position, made no difference to the direction of the tilt.</p>
+<h2>When a head tilt is a reason to call the vet</h2>
+<p>A quick, curious tilt when you talk to your dog is normal. A tilt that stays there is not. A constant head tilt is a classic sign of a problem with the vestibular system, the inner ear and brain parts that control balance. A 2023 review in <i>Frontiers in Veterinary Science</i> describes idiopathic vestibular syndrome, a common cause in dogs over nine, as usually starting suddenly with a head tilt toward the affected side, abnormal eye movements, a wobbly, unbalanced walk and sometimes nausea or vomiting. Many dogs improve within days and recover within two to four weeks, but a slight tilt can remain. Vets only diagnose it after ruling out other causes such as middle or inner ear infection, stroke, inflammation of the brain, injury and tumors.</p>
+<p>Contact your vet promptly if your dog has any of these:</p>
+<ul><li>A head tilt that does not go away when you stop talking.</li>
+<li>Stumbling, leaning, falling or circling to one side.</li>
+<li>Eyes flicking side to side or up and down on their own.</li>
+<li>Head shaking, scratching at an ear, ear odor or discharge.</li>
+<li>Vomiting, drooling, a drooping face or seeming dull or confused (see our <a href="{R}health.html#emergency">signs that need a vet</a>).</li></ul>
+<h2>Fun ways to use your dog's head tilt</h2>
+<ul><li><b>Notice what triggers it.</b> If your dog tilts for "walk", "ball" or a favorite toy's name, it may be telling you which words matter to it most.</li>
+<li><b>Teach a toy name the kind way.</b> Short, playful sessions where you name a toy while you play with it are how word learning dogs picked up names. Do not worry if your dog never learns any; most do not (see <a href="{R}training.html">reward based training</a>).</li>
+<li><b>Reward calm attention.</b> A tilt means your dog is focused on you, which is a great moment for a treat and praise.</li></ul>
+""",
+         faq=[("Why do dogs tilt their heads when you talk to them?", "Probably because they are paying close attention to words that mean something to them. In a 2021 study of 40 dogs, dogs that knew the names of their toys tilted their heads on 43% of requests to fetch a toy, compared with 2% for typical dogs."),
+              ("Do smarter dogs tilt their heads more?", "In the one study so far, dogs that were unusually good at learning toy names tilted much more often. That suggests a link with processing meaningful words, but it does not mean a dog that never tilts is less intelligent."),
+              ("Why does my dog always tilt its head to the same side?", "That is normal. The 2021 study found each dog's tilt direction stayed the same across tests months apart, so researchers treat it as a stable individual trait, like paw preference."),
+              ("Can all dogs learn the names of toys?", "Very few can. In a 2021 study, only 1 of 34 typical family dogs learned two toy names after three months of training, while a handful of rare gifted dogs learned many."),
+              ("When is a head tilt a sign of a health problem?", "When it stays even when nothing is going on, or comes with stumbling, circling, falling, flicking eyes, head shaking or vomiting. These can be signs of vestibular (balance) disease or an inner ear problem, so contact your vet.")],
+         sources=src("sommese2022", "fugazza2021", "ratcliffe2014", "mertens2023"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
+         published="2026-10-12")
+
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first articles on single dog questions: chocolate poisoning doses, the puppy socialization window, vaccine schedules, the alpha dog myth, body condition scoring, how dogs see color and why dogs eat grass.",
+         "Answer first dog articles: why dogs tilt their heads, eat grass and see color, chocolate poisoning, puppy socialization, vaccines and body condition.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-11")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-12")

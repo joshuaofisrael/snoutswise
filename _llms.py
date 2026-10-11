@@ -43,6 +43,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [Why do dogs tilt their heads? It may mean they are listening hard]({u}blog/why-do-dogs-tilt-their-heads.html)
 - [Why do dogs eat grass? Usually because it is normal]({u}blog/why-do-dogs-eat-grass.html)
 - [Can dogs see color? Yes, mostly blues and yellows]({u}blog/can-dogs-see-color.html)
 - [My dog ate chocolate: how much is dangerous?]({u}blog/dog-ate-chocolate.html)
