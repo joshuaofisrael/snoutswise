@@ -81,3 +81,11 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Rationale: a new page answering a high-volume question ("why do dogs eat grass") gets discovered and weighted faster with links from pillar/FAQ pages and accurate lastmod; FAQ Q&A gives AI search engines a short citable answer.
 - IndexNow: 8 changed URLs, HTTP 200 (00:16 London).
 - Next: other posts' meta descriptions are 169 to 214 chars (can-dogs-see-color 214, blog index 211); trim in a later session. Consider replacing hard-coded TODAY with per-page dates everywhere.
+
+## 2026-10-12 00:13 London: daily SEO action (meta descriptions for all blog posts)
+- Data: still no Search Console/Bing data (GSC tag pending), so ranked by operator priority list. Technical check first: live robots.txt Allow all, sitemap and llms.txt include the new post, new post 200, no noindex. No serious indexing problem found, so took the item flagged "Next" on 11 Oct.
+- Action: rewrote 6 overlong blog meta descriptions (169 to 214 chars) to 140 to 148 chars, each leading with the question/answer: can-dogs-see-color (214 -> 142), is-my-dog-overweight (182 -> 140), alpha-dog-myth (177 -> 141), dog-vaccine-schedule (176 -> 147), dog-ate-chocolate (171 -> 148), puppy-socialization-window (169 -> 140). Blog index description cut from 211 to about 140 and now names the new head-tilt post. New post (why-do-dogs-tilt-their-heads) written at 149.
+- No dateModified/lastmod bump for the 6 posts (meta only, not content; no manufactured freshness). Changed-content pages today: home, blog index, behavior (new contextual head-tilt paragraph + related link + Sommese source), new post.
+- Rationale: descriptions over ~155 chars get truncated in Google/Bing snippets, cutting off the answer; an answer-first snippet should raise CTR once impressions arrive and gives AI engines a clean summary.
+- Commits: 2d82024 (article + behavior link + blog index meta), a1361ec (6 post metas). IndexNow: 6 URLs HTTP 200 + 6 URLs HTTP 200 (00:13 London).
+- Next: page title lengths audit (several over 60 chars); add a head-tilt Q&A to faq.html; replace hard-coded TODAY default in _build.py with per-page dates.
