@@ -200,7 +200,7 @@ def write(name, text):
 def extras():
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (u, d) for u, d in SITEMAP + [(SITE_URL + "llms.txt", TODAY)]) + "</urlset>\n")
-    bots = ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User", "ClaudeBot",
+    bots = ["CCBot", "anthropic-ai", "Bytespider", "Meta-ExternalAgent", "cohere-ai", "Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User", "ClaudeBot",
             "Claude-SearchBot", "Claude-User", "Google-Extended", "Applebot", "Applebot-Extended", "DuckAssistBot", "Amazonbot"]
     # robots.txt is served at the custom domain root (https://snoutswise.com/robots.txt).
     write("robots.txt", "User-agent: *\nAllow: /\n\n" + "".join("User-agent: %s\nAllow: /\n\n" % b for b in bots) + "Sitemap: %ssitemap.xml\n" % SITE_URL)
