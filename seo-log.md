@@ -89,3 +89,10 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Rationale: descriptions over ~155 chars get truncated in Google/Bing snippets, cutting off the answer; an answer-first snippet should raise CTR once impressions arrive and gives AI engines a clean summary.
 - Commits: 2d82024 (article + behavior link + blog index meta), a1361ec (6 post metas). IndexNow: 6 URLs HTTP 200 + 6 URLs HTTP 200 (00:13 London).
 - Next: page title lengths audit (several over 60 chars); add a head-tilt Q&A to faq.html; replace hard-coded TODAY default in _build.py with per-page dates.
+
+## 2026-10-13 00:15 London: daily SEO action (FAQ + internal links for dream / head-tilt cluster)
+- Data: still no Search Console/Bing data (GSC tag pending), so ranked by operator priority. Technical check: new post built with FAQPage JSON-LD, sitemap and llms.txt include it. Highest EV after a new article is inbound links from pillars/FAQ plus accurate lastmod (same pattern as 11 Oct grass cluster), and the prior "Next" note to add a head-tilt FAQ Q&A.
+- Action (single cluster): (1) faq.html gains two sourced Q&As (Why do dogs tilt their heads? / Do dogs dream?) in visible FAQ + FAQPage JSON-LD (now 16 Qs), linking to both posts; (2) behavior.html #problems gains a REM/twitch contextual paragraph linking the dream article, related links add dream post, sources add Kis 2014/2017; (3) training.html gains a quiet-rest-after-learning sentence linking the dream article, related + kis2017 source; (4) health.html related adds dream post; (5) per-page updated="2026-10-13" only on pages genuinely changed (faq, behavior, training, health, plus article commit's home/blog index).
+- Rationale: new high-interest query page ("do dogs dream") gets discovered faster with pillar/FAQ inbound links and accurate lastmod; FAQ Q&As give AI/search engines short citable answers for both today's and yesterday's topics.
+- IndexNow: pending push.
+- Next: page title lengths audit (several over 60 chars); replace hard-coded TODAY default in _build.py with per-page dates everywhere.
