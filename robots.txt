@@ -1,6 +1,21 @@
 User-agent: *
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
@@ -44,21 +59,6 @@ User-agent: DuckAssistBot
 Allow: /
 
 User-agent: Amazonbot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://snoutswise.com/sitemap.xml

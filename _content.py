@@ -37,6 +37,9 @@ S = {
  "fugazza2021": ("Fugazza C, Dror S, Sommese A, Temesi A, Miklósi Á (2021). Word learning dogs (Canis familiaris) provide an animal model for studying exceptional performance. Scientific Reports 11:14070. DOI 10.1038/s41598-021-93581-2", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-021-93581-2"),
  "ratcliffe2014": ("Ratcliffe VF, Reby D (2014). Orienting asymmetries in dogs' responses to different communicatory components of human speech. Current Biology 24(24):2908 to 2912. DOI 10.1016/j.cub.2014.10.030", "PubMed record", "https://pubmed.ncbi.nlm.nih.gov/25454584/"),
  "mertens2023": ("Mertens A, Schenk H, Volk H (2023). Current definition, diagnosis, and treatment of canine and feline idiopathic vestibular syndrome. Frontiers in Veterinary Science 10:1263976. DOI 10.3389/fvets.2023.1263976", "Frontiers (open access)", "https://doi.org/10.3389/fvets.2023.1263976"),
+ "kis2014": ("Kis A, Szakadát S, Kovács E, Gácsi M, Simor P, Gombos F, Topál J, Miklósi Á, Bódizs R (2014). Development of a non-invasive polysomnography technique for dogs (Canis familiaris). Physiology & Behavior 130:149 to 156. DOI 10.1016/j.physbeh.2014.04.004", "Elsevier / author manuscript (real.mtak.hu)", "https://doi.org/10.1016/j.physbeh.2014.04.004"),
+ "kis2017": ("Kis A, Szakadát S, Gácsi M, Kovács E, Simor P, Török C, Gombos F, Bódizs R, Topál J (2017). The interrelated effect of sleep and learning in dogs (Canis familiaris); an EEG and behavioural study. Scientific Reports 7:41873. DOI 10.1038/srep41873", "Scientific Reports (open access)", "https://doi.org/10.1038/srep41873"),
+ "bodizs2020": ("Bódizs R, Kis A, Gácsi M, Topál J (2020). Sleep in the dog: comparative, behavioral and translational relevance. Current Opinion in Behavioral Sciences 33:25 to 33. DOI 10.1016/j.cobeha.2019.12.006", "Elsevier (open access CC BY-NC-ND)", "https://doi.org/10.1016/j.cobeha.2019.12.006"),
 }
 import datetime
 def nice(d):
@@ -80,6 +83,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-dream.html">Do dogs dream? They have REM sleep, but dreams are still unproven</a></li>
 <li><a href="{R}blog/why-do-dogs-tilt-their-heads.html">Why do dogs tilt their heads? It may mean they are listening hard</a></li>
 <li><a href="{R}blog/why-do-dogs-eat-grass.html">Why do dogs eat grass? Usually because it is normal</a></li>
 <li><a href="{R}blog/can-dogs-see-color.html">Can dogs see color? Yes, mostly blues and yellows</a></li>
@@ -93,7 +97,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-12")
+         body, kind="home", updated="2026-10-13")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -1011,10 +1015,52 @@ def blog(page):
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
          published="2026-10-12")
 
+
+    # 9 daily fact: do dogs dream / REM sleep (13 Oct 2026)
+    post(page, "do-dogs-dream", "Do Dogs Dream? What REM Sleep Research Shows | SnoutsWise",
+         "Do dogs dream? They have clear REM sleep with rapid eye movements. Sleep also helps them remember new commands. What science can and cannot say.",
+         "Do dogs dream? They have REM sleep, but dreams are still unproven",
+         "Dogs have the same basic sleep stages people do, including REM sleep with rapid eye movements and relaxed muscles. That is why paws, whiskers and soft barks during a nap look so much like dreaming. Scientists can measure that REM state with brain and muscle sensors, but they cannot ask a dog what it experiences, so human-style dreaming is still an open question. What is solid: after dogs learn new commands, their sleep brain waves change, and their performance often improves after a nap or a night's sleep.",
+         """
+<h2>What scientists can measure in a sleeping dog</h2>
+<p>In 2014, a Budapest team led by Anna Kis published a fully non-invasive way to record sleep in family dogs while their owners sat nearby. They used soft scalp electrodes (EEG), eye movement sensors (EOG), muscle tone (EMG), breathing and heart rate, the same kind of polysomnography used in people. Twenty-two adult pet dogs and twelve adult humans each took a three hour afternoon nap.</p>
+<p>The dog recordings showed the same main stages people have:</p>
+<ul><li><b>Drowsiness</b>: lighter sleep with faster brain waves and some muscle tone.</li>
+<li><b>Slow wave sleep (SWS / Non-REM)</b>: deeper sleep with large, slow delta waves and lower muscle tone.</li>
+<li><b>REM sleep</b>: rapid eye movements, fast brain activity, muscular atonia (very low muscle tone), and irregular breathing and heartbeat.</li></ul>
+<p>Sleep was polyphasic: dogs switched between stages often. In that three hour session, average sleep efficiency was about 43% (time asleep out of the recording), with wide individual differences. Mean REM time was about 16.5 minutes and mean SWS about 21.6 minutes, though some dogs had little or no REM or SWS in that afternoon nap. Dogs' age also showed up in the EEG: older dogs had less relative delta power and more alpha and beta power in SWS and REM, a pattern familiar from human aging research.</p>
+<h2>So are those twitches dreams?</h2>
+<p>During REM, many dogs twitch their legs, whiskers or ears, or make quiet sounds. That fits what the sensors show: the body is mostly paralyzed (atonia) while the brain and eyes are active, so small movements can break through. A 2020 review by Robert Bodizs and colleagues notes that dogs meet the behavioral and polygraphic criteria for both Non-REM and REM sleep, including facial or leg twitches in REM.</p>
+<p>None of that proves a dog is "seeing" a dream story the way people report dreams. Proving that would need a way to link brain patterns to an experience the animal can report. Reviews of mammal dreaming make the same point: REM is necessary for the kind of vivid dreaming people describe, but it is not the same as proof that a dog has one. The honest answer today is that dogs have REM sleep that looks a lot like ours, and the twitching is consistent with an active brain during that stage, while the content of any dog dream remains unknown.</p>
+<h2>How much do dogs sleep, and in what pattern?</h2>
+<p>Comparative sleep databases often list about 10.1 hours of average daily sleep for domestic dogs, with published estimates ranging from roughly 7.7 to 16 hours. Dogs are mainly diurnal: most inactivity falls between about 21:00 and 06:00, with a rest period in the afternoon. Their sleep cycles are short. Reviews describe ultradian cycles of about 20 minutes (roughly 12 minutes of drowsiness or Non-REM plus about 6 minutes of REM), compared with about 90 minutes in adult humans. Sleep is also polyphasic, with brief wake-sleep cycles through the day and night.</p>
+<p>That short cycle pattern may help dogs adapt to changing human schedules. Bodizs and colleagues note that dogs can cope with shift work better than people often do, partly because their natural brief cycles let them catch rest in pieces.</p>
+<h2>Sleep helps dogs remember new commands</h2>
+<p>In 2017, Kis and colleagues taught 15 dogs to link unfamiliar spoken words to the already known actions "sit" and "lie down", then recorded three hours of sleep. Compared with a matched non-learning session, post-learning Non-REM sleep showed more delta power and less alpha power, and REM sleep showed more delta power. After the nap, performance on the new commands rose compared with the pre-sleep baseline. Dogs whose REM sleep had less delta and more beta power improved more.</p>
+<p>A second experiment with 53 dogs looked at what happened in the hour after learning. Dogs that slept, walked on leash, or played all showed better long-term performance a week later. Dogs that learned an unrelated new task in that hour did not improve a week later, which suggests interfering learning can block consolidation. Play briefly hurt immediate retest scores (likely attention or arousal), but those dogs still improved after a night at home. A one hour sleep bout alone was not enough to raise immediate scores the way the three hour nap had, which matches human work showing longer sleep often helps more.</p>
+<p>So when you teach a new cue, give your dog a quiet rest afterward and avoid piling on a second hard lesson in the same hour (see <a href="{R}training.html">reward based training</a>).</p>
+<h2>When sleep problems need a vet</h2>
+<p>Ordinary twitching in REM is normal. Violent thrashing, howling, growling or biting during sleep can be REM sleep behavior disorder, in which the usual muscle paralysis fails. Brachycephalic breeds (such as English bulldogs) are prone to sleep disordered breathing with snoring and daytime sleepiness. Narcolepsy, often linked to orexin pathway problems, causes sudden sleep attacks and emotion triggered loss of muscle tone. Contact your vet if sleep looks unsafe or daytime alertness collapses (see <a href="{R}health.html#emergency">signs that need a vet</a>).</p>
+<h2>Practical takeaways for owners</h2>
+<ul><li><b>Let sleeping dogs lie.</b> Soft twitches and quiet sounds in a nap are usually REM, not a reason to wake them.</li>
+<li><b>Protect rest after training.</b> A nap or quiet evening helps new cues stick; stacking unrelated lessons right after can interfere.</li>
+<li><b>Match the schedule.</b> Dogs already prefer night sleep and an afternoon rest. Sudden all night disturbance is harder on them than short daytime interruptions.</li>
+<li><b>Watch for red flags.</b> Violent dream-like acting out, loud breathing pauses, or sudden collapses during play need veterinary advice.</li></ul>
+""",
+         faq=[("Do dogs dream when they twitch in their sleep?", "Twitching during REM sleep is common and fits an active brain with mostly paralyzed muscles. That looks like dreaming from the outside, but scientists cannot confirm what a dog experiences. What is measured is REM sleep, not dream content."),
+              ("Do dogs have the same sleep stages as people?", "Yes in outline. Non-invasive recordings show drowsiness, slow wave (Non-REM) sleep and REM sleep with rapid eye movements and low muscle tone, similar to human polysomnography."),
+              ("How much sleep does a dog need?", "Comparative databases often cite about 10 hours a day on average, with published estimates from about 8 to 16 hours. Dogs sleep in short cycles and often nap by day as well as at night."),
+              ("Does sleep help dogs learn?", "Yes. After dogs learned new command words, their sleep EEG changed and performance improved after a three hour nap. A second study found that sleep, a quiet walk or play all allowed long-term gains a week later, while learning an unrelated task in the same hour blocked that improvement."),
+              ("When should I worry about my dog's sleep?", "If your dog violently acts out dreams, snores with pauses and is exhausted by day, or collapses into sleep during excitement, contact your vet. Soft REM twitches alone are usually normal.")],
+         sources=src("kis2014", "kis2017", "bodizs2020"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
+         published="2026-10-13")
+
+
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: why dogs tilt their heads, eat grass and see color, chocolate poisoning, puppy socialization, vaccines and body condition.",
+         "Answer first dog articles: do dogs dream, why dogs tilt their heads, eat grass and see color, chocolate, puppy socialization, vaccines and body condition.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-12")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-13")
