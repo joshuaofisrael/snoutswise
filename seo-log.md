@@ -103,5 +103,5 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Rationale: new high-interest query page ("do dogs feel jealousy") gets discovered faster with pillar/FAQ inbound links and accurate lastmod; FAQ Q&A gives AI/search engines a short citable answer.
 - News: no relevant dog news today (no solid two-source story found in slot).
 - Outreach emails: skipped (no Joshua yes this run).
-- IndexNow: pending after push.
+- IndexNow: 7 URLs (jealousy post, blog index, home, faq, behavior, llms.txt, sitemap.xml), HTTP 200 (00:16 London).
 - Next: page title lengths audit; replace hard-coded TODAY default in _build.py with per-page dates everywhere.
