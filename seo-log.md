@@ -96,3 +96,12 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Rationale: new high-interest query page ("do dogs dream") gets discovered faster with pillar/FAQ inbound links and accurate lastmod; FAQ Q&As give AI/search engines short citable answers for both today's and yesterday's topics.
 - IndexNow: 9 URLs (dream post, blog index, home, faq, behavior, training, health, llms.txt, sitemap.xml), HTTP 200 (00:16 London).
 - Next: page title lengths audit (several over 60 chars); replace hard-coded TODAY default in _build.py with per-page dates everywhere.
+
+## 2026-10-14 00:15 London: daily SEO action (FAQ + internal links for jealousy cluster)
+- Data: still no Search Console/Bing data (GSC tag pending). Highest EV after today's new post is inbound links from pillar/FAQ plus accurate lastmod (same pattern as dream/grass clusters).
+- Action (single cluster): (1) faq.html gains one sourced Q&A (Do dogs feel jealousy?) in visible FAQ + FAQPage JSON-LD (now 17 Qs), linking the post; (2) behavior.html #problems gains a jealousy-like contextual paragraph linking the post, related links add the post, sources add Harris 2014 and Abdai 2018; (3) per-page updated="2026-10-14" only on pages genuinely changed (home, faq, behavior, blog index, new post).
+- Rationale: new high-interest query page ("do dogs feel jealousy") gets discovered faster with pillar/FAQ inbound links and accurate lastmod; FAQ Q&A gives AI/search engines a short citable answer.
+- News: no relevant dog news today (no solid two-source story found in slot).
+- Outreach emails: skipped (no Joshua yes this run).
+- IndexNow: pending after push.
+- Next: page title lengths audit; replace hard-coded TODAY default in _build.py with per-page dates everywhere.

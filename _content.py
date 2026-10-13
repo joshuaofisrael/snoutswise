@@ -40,6 +40,9 @@ S = {
  "kis2014": ("Kis A, Szakadát S, Kovács E, Gácsi M, Simor P, Gombos F, Topál J, Miklósi Á, Bódizs R (2014). Development of a non-invasive polysomnography technique for dogs (Canis familiaris). Physiology & Behavior 130:149 to 156. DOI 10.1016/j.physbeh.2014.04.004", "Elsevier / author manuscript (real.mtak.hu)", "https://doi.org/10.1016/j.physbeh.2014.04.004"),
  "kis2017": ("Kis A, Szakadát S, Gácsi M, Kovács E, Simor P, Török C, Gombos F, Bódizs R, Topál J (2017). The interrelated effect of sleep and learning in dogs (Canis familiaris); an EEG and behavioural study. Scientific Reports 7:41873. DOI 10.1038/srep41873", "Scientific Reports (open access)", "https://doi.org/10.1038/srep41873"),
  "bodizs2020": ("Bódizs R, Kis A, Gácsi M, Topál J (2020). Sleep in the dog: comparative, behavioral and translational relevance. Current Opinion in Behavioral Sciences 33:25 to 33. DOI 10.1016/j.cobeha.2019.12.006", "Elsevier (open access CC BY-NC-ND)", "https://doi.org/10.1016/j.cobeha.2019.12.006"),
+ "harris2014": ("Harris CR, Prouvost C (2014). Jealousy in Dogs. PLoS ONE 9(7): e94597. DOI 10.1371/journal.pone.0094597", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0094597"),
+ "abdai2018": ("Abdai J, Baño Terencio C, Pérez Fraga P, Miklósi Á (2018). Investigating jealous behaviour in dogs. Scientific Reports 8:8911. DOI 10.1038/s41598-018-27251-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-018-27251-1"),
+ "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
 }
 import datetime
 def nice(d):
@@ -83,6 +86,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-feel-jealousy.html">Do dogs feel jealousy? They show jealousy-like behaviour in experiments</a></li>
 <li><a href="{R}blog/do-dogs-dream.html">Do dogs dream? They have REM sleep, but dreams are still unproven</a></li>
 <li><a href="{R}blog/why-do-dogs-tilt-their-heads.html">Why do dogs tilt their heads? It may mean they are listening hard</a></li>
 <li><a href="{R}blog/why-do-dogs-eat-grass.html">Why do dogs eat grass? Usually because it is normal</a></li>
@@ -97,7 +101,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-13")
+         body, kind="home", updated="2026-10-14")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -311,6 +315,7 @@ def behavior(page):
 <p>Not every odd habit is a problem. Eating grass, for example, is common and usually normal: in a survey of 1,571 plant eating dogs, most did not seem ill beforehand or vomit afterwards (<a href="{R}blog/why-do-dogs-eat-grass.html">why dogs eat grass and when to call a vet</a>).</p>
 <p>Head tilting is another everyday habit. In a 2021 study of 40 dogs, dogs that knew the names of their toys tilted their heads on 43% of requests, against 2% for typical dogs, which suggests the tilt goes with listening closely to meaningful words. A tilt that stays, or comes with stumbling or circling, is a reason to see a vet (<a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</p>
 <p>Twitching, soft barks or paddling paws during a nap are usually REM sleep, not a behavior problem. Dogs have measurable REM with rapid eye movements and low muscle tone; whether that equals human-style dreaming is still unproven. After learning new commands, sleep can help performance improve (<a href="{R}blog/do-dogs-dream.html">do dogs dream and what REM research shows</a>).</p>
+<p>Pushing in when you pet another dog is often jealousy-like behaviour, not "dominance". In experiments, dogs push, get between and sometimes snap more when owners affectionately attend to a rival dog (or a stuffed dog) than to a nonsocial object or a book (<a href="{R}blog/do-dogs-feel-jealousy.html">do dogs feel jealousy</a>).</p>
 <p>AVSAB also recommends teaching puppies to enjoy short periods alone with a stuffed food toy, and offering a wide variety of experiences in the first year, which it links to a lower risk of separation related behavior.</p></section>
 <section id="help"><h2>When to get professional help</h2>
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
@@ -319,9 +324,9 @@ def behavior(page):
          "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
-         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017"),
-         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-13")
+         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018"),
+         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-14")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
 FOODS = [
@@ -520,18 +525,19 @@ def faq(page):
         ("Can dogs see color?", "Yes, mostly blues and yellows. Dogs have two types of cone cells instead of the three most people have, so their color vision is similar to a person with red green color blindness. <a href=\"{R}blog/can-dogs-see-color.html\">How dogs see color</a>."),
         ("Why do dogs tilt their heads?", "Often when they hear a word that means something to them. In a 2021 study of 40 dogs, dogs that knew toy names tilted on 43% of fetch requests versus 2% for typical dogs. A tilt that stays, or comes with stumbling or flicking eyes, needs a vet. <a href=\"{R}blog/why-do-dogs-tilt-their-heads.html\">What the research found</a>."),
         ("Do dogs dream?", "Dogs have clear REM sleep with rapid eye movements and low muscle tone, which is why they twitch in naps. Dream content is unproven. Sleep after learning new commands can improve performance. <a href=\"{R}blog/do-dogs-dream.html\">What REM research shows</a>."),
+        ("Do dogs feel jealousy?", "They show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners pet a rival dog than a toy or book. Human-style conscious jealousy is still debated. <a href=\"{R}blog/do-dogs-feel-jealousy.html\">What experiments show</a>."),
         ("How old is my dog in human years?", "By the 2020 epigenetic clock formula, human age is about 16 &times; ln(dog age) + 31, so a 1 year old dog is about 31 and a 10 year old about 68. Try the <a href=\"{R}dog-age-calculator.html\">dog age calculator</a>."),
         ("How often should I brush my dog's teeth?", "The AVMA says daily brushing is best, but several times a week can be effective, alongside a dental check by your vet at least once a year."),
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
     page("faq.html", "Dog FAQ: Quick, Sourced Answers to Common Dog Questions | SnoutsWise",
-         "Short, sourced answers to common dog questions: sleep and dreaming, head tilting, grass eating, color vision, vaccines, socialization, weight and heatstroke.",
+         "Short, sourced answers to common dog questions: jealousy, sleep and dreaming, head tilting, grass eating, color vision, vaccines, socialization, weight and heatstroke.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
-         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
-         related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-13")
+         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
+         related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-14")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -1060,10 +1066,47 @@ def blog(page):
          published="2026-10-13")
 
 
+    # 10 daily fact: do dogs feel jealousy (14 Oct 2026)
+    post(page, "do-dogs-feel-jealousy", "Do Dogs Feel Jealousy? What Experiments Show | SnoutsWise",
+         "Do dogs feel jealousy? Experiments show more pushy, between-owner behaviour when owners pet a rival dog than a toy or book. What science can and cannot say.",
+         "Do dogs feel jealousy? They show jealousy-like behaviour in experiments",
+         "When owners pet what looks like another dog, pet dogs often push in, try to get between them, and sometimes snap more than when the owner pets a nonsocial object or reads a book. That pattern matches a simple form of jealousy seen in human infants: protect a valued bond from an interloper. Follow-up work with real dogs as rivals found the same kind of owner-oriented interrupting. Scientists still debate whether dogs have a conscious jealous feeling the way people do, and some studies with fake rivals found weaker or unclear results.",
+         """
+<h2>The first lab-style test of dog jealousy</h2>
+<p>In 2014, Christine Harris and Caroline Prouvost at UC San Diego adapted a method used with six-month-old human babies. They tested 36 small pet dogs at home. Owners ignored their own dog while they affectionately petted and talked to one of three things, in counterbalanced order:</p>
+<ul><li><b>A stuffed dog</b> that could bark, whine and wag its tail for a few seconds when a button was pressed (the jealousy condition).</li>
+<li><b>A novel jack-o-lantern pail</b> treated the same way (affection to a nonsocial object).</li>
+<li><b>A children's pop-up book</b> read aloud (loss of attention without an interloper).</li></ul>
+<p>Coders scored behaviours that owners and infant studies link to jealousy: pushing or touching the owner or object, getting between them, attention toward the owner, and aggression such as snapping.</p>
+<p>Dogs showed significantly more of those behaviours toward the stuffed dog than toward the jack-o-lantern or the book. About one quarter snapped at the stuffed dog during the interaction, versus only one dog in each of the other conditions. After the owner set the object down, 36% snapped at the stuffed dog. Dogs also pushed or touched the owner and the object more in the stuffed-dog condition, and tried to get between owner and object more often. Whining was higher than in the book condition. Barking did not differ clearly across conditions.</p>
+<p>Attention rose when the owner showed affection: dogs looked more at the owner and at the object in the affection conditions than while the owner read. They looked even more at the stuffed dog than at the jack-o-lantern. Most dogs treated the toy as dog-like: 86% sniffed its anal region during or after the trial, the same kind of social investigation dogs use with other dogs.</p>
+<h2>What about a real dog rival?</h2>
+<p>Critics argued a stuffed dog that barks and wags on cue might startle dogs or invite territorial reactions at home, rather than jealousy. In 2018, Judit Abdai and colleagues at Eotvos Lorand University tested dogs from multi-dog households with real partners: a familiar housemate dog and an unfamiliar dog as social rivals, plus familiar and unfamiliar nonsocial objects. Owners focused attention on each partner in turn.</p>
+<p>Dogs showed more owner-oriented behaviour and more attempts to interrupt the owner-partner interaction when the partner was another dog than when it was an object. Interrupt attempts differed across conditions (Friedman test on 22 dogs, p &lt; 0.001), with more interruptions for social than nonsocial partners. The authors conclude the pattern fits a functional description of jealous behaviour: it appears when a valued relationship is threatened by a social third party, not merely when attention is lost.</p>
+<h2>Why some studies still urge caution</h2>
+<p>Also in 2018, Emanuela Prato-Previde and colleagues ran two studies (36 dogs each) with a book, a puppet and a fake dog (furry in Study 1, plastic in Study 2), handled by the owner or a stranger. Dogs often sniffed the fake dog's ano-genital area, but aggressive biting never occurred, and many classic jealousy markers were absent or rare. Differences between the fake dog and the puppet were clearer only in Study 2. Dogs paid similar attention when a stranger handled the fake dog as when the owner did, which is not the pattern expected if jealousy is only about protecting the bond with the owner.</p>
+<p>Their conclusion is careful: they do not rule out a rudimentary form of jealousy, but they argue fake rivals are a weak test and that future work should use real social interlopers and more naturalistic setups. That is why Abdai's real-dog design matters, and why the honest answer for owners is "jealousy-like behaviour, yes; full human-style jealousy, not proven."</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Expect pushiness when you pet another dog.</b> Getting between you and a guest dog is common in these studies. Manage with a lead, distance or a short "go to mat" cue rather than scolding (see <a href="{R}training.html">reward based training</a>).</li>
+<li><b>Rule out fear and pain first.</b> Sudden snapping when you touch another animal can also be fear or redirected aggression. Check for stress signals such as lip licking, a tucked tail or a stiff body (<a href="{R}behavior.html#stress">reading stress</a>), and see a vet if behaviour changes suddenly.</li>
+<li><b>Do not use dominance labels.</b> Jealousy-like interrupting is about protecting access to you, not becoming "alpha". AVSAB advises against alpha rolls and dominance explanations (<a href="{R}blog/alpha-dog-myth.html">the alpha dog myth</a>).</li>
+<li><b>Train calm sharing.</b> Reward your dog for staying on a mat while you greet another dog or person, then release them for a turn. Short, successful rehearsals beat forcing them to "get over it".</li></ul>
+""",
+         faq=[("Do dogs feel jealousy like people do?", "Dogs show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners affectionately attend to a rival dog or stuffed dog than to a nonsocial object or a book. Whether they have a conscious jealous feeling like adults do is still debated."),
+              ("What did the first jealousy experiment find?", "Harris and Prouvost (2014) tested 36 small dogs at home. Dogs snapped, pushed and tried to get between more when owners petted a stuffed dog than a jack-o-lantern or while reading a book. About 86% sniffed the stuffed dog's rear, suggesting they treated it as dog-like."),
+              ("Does a real dog rival change the result?", "Yes. Abdai and colleagues (2018) used familiar and unfamiliar real dogs plus objects. Dogs interrupted and oriented to the owner more for dog partners than for objects, which fits jealousy as protecting a social bond."),
+              ("Why do some scientists still doubt it?", "Prato-Previde and colleagues (2018) found that fake dogs often failed to trigger clear jealousy markers, and dogs reacted similarly when a stranger handled the fake dog. They urge using real social interlopers before claiming human-like jealousy."),
+              ("How should I handle a jealous dog?", "Manage space, reward calm alternatives such as going to a mat, and avoid dominance punishments. If snapping or fear is escalating, contact your vet or a certified behaviour professional (see <a href=\"{R}behavior.html#help\">when to get help</a>).")],
+         sources=src("harris2014", "abdai2018", "prato2018"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?")],
+         published="2026-10-14")
+
+
+
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: do dogs dream, why dogs tilt their heads, eat grass and see color, chocolate, puppy socialization, vaccines and body condition.",
+         "Answer first dog articles: jealousy, dreaming, head tilting, grass eating, color vision, chocolate, socialization, vaccines and body condition.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-13")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-14")
