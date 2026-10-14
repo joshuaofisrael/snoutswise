@@ -43,6 +43,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [Why do dogs yawn? Sometimes stress, sometimes they catch yours]({u}blog/why-do-dogs-yawn.html)
 - [Do dogs feel jealousy? They show jealousy-like behaviour in experiments]({u}blog/do-dogs-feel-jealousy.html)
 - [Do dogs dream? They have REM sleep, but dreams are still unproven]({u}blog/do-dogs-dream.html)
 - [Why do dogs tilt their heads? It may mean they are listening hard]({u}blog/why-do-dogs-tilt-their-heads.html)

@@ -42,6 +42,10 @@ S = {
  "bodizs2020": ("Bódizs R, Kis A, Gácsi M, Topál J (2020). Sleep in the dog: comparative, behavioral and translational relevance. Current Opinion in Behavioral Sciences 33:25 to 33. DOI 10.1016/j.cobeha.2019.12.006", "Elsevier (open access CC BY-NC-ND)", "https://doi.org/10.1016/j.cobeha.2019.12.006"),
  "harris2014": ("Harris CR, Prouvost C (2014). Jealousy in Dogs. PLoS ONE 9(7): e94597. DOI 10.1371/journal.pone.0094597", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0094597"),
  "abdai2018": ("Abdai J, Baño Terencio C, Pérez Fraga P, Miklósi Á (2018). Investigating jealous behaviour in dogs. Scientific Reports 8:8911. DOI 10.1038/s41598-018-27251-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-018-27251-1"),
+ "joly2008": ("Joly-Mascheroni RM, Senju A, Shepherd AJ (2008). Dogs catch human yawns. Biology Letters 4(5): 446-448. DOI 10.1098/rsbl.2008.0333", "Biology Letters", "https://doi.org/10.1098/rsbl.2008.0333"),
+ "harr2009": ("Harr AL, Gilbert VR, Phillips KA (2009). Do dogs (Canis familiaris) show contagious yawning? Animal Cognition 12(6): 833-837. DOI 10.1007/s10071-009-0233-0", "Animal Cognition", "https://doi.org/10.1007/s10071-009-0233-0"),
+ "madsen2013": ("Madsen EA, Persson T (2013). Contagious yawning in domestic dog puppies (Canis lupus familiaris): the effect of ontogeny and emotional closeness on low-level imitation in dogs. Animal Cognition 16(2): 233-240. DOI 10.1007/s10071-012-0568-9", "Animal Cognition", "https://doi.org/10.1007/s10071-012-0568-9"),
+ "romero2013": ("Romero T, Konno A, Hasegawa T (2013). Familiarity bias and physiological responses in contagious yawning by dogs support link to empathy. PLoS ONE 8(8): e71365. DOI 10.1371/journal.pone.0071365", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0071365"),
  "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
 }
 import datetime
@@ -86,6 +90,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/why-do-dogs-yawn.html">Why do dogs yawn? Sometimes stress, sometimes they catch yours</a></li>
 <li><a href="{R}blog/do-dogs-feel-jealousy.html">Do dogs feel jealousy? They show jealousy-like behaviour in experiments</a></li>
 <li><a href="{R}blog/do-dogs-dream.html">Do dogs dream? They have REM sleep, but dreams are still unproven</a></li>
 <li><a href="{R}blog/why-do-dogs-tilt-their-heads.html">Why do dogs tilt their heads? It may mean they are listening hard</a></li>
@@ -101,7 +106,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-14")
+         body, kind="home", updated="2026-10-15")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -297,7 +302,7 @@ def behavior(page):
 <tr><td>Tail lowering</td><td>Tail held low or tucked</td></tr>
 <tr><td>Lifting a front leg</td><td>One paw raised, often with other signals</td></tr>
 <tr><td>Panting</td><td>Panting when not hot or tired</td></tr>
-<tr><td>Yawning</td><td>Yawning in a tense situation rather than when sleepy</td></tr>
+<tr><td>Yawning</td><td>Yawning in a tense situation rather than when sleepy (<a href="{R}blog/why-do-dogs-yawn.html">why dogs yawn</a>)</td></tr>
 <tr><td>Yelping</td><td>Sudden high pitched cries</td></tr>
 </tbody></table></div>
 <p>When you see several of these together, give your dog space and make the situation easier: increase distance, stop what you were doing, or leave. Pushing a frightened dog to "face its fear" is flooding, which AVSAB advises against.</p></section>
@@ -324,9 +329,9 @@ def behavior(page):
          "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
-         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018"),
-         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-14")
+         sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013"),
+         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-15")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
 FOODS = [
@@ -526,18 +531,19 @@ def faq(page):
         ("Why do dogs tilt their heads?", "Often when they hear a word that means something to them. In a 2021 study of 40 dogs, dogs that knew toy names tilted on 43% of fetch requests versus 2% for typical dogs. A tilt that stays, or comes with stumbling or flicking eyes, needs a vet. <a href=\"{R}blog/why-do-dogs-tilt-their-heads.html\">What the research found</a>."),
         ("Do dogs dream?", "Dogs have clear REM sleep with rapid eye movements and low muscle tone, which is why they twitch in naps. Dream content is unproven. Sleep after learning new commands can improve performance. <a href=\"{R}blog/do-dogs-dream.html\">What REM research shows</a>."),
         ("Do dogs feel jealousy?", "They show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners pet a rival dog than a toy or book. Human-style conscious jealousy is still debated. <a href=\"{R}blog/do-dogs-feel-jealousy.html\">What experiments show</a>."),
+        ("Why do dogs yawn?", "Often from tiredness, but yawning is also a stress signal when it comes with lip licking or a lowered body. Some dogs catch human yawns: 21 of 29 dogs did in a 2008 study, more from owners than strangers in a 2013 study. <a href=\"{R}blog/why-do-dogs-yawn.html\">What the studies found</a>."),
         ("How old is my dog in human years?", "By the 2020 epigenetic clock formula, human age is about 16 &times; ln(dog age) + 31, so a 1 year old dog is about 31 and a 10 year old about 68. Try the <a href=\"{R}dog-age-calculator.html\">dog age calculator</a>."),
         ("How often should I brush my dog's teeth?", "The AVMA says daily brushing is best, but several times a week can be effective, alongside a dental check by your vet at least once a year."),
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
     page("faq.html", "Dog FAQ: Quick, Sourced Answers to Common Dog Questions | SnoutsWise",
-         "Short, sourced answers to common dog questions: jealousy, sleep and dreaming, head tilting, grass eating, color vision, vaccines, socialization, weight and heatstroke.",
+         "Short, sourced answers to common dog questions: yawning, jealousy, dreaming, head tilting, grass eating, color vision, vaccines, socialization, weight and heatstroke.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
-         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
-         related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-14")
+         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
+         related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-15")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -1102,11 +1108,41 @@ def blog(page):
          published="2026-10-14")
 
 
+    # 11 daily fact: why do dogs yawn (15 Oct 2026)
+    post(page, "why-do-dogs-yawn", "Why Do Dogs Yawn? Tiredness, Stress or Catching Yours | SnoutsWise",
+         "Why do dogs yawn? Often from tiredness or stress, and some dogs catch human yawns, more from owners than strangers. What the studies found.",
+         "Why do dogs yawn? Sometimes stress, sometimes they catch yours",
+         "Dogs yawn when they are sleepy, but yawning is also one of the stress signals vets and behaviour researchers watch for, alongside lip licking and a lowered body. Several experiments also suggest that some dogs catch human yawns: in the first study, 21 of 29 dogs yawned after watching a person yawn, and none did after a fake mouth movement. Later studies found the effect is stronger with the owner than a stranger and only shows up after about 7 months of age, though one video study found almost no contagion at all.",
+         """
+<h2>Yawning as a stress signal</h2>
+<p>A yawn on its own does not mean your dog is unhappy. Context matters. The American Veterinary Society of Animal Behavior lists yawning among the behaviours researchers recorded as stress related during training, together with lip licking, a lowered body or tail, lifting a front paw and panting (see <a href="{R}behavior.html#stress">reading stress and fear</a>). A yawn at the vet, during a tense greeting or while being told off is more likely to be a stress yawn than one at bedtime.</p>
+<h2>Do dogs catch human yawns?</h2>
+<p>In 2008, Ramiro Joly-Mascheroni, Atsushi Senju and Alex Shepherd at Birkbeck, University of London, had a person sit in front of each of 29 dogs and either yawn or make similar mouth movements without yawning. 21 of the 29 dogs yawned after watching the yawn, and none yawned after the control mouth movements. The authors suggested this might reflect a rudimentary form of empathy, and that because yawning changes arousal, catching yawns could help dogs and people coordinate.</p>
+<p>The result has not always repeated. In 2009, Aimee Harr and colleagues showed 15 dogs videos of humans and dogs yawning or simply opening their mouths. Only one dog yawned significantly more to the yawning videos, mostly to the human ones. Watching a screen may be a weaker test than a live person, but it is a reminder that the effect is not universal.</p>
+<h2>Owners are more contagious than strangers</h2>
+<p>In 2013, Teresa Romero, Akitsugu Konno and Toshikazu Hasegawa at the University of Tokyo tested 25 dogs with live yawns from their owner and from an unfamiliar experimenter. Dogs yawned more in the yawning condition than the control, and more when the owner yawned than the stranger. Heart rate, measured in 21 of the dogs, did not differ between conditions, which the authors read as evidence that these yawns were not a stress response.</p>
+<p>The same year, Elainie Madsen and Tomas Persson at Lund University tested 35 puppies aged 4 to 14 months. The puppies yawned contagiously, but only dogs older than about 7 months showed it, and in their study a familiar person was not more contagious than an unfamiliar one. They link the age effect to a developmental increase in attention to others, similar to how yawn contagion rises in young children.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Read yawns in context.</b> Sleepy yawns at night are normal. Repeated yawning with lip licking, a tucked tail or turning away in a tense moment is your cue to give space or end the session.</li>
+<li><b>Training sessions:</b> if your dog starts yawning a lot, make the task easier and keep sessions short (see <a href="{R}training.html">reward based training</a>).</li>
+<li><b>Do not read too much into catching yawns.</b> A dog that yawns back may be tuned in to you, but a dog that does not is not less attached. The studies disagree on how strong and how social the effect is.</li>
+<li><b>See your vet</b> if yawning suddenly increases with other changes such as drooling, pawing at the mouth or lethargy, since mouth pain or illness can change behaviour.</li></ul>
+""",
+         faq=[("Why does my dog yawn so much?", "Often because they are tired or settling down, but yawning is also one of the stress signals AVSAB lists alongside lip licking, a lowered body and panting. Look at the situation: repeated yawns in a tense moment usually mean your dog needs a break."),
+              ("Can dogs catch yawns from people?", "Some can. In a 2008 study, 21 of 29 dogs yawned after watching a person yawn and none after fake mouth movements. A 2009 video study found only 1 of 15 dogs showed clear contagion, so the effect varies."),
+              ("Do dogs yawn more when their owner yawns?", "In a 2013 study of 25 dogs, dogs yawned more when their owner yawned than when a stranger did, and their heart rate did not rise, suggesting the yawns were not stress. A puppy study the same year did not find an owner effect."),
+              ("Do puppies catch yawns?", "Madsen and Persson (2013) tested 35 dogs aged 4 to 14 months and found contagious yawning only in dogs older than about 7 months."),
+              ("Is yawning a sign my dog is stressed?", "It can be, especially with other signals such as lip licking, a tucked tail or lifting a paw. A single yawn at bedtime is just tiredness. See <a href=\"{R}behavior.html#stress\">reading stress</a>.")],
+         sources=src("joly2008", "harr2009", "romero2013", "madsen2013", "avsab_train"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?")],
+         published="2026-10-15")
+
+
 
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: jealousy, dreaming, head tilting, grass eating, color vision, chocolate, socialization, vaccines and body condition.",
+         "Answer first dog articles: yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate, socialization and vaccines.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-14")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-15")
