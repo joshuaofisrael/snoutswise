@@ -105,3 +105,13 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Outreach emails: skipped (no Joshua yes this run).
 - IndexNow: 7 URLs (jealousy post, blog index, home, faq, behavior, llms.txt, sitemap.xml), HTTP 200 (00:16 London).
 - Next: page title lengths audit; replace hard-coded TODAY default in _build.py with per-page dates everywhere.
+
+## 2026-10-15 00:14 London: daily SEO action (FAQ + stress-table internal links for yawning cluster)
+- Data: still no Search Console/Bing data. Highest EV after today's new post is inbound links from pillar/FAQ plus accurate lastmod (same pattern as previous clusters).
+- Article: blog/why-do-dogs-yawn.html (Joly-Mascheroni 2008, Harr 2009, Romero 2013, Madsen 2013 DOIs verified via Crossref and abstracts read; AVSAB stress list).
+- Action (single cluster): (1) faq.html gains a sourced Q&A (Why do dogs yawn?) in visible FAQ + FAQPage JSON-LD (now 18 Qs); (2) behavior.html stress-signal table yawning row links the post, related links add it, sources add Joly 2008 and Romero 2013; (3) home latest list and llms.txt include it; updated="2026-10-15" only on pages genuinely changed (home, faq, behavior, blog index).
+- News: blog/big-dogs-age-faster-dna-study.html on Mariner et al., Science 8 Oct 2026 (DOI 10.1126/science.aeb2986 verified via Crossref; figures from the paper's abstract) plus ASU News release (opened); links dog age calculator and weight post.
+- Outreach emails: skipped (no Joshua yes saved).
+- IndexNow: 8 URLs, see below.
+- Next: page title lengths audit; replace hard-coded TODAY default in _build.py with per-page dates.
+- IndexNow result:  00:13
