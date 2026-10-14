@@ -42,6 +42,8 @@ S = {
  "bodizs2020": ("Bódizs R, Kis A, Gácsi M, Topál J (2020). Sleep in the dog: comparative, behavioral and translational relevance. Current Opinion in Behavioral Sciences 33:25 to 33. DOI 10.1016/j.cobeha.2019.12.006", "Elsevier (open access CC BY-NC-ND)", "https://doi.org/10.1016/j.cobeha.2019.12.006"),
  "harris2014": ("Harris CR, Prouvost C (2014). Jealousy in Dogs. PLoS ONE 9(7): e94597. DOI 10.1371/journal.pone.0094597", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0094597"),
  "abdai2018": ("Abdai J, Baño Terencio C, Pérez Fraga P, Miklósi Á (2018). Investigating jealous behaviour in dogs. Scientific Reports 8:8911. DOI 10.1038/s41598-018-27251-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-018-27251-1"),
+ "mariner2026": ("Mariner BL, McCoy BM, Greenier A, Brassington L, et al. (2026). Epigenetic aging and transposon dysregulation reflect size-related lifespan compression in dogs. Science 394(6820), published 8 October 2026. DOI 10.1126/science.aeb2986", "Science", "https://doi.org/10.1126/science.aeb2986"),
+ "asu2026": ("Caspermeyer J (8 October 2026). Why big dogs age faster. ASU News, Arizona State University", "ASU News", "https://news.asu.edu/20261008-health-and-medicine-why-big-dogs-age-faster"),
  "joly2008": ("Joly-Mascheroni RM, Senju A, Shepherd AJ (2008). Dogs catch human yawns. Biology Letters 4(5): 446-448. DOI 10.1098/rsbl.2008.0333", "Biology Letters", "https://doi.org/10.1098/rsbl.2008.0333"),
  "harr2009": ("Harr AL, Gilbert VR, Phillips KA (2009). Do dogs (Canis familiaris) show contagious yawning? Animal Cognition 12(6): 833-837. DOI 10.1007/s10071-009-0233-0", "Animal Cognition", "https://doi.org/10.1007/s10071-009-0233-0"),
  "madsen2013": ("Madsen EA, Persson T (2013). Contagious yawning in domestic dog puppies (Canis lupus familiaris): the effect of ontogeny and emotional closeness on low-level imitation in dogs. Animal Cognition 16(2): 233-240. DOI 10.1007/s10071-012-0568-9", "Animal Cognition", "https://doi.org/10.1007/s10071-012-0568-9"),
@@ -90,6 +92,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/big-dogs-age-faster-dna-study.html">News: big dogs show faster DNA aging, a Science study finds</a></li>
 <li><a href="{R}blog/why-do-dogs-yawn.html">Why do dogs yawn? Sometimes stress, sometimes they catch yours</a></li>
 <li><a href="{R}blog/do-dogs-feel-jealousy.html">Do dogs feel jealousy? They show jealousy-like behaviour in experiments</a></li>
 <li><a href="{R}blog/do-dogs-dream.html">Do dogs dream? They have REM sleep, but dreams are still unproven</a></li>
@@ -1135,6 +1138,33 @@ def blog(page):
               ("Is yawning a sign my dog is stressed?", "It can be, especially with other signals such as lip licking, a tucked tail or lifting a paw. A single yawn at bedtime is just tiredness. See <a href=\"{R}behavior.html#stress\">reading stress</a>.")],
          sources=src("joly2008", "harr2009", "romero2013", "madsen2013", "avsab_train"),
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?")],
+         published="2026-10-15")
+
+
+    # news 15 Oct 2026: big dogs age faster (Science, Dog Aging Project)
+    post(page, "big-dogs-age-faster-dna-study", "Why Big Dogs Age Faster: New DNA Study in Science | SnoutsWise",
+         "News: a Dog Aging Project study in Science finds large dogs show faster DNA aging, with the biggest changes in jumping genes. What it means for owners.",
+         "News: big dogs show faster DNA aging, a Science study finds",
+         "A study of 894 pet dogs in the Dog Aging Project, published in Science on 8 October 2026, found that larger dogs, males and younger dogs carry DNA methylation patterns that look older than their age, and that dogs whose epigenetic age ran ahead of their real age had a higher risk of death. The biggest size difference was in transposable elements, sometimes called jumping genes: large dogs lost methylation there 31% faster with age than small dogs. Whether this causes faster aging or is a side effect is still unknown.",
+         """
+<h2>What the researchers did</h2>
+<p>The team, led by Blaise Mariner and senior author Noah Snyder-Mackler at Arizona State University, analysed 1,640 blood DNA methylation profiles from 894 companion dogs in the Dog Aging Project, a large US study of pet dogs. Methylation marks are small chemical tags on DNA that shift in predictable ways with age, so they can be used as a molecular clock. Using dogs with known birthdates, the team built an age predictor that, according to the paper's summary, explained 86% of the variation in age with a median error of under a year (0.82 years).</p>
+<h2>What they found</h2>
+<ul><li><b>Older than expected meant higher risk.</b> Dogs whose epigenetic age was higher than their real age had higher mortality risk, which suggests the clock tracks real biological ageing rather than just birthdays.</li>
+<li><b>Size, sex and youth mattered.</b> Larger dogs, males and younger dogs showed patterns consistent with faster epigenetic ageing.</li>
+<li><b>Jumping genes were the hotspot for size.</b> Most of the genome's transposable elements lost methylation with age, and that loss was 31% stronger in larger dogs, including in a class called LINE1s. Methylation normally helps keep these elements quiet.</li></ul>
+<p>In ASU's news release, Mariner called it one of the clearest molecular signatures yet that lines up with the known trade-off between body size and lifespan in dogs. The release also notes that more research is needed to tell whether LINE1 activity is a cause or a consequence of ageing.</p>
+<h2>What it means for owners</h2>
+<ul><li><b>Nothing to change today.</b> This is basic research. There is no test or treatment from it you can buy, and it does not mean any individual large dog will be unhealthy.</li>
+<li><b>Big dogs do tend to be "older" sooner.</b> That fits the long-known pattern that giant and large breeds have shorter average lifespans, which is why vets often suggest earlier senior check-ups for big breeds. Ask your vet when your dog should start them.</li>
+<li><b>Weight still matters.</b> Keeping any dog lean is one of the few proven ways to add healthy years (see <a href="{R}blog/is-my-dog-overweight.html">is my dog overweight?</a>).</li>
+<li><b>Curious about "dog years"?</b> Our <a href="{R}dog-age-calculator.html">dog age calculator</a> uses an earlier, smaller DNA methylation clock from 2020 that compares dog and human ageing.</li></ul>
+""",
+         faq=[("Why do big dogs die younger?", "Nobody knows the full answer, but a 2026 Science study of 894 Dog Aging Project dogs found larger dogs show faster DNA methylation ageing, especially in transposable elements, where age-related loss was 31% stronger than in smaller dogs."),
+              ("What is epigenetic age?", "An estimate of biological age from chemical marks on DNA called methylation. In this study, dogs whose epigenetic age ran ahead of their real age had a higher risk of death."),
+              ("Does this study change how I should care for my large dog?", "Not directly. It is basic research with no new test or treatment. Keep your dog lean, keep up regular vet visits, and ask your vet when to start senior check-ups for a large breed.")],
+         sources=src("mariner2026", "asu2026", "wang2020"),
+         related=[("dog-age-calculator.html", "Dog age calculator"), ("health.html", "Dog health basics"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?")],
          published="2026-10-15")
 
 
