@@ -14,7 +14,7 @@ SITE_URL = "https://snoutswise.com/"   # <- the ONE line that sets the base URL 
 SITE_NAME = "SnoutsWise"
 LEGAL_NAME = "Joshua Israel Ventures LLC"
 CONTACT_EMAIL = "joshuaofisrael@gmail.com"
-GSC_TOKEN = ""          # Google Search Console HTML tag token (content="..."); empty = no tag
+GSC_TOKEN = "gtxJlcQd6hl6x20ZXICq7jrsH6cutKkniTG-J_7hrZM"          # Google Search Console HTML tag token (content="..."); empty = no tag
 CF_BEACON_TOKEN = ""    # Cloudflare Web Analytics beacon token; empty = no beacon. NOTE: update privacy.html before enabling.
 INDEXNOW_KEY = "f82447b1414b64e38975376b34f684d7"
 TODAY = "2026-10-08"
