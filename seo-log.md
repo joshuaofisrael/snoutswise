@@ -115,3 +115,12 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - IndexNow: 8 URLs, see below.
 - Next: page title lengths audit; replace hard-coded TODAY default in _build.py with per-page dates.
 - IndexNow result:  00:13
+
+## 2026-10-16 00:14 London: daily SEO action (title length audit)
+- Data: still no Search Console/Bing query data. Highest EV deferred item was the title length audit: 25 pages had titles over 60 chars, so Google was truncating them in results.
+- Action: shortened 10 titles in _content.py to about 49-61 chars while keeping the main query words and the SnoutsWise brand (behavior, health, care, training, dog age calculator, and the overweight, alpha, chocolate, vaccine and socialization posts).
+- Article: blog/can-dogs-smell-fear.html (Wilson 2022 PLOS ONE, D'Aniello 2018 Anim Cogn, Parr-Cortes 2024 Sci Rep; DOIs verified via Crossref, abstracts read). Linked from home latest, blog index, behavior related links, llms.txt.
+- News: blog/dogs-bouba-kiki-effect-study.html on Biffi et al., Proc R Soc B 14 Oct 2026 (DOI 10.1098/rspb.2026.1209 verified via Crossref, abstract read) plus New Scientist 14 Oct 2026 (opened).
+- Outreach emails: skipped (no Joshua yes saved in my chat).
+- IndexNow: 17 URLs (two new posts, blog index, home, retitled pages, llms.txt, sitemap.xml), HTTP 200 (00:13 London).
+- Next: shorten the remaining long titles in _edu.py/_games.py (teachers, research, games) and the faq/breeds/grass/tilt/yawn titles; replace hard-coded TODAY default in _build.py with per-page dates.
