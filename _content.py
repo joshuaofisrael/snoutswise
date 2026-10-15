@@ -48,6 +48,9 @@ S = {
  "harr2009": ("Harr AL, Gilbert VR, Phillips KA (2009). Do dogs (Canis familiaris) show contagious yawning? Animal Cognition 12(6): 833-837. DOI 10.1007/s10071-009-0233-0", "Animal Cognition", "https://doi.org/10.1007/s10071-009-0233-0"),
  "madsen2013": ("Madsen EA, Persson T (2013). Contagious yawning in domestic dog puppies (Canis lupus familiaris): the effect of ontogeny and emotional closeness on low-level imitation in dogs. Animal Cognition 16(2): 233-240. DOI 10.1007/s10071-012-0568-9", "Animal Cognition", "https://doi.org/10.1007/s10071-012-0568-9"),
  "romero2013": ("Romero T, Konno A, Hasegawa T (2013). Familiarity bias and physiological responses in contagious yawning by dogs support link to empathy. PLoS ONE 8(8): e71365. DOI 10.1371/journal.pone.0071365", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0071365"),
+ "wilson2022": ("Wilson C, Campbell K, Petzel Z, Reeve C (2022). Dogs can discriminate between human baseline and psychological stress condition odours. PLOS ONE 17(9): e0274143. DOI 10.1371/journal.pone.0274143", "PLOS ONE (open access)", "https://doi.org/10.1371/journal.pone.0274143"),
+ "daniello2018": ("D'Aniello B, Semin GR, Alterisio A, Aria M, Scandurra A (2018). Interspecies transmission of emotional information via chemosignals: from humans to dogs (Canis lupus familiaris). Animal Cognition 21(1): 67-78. DOI 10.1007/s10071-017-1139-x", "Animal Cognition", "https://doi.org/10.1007/s10071-017-1139-x"),
+ "parrcortes2024": ("Parr-Cortes Z, M\u00fcller C, Talas L, Mendl M, Guest C, Rooney N (2024). The odour of an unfamiliar stressed or relaxed person affects dogs' responses to a cognitive bias test. Scientific Reports 14: 15843. DOI 10.1038/s41598-024-66147-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-024-66147-1"),
  "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
 }
 import datetime
@@ -92,6 +95,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/can-dogs-smell-fear.html">Can dogs smell fear? The evidence says they can pick up on it</a></li>
 <li><a href="{R}blog/big-dogs-age-faster-dna-study.html">News: big dogs show faster DNA aging, a Science study finds</a></li>
 <li><a href="{R}blog/why-do-dogs-yawn.html">Why do dogs yawn? Sometimes stress, sometimes they catch yours</a></li>
 <li><a href="{R}blog/do-dogs-feel-jealousy.html">Do dogs feel jealousy? They show jealousy-like behaviour in experiments</a></li>
@@ -190,7 +194,7 @@ def care(page):
 <li>Bins containing bones, corn cobs, fruit pits or grapes; the AKC warns that cobs, pits and cooked poultry bones can cause blockages or injuries.</li>
 <li>Raw bread dough, which can expand in the stomach and produce alcohol, according to the ASPCA.</li></ul></section>
 """
-    page("care.html", "Dog Care Basics: Feeding, Weight, Teeth, Grooming & Safety | SnoutsWise",
+    page("care.html", "Dog Care Basics: Feeding, Weight and Grooming | SnoutsWise",
          "Everyday dog care with sources: what to feed, keeping a healthy weight, exercise, brushing teeth, grooming, microchip rules and how to cool a dog with heatstroke.",
          body, h1="Dog care basics",
          lead="Good everyday care comes down to a complete and balanced diet, keeping your dog lean, daily exercise and mental stimulation, regular tooth brushing, grooming suited to the coat, permanent ID, and protecting your dog from heat and household toxins. The sections below explain each one and link to the veterinary sources behind the advice.",
@@ -237,7 +241,7 @@ def health(page):
 <section id="checkups"><h2>Routine checkups</h2>
 <p>Regular checkups let your vet review vaccines, parasite prevention, teeth, weight and any lumps or changes you have noticed. The AAHA guidelines say each dog's vaccine needs should be reassessed at least once a year. Write down questions beforehand, and mention changes in appetite, thirst, energy, toileting or behavior; behavior changes can be a sign of pain or illness.</p></section>
 """
-    page("health.html", "Dog Health Basics: Normal Vital Signs, Vaccines & Warning Signs | SnoutsWise",
+    page("health.html", "Dog Health Basics: Vital Signs and Warning Signs | SnoutsWise",
          "Normal dog temperature, heart rate and breathing rate, core vaccines and booster schedule, emergency warning signs, poisoning and heatstroke first steps.",
          body, h1="Dog health basics",
          lead="A healthy adult dog has an average body temperature of 101 to 102.5&deg;F (38.3 to 39.2&deg;C), a heart rate of 70 to 120 beats per minute and a resting breathing rate of 18 to 34 breaths per minute, according to the Merck Veterinary Manual. The basics of keeping a dog healthy are core vaccines, a lean body weight, dental care, regular checkups and knowing which warning signs mean you should call a vet immediately.",
@@ -284,7 +288,7 @@ def training(page):
 <section id="trainer"><h2>Choosing a trainer</h2>
 <p>AVSAB recommends trainers who are certified, humane and effective, and suggests watching a class before signing up. It specifically advises against hiring trainers who talk about "dominance", "leader of the pack" or "alpha" theories. For serious problems such as aggression or severe fear, start with your vet, who can rule out pain or illness and refer you to a veterinary behaviorist.</p></section>
 """
-    page("training.html", "Reward Based Dog Training: How It Works & First Skills | SnoutsWise",
+    page("training.html", "Reward Based Dog Training: How It Works | SnoutsWise",
          "Why vets recommend reward based dog training, how markers, luring and shaping work, step by step first skills (sit, recall, loose lead) and what tools to avoid.",
          body, h1="Dog training: the reward based approach",
          lead="Veterinary behavior experts recommend reward based training for all dogs: you teach the behavior you want and reward it, instead of punishing mistakes. The American Veterinary Society of Animal Behavior says the evidence shows reward based methods are more effective than aversive ones and better for welfare and the dog and owner relationship, and that there is no evidence aversive training is ever necessary.",
@@ -328,12 +332,12 @@ def behavior(page):
 <section id="help"><h2>When to get professional help</h2>
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
 """
-    page("behavior.html", "Dog Behavior Explained: Stress Signals, Socialization & Dominance | SnoutsWise",
+    page("behavior.html", "Dog Behavior: Stress Signals and Socialization | SnoutsWise",
          "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
          sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013"),
-         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
          crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-15")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
@@ -510,7 +514,7 @@ document.getElementById('go').addEventListener('click',calc);y.addEventListener(
         ("How old is a 10 year old dog in human years?", "About 68, using the epigenetic clock formula human age = 16 ln(10) + 31. The old times seven rule would say 70."),
         ("Does the formula work for small and giant breeds?", "It was built from Labrador retrievers only, so it is most reliable for medium to large dogs with a similar lifespan. Smaller breeds usually live longer and giant breeds shorter, so treat the result as a rough guide."),
     ]
-    page("dog-age-calculator.html", "Dog Age Calculator: Dog Years to Human Years (Science Based) | SnoutsWise",
+    page("dog-age-calculator.html", "Dog Age Calculator: Dog Years to Human Years | SnoutsWise",
          "Convert dog years to human years with the epigenetic clock formula from the 2020 Cell Systems study (16 ln(age) + 31), plus a full table and the limits of the method.",
          body, h1="Dog age calculator: dog years to human years",
          lead="The best evidence based conversion comes from a 2020 study of DNA methylation in 104 Labrador retrievers, which found that human age is roughly 16 &times; ln(dog age) + 31. By that formula a 1 year old dog is about 31 in human years, a 4 year old about 53, a 10 year old about 68 and a 14 year old about 73. Dogs age very quickly early in life and more slowly later, so the old times 7 rule is wrong at both ends.",
@@ -712,7 +716,7 @@ o.innerHTML='Estimated dose: <b>'+Math.round(d)+' mg of methylxanthines per kg</
 
 def blog(page):
     # 1 chocolate
-    post(page, "dog-ate-chocolate", "My Dog Ate Chocolate: How Much Is Dangerous? (Dose Estimator) | SnoutsWise",
+    post(page, "dog-ate-chocolate", "My Dog Ate Chocolate: How Much Is Dangerous? | SnoutsWise",
          "Dog ate chocolate? Estimate the theobromine dose from chocolate type and your dog's weight with Merck Veterinary Manual figures, plus warning signs.",
          "My dog ate chocolate: how much is dangerous?",
          "Chocolate is dangerous because it contains theobromine and caffeine, and the risk depends on the type of chocolate and your dog's weight. The Merck Veterinary Manual says mild signs can appear at about 20 mg of these compounds per kg of body weight, heart problems at 40 to 50 mg/kg and seizures at 60 mg/kg or more; cocoa powder and baking chocolate are by far the most concentrated. If your dog has eaten chocolate, call your vet now and use the estimator below to give them the numbers.",
@@ -761,7 +765,7 @@ def blog(page):
          script=CHOC_JS)
 
     # 2 socialization
-    post(page, "puppy-socialization-window", "Puppy Socialization Window: When It Closes & What to Do | SnoutsWise",
+    post(page, "puppy-socialization-window", "Puppy Socialization Window: When It Closes | SnoutsWise",
          "The puppy socialization window is the first three months. When classes can start before vaccines finish, plus a safe week by week checklist.",
          "The puppy socialization window: when it closes and what to do",
          "The American Veterinary Society of Animal Behavior (AVSAB) says the first three months of a puppy's life are the primary and most important window for socialization, because sociability outweighs fear during this period. It recommends starting puppy classes as early as 7 to 8 weeks, as long as the puppy has had at least one set of vaccines at least 7 days before the first class and a first deworming, rather than waiting until vaccinations are complete.",
@@ -804,7 +808,7 @@ def blog(page):
          related=[("behavior.html#socialization", "Behavior: socialization"), ("training.html", "Reward based training"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("blog/alpha-dog-myth.html", "The alpha dog myth")])
 
     # 3 vaccines
-    post(page, "dog-vaccine-schedule", "How Often Do Dogs Need Vaccines? Core vs Non Core Explained | SnoutsWise",
+    post(page, "dog-vaccine-schedule", "Dog Vaccines: How Often? Core vs Non Core | SnoutsWise",
          "Do dogs need yearly vaccines? What AAHA guidelines say about core vaccines (distemper, parvo, adenovirus, lepto, rabies), puppy shots and boosters.",
          "How often do dogs need vaccines? Core and non core vaccines explained",
          "Not every vaccine is yearly. Under the American Animal Hospital Association (AAHA) guidelines, after the puppy series and one booster within a year, the distemper, adenovirus and parvovirus combination vaccine is boosted every 3 years, the leptospirosis vaccine every year, and rabies as local law requires. Non core vaccines such as kennel cough, Lyme disease and canine influenza are given, usually yearly, only to dogs whose lifestyle or location puts them at risk.",
@@ -839,7 +843,7 @@ def blog(page):
          related=[("health.html#vaccines", "Health: vaccines"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("health.html#checkups", "Routine checkups"), ("glossary.html#core-vaccine", "Glossary: core vaccine")])
 
     # 4 alpha
-    post(page, "alpha-dog-myth", "Is the Alpha Dog Idea True? What Research Says About Dominance | SnoutsWise",
+    post(page, "alpha-dog-myth", "Is the Alpha Dog Idea True? What Research Says | SnoutsWise",
          "Do you need to be the alpha? Where the dominance idea came from, what L. David Mech's wolf research found and why vet behaviorists reject it.",
          "Is the \"alpha dog\" idea true? What the research says about dominance",
          "No. The popular idea that your dog is trying to dominate you, and that you must act as the \"alpha\", is not supported by modern research. Wolf biologist L. David Mech found that wild wolf packs are families led by the parents rather than groups fighting for rank, and the American Veterinary Society of Animal Behavior advises against trainers who rely on dominance, pack leader or alpha theories and against forceful techniques such as alpha rolls.",
@@ -876,7 +880,7 @@ def blog(page):
          related=[("training.html", "Reward based training"), ("behavior.html#dominance", "Behavior: the dominance myth"), ("behavior.html#problems", "Problem behaviors"), ("blog/puppy-socialization-window.html", "Puppy socialization window")])
 
     # 5 weight
-    post(page, "is-my-dog-overweight", "Is My Dog Overweight? How to Use the 9 Point Body Condition Score | SnoutsWise",
+    post(page, "is-my-dog-overweight", "Is My Dog Overweight? Body Condition Score Guide | SnoutsWise",
          "Is your dog overweight? Use the WSAVA 9 point body condition score at home: ribs, waist and tuck explained, plus why lean dogs lived longer.",
          "Is my dog overweight? How to use the 9 point body condition score",
          "Your dog is probably at a healthy weight if you can easily feel its ribs under a thin layer of fat, see a waist behind the ribs when you look down from above, and see the belly tuck up when you look from the side. That is a score of 4 to 5 on the 9 point body condition score used on the World Small Animal Veterinary Association (WSAVA) chart; 6 and above is over ideal. It matters: in a 14 year study, Labradors kept lean lived a median 1.8 years longer than their heavier littermates.",
@@ -1168,11 +1172,37 @@ def blog(page):
          published="2026-10-15")
 
 
+    # 12 daily fact: can dogs smell fear (16 Oct 2026)
+    post(page, "can-dogs-smell-fear", "Can Dogs Smell Fear? What Odour Studies Found | SnoutsWise",
+         "Can dogs smell fear and stress? Studies show dogs can tell stressed from calm human odour and react to fear sweat. What the research found.",
+         "Can dogs smell fear? The evidence says they can pick up on it",
+         "Dogs cannot read your mind, but several experiments show they can detect changes in human body odour linked to fear and stress, even with no sight or sound of the person. In a 2022 study, trained dogs picked a stressed person's breath and sweat sample over the same person's calm sample in 93.75% of 720 trials. Other studies found that the smell of human fear sweat made dogs more stressed, and that stress odour made dogs more cautious in a decision task.",
+         """
+<h2>Dogs can tell stressed odour from calm odour</h2>
+<p>In 2022, Clara Wilson and colleagues collected breath and sweat samples from 36 people before and after a stressful mental arithmetic task, and checked that the task really raised stress using self reports and physiological measures. Four dogs trained to alert on the stress samples were then offered a choice of three pots: the person's stress sample, the same person's calm sample from before the task, and a blank. The dogs chose the stress sample with 90% to 96.88% accuracy, 93.75% across all 720 trials. Because the two samples came from the same person, the dogs must have been smelling a change linked to stress, not just who the person was.</p>
+<h2>Fear sweat changes how dogs behave</h2>
+<p>A 2018 study by Biagio D'Aniello and colleagues asked whether untrained pet dogs react to these smells. They collected armpit sweat from male donors under fear and happiness conditions, then exposed Labrador and Golden retrievers to fear sweat, happy sweat or a no-sweat control while their owner and a stranger were in the room. In the fear odour condition the dogs showed more stress behaviours and had higher heart rates than in the happy or control conditions. In the happy odour condition they approached and interacted with the stranger more and with their owner less.</p>
+<h2>Stress odour can make dogs more cautious</h2>
+<p>In 2024, Zoe Parr-Cortes and colleagues tested 18 dogs in a cognitive bias task, where dogs learn that a bowl in one spot has food and a bowl in another spot does not, then are shown bowls in ambiguous spots in between. With odour from unfamiliar stressed volunteers present, dogs were less likely to approach the ambiguous bowl closest to the unrewarded spot than with no odour. The authors read this as possible risk-reduction behaviour, a sign that human stress smell may nudge dogs toward a more pessimistic mood and affect how they learn.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>"Smelling fear" is real, with limits.</b> The studies show dogs can detect and react to odour changes from fear and stress. They do not show dogs understand the emotion the way a person would, and dogs also read your body language and voice.</li>
+<li><b>Your stress can rub off.</b> If you are tense at the vet or during a tricky greeting, your dog may pick up on it. Slow breathing and calm handling help both of you. Watch for your dog's own stress signals such as lip licking, yawning or a tucked tail (see <a href="{R}behavior.html#stress">reading stress</a> and <a href="{R}blog/why-do-dogs-yawn.html">why dogs yawn</a>).</li>
+<li><b>Do not stare down or run from an unfamiliar dog</b> to "hide" fear. Stand still, turn side on and let the dog lose interest. Never approach a dog that is growling or stiff.</li>
+<li><b>Training sessions:</b> train when you are calm, and keep sessions short and positive (see <a href="{R}training.html">reward based training</a>).</li></ul>
+""",
+         faq=[("Can dogs really smell fear?", "Experiments suggest they can detect odour changes linked to fear and stress. In a 2018 study, pet retrievers exposed to fear sweat showed more stress behaviours and higher heart rates than dogs exposed to happy sweat or no sweat."),
+              ("How accurate are dogs at smelling human stress?", "In a 2022 PLOS ONE study, four trained dogs picked a person's post-stress breath and sweat sample over the same person's calm sample with 93.75% accuracy across 720 trials."),
+              ("Does my stress affect my dog?", "It may. A 2024 Scientific Reports study found dogs exposed to the smell of stressed strangers were more cautious in an ambiguous food task, which the authors linked to a more pessimistic state. Dogs also respond to your voice and body language."),
+              ("Should I hide my fear around a strange dog?", "You cannot hide your smell, but calm behaviour matters most. Stand still, turn side on, avoid staring and do not run. Never approach a dog that is growling or stiff.")],
+         sources=src("wilson2022", "daniello2018", "parrcortes2024"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/can-dogs-see-color.html", "Can dogs see color?")],
+         published="2026-10-16")
+
 
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate, socialization and vaccines.",
+         "Answer first dog articles: smelling fear, yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate, socialization and vaccines.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-15")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-16")

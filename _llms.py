@@ -44,6 +44,7 @@ The content is general education, not veterinary advice; readers are told to con
 
 ## Blog
 - [News: big dogs show faster DNA aging, a Science study finds]({u}blog/big-dogs-age-faster-dna-study.html)
+- [Can dogs smell fear? The evidence says they can pick up on it]({u}blog/can-dogs-smell-fear.html)
 - [Why do dogs yawn? Sometimes stress, sometimes they catch yours]({u}blog/why-do-dogs-yawn.html)
 - [Do dogs feel jealousy? They show jealousy-like behaviour in experiments]({u}blog/do-dogs-feel-jealousy.html)
 - [Do dogs dream? They have REM sleep, but dreams are still unproven]({u}blog/do-dogs-dream.html)
