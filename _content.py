@@ -51,6 +51,8 @@ S = {
  "wilson2022": ("Wilson C, Campbell K, Petzel Z, Reeve C (2022). Dogs can discriminate between human baseline and psychological stress condition odours. PLOS ONE 17(9): e0274143. DOI 10.1371/journal.pone.0274143", "PLOS ONE (open access)", "https://doi.org/10.1371/journal.pone.0274143"),
  "daniello2018": ("D'Aniello B, Semin GR, Alterisio A, Aria M, Scandurra A (2018). Interspecies transmission of emotional information via chemosignals: from humans to dogs (Canis lupus familiaris). Animal Cognition 21(1): 67-78. DOI 10.1007/s10071-017-1139-x", "Animal Cognition", "https://doi.org/10.1007/s10071-017-1139-x"),
  "parrcortes2024": ("Parr-Cortes Z, M\u00fcller C, Talas L, Mendl M, Guest C, Rooney N (2024). The odour of an unfamiliar stressed or relaxed person affects dogs' responses to a cognitive bias test. Scientific Reports 14: 15843. DOI 10.1038/s41598-024-66147-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-024-66147-1"),
+ "biffi2026": ("Biffi E, Pedretti G, Normando S, Lazebnik T, Loconsole M, Valsecchi P (2026). Hearing shapes: the Bouba-Kiki effect in adult domestic dogs. Proceedings of the Royal Society B 293(2080): 20261209. DOI 10.1098/rspb.2026.1209", "Proceedings of the Royal Society B (open access)", "https://doi.org/10.1098/rspb.2026.1209"),
+ "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
  "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
 }
 import datetime
@@ -95,6 +97,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/dogs-bouba-kiki-effect-study.html">News: dogs match "bouba" to round shapes and "kiki" to spiky ones</a></li>
 <li><a href="{R}blog/can-dogs-smell-fear.html">Can dogs smell fear? The evidence says they can pick up on it</a></li>
 <li><a href="{R}blog/big-dogs-age-faster-dna-study.html">News: big dogs show faster DNA aging, a Science study finds</a></li>
 <li><a href="{R}blog/why-do-dogs-yawn.html">Why do dogs yawn? Sometimes stress, sometimes they catch yours</a></li>
@@ -1196,6 +1199,31 @@ def blog(page):
               ("Should I hide my fear around a strange dog?", "You cannot hide your smell, but calm behaviour matters most. Stand still, turn side on, avoid staring and do not run. Never approach a dog that is growling or stiff.")],
          sources=src("wilson2022", "daniello2018", "parrcortes2024"),
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/can-dogs-see-color.html", "Can dogs see color?")],
+         published="2026-10-16")
+
+
+    # news 16 Oct 2026: bouba-kiki effect in dogs (Proc B)
+    post(page, "dogs-bouba-kiki-effect-study", "Dogs Match Sounds to Shapes: Bouba-Kiki Study | SnoutsWise",
+         "News: a Proceedings B study finds pet dogs link the word bouba with a round shape and kiki with a spiky one, like people do. What it means.",
+         "News: dogs match \"bouba\" to round shapes and \"kiki\" to spiky ones",
+         "People around the world tend to call a rounded shape \"bouba\" and a spiky shape \"kiki\". A study published in Proceedings of the Royal Society B on 14 October 2026 found that adult pet dogs show a similar link: they looked more at a rounded shape while \"bouba\" was played and looked at and explored a spiky shape while \"kiki\" was played. The authors say this suggests the sound and shape link is not unique to human language.",
+         """
+<h2>What the researchers did</h2>
+<p>Eleonora Biffi and colleagues, led from the University of Parma in Italy according to New Scientist, showed pet dogs a rounded shape on one side of a room and a spiky shape on the other while the nonsense words were played. In the first experiment, 51 owners sat holding their adult dogs. New Scientist reports that 56% of dogs lingered on the round shape when they heard \"bouba\" and 63% focused on the spiky shape when they heard \"kiki\".</p>
+<p>To rule out owners giving hidden cues, the team repeated the test with owners wearing headphones playing music so they could not hear the words. The result held, with a slightly stronger bias toward the round shape for \"bouba\".</p>
+<h2>Why it matters</h2>
+<p>The bouba-kiki effect has long been described in people as a case of sound symbolism linked to language. The paper notes that 3-day-old chicks also show it, and the dog result adds to evidence that it may be a broader matching between hearing and vision rather than something language creates. In New Scientist, Biffi said it may reflect general principles of how the brain combines information from different senses, while Attila Andics at Eotvos Lorand University, who was not an author, said a next question is whether dogs learn these links or are born with the expectation.</p>
+<p>The authors say more work is needed on what the link is for and how it develops. Biffi told New Scientist the team is now testing puppies and wild canids such as foxes, and would like to test cats.</p>
+<h2>What it means for owners</h2>
+<ul><li><b>Nothing to change.</b> This is basic research on perception, not a training method.</li>
+<li><b>Dogs process human sounds in rich ways.</b> It fits other research showing dogs pay close attention to how we speak (see <a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</li>
+<li><b>Clear, consistent cue words still help.</b> Short, distinct words for each cue are easier for dogs to learn (see <a href="{R}training.html">reward based training</a>).</li></ul>
+""",
+         faq=[("What is the bouba-kiki effect?", "The tendency to match the made-up word bouba with a rounded shape and kiki with a spiky shape. It has been reported in people across many cultures and in young chicks."),
+              ("Do dogs show the bouba-kiki effect?", "A 2026 Proceedings B study found adult pet dogs looked more at a rounded shape when bouba was played and at a spiky shape when kiki was played, even when owners could not hear the words."),
+              ("Does this mean dogs understand language?", "No. The authors and outside experts say it points to general links between hearing and vision rather than language. It is not yet known whether dogs learn the link or are born with it.")],
+         sources=src("biffi2026", "newsci2026bouba"),
+         related=[("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("training.html", "Reward based training"), ("behavior.html", "Dog behavior")],
          published="2026-10-16")
 
 
