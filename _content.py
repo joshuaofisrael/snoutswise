@@ -50,6 +50,9 @@ S = {
  "romero2013": ("Romero T, Konno A, Hasegawa T (2013). Familiarity bias and physiological responses in contagious yawning by dogs support link to empathy. PLoS ONE 8(8): e71365. DOI 10.1371/journal.pone.0071365", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0071365"),
  "wilson2022": ("Wilson C, Campbell K, Petzel Z, Reeve C (2022). Dogs can discriminate between human baseline and psychological stress condition odours. PLOS ONE 17(9): e0274143. DOI 10.1371/journal.pone.0274143", "PLOS ONE (open access)", "https://doi.org/10.1371/journal.pone.0274143"),
  "daniello2018": ("D'Aniello B, Semin GR, Alterisio A, Aria M, Scandurra A (2018). Interspecies transmission of emotional information via chemosignals: from humans to dogs (Canis lupus familiaris). Animal Cognition 21(1): 67-78. DOI 10.1007/s10071-017-1139-x", "Animal Cognition", "https://doi.org/10.1007/s10071-017-1139-x"),
+ "hare2002": ("Hare B, Brown M, Williamson C, Tomasello M (2002). The domestication of social cognition in dogs. Science 298(5598): 1634-1636. DOI 10.1126/science.1072702", "Science", "https://doi.org/10.1126/science.1072702"),
+ "bray2021": ("Bray EE, Gnanadesikan GE, Horschler DJ, Levy KM, Kennedy BS, Famula TR, MacLean EL (2021). Early-emerging and highly heritable sensitivity to human communication in dogs. Current Biology 31(14): 3132-3136. DOI 10.1016/j.cub.2021.04.055", "Current Biology", "https://doi.org/10.1016/j.cub.2021.04.055"),
+ "salomons2021": ("Salomons H, Smith KCM, Callahan-Beckel M, et al. (2021). Cooperative communication with humans evolved to emerge early in domestic dogs. Current Biology 31(14): 3137-3144. DOI 10.1016/j.cub.2021.06.051", "Current Biology (free full text via PubMed Central)", "https://doi.org/10.1016/j.cub.2021.06.051"),
  "parrcortes2024": ("Parr-Cortes Z, M\u00fcller C, Talas L, Mendl M, Guest C, Rooney N (2024). The odour of an unfamiliar stressed or relaxed person affects dogs' responses to a cognitive bias test. Scientific Reports 14: 15843. DOI 10.1038/s41598-024-66147-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-024-66147-1"),
  "biffi2026": ("Biffi E, Pedretti G, Normando S, Lazebnik T, Loconsole M, Valsecchi P (2026). Hearing shapes: the Bouba-Kiki effect in adult domestic dogs. Proceedings of the Royal Society B 293(2080): 20261209. DOI 10.1098/rspb.2026.1209", "Proceedings of the Royal Society B (open access)", "https://doi.org/10.1098/rspb.2026.1209"),
  "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
@@ -97,6 +100,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-understand-pointing.html">Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks</a></li>
 <li><a href="{R}blog/dogs-bouba-kiki-effect-study.html">News: dogs match "bouba" to round shapes and "kiki" to spiky ones</a></li>
 <li><a href="{R}blog/can-dogs-smell-fear.html">Can dogs smell fear? The evidence says they can pick up on it</a></li>
 <li><a href="{R}blog/big-dogs-age-faster-dna-study.html">News: big dogs show faster DNA aging, a Science study finds</a></li>
@@ -116,7 +120,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-15")
+         body, kind="home", updated="2026-10-18")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -295,9 +299,9 @@ def training(page):
          "Why vets recommend reward based dog training, how markers, luring and shaping work, step by step first skills (sit, recall, loose lead) and what tools to avoid.",
          body, h1="Dog training: the reward based approach",
          lead="Veterinary behavior experts recommend reward based training for all dogs: you teach the behavior you want and reward it, instead of punishing mistakes. The American Veterinary Society of Animal Behavior says the evidence shows reward based methods are more effective than aversive ones and better for welfare and the dog and owner relationship, and that there is no evidence aversive training is ever necessary.",
-         sources=src("avsab_train", "avsab_puppy", "mech", "kis2017"),
-         related=[("behavior.html", "Dog behavior"), ("blog/alpha-dog-myth.html", "The alpha dog myth"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/do-dogs-dream.html", "Do dogs dream? Sleep and learning"), ("breeds.html", "Breed groups"), ("faq.html", "Dog FAQ")],
-         crumbs=[("index.html", "Home"), ("training.html", "Training")], updated="2026-10-13")
+         sources=src("avsab_train", "avsab_puppy", "mech", "kis2017", "bray2021"),
+         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/alpha-dog-myth.html", "The alpha dog myth"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/do-dogs-dream.html", "Do dogs dream? Sleep and learning"), ("breeds.html", "Breed groups"), ("faq.html", "Dog FAQ")],
+         crumbs=[("index.html", "Home"), ("training.html", "Training")], updated="2026-10-18")
 
 # ------------------------------------------------------------------ BEHAVIOR
 def behavior(page):
@@ -542,6 +546,7 @@ def faq(page):
         ("Do dogs dream?", "Dogs have clear REM sleep with rapid eye movements and low muscle tone, which is why they twitch in naps. Dream content is unproven. Sleep after learning new commands can improve performance. <a href=\"{R}blog/do-dogs-dream.html\">What REM research shows</a>."),
         ("Do dogs feel jealousy?", "They show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners pet a rival dog than a toy or book. Human-style conscious jealousy is still debated. <a href=\"{R}blog/do-dogs-feel-jealousy.html\">What experiments show</a>."),
         ("Why do dogs yawn?", "Often from tiredness, but yawning is also a stress signal when it comes with lip licking or a lowered body. Some dogs catch human yawns: 21 of 29 dogs did in a 2008 study, more from owners than strangers in a 2013 study. <a href=\"{R}blog/why-do-dogs-yawn.html\">What the studies found</a>."),
+        ("Do dogs understand pointing?", "Most dogs do. A 2021 study of 375 eight-week-old puppies found they followed human gestures well with no sign of needing to learn it, and over 40% of the variation was genetic. Hand-raised wolves do worse. <a href=\"{R}blog/do-dogs-understand-pointing.html\">What the studies show</a>."),
         ("How old is my dog in human years?", "By the 2020 epigenetic clock formula, human age is about 16 &times; ln(dog age) + 31, so a 1 year old dog is about 31 and a 10 year old about 68. Try the <a href=\"{R}dog-age-calculator.html\">dog age calculator</a>."),
         ("How often should I brush my dog's teeth?", "The AVMA says daily brushing is best, but several times a week can be effective, alongside a dental check by your vet at least once a year."),
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
@@ -553,7 +558,7 @@ def faq(page):
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
          faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
          related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-15")
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-18")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -1175,6 +1180,33 @@ def blog(page):
          published="2026-10-15")
 
 
+    # 13 daily fact: do dogs understand pointing (18 Oct 2026)
+    post(page, "do-dogs-understand-pointing", "Do Dogs Understand Pointing? What Studies Show | SnoutsWise",
+         "Do dogs understand pointing? Yes: even 8 week old puppies follow human points, and studies link the skill to domestication and genes.",
+         "Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks",
+         "Most dogs follow a human pointing gesture to find hidden food, and they do it without special training. A 2021 study of 375 eight-week-old puppies found they were highly skilled at using human gestures, with no sign that they needed to learn it, and that over 40% of the variation in point following was down to genes. Wolf puppies raised by people do much worse, which points to domestication shaping this skill.",
+         """
+<h2>Dogs beat great apes and hand-raised wolves</h2>
+<p>In a 2002 Science paper, Brian Hare and colleagues noted that dogs are more skilful than great apes at tasks where they must read human signals, such as pointing or looking, to find hidden food. In their experiments, wolves raised by humans did not show the same skills, while domestic puppies only a few weeks old did, even puppies that had had little human contact. The authors concluded that domestication selected dogs for social thinking skills that let them communicate with people in unusual ways.</p>
+<h2>Puppies follow points before they could have learned it</h2>
+<p>In 2021, Emily Bray, Evan MacLean and colleagues tested 375 puppies at 8 weeks old, all from an assistance dog breeding programme, on a set of social tasks. The puppies were highly skilled at using a range of human gestures, and the researchers found no evidence that their performance depended on learning. Because the puppies' family trees were known, the team could estimate heritability: over 40% of the variation in point following and in attention to human faces was linked to genetic factors.</p>
+<h2>Dog puppies versus wolf puppies</h2>
+<p>A companion 2021 study led by Hannah Salomons and Brian Hare compared 44 dog puppies and 37 wolf puppies aged 5 to 18 weeks. The wolf puppies were raised with intensive human contact. Dog puppies were more attracted to people, read human gestures more skilfully and made more eye contact with humans than the wolf puppies. On tasks that did not involve people, such as memory and self control, the two species performed similarly. The authors say this fits the idea that domestication boosted dogs' ability to cooperate and communicate with humans.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Pointing is a ready-made training tool.</b> Most dogs already follow a clear point, so you can use it to direct your dog to a toy, a mat or a dropped treat, then reward the result (see <a href="{R}training.html">reward based training</a>).</li>
+<li><b>Dogs differ.</b> Since part of the skill is inherited, some dogs follow points more easily than others. A dog that struggles is not being stubborn. Make the gesture bigger, get closer to the target and reward small successes.</li>
+<li><b>Get your dog's attention first.</b> Say your dog's name or make eye contact before you point, then point clearly and hold it for a moment.</li>
+<li><b>Watch what your dog tells you back.</b> Dogs read our signals closely, and theirs are worth reading too (see <a href="{R}behavior.html">dog behavior</a> and <a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</li></ul>
+""",
+         faq=[("Do dogs understand pointing?", "Most do. Studies show dogs follow human pointing to find hidden food far better than great apes or hand-raised wolves, and puppies can do it by 8 weeks old."),
+              ("Do puppies need to learn to follow a point?", "Apparently not. A 2021 Current Biology study of 375 eight-week-old puppies found they were highly skilled at using human gestures and found no evidence their performance required learning."),
+              ("Is following a point genetic in dogs?", "Partly. The same 2021 study found over 40% of the variation in puppies' point following and attention to human faces was attributable to genetic factors."),
+              ("Can wolves follow human pointing?", "Not as well as dogs. In 2002 and 2021 studies, wolves raised by people did worse than dog puppies at reading human gestures, while doing about as well on non-social tasks.")],
+         sources=src("hare2002", "bray2021", "salomons2021"),
+         related=[("training.html", "Reward based training"), ("behavior.html", "Dog behavior"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs match sounds to shapes"), ("blog/puppy-socialization-window.html", "Puppy socialization window")],
+         published="2026-10-18")
+
+
     # 12 daily fact: can dogs smell fear (16 Oct 2026)
     post(page, "can-dogs-smell-fear", "Can Dogs Smell Fear? What Odour Studies Found | SnoutsWise",
          "Can dogs smell fear and stress? Studies show dogs can tell stressed from calm human odour and react to fear sweat. What the research found.",
@@ -1230,7 +1262,7 @@ def blog(page):
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: smelling fear, yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate, socialization and vaccines.",
+         "Answer first dog articles: pointing, smelling fear, yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate and vaccines.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-16")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-18")
