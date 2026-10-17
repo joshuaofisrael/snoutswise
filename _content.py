@@ -53,6 +53,8 @@ S = {
  "hare2002": ("Hare B, Brown M, Williamson C, Tomasello M (2002). The domestication of social cognition in dogs. Science 298(5598): 1634-1636. DOI 10.1126/science.1072702", "Science", "https://doi.org/10.1126/science.1072702"),
  "bray2021": ("Bray EE, Gnanadesikan GE, Horschler DJ, Levy KM, Kennedy BS, Famula TR, MacLean EL (2021). Early-emerging and highly heritable sensitivity to human communication in dogs. Current Biology 31(14): 3132-3136. DOI 10.1016/j.cub.2021.04.055", "Current Biology", "https://doi.org/10.1016/j.cub.2021.04.055"),
  "salomons2021": ("Salomons H, Smith KCM, Callahan-Beckel M, et al. (2021). Cooperative communication with humans evolved to emerge early in domestic dogs. Current Biology 31(14): 3137-3144. DOI 10.1016/j.cub.2021.06.051", "Current Biology (free full text via PubMed Central)", "https://doi.org/10.1016/j.cub.2021.06.051"),
+ "alsulami2026": ("Alsulami A, Bogdani M, MacLean EL, Keene CD, McGrath S, Dog Aging Project Consortium, Latimer CS, Moreno JA (2026). Alzheimer's disease neuropathological characterization of the dog brain and relationship to biofluid biomarkers and cognitive function. npj Dementia 2: 88. DOI 10.1038/s44400-026-00141-4", "npj Dementia (open access)", "https://doi.org/10.1038/s44400-026-00141-4"),
+ "uw2026ccd": ("Similar brain patterns seen in dogs, humans with dementia (6 October 2026)", "UW Medicine Newsroom", "https://newsroom.uw.edu/news-releases/similar-brain-patterns-seen-in-dogs-humans-with-dementia"),
  "parrcortes2024": ("Parr-Cortes Z, M\u00fcller C, Talas L, Mendl M, Guest C, Rooney N (2024). The odour of an unfamiliar stressed or relaxed person affects dogs' responses to a cognitive bias test. Scientific Reports 14: 15843. DOI 10.1038/s41598-024-66147-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-024-66147-1"),
  "biffi2026": ("Biffi E, Pedretti G, Normando S, Lazebnik T, Loconsole M, Valsecchi P (2026). Hearing shapes: the Bouba-Kiki effect in adult domestic dogs. Proceedings of the Royal Society B 293(2080): 20261209. DOI 10.1098/rspb.2026.1209", "Proceedings of the Royal Society B (open access)", "https://doi.org/10.1098/rspb.2026.1209"),
  "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
@@ -100,6 +102,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/dog-dementia-brain-study.html">News: senior dogs with dementia show early Alzheimer's-like brain changes</a></li>
 <li><a href="{R}blog/do-dogs-understand-pointing.html">Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks</a></li>
 <li><a href="{R}blog/dogs-bouba-kiki-effect-study.html">News: dogs match "bouba" to round shapes and "kiki" to spiky ones</a></li>
 <li><a href="{R}blog/can-dogs-smell-fear.html">Can dogs smell fear? The evidence says they can pick up on it</a></li>
@@ -1178,6 +1181,34 @@ def blog(page):
          sources=src("mariner2026", "asu2026", "wang2020"),
          related=[("dog-age-calculator.html", "Dog age calculator"), ("health.html", "Dog health basics"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?")],
          published="2026-10-15")
+
+
+    # news 18 Oct 2026: Alzheimer's-like brain changes in senior dogs (npj Dementia)
+    post(page, "dog-dementia-brain-study", "Dog Dementia Brains Resemble Early Alzheimer's | SnoutsWise",
+         "News: an npj Dementia study of 24 senior dogs found Alzheimer's-like amyloid deposits, heavier in dogs with cognitive decline. What it means.",
+         "News: senior dogs with dementia show early Alzheimer's-like brain changes",
+         "A study published in npj Dementia on 6 October 2026 examined the brains of 24 senior pet dogs donated by their owners. The dogs had amyloid-beta deposits similar to the early stages of Alzheimer's disease in people, and dogs rated as cognitively impaired had more of it. Age was the strongest predictor of how much amyloid built up. The researchers say aging pet dogs could help scientists study the earliest stages of Alzheimer's.",
+         """
+<h2>What the researchers did</h2>
+<p>Abdullatif Alsulami, Julie Moreno, Caitlin Latimer and colleagues, working with the Dog Aging Project, examined post-mortem brain tissue from 24 client-owned senior dogs. According to UW Medicine, the analyses were carried out at Colorado State University and UW Medicine in Seattle. The team adapted the staging methods pathologists use for human Alzheimer's disease and compared the brain findings with each dog's earlier score on the Canine Cognitive Dysfunction Rating, a questionnaire about behaviour, and with blood biomarkers.</p>
+<h2>What they found</h2>
+<ul><li>The senior dogs had amyloid-beta deposits in a pattern consistent with early regional involvement in the human staging system.</li>
+<li>Some had phosphorylated tau, another protein linked to Alzheimer's, but it was variable and restricted to certain regions. No neuritic plaques were found.</li>
+<li>Cognitively impaired dogs had a greater amyloid burden, and age was the strongest predictor of amyloid build-up.</li>
+<li>Blood levels of a protein called GFAP rose with amyloid plaque burden. The other blood markers tested did not track it.</li></ul>
+<p>In the UW Medicine release, Latimer said no one had mapped this pathology in dogs before and that the dogs could represent a model of the earliest stages of Alzheimer's disease. Moreno said the work supports companion dogs as an important model for studying Alzheimer's and related diseases.</p>
+<h2>What it means for owners</h2>
+<ul><li><b>Canine cognitive dysfunction is real.</b> UW Medicine notes it is typically seen in dogs over 8 years old, with signs such as disorientation, changes in social interaction and a decline in everyday function.</li>
+<li><b>Tell your vet about changes in an older dog.</b> Getting lost in familiar places, changed sleep, new house soiling or less interest in family can have many causes, including pain or other illness, so a check-up comes first (see <a href="{R}health.html">dog health basics</a>).</li>
+<li><b>This is not a test or a treatment yet.</b> The study was small and looked at brains after death. Blood markers such as GFAP need more research before they could help in the clinic.</li>
+<li><b>Big dogs age faster.</b> Use our <a href="{R}dog-age-calculator.html">dog age calculator</a> and read about <a href="{R}blog/big-dogs-age-faster-dna-study.html">size and DNA aging</a> to know when your dog counts as a senior.</li></ul>
+""",
+         faq=[("Can dogs get Alzheimer's disease?", "Dogs get canine cognitive dysfunction, a form of dementia. A 2026 npj Dementia study found senior dogs develop early Alzheimer's-like amyloid deposits, with more in cognitively impaired dogs."),
+              ("What are signs of dementia in dogs?", "Signs include disorientation, changes in social interaction and a decline in everyday function, typically in dogs over about 8 years old. See your vet, because pain and other illnesses can cause similar changes."),
+              ("Is there a blood test for dog dementia?", "Not yet in routine use. In the 2026 study, blood GFAP levels rose with amyloid plaque burden, but the other markers tested did not, and more research is needed.")],
+         sources=src("alsulami2026", "uw2026ccd"),
+         related=[("health.html", "Dog health basics"), ("blog/big-dogs-age-faster-dna-study.html", "Big dogs age faster"), ("dog-age-calculator.html", "Dog age calculator"), ("blog/do-dogs-dream.html", "Do dogs dream?")],
+         published="2026-10-18")
 
 
     # 13 daily fact: do dogs understand pointing (18 Oct 2026)

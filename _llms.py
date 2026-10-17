@@ -43,6 +43,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [News: senior dogs with dementia show early Alzheimer's-like brain changes]({u}blog/dog-dementia-brain-study.html)
 - [Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks]({u}blog/do-dogs-understand-pointing.html)
 - [News: big dogs show faster DNA aging, a Science study finds]({u}blog/big-dogs-age-faster-dna-study.html)
 - [News: dogs match bouba to round shapes and kiki to spiky ones]({u}blog/dogs-bouba-kiki-effect-study.html)
