@@ -124,3 +124,12 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Outreach emails: skipped (no Joshua yes saved in my chat).
 - IndexNow: 17 URLs (two new posts, blog index, home, retitled pages, llms.txt, sitemap.xml), HTTP 200 (00:13 London).
 - Next: shorten the remaining long titles in _edu.py/_games.py (teachers, research, games) and the faq/breeds/grass/tilt/yawn titles; replace hard-coded TODAY default in _build.py with per-page dates.
+
+## 2026-10-18 00:13 London: daily SEO action (FAQ + training inbound link for pointing cluster)
+- Data: still no Search Console/Bing query data. Highest EV after today's new post is inbound links from FAQ and the most relevant pillar plus accurate lastmod (same pattern as earlier clusters).
+- Article: blog/do-dogs-understand-pointing.html (Hare et al. 2002 Science, Bray et al. 2021 Curr Biol, Salomons et al. 2021 Curr Biol; DOIs verified via Crossref, abstracts read via Crossref/PubMed). Linked from home latest, blog index, llms.txt.
+- Action (single cluster): faq.html gains a sourced Q&A (Do dogs understand pointing?) in visible FAQ + FAQPage JSON-LD; training.html related links add the post and sources add Bray 2021; updated="2026-10-18" only on pages genuinely changed (home, blog index, faq, training).
+- News: blog/dog-dementia-brain-study.html on Alsulami et al., npj Dementia 6 Oct 2026 (DOI 10.1038/s44400-026-00141-4 verified via Crossref, abstract read) plus UW Medicine Newsroom release (opened); links health, dog age calculator and big-dogs-age post.
+- Outreach emails: skipped (no Joshua yes saved in my chat; also Sunday). Reframed outreach/edu-template.md draft to pitch SnoutsWise as a serious, cited resource on dog biology, behavior, health and care.
+- Commits: d854db1 (article + SEO), e9b6536 (news). IndexNow: 8 URLs HTTP 200 + blog/index.html HTTP 200 (00:10 London).
+- Next: shorten remaining long titles in _edu.py/_games.py and the faq/breeds/grass/tilt/yawn titles; replace hard-coded TODAY default in _build.py with per-page dates.
