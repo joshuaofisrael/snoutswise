@@ -647,7 +647,7 @@ def trust(page):
          h1="Thanks for your message", kind="webpage", index=False, nav="contact.html")
 
     page("privacy.html", "Privacy Policy | SnoutsWise",
-         "How Joshua Israel Ventures LLC handles data on SnoutsWise: hosting logs, Google Fonts, the FormSubmit contact form, no analytics, ads or affiliate cookies.",
+         "How Joshua Israel Ventures LLC handles data on SnoutsWise: hosting logs, Google Fonts, the FormSubmit contact form and cookieless Cloudflare Web Analytics; no ads or affiliate cookies.",
          """
 <p class="meta">Last updated 8 October 2026</p>
 <h2>Who we are</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC. Joshua Israel Ventures LLC owns and operates snoutswise.com and is the data controller for personal information collected through it ("we", "us"). Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
@@ -656,7 +656,7 @@ def trust(page):
 <li><b>Fonts.</b> Pages load the Fredoka and Nunito fonts from Google Fonts (fonts.googleapis.com and fonts.gstatic.com). To deliver them, your browser connects to Google's servers, which receive your IP address and browser information. See <a href="https://developers.google.com/fonts/faq/privacy" rel="noopener">Google Fonts privacy information</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</li>
 <li><b>Contact form.</b> If you use the <a href="{R}contact.html">contact form</a>, your name, email address, chosen topic and message are sent through FormSubmit (formsubmit.co) to our email inbox, which is a Gmail account provided by Google. We use them only to read and reply to your message.</li>
 <li><b>Email.</b> If you email us directly, we receive your email address and whatever you include in the message.</li></ul>
-<h2>What we do not use</h2><p>The site has no user accounts and sets no cookies of its own. It currently uses no analytics, no advertising and no affiliate links or affiliate cookies. If we add any of these, we will update this policy before they go live.</p>
+<h2>Analytics</h2><p>We use Cloudflare Web Analytics to count visits and see which pages are popular. It is cookieless: it sets no cookies, does not use local storage, and does not fingerprint visitors or track them across sites. Cloudflare processes basic request data such as the page URL, referrer, browser type and approximate country to produce aggregate statistics. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p><h2>What we do not use</h2><p>The site has no user accounts and sets no cookies of its own. It currently uses no advertising and no affiliate links or affiliate cookies. If we add any of these, we will update this policy before they go live.</p>
 <h2>How we use and share information</h2><p>We use contact form messages and emails only to respond to you and to improve or correct the site. We do not sell personal information or share it for advertising. The service providers named above (GitHub, Google and FormSubmit) process data on our behalf or as part of delivering their services, under their own privacy terms.</p>
 <h2>How long we keep it</h2><p>We keep messages only as long as needed to deal with them and then delete them. Email us at any time to ask us to delete your message.</p>
 <h2>Third party links</h2><p>Pages link to outside sources such as veterinary manuals and kennel clubs. Their own privacy policies apply when you visit them.</p>

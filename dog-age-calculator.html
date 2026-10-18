@@ -34,4 +34,5 @@
 function calc(){var a=(+y.value||0)+(+m.value||0)/12;if(a<0.25){o.innerHTML='Enter an age of at least 3 months.';return}
 var h=16*Math.log(a)+31;o.innerHTML='A dog aged <b>'+a.toFixed(a%1?2:0).replace(/\.?0+$/,'')+' years</b> is roughly <b>'+Math.round(h)+' in human years</b> by the epigenetic clock (the old times 7 rule would say '+Math.round(a*7)+').'}
 document.getElementById('go').addEventListener('click',calc);y.addEventListener('input',calc);m.addEventListener('input',calc);calc()})();</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "08276d2c8a2b42c9a5a0c936cc20ca7b"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

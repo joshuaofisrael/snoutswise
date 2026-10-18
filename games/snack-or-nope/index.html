@@ -41,4 +41,5 @@ st.innerHTML='<div class="foodcard"><p class="food">You scored '+score+' out of 
 [].forEach.call(ch.querySelectorAll('button'),function(b){b.onclick=function(){pick(b.dataset.v)}});
 document.addEventListener('keydown',function(e){if(e.target.tagName=='INPUT')return;var m={'1':'yes','2':'caution','3':'no'}[e.key];if(m&&!locked){e.preventDefault();pick(m)}});
 start()})();</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "08276d2c8a2b42c9a5a0c936cc20ca7b"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

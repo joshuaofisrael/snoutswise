@@ -46,4 +46,5 @@ function end(){if(score>best){best=score;try{localStorage.setItem(K,best)}catch(
 fc.innerHTML='<h3>Round over: '+score+' / 500</h3><p>'+(score>=400?'Champion thrower!':score>=250?'Good arm! Try a yellow or blue ball for faster fetches.':'Keep practising: stop the marker in the bright zone.')+'</p><button class="btn" id="fs-again">Play again</button>';fc.hidden=false;document.getElementById('fs-again').onclick=newRound;document.getElementById('fs-again').focus()}
 tb.onclick=doThrow;document.addEventListener('keydown',function(e){if(e.code=='Space'&&run&&e.target.tagName!='BUTTON'){e.preventDefault();doThrow()}var m={'1':'yellow','2':'blue','3':'red'}[e.key];if(m)setCol(m)});
 setCol('yellow');requestAnimationFrame(loop);newRound()})();</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "08276d2c8a2b42c9a5a0c936cc20ca7b"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

@@ -29,4 +29,5 @@
 function run(){var t=q.value.trim().toLowerCase(),shown=0;rows.forEach(function(r){if(r.classList.contains('cat')){r.hidden=!!t||f!='all';return}var ok=(!t||r.textContent.toLowerCase().indexOf(t)>-1)&&(f=='all'||r.dataset.v==f);r.hidden=!ok;if(ok)shown++});c.textContent=shown+' food'+(shown==1?'':'s')+' shown'}
 q.addEventListener('input',run);[].forEach.call(document.querySelectorAll('[data-f]'),function(b){b.addEventListener('click',function(){f=b.dataset.f;[].forEach.call(document.querySelectorAll('[data-f]'),function(x){x.className='btn'+(x==b?'':' alt')});run()})});
 var h=location.hash.slice(1);if(h){var e=document.getElementById(h);if(e&&!e.classList.contains('cat'))e.style.outline='3px solid #A13D14'}run()})();</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "08276d2c8a2b42c9a5a0c936cc20ca7b"}'></script><!-- End Cloudflare Web Analytics -->
 </body></html>

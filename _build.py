@@ -15,7 +15,7 @@ SITE_NAME = "SnoutsWise"
 LEGAL_NAME = "Joshua Israel Ventures LLC"
 CONTACT_EMAIL = "joshuaofisrael@gmail.com"
 GSC_TOKEN = "gtxJlcQd6hl6x20ZXICq7jrsH6cutKkniTG-J_7hrZM"          # Google Search Console HTML tag token (content="..."); empty = no tag
-CF_BEACON_TOKEN = ""    # Cloudflare Web Analytics beacon token; empty = no beacon. NOTE: update privacy.html before enabling.
+CF_BEACON_TOKEN = "08276d2c8a2b42c9a5a0c936cc20ca7b"    # Cloudflare Web Analytics beacon token; empty = no beacon. NOTE: update privacy.html before enabling.
 INDEXNOW_KEY = "f82447b1414b64e38975376b34f684d7"
 TODAY = "2026-10-08"
 OG_IMAGE = "og-image.png"
