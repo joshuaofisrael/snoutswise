@@ -133,3 +133,12 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Outreach emails: skipped (no Joshua yes saved in my chat; also Sunday). Reframed outreach/edu-template.md draft to pitch SnoutsWise as a serious, cited resource on dog biology, behavior, health and care.
 - Commits: d854db1 (article + SEO), e9b6536 (news). IndexNow: 8 URLs HTTP 200 + blog/index.html HTTP 200 (00:10 London).
 - Next: shorten remaining long titles in _edu.py/_games.py and the faq/breeds/grass/tilt/yawn titles; replace hard-coded TODAY default in _build.py with per-page dates.
+
+## 2026-10-19 00:11 London: daily SEO action (finish title length audit + drinking cluster links)
+- Data: still no Search Console/Bing query data. Highest EV unfinished checklist item was the rest of the title audit: 11 more titles were over 60 chars and getting truncated in results.
+- Action: shortened 11 titles to 44-55 chars (faq, breeds, grass, tilt, yawn, games hub, research, teachers hub and three teacher worksheets) keeping the main query words and brand.
+- Article: blog/how-do-dogs-drink-water.html (Gart et al. 2015 PNAS, Crompton & Musinsky 2011 Biol Lett, Reis et al. 2010 Science; DOIs verified via Crossref, abstracts read). Linked from home latest, blog index, care related links, a new FAQ Q&A (visible + FAQPage JSON-LD) and llms.txt; updated="2026-10-19" only on pages genuinely changed.
+- News: none. Best candidate (CANID cognitive test, Animal Cognition 12 Oct 2026, DOI 10.1007/s10071-026-02112-x) only had aggregator coverage as a second source and overlaps yesterday's dementia post, so skipped for quality.
+- Outreach emails: skipped (no Joshua yes saved in my chat).
+- Commit 6fcb877. IndexNow: 17 URLs HTTP 200 (00:10 London).
+- Next: meta descriptions over 160 chars (privacy, teachers worksheets, behavior, glossary, faq, care, age calculator, wag signals); add the new DOIs to the research page if it is not auto-built from sources; replace hard-coded TODAY default in _build.py with per-page dates.
