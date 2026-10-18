@@ -49,7 +49,7 @@ def register(page, org, site_url, foods, sources):
     hub_ld = {"@context": "https://schema.org", "@type": "ItemList", "name": "SnoutsWise dog games",
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": site_url + "games/%s/" % s, "name": n}
                                   for i, (s, n, d, g, a) in enumerate(GAMES)]}
-    page("games/index.html", "Free Dog Games: Food Sorting, Body Language and Fetch | SnoutsWise",
+    page("games/index.html", "Free Dog Games: Food, Body Language, Fetch | SnoutsWise",
          "Three free, original dog games that teach real facts: sort safe and toxic foods, read dog body language, and time a fetch throw. No sign up, no ads.",
          """
 <div class="grid gamegrid">""" + tiles + """</div>

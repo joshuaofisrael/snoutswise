@@ -54,7 +54,7 @@ def register(page, org, site_url, S):
     crumbs = lambda p, n: [("index.html", "Home"), ("teachers/index.html", "Teachers"), (p, n)]
 
     # ------------- HUB
-    page("teachers/index.html", "Free Dog Science Resources for Teachers: Worksheets, Lessons, Games | SnoutsWise",
+    page("teachers/index.html", "Dog Science Resources for Teachers | SnoutsWise",
          "Free printable dog fact sheets and worksheets with answer keys, lesson ideas by grade band linked to NGSS, a vocabulary list and classroom games. No sign up, no ads.",
          """
 <section class="card"><h2>Printables (free, no sign up)</h2><ul>
@@ -92,7 +92,7 @@ def register(page, org, site_url, S):
          crumbs=[("index.html", "Home"), ("teachers/index.html", "Teachers")])
 
     # ------------- K-2 WORKSHEET
-    page("teachers/dog-needs-worksheet.html", "What Does a Dog Need? Free K-2 Worksheet with Answer Key | SnoutsWise",
+    page("teachers/dog-needs-worksheet.html", "What Does a Dog Need? K-2 Worksheet | SnoutsWise",
          "Free printable kindergarten to grade 2 worksheet: what a dog needs to live and grow, safe and unsafe foods, with an answer key. Linked to NGSS K-LS1-1.",
          PRINT + """
 <section class="card printable"><h2>Name: ____________________ &nbsp; Date: __________</h2>
@@ -120,7 +120,7 @@ def register(page, org, site_url, S):
          crumbs=crumbs("teachers/dog-needs-worksheet.html", "What does a dog need?"))
 
     # ------------- 3-5 FACT SHEET
-    page("teachers/dog-senses-fact-sheet.html", "Dog Senses and Body Language Fact Sheet for Grades 3-5 | SnoutsWise",
+    page("teachers/dog-senses-fact-sheet.html", "Dog Senses Fact Sheet, Grades 3-5 | SnoutsWise",
          "Free printable fact sheet for grades 3 to 5: how dogs see color, why they notice movement, and how they show feelings with body language. Quiz and answer key included. NGSS 4-LS1-2.",
          PRINT + """
 <section class="card printable"><h2>Dog senses and body language: fact sheet</h2>
@@ -153,7 +153,7 @@ def register(page, org, site_url, S):
          crumbs=crumbs("teachers/dog-senses-fact-sheet.html", "Dog senses fact sheet"))
 
     # ------------- 3-8 TRAITS WORKSHEET
-    page("teachers/dog-traits-worksheet.html", "Dog Traits, Breeds and Selective Breeding Worksheet (Grades 3-8) | SnoutsWise",
+    page("teachers/dog-traits-worksheet.html", "Dog Traits and Breeding Worksheet | SnoutsWise",
          "Free printable worksheet: compare traits of puppies and parents, then explore how selective breeding created dog breeds for different jobs. Answer key included. NGSS 3-LS3-1 and MS-LS4-5.",
          PRINT + """
 <section class="card printable"><h2>Name: ____________________ &nbsp; Date: __________</h2>
@@ -192,7 +192,7 @@ def register(page, org, site_url, S):
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": "Peer reviewed papers behind SnoutsWise",
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": {"@type": "ScholarlyArticle", "name": t, "datePublished": str(y),
                                "isPartOf": {"@type": "Periodical", "name": j}, "sameAs": "https://doi.org/" + d}} for i, (a, y, t, j, v, d, s, u) in enumerate(PAPERS)]}
-    page("research/index.html", "Research Behind SnoutsWise: Peer Reviewed Dog Science Papers with DOIs | SnoutsWise",
+    page("research/index.html", "Peer Reviewed Dog Research We Cite | SnoutsWise",
          "The peer reviewed papers and veterinary guidelines behind SnoutsWise articles, with DOIs and plain language summaries, for students, teachers and researchers.",
          """
 <section class="card"><h2>Peer reviewed papers</h2><ol>""" + rows + """</ol><p class="gnote">Each DOI was checked against its Crossref record on 9 October 2026. Summaries are our own plain language descriptions of each paper's abstract.</p></section>

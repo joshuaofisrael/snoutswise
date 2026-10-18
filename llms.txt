@@ -33,6 +33,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Research behind SnoutsWise](https://snoutswise.com/research/): peer reviewed papers with DOIs and veterinary guidelines used across the site
 
 ## Blog
+- [How do dogs drink water? A fast tongue pulls up a column of water](https://snoutswise.com/blog/how-do-dogs-drink-water.html)
 - [News: senior dogs with dementia show early Alzheimer's-like brain changes](https://snoutswise.com/blog/dog-dementia-brain-study.html)
 - [Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks](https://snoutswise.com/blog/do-dogs-understand-pointing.html)
 - [News: big dogs show faster DNA aging, a Science study finds](https://snoutswise.com/blog/big-dogs-age-faster-dna-study.html)

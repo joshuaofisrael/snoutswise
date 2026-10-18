@@ -58,6 +58,9 @@ S = {
  "parrcortes2024": ("Parr-Cortes Z, M\u00fcller C, Talas L, Mendl M, Guest C, Rooney N (2024). The odour of an unfamiliar stressed or relaxed person affects dogs' responses to a cognitive bias test. Scientific Reports 14: 15843. DOI 10.1038/s41598-024-66147-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-024-66147-1"),
  "biffi2026": ("Biffi E, Pedretti G, Normando S, Lazebnik T, Loconsole M, Valsecchi P (2026). Hearing shapes: the Bouba-Kiki effect in adult domestic dogs. Proceedings of the Royal Society B 293(2080): 20261209. DOI 10.1098/rspb.2026.1209", "Proceedings of the Royal Society B (open access)", "https://doi.org/10.1098/rspb.2026.1209"),
  "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
+ "gart2015": ("Gart S, Socha JJ, Vlachos PP, Jung S (2015). Dogs lap using acceleration-driven open pumping. Proceedings of the National Academy of Sciences 112(52): 15798-15802. DOI 10.1073/pnas.1514842112", "PNAS", "https://doi.org/10.1073/pnas.1514842112"),
+ "crompton2011": ("Crompton AW, Musinsky C (2011). How dogs lap: ingestion and intraoral transport in Canis familiaris. Biology Letters 7(6): 882-884. DOI 10.1098/rsbl.2011.0336", "Biology Letters", "https://doi.org/10.1098/rsbl.2011.0336"),
+ "reis2010": ("Reis PM, Jung S, Aristoff JM, Stocker R (2010). How cats lap: water uptake by Felis catus. Science 330(6008): 1231-1234. DOI 10.1126/science.1195421", "Science", "https://doi.org/10.1126/science.1195421"),
  "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
 }
 import datetime
@@ -102,6 +105,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/how-do-dogs-drink-water.html">How do dogs drink water? A fast tongue pulls up a column of water</a></li>
 <li><a href="{R}blog/dog-dementia-brain-study.html">News: senior dogs with dementia show early Alzheimer's-like brain changes</a></li>
 <li><a href="{R}blog/do-dogs-understand-pointing.html">Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks</a></li>
 <li><a href="{R}blog/dogs-bouba-kiki-effect-study.html">News: dogs match "bouba" to round shapes and "kiki" to spiky ones</a></li>
@@ -123,7 +127,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-18")
+         body, kind="home", updated="2026-10-19")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -166,7 +170,7 @@ def breeds(page):
 <section id="mixed"><h2>Mixed breeds and rescue dogs</h2>
 <p>Breed groups describe tendencies, not guarantees: individual dogs vary, and many wonderful dogs are mixes. When you meet a rescue dog, the rescue's notes on how that particular dog behaves with people, other dogs, children and being left alone usually tell you more than a guess at its ancestry. Whatever dog you choose, early <a href="{R}behavior.html#socialization">socialization</a> and <a href="{R}training.html">reward based training</a> matter more than the label.</p></section>
 """
-    page("breeds.html", "Dog Breed Groups Explained: AKC vs Royal Kennel Club | SnoutsWise",
+    page("breeds.html", "Dog Breed Groups: AKC vs Royal Kennel Club | SnoutsWise",
          "The seven AKC and seven Royal Kennel Club dog breed groups compared side by side, what each was bred for, and a practical checklist for choosing a breed.",
          body, h1="Dog breeds and breed groups explained",
          lead="Kennel clubs sort dog breeds into groups based on the work they were originally bred to do. The American Kennel Club uses seven groups (Sporting, Hound, Working, Terrier, Toy, Non-Sporting and Herding) and The Royal Kennel Club in the UK also uses seven (Gundog, Hound, Pastoral, Terrier, Toy, Utility and Working). A breed's original job is one of the best clues to how much exercise, training and company it will need.",
@@ -209,7 +213,7 @@ def care(page):
          body, h1="Dog care basics",
          lead="Good everyday care comes down to a complete and balanced diet, keeping your dog lean, daily exercise and mental stimulation, regular tooth brushing, grooming suited to the coat, permanent ID, and protecting your dog from heat and household toxins. The sections below explain each one and link to the veterinary sources behind the advice.",
          sources=src("akc_food", "aspca_foods", "wsava_bcs", "penn_kealy", "avsab_puppy", "avma_dental", "gov_chip", "rspca_heat"),
-         related=[("health.html", "Dog health basics"), ("can-dogs-eat.html", "Can dogs eat this? food table"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("breeds.html", "Breed groups"), ("training.html", "Training")],
+         related=[("health.html", "Dog health basics"), ("blog/how-do-dogs-drink-water.html", "How dogs drink water"), ("can-dogs-eat.html", "Can dogs eat this? food table"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("breeds.html", "Breed groups"), ("training.html", "Training")],
          crumbs=[("index.html", "Home"), ("care.html", "Care")])
 
 # ------------------------------------------------------------------ HEALTH
@@ -550,18 +554,19 @@ def faq(page):
         ("Do dogs feel jealousy?", "They show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners pet a rival dog than a toy or book. Human-style conscious jealousy is still debated. <a href=\"{R}blog/do-dogs-feel-jealousy.html\">What experiments show</a>."),
         ("Why do dogs yawn?", "Often from tiredness, but yawning is also a stress signal when it comes with lip licking or a lowered body. Some dogs catch human yawns: 21 of 29 dogs did in a 2008 study, more from owners than strangers in a 2013 study. <a href=\"{R}blog/why-do-dogs-yawn.html\">What the studies found</a>."),
         ("Do dogs understand pointing?", "Most dogs do. A 2021 study of 375 eight-week-old puppies found they followed human gestures well with no sign of needing to learn it, and over 40% of the variation was genetic. Hand-raised wolves do worse. <a href=\"{R}blog/do-dogs-understand-pointing.html\">What the studies show</a>."),
+        ("How do dogs drink water?", "By lapping. A dog curls its tongue backward, dips it in and pulls it up very fast, which lifts a column of water that the dog bites off before it falls. The backward curl helps the dog drink more per lap, and also explains the splashing. <a href=\"{R}blog/how-do-dogs-drink-water.html\">The physics of lapping</a>."),
         ("How old is my dog in human years?", "By the 2020 epigenetic clock formula, human age is about 16 &times; ln(dog age) + 31, so a 1 year old dog is about 31 and a 10 year old about 68. Try the <a href=\"{R}dog-age-calculator.html\">dog age calculator</a>."),
         ("How often should I brush my dog's teeth?", "The AVMA says daily brushing is best, but several times a week can be effective, alongside a dental check by your vet at least once a year."),
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
-    page("faq.html", "Dog FAQ: Quick, Sourced Answers to Common Dog Questions | SnoutsWise",
+    page("faq.html", "Dog FAQ: Quick, Sourced Answers | SnoutsWise",
          "Short, sourced answers to common dog questions: yawning, jealousy, dreaming, head tilting, grass eating, color vision, vaccines, socialization, weight and heatstroke.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
          faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
          related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-18")
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-19")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -962,7 +967,7 @@ def blog(page):
          published="2026-10-08")
 
     # 7 daily fact: grass eating (11 Oct 2026)
-    post(page, "why-do-dogs-eat-grass", "Why Do Dogs Eat Grass? What a 1,571 Dog Study Found | SnoutsWise",
+    post(page, "why-do-dogs-eat-grass", "Why Do Dogs Eat Grass? What Studies Found | SnoutsWise",
          "Why do dogs eat grass? A study of 1,571 dogs found 68% ate plants daily or weekly and most were not sick first. What it means and when to call a vet.",
          "Why do dogs eat grass? Usually because it is normal",
          "Most dogs eat grass simply because it is normal dog behavior, not because they are sick. In the largest study so far, a survey of 1,571 owners of plant eating dogs published in <i>Applied Animal Behaviour Science</i> in 2008, 68% of the dogs ate plants daily or weekly, only 9% often seemed unwell beforehand and only 22% often vomited afterwards. Researchers think the habit may be inherited from wild ancestors, since wolves eat grass too. A dog that suddenly eats grass frantically, vomits repeatedly or seems unwell should still see a vet.",
@@ -1006,7 +1011,7 @@ def blog(page):
          published="2026-10-11")
 
     # 8 daily fact: head tilting (12 Oct 2026)
-    post(page, "why-do-dogs-tilt-their-heads", "Why Do Dogs Tilt Their Heads? What the Research Found | SnoutsWise",
+    post(page, "why-do-dogs-tilt-their-heads", "Why Do Dogs Tilt Their Heads? The Research | SnoutsWise",
          "Why do dogs tilt their heads? In a 2021 study, dogs that knew toy names tilted on 43% of requests vs 2% for other dogs. Plus when a tilt needs a vet.",
          "Why do dogs tilt their heads? It may mean they are listening hard",
          "Dogs often tilt their heads when they hear a word that means something to them. In a 2021 study of 40 dogs in <i>Animal Cognition</i>, dogs that had learned the names of their toys tilted their heads on 43% of requests to fetch a toy, compared with just 2% for typical dogs given the same training. The researchers think the tilt may be linked to paying close attention to meaningful speech, and each dog tended to tilt to the same side every time. A tilt that does not go away, or comes with stumbling, circling or flicking eyes, is different: that can be a balance (vestibular) problem and needs a vet.",
@@ -1127,7 +1132,7 @@ def blog(page):
 
 
     # 11 daily fact: why do dogs yawn (15 Oct 2026)
-    post(page, "why-do-dogs-yawn", "Why Do Dogs Yawn? Tiredness, Stress or Catching Yours | SnoutsWise",
+    post(page, "why-do-dogs-yawn", "Why Do Dogs Yawn? Stress or Contagion | SnoutsWise",
          "Why do dogs yawn? Often from tiredness or stress, and some dogs catch human yawns, more from owners than strangers. What the studies found.",
          "Why do dogs yawn? Sometimes stress, sometimes they catch yours",
          "Dogs yawn when they are sleepy, but yawning is also one of the stress signals vets and behaviour researchers watch for, alongside lip licking and a lowered body. Several experiments also suggest that some dogs catch human yawns: in the first study, 21 of 29 dogs yawned after watching a person yawn, and none did after a fake mouth movement. Later studies found the effect is stronger with the owner than a stranger and only shows up after about 7 months of age, though one video study found almost no contagion at all.",
@@ -1209,6 +1214,35 @@ def blog(page):
          sources=src("alsulami2026", "uw2026ccd"),
          related=[("health.html", "Dog health basics"), ("blog/big-dogs-age-faster-dna-study.html", "Big dogs age faster"), ("dog-age-calculator.html", "Dog age calculator"), ("blog/do-dogs-dream.html", "Do dogs dream?")],
          published="2026-10-18")
+
+
+    # 14 daily fact: how do dogs drink water (19 Oct 2026)
+    post(page, "how-do-dogs-drink-water", "How Do Dogs Drink Water? The Physics of Lapping | SnoutsWise",
+         "How do dogs drink water? They curl the tongue back and pull it up fast, lifting a water column they bite off. Why dogs are messy drinkers.",
+         "How do dogs drink water? A fast tongue pulls up a column of water",
+         "Dogs cannot suck water up the way people do, so they lap. A dog curls the tip of its tongue backward, dips it into the bowl and then whips it upward very fast. That pulls a column of water up out of the bowl, and the dog times its bite to close on the column just as it breaks off. High speed video studies also show that water clings to the surface of the tongue, and that a dog needs at least three laps to move a mouthful back to its throat.",
+         """
+<h2>Dogs lap with a fast upward flick</h2>
+<p>In a 2015 PNAS study, Sean Gart, Sunghwan Jung and colleagues filmed a wide range of dogs of different breeds and body sizes while they drank, and built physical experiments that copied the motion of a dog's tongue leaving the water. They found that dogs accelerate the tongue upward more quickly than cats do. That fast pull drags a column of water up out of the bowl, and the dog times its bite to coincide with the moment the column pinches off, so it catches the water before it falls back.</p>
+<h2>Why dogs are such messy drinkers</h2>
+<p>The same study explains the splashing. A dog curls its tongue backward, like a ladle facing the wrong way, and the authors found that this backward curl increases the size of the water column. That lets a dog drink more per lap than it could with a straight tongue, at the cost of water flying around the bowl.</p>
+<h2>Water sticks to the tongue, then gets trapped</h2>
+<p>A 2011 Biology Letters study by A. W. Crompton and Catherine Musinsky used high speed light video and X-ray video of drinking dogs. They reported that, like cats, dogs rely on liquid sticking to the tongue rather than simply scooping it. Water rides up on the tongue's surface as it is drawn back, and a tight contact between the tongue and the ridges on the roof of the mouth (the palatal rugae) traps the water so it does not fall out when the tongue goes out again. They found that at least three lapping cycles are needed to move liquid through a dog's mouth to the throat.</p>
+<h2>How this compares with cats</h2>
+<p>Cats were studied first. In a 2010 Science paper, Pedro Reis, Sunghwan Jung and colleagues showed that cats curl the tongue so its upper surface touches the water, then lift it rapidly so a column of liquid grows by inertia until gravity breaks it, and close their jaws to capture it. They also found lapping speed is tuned to body mass, a pattern that held from house cats to lions. Cats do this neatly with a light touch, while dogs plunge the curled tongue in and accelerate it harder, which is where the mess comes from.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Splashing is normal.</b> It comes from the backward curl of the tongue, not bad manners. A wide, heavy bowl on a mat or an easy to wipe floor helps.</li>
+<li><b>Keep fresh water available.</b> Refill and clean the bowl daily, and offer extra water and shade on hot days (see <a href="{R}care.html">everyday dog care</a> and <a href="{R}health.html">dog health basics</a>).</li>
+<li><b>Watch for changes.</b> If your dog suddenly drinks much more or much less than usual, or struggles to lap, call your vet rather than guessing at the cause.</li>
+<li><b>Lapping takes a few goes.</b> Since a mouthful needs at least three laps to reach the throat, a dog drinking for a while at the bowl is just working through that cycle.</li></ul>
+""",
+         faq=[("How do dogs drink water?", "By lapping. A dog curls its tongue backward, dips it in and accelerates it upward, pulling up a column of water that it bites off just as the column breaks."),
+              ("Why are dogs such messy drinkers?", "A 2015 PNAS study found the backward curl of a dog's tongue increases the size of the water column, so dogs drink more per lap but splash more too."),
+              ("Do dogs scoop water with their tongue?", "Not mainly. X-ray video in a 2011 Biology Letters study showed water clings to the tongue surface and is trapped against ridges on the roof of the mouth, with at least three laps needed to move it to the throat."),
+              ("Do dogs and cats drink the same way?", "Both lap and both rely on water sticking to the tongue, but cats touch the surface lightly while dogs plunge the curled tongue in and accelerate it faster than cats do.")],
+         sources=src("gart2015", "crompton2011", "reis2010"),
+         related=[("care.html", "Everyday dog care"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?")],
+         published="2026-10-19")
 
 
     # 13 daily fact: do dogs understand pointing (18 Oct 2026)
@@ -1293,7 +1327,7 @@ def blog(page):
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: pointing, smelling fear, yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate and vaccines.",
+         "Answer first dog articles: drinking, pointing, smelling fear, yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate and vaccines.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-18")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-19")
