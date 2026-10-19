@@ -142,3 +142,12 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Outreach emails: skipped (no Joshua yes saved in my chat).
 - Commit 6fcb877. IndexNow: 17 URLs HTTP 200 (00:10 London).
 - Next: meta descriptions over 160 chars (privacy, teachers worksheets, behavior, glossary, faq, care, age calculator, wag signals); add the new DOIs to the research page if it is not auto-built from sources; replace hard-coded TODAY default in _build.py with per-page dates.
+
+## 2026-10-20 00:17 London: daily SEO action (meta description length audit + tail wagging cluster)
+- Data: still no Search Console/Bing query data. Highest EV unfinished checklist item was meta descriptions over 160 chars, which Google truncates in results.
+- Action: shortened all 10 meta descriptions over 160 chars to 147-159 (behavior, care, dog age calculator, faq, wag signals game, glossary, privacy, teachers hub and two teacher sheets); a site-wide check now finds none over 160, the beacon and LLC footer on every page and no Michigan text.
+- Article: blog/why-do-dogs-wag-their-tails.html (Leonetti et al. 2024 Biol Lett, open full text read; Siniscalchi et al. 2013 Curr Biol, abstract read via PubMed; Quaranta et al. 2007 Curr Biol, DOI verified via Crossref, findings reported as summarised by the 2024 review since the publisher page was behind a bot check). Linked from home latest, blog index, behavior related links, a new FAQ Q&A (visible + FAQPage JSON-LD) and llms.txt; updated="2026-10-20" only on pages genuinely changed.
+- News: none tonight (lean pacing until the 22 Oct usage reset; no candidate verified in the slot).
+- Outreach emails: skipped (no Joshua yes saved in my chat).
+- Commit a449506. IndexNow: 15 URLs HTTP 200 (00:17 London).
+- Next: add the new DOIs to the research page if it is not auto-built from sources; replace hard-coded TODAY default in _build.py with per-page dates; feeding calculator hub after 22 Oct.
