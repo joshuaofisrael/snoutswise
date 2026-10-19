@@ -55,7 +55,7 @@ def register(page, org, site_url, S):
 
     # ------------- HUB
     page("teachers/index.html", "Dog Science Resources for Teachers | SnoutsWise",
-         "Free printable dog fact sheets and worksheets with answer keys, lesson ideas by grade band linked to NGSS, a vocabulary list and classroom games. No sign up, no ads.",
+         "Free printable dog fact sheets and worksheets with answer keys, NGSS-linked lesson ideas by grade band, a vocabulary list and classroom games. No sign up.",
          """
 <section class="card"><h2>Printables (free, no sign up)</h2><ul>
 <li><a href="{R}teachers/dog-needs-worksheet.html"><b>What does a dog need?</b></a> Grades K to 2 worksheet with answer key. NGSS K-LS1-1.</li>
@@ -121,7 +121,7 @@ def register(page, org, site_url, S):
 
     # ------------- 3-5 FACT SHEET
     page("teachers/dog-senses-fact-sheet.html", "Dog Senses Fact Sheet, Grades 3-5 | SnoutsWise",
-         "Free printable fact sheet for grades 3 to 5: how dogs see color, why they notice movement, and how they show feelings with body language. Quiz and answer key included. NGSS 4-LS1-2.",
+         "Free printable fact sheet for grades 3 to 5: how dogs see color, notice movement and show feelings with body language. Quiz and answer key. NGSS 4-LS1-2.",
          PRINT + """
 <section class="card printable"><h2>Dog senses and body language: fact sheet</h2>
 <h3>How dogs see</h3><ul>
@@ -154,7 +154,7 @@ def register(page, org, site_url, S):
 
     # ------------- 3-8 TRAITS WORKSHEET
     page("teachers/dog-traits-worksheet.html", "Dog Traits and Breeding Worksheet | SnoutsWise",
-         "Free printable worksheet: compare traits of puppies and parents, then explore how selective breeding created dog breeds for different jobs. Answer key included. NGSS 3-LS3-1 and MS-LS4-5.",
+         "Free printable worksheet on inherited traits and how selective breeding created dog breeds for different jobs. Answer key included. NGSS 3-LS3-1, MS-LS4-5.",
          PRINT + """
 <section class="card printable"><h2>Name: ____________________ &nbsp; Date: __________</h2>
 <h3>Part A (grades 3 to 5). Traits in a family</h3>

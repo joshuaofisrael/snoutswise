@@ -162,7 +162,7 @@ st.innerHTML='<div class="foodcard"><p class="food">You read '+score+' of '+deck
 document.addEventListener('keydown',function(e){var k=+e.key;if(k>=1&&k<=4&&!locked){e.preventDefault();pick(k-1)}});
 start()})();""".replace("__DATA__", json.dumps(jsdata, ensure_ascii=False))
     page("games/wag-signals/index.html", "Wag Signals: Free Dog Body Language Game | SnoutsWise",
-         "Free original game: read a cartoon dog's ears, eyes, mouth, body and tail and decide if it is happy, playful, worried or warning you. Based on RSPCA and ASPCA guidance.",
+         "Free game: read a cartoon dog's ears, eyes, mouth, body and tail and decide if it is happy, playful, worried or warning you. Based on RSPCA and ASPCA advice.",
          """
 <div class="game" aria-label="Wag Signals game">
 <div class="gbar"><span>Dog <span class="pill" id="ws-round">1 / 8</span></span><span>Score <span class="pill" id="ws-score" aria-live="polite">0</span></span><span>Best <span class="pill" id="ws-best">0</span></span><button class="btn ghost" id="ws-sound" aria-pressed="false">Sound: off</button></div>

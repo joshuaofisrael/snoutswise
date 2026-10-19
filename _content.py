@@ -58,6 +58,9 @@ S = {
  "parrcortes2024": ("Parr-Cortes Z, M\u00fcller C, Talas L, Mendl M, Guest C, Rooney N (2024). The odour of an unfamiliar stressed or relaxed person affects dogs' responses to a cognitive bias test. Scientific Reports 14: 15843. DOI 10.1038/s41598-024-66147-1", "Scientific Reports (open access)", "https://doi.org/10.1038/s41598-024-66147-1"),
  "biffi2026": ("Biffi E, Pedretti G, Normando S, Lazebnik T, Loconsole M, Valsecchi P (2026). Hearing shapes: the Bouba-Kiki effect in adult domestic dogs. Proceedings of the Royal Society B 293(2080): 20261209. DOI 10.1098/rspb.2026.1209", "Proceedings of the Royal Society B (open access)", "https://doi.org/10.1098/rspb.2026.1209"),
  "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
+ "quaranta2007": ("Quaranta A, Siniscalchi M, Vallortigara G (2007). Asymmetric tail-wagging responses by dogs to different emotive stimuli. Current Biology 17(6): R199-R201. DOI 10.1016/j.cub.2007.02.008", "Current Biology", "https://doi.org/10.1016/j.cub.2007.02.008"),
+ "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
+ "leonetti2024": ("Leonetti S, Cimarelli G, Hersh TA, Ravignani A (2024). Why do dogs wag their tails? Biology Letters 20(1): 20230407. DOI 10.1098/rsbl.2023.0407", "Biology Letters", "https://doi.org/10.1098/rsbl.2023.0407"),
  "gart2015": ("Gart S, Socha JJ, Vlachos PP, Jung S (2015). Dogs lap using acceleration-driven open pumping. Proceedings of the National Academy of Sciences 112(52): 15798-15802. DOI 10.1073/pnas.1514842112", "PNAS", "https://doi.org/10.1073/pnas.1514842112"),
  "crompton2011": ("Crompton AW, Musinsky C (2011). How dogs lap: ingestion and intraoral transport in Canis familiaris. Biology Letters 7(6): 882-884. DOI 10.1098/rsbl.2011.0336", "Biology Letters", "https://doi.org/10.1098/rsbl.2011.0336"),
  "reis2010": ("Reis PM, Jung S, Aristoff JM, Stocker R (2010). How cats lap: water uptake by Felis catus. Science 330(6008): 1231-1234. DOI 10.1126/science.1195421", "Science", "https://doi.org/10.1126/science.1195421"),
@@ -105,6 +108,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/why-do-dogs-wag-their-tails.html">Why do dogs wag their tails? It signals arousal, not just happiness</a></li>
 <li><a href="{R}blog/how-do-dogs-drink-water.html">How do dogs drink water? A fast tongue pulls up a column of water</a></li>
 <li><a href="{R}blog/dog-dementia-brain-study.html">News: senior dogs with dementia show early Alzheimer's-like brain changes</a></li>
 <li><a href="{R}blog/do-dogs-understand-pointing.html">Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks</a></li>
@@ -127,7 +131,7 @@ def home(page):
 """
     page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
          "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-19")
+         body, kind="home", updated="2026-10-20")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -209,7 +213,7 @@ def care(page):
 <li>Raw bread dough, which can expand in the stomach and produce alcohol, according to the ASPCA.</li></ul></section>
 """
     page("care.html", "Dog Care Basics: Feeding, Weight and Grooming | SnoutsWise",
-         "Everyday dog care with sources: what to feed, keeping a healthy weight, exercise, brushing teeth, grooming, microchip rules and how to cool a dog with heatstroke.",
+         "Everyday dog care with sources: feeding, healthy weight, exercise, brushing teeth, grooming, microchip rules and how to cool a dog with heatstroke.",
          body, h1="Dog care basics",
          lead="Good everyday care comes down to a complete and balanced diet, keeping your dog lean, daily exercise and mental stimulation, regular tooth brushing, grooming suited to the coat, permanent ID, and protecting your dog from heat and household toxins. The sections below explain each one and link to the veterinary sources behind the advice.",
          sources=src("akc_food", "aspca_foods", "wsava_bcs", "penn_kealy", "avsab_puppy", "avma_dental", "gov_chip", "rspca_heat"),
@@ -347,12 +351,12 @@ def behavior(page):
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
 """
     page("behavior.html", "Dog Behavior: Stress Signals and Socialization | SnoutsWise",
-         "How to read stress and fear in dogs, why puppy socialization matters, what research says about dominance and alpha theory, and a step by step approach to problem behavior.",
+         "How to read stress, fear and tail wags in dogs, why puppy socialization matters, what research says about alpha theory, and how to tackle problem behavior.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
          sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013"),
-         related=[("training.html", "Reward based training"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-15")
+         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-20")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
 FOODS = [
@@ -529,7 +533,7 @@ document.getElementById('go').addEventListener('click',calc);y.addEventListener(
         ("Does the formula work for small and giant breeds?", "It was built from Labrador retrievers only, so it is most reliable for medium to large dogs with a similar lifespan. Smaller breeds usually live longer and giant breeds shorter, so treat the result as a rough guide."),
     ]
     page("dog-age-calculator.html", "Dog Age Calculator: Dog Years to Human Years | SnoutsWise",
-         "Convert dog years to human years with the epigenetic clock formula from the 2020 Cell Systems study (16 ln(age) + 31), plus a full table and the limits of the method.",
+         "Convert dog years to human years with the epigenetic clock formula from a 2020 Cell Systems study (16 ln(age) + 31), plus a full table and its limits.",
          body, h1="Dog age calculator: dog years to human years",
          lead="The best evidence based conversion comes from a 2020 study of DNA methylation in 104 Labrador retrievers, which found that human age is roughly 16 &times; ln(dog age) + 31. By that formula a 1 year old dog is about 31 in human years, a 4 year old about 53, a 10 year old about 68 and a 14 year old about 73. Dogs age very quickly early in life and more slowly later, so the old times 7 rule is wrong at both ends.",
          faq=faq, sources=src("wang2020", "merck_vitals"),
@@ -554,6 +558,7 @@ def faq(page):
         ("Do dogs feel jealousy?", "They show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners pet a rival dog than a toy or book. Human-style conscious jealousy is still debated. <a href=\"{R}blog/do-dogs-feel-jealousy.html\">What experiments show</a>."),
         ("Why do dogs yawn?", "Often from tiredness, but yawning is also a stress signal when it comes with lip licking or a lowered body. Some dogs catch human yawns: 21 of 29 dogs did in a 2008 study, more from owners than strangers in a 2013 study. <a href=\"{R}blog/why-do-dogs-yawn.html\">What the studies found</a>."),
         ("Do dogs understand pointing?", "Most dogs do. A 2021 study of 375 eight-week-old puppies found they followed human gestures well with no sign of needing to learn it, and over 40% of the variation was genetic. Hand-raised wolves do worse. <a href=\"{R}blog/do-dogs-understand-pointing.html\">What the studies show</a>."),
+        ("Why do dogs wag their tails?", "Mainly to communicate. A wag shows a dog is aroused or engaged, and research links it with both positive and negative states, so a wagging dog is not always a friendly one. Dogs also tend to wag more to the right for their owner and more to the left for an unfamiliar dominant dog. <a href=\"{R}blog/why-do-dogs-wag-their-tails.html\">What the research shows</a>."),
         ("How do dogs drink water?", "By lapping. A dog curls its tongue backward, dips it in and pulls it up very fast, which lifts a column of water that the dog bites off before it falls. The backward curl helps the dog drink more per lap, and also explains the splashing. <a href=\"{R}blog/how-do-dogs-drink-water.html\">The physics of lapping</a>."),
         ("How old is my dog in human years?", "By the 2020 epigenetic clock formula, human age is about 16 &times; ln(dog age) + 31, so a 1 year old dog is about 31 and a 10 year old about 68. Try the <a href=\"{R}dog-age-calculator.html\">dog age calculator</a>."),
         ("How often should I brush my dog's teeth?", "The AVMA says daily brushing is best, but several times a week can be effective, alongside a dental check by your vet at least once a year."),
@@ -561,12 +566,12 @@ def faq(page):
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
     page("faq.html", "Dog FAQ: Quick, Sourced Answers | SnoutsWise",
-         "Short, sourced answers to common dog questions: yawning, jealousy, dreaming, head tilting, grass eating, color vision, vaccines, socialization, weight and heatstroke.",
+         "Short, sourced answers to common dog questions: tail wagging, yawning, jealousy, dreaming, grass eating, color vision, vaccines, weight and heatstroke.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
          faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
          related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-19")
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-20")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -596,7 +601,7 @@ def glossary(page):
     ]
     body = '<dl class="card">' + "".join('<dt id="%s">%s</dt><dd>%s</dd>' % (slug(t), t, d) for t, d in terms) + "</dl>"
     page("glossary.html", "Dog Glossary: Plain English Dog & Vet Terms | SnoutsWise",
-         "Plain English definitions of dog care, health, training and breed terms: core vaccine, body condition score, brachycephalic, methylxanthines, shaping, xylitol and more.",
+         "Plain English definitions of dog care, health, training and breed terms: core vaccine, body condition score, brachycephalic, methylxanthines and more.",
          body, h1="Dog glossary",
          lead="Short, plain English definitions of terms you will meet on vet visits, in training classes and on kennel club sites, each linked to the page that explains it in more depth.",
          sources=src("aaha_table", "avsab_train", "rspca_heat", "avma_dental", "merck_choc", "wsava_bcs", "rkc_groups"),
@@ -652,7 +657,7 @@ def trust(page):
          h1="Thanks for your message", kind="webpage", index=False, nav="contact.html")
 
     page("privacy.html", "Privacy Policy | SnoutsWise",
-         "How Joshua Israel Ventures LLC handles data on SnoutsWise: hosting logs, Google Fonts, the FormSubmit contact form and cookieless Cloudflare Web Analytics; no ads or affiliate cookies.",
+         "How Joshua Israel Ventures LLC handles data on SnoutsWise: hosting logs, Google Fonts, the contact form and cookieless Cloudflare Web Analytics. No ad cookies.",
          """
 <p class="meta">Last updated 8 October 2026</p>
 <h2>Who we are</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC. Joshua Israel Ventures LLC owns and operates snoutswise.com and is the data controller for personal information collected through it ("we", "us"). Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
@@ -1216,6 +1221,35 @@ def blog(page):
          published="2026-10-18")
 
 
+    # 15 daily fact: why do dogs wag their tails (20 Oct 2026)
+    post(page, "why-do-dogs-wag-their-tails", "Why Do Dogs Wag Their Tails? What Science Says | SnoutsWise",
+         "Why do dogs wag their tails? Wagging signals arousal, not only happiness, and the side it leans to can differ. What the research shows.",
+         "Why do dogs wag their tails? It signals arousal, not just happiness",
+         "Dogs wag their tails mainly as a social signal, and a wag shows that a dog is aroused or engaged, not always that it is happy. A 2024 Biology Letters review found tail wagging is linked with both positive and negative arousal. Studies from the University of Bari also found that dogs tend to wag more to the right for things they want to approach, such as their owner, and more to the left for things that make them want to withdraw, and that other dogs notice the difference.",
+         """
+<h2>A wag means arousal, not always joy</h2>
+<p>In a 2024 Biology Letters review, Silvia Leonetti, Andrea Ravignani and colleagues pulled together what is known about tail wagging. People tend to read any wag as a happy dog, but the review notes that quantitative studies have produced patchy results. Wagging is frequently associated with both positive and negative arousal, and several studies found that the time a dog spends wagging rises with its heart rate. There is indirect evidence linking wagging with oxytocin, especially when dogs are reunited with a familiar person, while links with the stress hormone cortisol are inconsistent across studies.</p>
+<h2>Left and right wags can mean different things</h2>
+<p>Angelo Quaranta, Marcello Siniscalchi and Giorgio Vallortigara reported in a 2007 Current Biology paper that tail wagging is asymmetric. As the 2024 review summarizes this line of work, dogs show a right-side wagging bias, linked to activity in the left side of the brain, for stimuli with a positive emotional value such as their owner or a familiar person. They show left-biased wagging, linked to the right side of the brain, for stimuli that make them want to withdraw, such as an unfamiliar dominant dog.</p>
+<h2>Other dogs read the direction of a wag</h2>
+<p>In a 2013 follow-up in Current Biology, Siniscalchi and colleagues showed dogs video images of other dogs wagging with a left or right bias. Dogs watching left-biased wagging had higher heart activity and scored higher for anxious behavior than dogs watching right-biased wagging. The authors say this shows dogs are sensitive to the tail signals of other dogs and could be useful for dog welfare work.</p>
+<h2>Why dogs wag more than wolves</h2>
+<p>The 2024 review asks why dogs wag their tails more often, and in more situations, than close relatives such as wolves. The authors offer two hypotheses to be tested: wagging may have increased as a side effect of selecting dogs for tameness and docility during domestication, or people may have favoured it directly because humans are drawn to rhythmic movement. Neither idea is proven yet, and the authors call wagging one of the most visible but least studied animal behaviors.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Read the whole dog, not just the tail.</b> A wag tells you a dog is engaged. Check the body, ears, mouth and the situation before you approach (see <a href="{R}behavior.html">dog behavior</a> and <a href="{R}behavior.html#stress">reading stress</a>).</li>
+<li><b>Do not assume a wagging dog is friendly.</b> Since wagging also goes with negative arousal, a stiff dog wagging while it stares or growls is not inviting contact. Let unfamiliar dogs come to you, or not at all.</li>
+<li><b>The side is a subtle clue, not a rule.</b> The left and right findings come from group averages in lab studies, so do not try to judge one dog's mood from wag direction alone.</li>
+<li><b>Notice changes.</b> If your dog stops wagging, holds its tail oddly or yelps when the tail is touched, a vet check is worth it, since pain can change tail carriage (see <a href="{R}health.html">dog health basics</a>).</li></ul>
+""",
+         faq=[("Why do dogs wag their tails?", "Mainly to communicate. A 2024 Biology Letters review found tail wagging goes with both positive and negative arousal, so a wag means a dog is engaged, not always happy."),
+              ("Does a wagging tail mean a dog is happy?", "Not always. Wagging is linked with both positive and negative arousal. Look at the whole body and the situation, and be careful with a stiff dog that wags while staring or growling."),
+              ("What does it mean when a dog wags to the right or left?", "Studies from the University of Bari found dogs tend to wag more to the right for things they want to approach, such as their owner, and more to the left for things that trigger withdrawal, such as an unfamiliar dominant dog."),
+              ("Can dogs read other dogs' tail wags?", "Yes. In a 2013 Current Biology study, dogs watching videos of left-biased wagging dogs had higher heart activity and more anxious behavior than dogs watching right-biased wagging.")],
+         sources=src("leonetti2024", "quaranta2007", "siniscalchi2013"),
+         related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
+         published="2026-10-20")
+
+
     # 14 daily fact: how do dogs drink water (19 Oct 2026)
     post(page, "how-do-dogs-drink-water", "How Do Dogs Drink Water? The Physics of Lapping | SnoutsWise",
          "How do dogs drink water? They curl the tongue back and pull it up fast, lifting a water column they bite off. Why dogs are messy drinkers.",
@@ -1327,7 +1361,7 @@ def blog(page):
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles: drinking, pointing, smelling fear, yawning, jealousy, dreaming, head tilting, grass eating, color vision, chocolate and vaccines.",
+         "Answer first dog articles on tail wagging, drinking, pointing, smelling fear, yawning, jealousy, dreaming, head tilting, grass eating and color vision.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-19")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-20")

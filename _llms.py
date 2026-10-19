@@ -43,6 +43,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [Why do dogs wag their tails? It signals arousal, not just happiness]({u}blog/why-do-dogs-wag-their-tails.html)
 - [How do dogs drink water? A fast tongue pulls up a column of water]({u}blog/how-do-dogs-drink-water.html)
 - [News: senior dogs with dementia show early Alzheimer's-like brain changes]({u}blog/dog-dementia-brain-study.html)
 - [Do dogs understand pointing? Yes, and puppies can do it from about 8 weeks]({u}blog/do-dogs-understand-pointing.html)
