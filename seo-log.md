@@ -151,3 +151,7 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Outreach emails: skipped (no Joshua yes saved in my chat).
 - Commit a449506. IndexNow: 15 URLs HTTP 200 (00:17 London).
 - Next: add the new DOIs to the research page if it is not auto-built from sources; replace hard-coded TODAY default in _build.py with per-page dates; feeding calculator hub after 22 Oct.
+
+## 21 Oct 2026
+- Daily fact: do-dogs-recognize-themselves-in-mirror (Horowitz 2017 Behav Processes, Gallup 1970 Science; DOIs verified via Crossref/PubMed). FAQ Q&A schema, linked from home, blog index, llms.txt.
+- Usage hold until 22 Oct reset: no SEO extras, no news post, no outreach, no browser.

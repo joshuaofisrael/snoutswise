@@ -60,6 +60,8 @@ S = {
  "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
  "quaranta2007": ("Quaranta A, Siniscalchi M, Vallortigara G (2007). Asymmetric tail-wagging responses by dogs to different emotive stimuli. Current Biology 17(6): R199-R201. DOI 10.1016/j.cub.2007.02.008", "Current Biology", "https://doi.org/10.1016/j.cub.2007.02.008"),
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
+ "horowitz2017": ("Horowitz A (2017). Smelling themselves: Dogs investigate their own odours longer when modified in an 'olfactory mirror' test. Behavioural Processes 143: 17-24. DOI 10.1016/j.beproc.2017.08.001", "Behavioural Processes", "https://doi.org/10.1016/j.beproc.2017.08.001"),
+ "gallup1970": ("Gallup GG Jr (1970). Chimpanzees: self-recognition. Science 167(3914): 86-87. DOI 10.1126/science.167.3914.86", "Science", "https://doi.org/10.1126/science.167.3914.86"),
  "leonetti2024": ("Leonetti S, Cimarelli G, Hersh TA, Ravignani A (2024). Why do dogs wag their tails? Biology Letters 20(1): 20230407. DOI 10.1098/rsbl.2023.0407", "Biology Letters", "https://doi.org/10.1098/rsbl.2023.0407"),
  "gart2015": ("Gart S, Socha JJ, Vlachos PP, Jung S (2015). Dogs lap using acceleration-driven open pumping. Proceedings of the National Academy of Sciences 112(52): 15798-15802. DOI 10.1073/pnas.1514842112", "PNAS", "https://doi.org/10.1073/pnas.1514842112"),
  "crompton2011": ("Crompton AW, Musinsky C (2011). How dogs lap: ingestion and intraoral transport in Canis familiaris. Biology Letters 7(6): 882-884. DOI 10.1098/rsbl.2011.0336", "Biology Letters", "https://doi.org/10.1098/rsbl.2011.0336"),
@@ -108,6 +110,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-recognize-themselves-in-mirror.html">Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell</a></li>
 <li><a href="{R}blog/why-do-dogs-wag-their-tails.html">Why do dogs wag their tails? It signals arousal, not just happiness</a></li>
 <li><a href="{R}blog/how-do-dogs-drink-water.html">How do dogs drink water? A fast tongue pulls up a column of water</a></li>
 <li><a href="{R}blog/dog-dementia-brain-study.html">News: senior dogs with dementia show early Alzheimer's-like brain changes</a></li>
@@ -1248,6 +1251,31 @@ def blog(page):
          sources=src("leonetti2024", "quaranta2007", "siniscalchi2013"),
          related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
          published="2026-10-20")
+
+    # 16 daily fact: mirror self-recognition (21 Oct 2026)
+    post(page, "do-dogs-recognize-themselves-in-mirror", "Do Dogs Recognize Themselves in a Mirror? | SnoutsWise",
+         "Do dogs recognize themselves in a mirror? Dogs fail the classic mirror test, but a 2017 smell-based study suggests they know their own odour.",
+         "Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell",
+         "Dogs do not pass the classic mirror test, so there is no good evidence that they recognize their own reflection. But dogs live in a world of smell, and a 2017 study in Behavioural Processes built an \"olfactory mirror\" from each dog's own urine. Dogs sniffed their own scent longer when it had been changed with an extra odour, which the author reads as a sign that they recognize the scent as their own.",
+         """
+<h2>The classic mirror test</h2>
+<p>In 1970 the psychologist Gordon Gallup reported in Science that chimpanzees given time with a mirror began to use it to inspect parts of their own bodies. When they were later marked with dye on spots they could only see in the mirror, they touched the marks. This mark test became the standard check for mirror self-recognition. Dogs have not passed it: as the 2017 study below notes, dogs do well on many social thinking tasks but have not passed the test of mirror self-recognition.</p>
+<h2>Why a mirror may be the wrong test for dogs</h2>
+<p>Alexandra Horowitz of Barnard College argued that a visual test may not suit a species whose main sense is smell, and that dogs may not be motivated to care about a mark on their fur. So she designed a smell version of the test, based on how dogs naturally sniff the scent marks of other dogs.</p>
+<h2>The olfactory mirror study</h2>
+<p>Dogs were offered canisters to sniff. In the key test one held the dog's own urine, the \"olfactory mirror\", and another held the dog's own urine with an extra odour added. Dogs spent longer investigating their own scent when it was modified than when it was not, which Horowitz reads as recognising the scent as being of or from themselves. Dogs also spent longer on the scent of other known or unknown dogs than on their own. In a second experiment they spent longer on the modified sample than on the added odour by itself, which suggests novelty alone does not explain the result.</p>
+<h2>What this does and does not show</h2>
+<p>The study suggests dogs can tell their own scent from changed versions and from other dogs, which is a kind of self-recognition by smell. It does not prove that dogs have self-awareness in the human sense, and it is one study that other labs would need to repeat.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Barking at a mirror is normal.</b> Some dogs react to their reflection and others ignore it. Either is fine, and neither tells you how clever your dog is.</li>
+<li><b>Let your dog sniff on walks.</b> Scent is how dogs gather information about other dogs and themselves (see <a href="{R}behavior.html">dog behavior</a> and <a href="{R}blog/can-dogs-smell-fear.html">can dogs smell fear?</a>).</li></ul>
+""",
+         faq=[("Do dogs recognize themselves in a mirror?", "There is no good evidence they do by sight. Dogs have not passed the classic mirror mark test."),
+              ("Can dogs recognize their own smell?", "A 2017 Behavioural Processes study found dogs sniffed their own urine longer when an extra odour was added, suggesting they recognize their own scent."),
+              ("Why does my dog ignore its reflection?", "No one knows for sure, but dogs rely heavily on smell and a reflection carries no dog scent, which may be one reason it holds little interest.")],
+         sources=src("horowitz2017", "gallup1970"),
+         related=[("behavior.html", "Dog behavior"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?")],
+         published="2026-10-21")
 
 
     # 14 daily fact: how do dogs drink water (19 Oct 2026)
