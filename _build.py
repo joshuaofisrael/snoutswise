@@ -114,6 +114,7 @@ def render(p):
     head = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">']
     if GSC_TOKEN and p["path"] == "index.html":
         head.append('<meta name="google-site-verification" content="%s">' % GSC_TOKEN)
+    head.append('<meta name="google-adsense-account" content="ca-pub-5681559774142917"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script>')
     head.append('<title>%s</title><meta name="description" content="%s">' % (esc(p["title"]), esc(p["desc"])))
     if p["index"]:
         head.append('<link rel="canonical" href="%s">' % canon)

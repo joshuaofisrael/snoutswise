@@ -1,10 +1,10 @@
 """SnoutsWise games hub and 3 original games. Code and art are original works
-(c) 2026 Joshua Israel Ventures LLC. No libraries, no outside assets, no cookies, no tracking.
+(c) 2026 Joshua Israel Ventures LLC. No libraries, no outside assets.
 Facts come from sources opened on 9 Oct 2026 (RSPCA, ASPCApro, AKC) or the already sourced food table."""
 import json, re, html
 
 COPY = '<p class="copyline">Games are original works &copy; 2026 Joshua Israel Ventures LLC.</p>'
-SAFE = ('<p class="gnote">No sign up, no ads, no cookies and no trackers. Your best score is saved only in this browser '
+SAFE = ('<p class="gnote">No sign up. The game itself sets no cookies. Your best score is saved only in this browser '
         '(localStorage) and is never sent to us. Sound is off unless you switch it on.</p>')
 
 RSPCA = ("Understanding your dog's body language", "RSPCA", "https://www.rspca.org.uk/adviceandwelfare/pets/dogs/behaviour/understanding")
@@ -50,7 +50,7 @@ def register(page, org, site_url, foods, sources):
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": site_url + "games/%s/" % s, "name": n}
                                   for i, (s, n, d, g, a) in enumerate(GAMES)]}
     page("games/index.html", "Free Dog Games: Food, Body Language, Fetch | SnoutsWise",
-         "Three free, original dog games that teach real facts: sort safe and toxic foods, read dog body language, and time a fetch throw. No sign up, no ads.",
+         "Three free, original dog games that teach real facts: sort safe and toxic foods, read dog body language, and time a fetch throw. No sign up.",
          """
 <div class="grid gamegrid">""" + tiles + """</div>
 <section class="card"><h2>What you learn</h2><ul>

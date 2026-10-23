@@ -30,7 +30,7 @@ GUIDES = [
 RSPCA = ("Understanding your dog's body language", "RSPCA", "https://www.rspca.org.uk/adviceandwelfare/pets/dogs/behaviour/understanding")
 ASPCAPRO = ("Canine Body Language Tips", "ASPCApro (ASPCA)", "https://www.aspcapro.org/resource/canine-body-language-tips")
 AKC_COLOR = ("Can Dogs See Color?", "American Kennel Club", "https://www.akc.org/expert-advice/health/are-dogs-color-blind/")
-NOADS = '<p class="gnote noprint">Free to print and copy for classroom use. No sign up, no ads, and no student data collected. &copy; 2026 Joshua Israel Ventures LLC.</p>'
+NOADS = '<p class="gnote noprint">Free to print and copy for classroom use. No sign up and no student data collected. &copy; 2026 Joshua Israel Ventures LLC.</p>'
 PRINT = '<p class="noprint"><button class="btn" onclick="window.print()">Print this page</button></p>'
 
 
@@ -85,7 +85,7 @@ def register(page, org, site_url, S):
 <section class="card"><h2>For older students and researchers</h2><p>Our <a href="{R}research/">research page</a> lists the peer reviewed papers and veterinary guidelines behind our articles, with DOIs. Fact articles include a <b>Cite this page</b> box in APA, MLA and Chicago style.</p></section>
 """ + NOADS,
          h1="Dog science for teachers", kind="webpage", nav="teachers/",
-         lead="Free, print friendly dog science for classrooms: fact sheets and worksheets with answer keys, lesson ideas by grade band linked to NGSS where they fit, a vocabulary list and three classroom games. No sign up, no ads, no student data.",
+         lead="Free, print friendly dog science for classrooms: fact sheets and worksheets with answer keys, lesson ideas by grade band linked to NGSS where they fit, a vocabulary list and three classroom games. No sign up, no student data.",
          extra_head=lr("teachers/index.html", "SnoutsWise dog science resources for teachers", "Printable dog worksheets, fact sheets, lesson ideas, vocabulary and games for K to 12 classrooms.",
                        ["Kindergarten", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", "Grade 7", "Grade 8", "High school"], ["Lesson plan", "Worksheet"], list(NGSS)),
          related=[("research/index.html", "Research behind SnoutsWise"), ("games/index.html", "Dog games"), ("glossary.html", "Dog glossary"), ("breeds.html", "Breed groups")],

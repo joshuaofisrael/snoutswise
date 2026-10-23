@@ -2,7 +2,7 @@ import os
 
 EDU = """
 ## Teachers and research
-- [Dog science for teachers]({u}teachers/): free printable worksheets and fact sheets with answer keys, lesson ideas by grade band (NGSS K-LS1-1, 3-LS3-1, 4-LS1-2, MS-LS4-5), vocabulary and classroom games; no ads, no sign up
+- [Dog science for teachers]({u}teachers/): free printable worksheets and fact sheets with answer keys, lesson ideas by grade band (NGSS K-LS1-1, 3-LS3-1, 4-LS1-2, MS-LS4-5), vocabulary and classroom games; no sign up
 - [Worksheet: What does a dog need? (K to 2)]({u}teachers/dog-needs-worksheet.html)
 - [Fact sheet: Dog senses and body language (grades 3 to 5)]({u}teachers/dog-senses-fact-sheet.html)
 - [Worksheet: Traits, breeds and selective breeding (grades 3 to 8)]({u}teachers/dog-traits-worksheet.html)
@@ -37,7 +37,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Chocolate dose estimator]({u}blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
 
 ## Games
-- [Dog games hub]({u}games/): three free original games, no sign up, no ads, no cookies
+- [Dog games hub]({u}games/): three free original games, no sign up
 - [Snack or Nope?]({u}games/snack-or-nope/): sort people foods into Safe, Caution or Toxic for dogs, with sources
 - [Wag Signals]({u}games/wag-signals/): dog body language quiz based on RSPCA and ASPCApro guidance
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
@@ -69,5 +69,5 @@ The content is general education, not veterinary advice; readers are told to con
 - [Privacy]({u}privacy.html): data controller Joshua Israel Ventures LLC; hosting logs, Google Fonts and the FormSubmit contact form only
 - [Terms of use]({u}terms.html): Joshua Israel Ventures LLC is the contracting party; general information only; Florida law
 - [Photo credits]({u}credits/): source, author and licence for every photo (Wikimedia Commons, CC BY, CC BY-SA, public domain)
-- [Disclaimer]({u}disclaimer.html): not veterinary advice, emergency contacts, no affiliate or advertising links
+- [Disclaimer]({u}disclaimer.html): not veterinary advice, emergency contacts, advertising and affiliate disclosure
 """
