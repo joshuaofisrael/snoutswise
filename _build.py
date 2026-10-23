@@ -8,7 +8,7 @@ SWITCHING TO A CUSTOM DOMAIN: change SITE_URL below (one line), add a CNAME file
 containing the bare domain, rebuild, commit, push. All internal links are relative.
 """
 import json, math, os, re, html, datetime
-import _photos
+import _photos, _aiimg
 
 SITE_URL = "https://snoutswise.com/"   # <- the ONE line that sets the base URL (was https://joshuaofisrael.github.io/snoutswise/ before the domain)
 SITE_NAME = "SnoutsWise"
@@ -95,7 +95,7 @@ def render(p):
                        "headline": strip_tags(p["headline"])[:110], "description": p["desc"],
                        "author": ORG,
                        "publisher": ORG, "datePublished": p["published"], "dateModified": p["updated"],
-                       "image": SITE_URL + OG_IMAGE, "mainEntityOfPage": canon, "inLanguage": "en"})
+                       "image": SITE_URL + ("img/" + _aiimg.src(p["path"]) if _aiimg.has(p["path"]) else OG_IMAGE), "mainEntityOfPage": canon, "inLanguage": "en"})
     elif p["kind"] == "webpage":
         graphs.append({"@context": "https://schema.org", "@type": "WebPage", "name": strip_tags(p["headline"]),
                        "url": canon, "description": p["desc"], "publisher": ORG})
@@ -121,9 +121,11 @@ def render(p):
         head.append('<meta name="robots" content="noindex">')
     head.append(FONTS + '<meta name="theme-color" content="#FFE600"><link rel="stylesheet" href="%sstyle.css"><link rel="icon" href="%sfavicon.svg" type="image/svg+xml">' % (R, R))
     head.append('<meta property="og:type" content="%s"><meta property="og:site_name" content="%s"><meta property="og:title" content="%s">'
-                '<meta property="og:description" content="%s"><meta property="og:url" content="%s"><meta property="og:image" content="%s%s">'
+                '<meta property="og:description" content="%s"><meta property="og:url" content="%s"><meta property="og:image" content="%s%s">%s'
                 '<meta name="twitter:card" content="summary_large_image">' % ("article" if p["kind"] in ("article", "post") else "website",
-                SITE_NAME, esc(p["title"]), esc(p["desc"]), canon, SITE_URL, OG_IMAGE))
+                SITE_NAME, esc(p["title"]), esc(p["desc"]), canon, SITE_URL,
+                ("img/" + _aiimg.src(p["path"])) if _aiimg.has(p["path"]) else OG_IMAGE,
+                ('<meta property="og:image:width" content="%d"><meta property="og:image:height" content="%d">' % (_aiimg.W, _aiimg.H)) if _aiimg.has(p["path"]) else ""))
     head.append(ld + p["extra_head"] + "</head><body>")
     out = ["".join(head)]
     out.append('<a class="skip" href="#main">Skip to content</a><header><a class="brand" href="%sindex.html">%s<span>%s</span></a>'
@@ -146,7 +148,7 @@ def render(p):
     if '<section class="hero">' in body:
         body = body.replace('<section class="hero">', '<section class="hero">' + DOODLE_PAWS + _photos.figure(p["path"], R, eager=True), 1)
     elif p["lead"] or p["h1"]:
-        out.append(_photos.figure(p["path"], R))
+        out.append(_photos.figure(p["path"], R) or _aiimg.figure(p["path"], R))
     out.append(body)
     if p["faq"]:
         out.append('<section class="card" id="faq"><h2>Frequently asked questions</h2>' + "".join(

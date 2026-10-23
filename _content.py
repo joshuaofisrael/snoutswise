@@ -648,7 +648,7 @@ def trust(page):
 <label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email">
 <label for="topic">Topic</label><select id="topic" name="topic"><option>Question</option><option>Correction</option><option>Suggestion</option><option>Other</option></select>
 <label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea>
-<p class="note">Messages are delivered by FormSubmit to our inbox. See our <a href="{R}privacy.html">privacy policy</a>.</p>
+<p class="note">We use your name, email and message only to read and answer your note and to improve the site. We do not sell them or add you to any list. Messages are delivered by FormSubmit to our inbox. See our <a href="{R}privacy.html">privacy policy</a>.</p>
 <button class="btn" type="submit">Send message</button>
 </form>
 """, h1="Contact us", kind="webpage",

@@ -155,3 +155,8 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 ## 21 Oct 2026
 - Daily fact: do-dogs-recognize-themselves-in-mirror (Horowitz 2017 Behav Processes, Gallup 1970 Science; DOIs verified via Crossref/PubMed). FAQ Q&A schema, linked from home, blog index, llms.txt.
 - Usage hold until 22 Oct reset: no SEO extras, no news post, no outreach, no browser.
+
+## 23 Oct 2026
+- Design, first step: 9 AI generated photo style images (hyper realistic dogs, no people, no text, WebP 1280x720, 29 to 108 KB) added with width/height, descriptive alt, lazy loading, honest "AI generated image" caption, and CSS polish (16:9 rounded card, soft shadow, responsive, reduced motion safe). Pages: the 5 newest articles (mirror, tail wag, drinking water, pointing, smell fear) plus blog index, FAQ, glossary, research. og:image (with width/height) and Article JSON-LD image now point to the page image on these pages. The 10 hub pages already had licensed Wikimedia photos. Credits page notes the AI images.
+- Contact form checked: honeypot, thanks redirect, footer link on all pages OK; added a how-messages-are-used line. Form action unchanged (no FormSubmit alias switch, needs Joshua activation).
+- Remaining without photos: older 14 articles, about, contact, contact-thanks, terms, privacy, disclaimer, 3 games, 3 teacher worksheets, credits.
