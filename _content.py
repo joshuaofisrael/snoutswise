@@ -617,7 +617,7 @@ def trust(page):
          "Who runs SnoutsWise, what it covers, how the content is researched and sourced, and how to report a correction.",
          """
 <h2>Who runs this site</h2>
-<p>SnoutsWise is a brand of Joshua Israel Ventures LLC. The site is owned and operated by Joshua Israel Ventures LLC. It is an independent publication and is not affiliated with any kennel club, veterinary organization, pet food company or retailer named on the site.</p>
+<p>SnoutsWise is an independent publication. It is not affiliated with any kennel club, veterinary organization, pet food company or retailer named on the site.</p>
 <h2>What we cover</h2>
 <p>Practical, plain English information for dog owners: <a href="{R}breeds.html">breed groups</a>, <a href="{R}care.html">everyday care</a>, <a href="{R}health.html">health basics</a>, <a href="{R}training.html">training</a> and <a href="{R}behavior.html">behavior</a>, plus tools such as the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table and the <a href="{R}dog-age-calculator.html">dog age calculator</a>.</p>
 <h2>How content is produced</h2>
@@ -630,11 +630,11 @@ def trust(page):
 <h2>Corrections</h2>
 <p>Spotted an error or an outdated guideline? Please email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> or use the <a href="{R}contact.html">contact form</a> with the page and the source, and we will check and correct it.</p>
 """, h1="About SnoutsWise", kind="webpage",
-         lead="SnoutsWise is a free, independent reference for dog owners, operated by Joshua Israel Ventures LLC. We turn veterinary and kennel club guidance into clear, practical pages and show the sources behind every claim.",
+         lead="SnoutsWise is a free, independent reference for dog owners. We turn veterinary and kennel club guidance into clear, practical pages and show the sources behind every claim.",
          crumbs=[("index.html", "Home"), ("about.html", "About")])
 
     page("contact.html", "Contact SnoutsWise | SnoutsWise",
-         "Contact SnoutsWise by email or form with questions, corrections or suggestions. Operated by Joshua Israel Ventures LLC.",
+         "Contact SnoutsWise by email or form with questions, corrections or suggestions.",
          """
 <p>Email us at <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>, or send a message with the form below. We read every message, although we cannot always reply individually.</p>
 <p class="note" style="font-style:normal"><b>We cannot give veterinary advice for individual dogs.</b> If your dog is unwell, injured or may have eaten something toxic, contact your vet or an emergency vet now.</p>
@@ -663,6 +663,7 @@ def trust(page):
          "How Joshua Israel Ventures LLC handles data on SnoutsWise: hosting logs, Google Fonts, the contact form and cookieless Cloudflare Web Analytics, and Google AdSense advertising and cookies.",
          """
 <p class="meta">Last updated 23 October 2026</p>
+<p><b>Ownership.</b> SnoutsWise is owned and operated by Joshua Israel Ventures LLC, a Florida limited liability company.</p>
 <h2>Who we are</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC. Joshua Israel Ventures LLC owns and operates snoutswise.com and is the data controller for personal information collected through it ("we", "us"). Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
 <h2>What we collect today</h2>
 <ul><li><b>Hosting server logs.</b> The site is hosted on GitHub Pages, run by GitHub, Inc. When you visit, GitHub's servers may automatically log technical information such as your IP address, browser type, the page requested and the time, for security and to keep the service running. We do not receive these logs. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.</li>
@@ -689,6 +690,7 @@ def trust(page):
          "Terms of use for SnoutsWise, owned and operated by Joshua Israel Ventures LLC: general information only, no warranties, limitation of liability, Florida law.",
          """
 <p class="meta">Last updated 23 October 2026</p>
+<p><b>Ownership.</b> SnoutsWise is owned and operated by Joshua Israel Ventures LLC, a Florida limited liability company.</p>
 <h2>Who you are dealing with</h2><p>These terms of use govern your use of snoutswise.com (the "site"). The site is owned and operated by Joshua Israel Ventures LLC ("we", "us", "our"), which is the contracting party for everything on the site. SnoutsWise is a brand owned by Joshua Israel Ventures LLC; it is not a separate company. By using the site you agree to these terms. If you do not agree, please do not use the site.</p>
 <h2>General information only, not professional advice</h2><p>Everything on the site, including articles, the food table, the dog age calculator and the chocolate dose estimator, is general educational information about dogs. It is not veterinary, medical or other professional advice, and it is not a substitute for an examination by a vet who knows your dog. Using the site does not create a veterinarian, client and patient relationship or any other professional relationship. If your dog may be ill, injured or poisoned, contact your vet or an emergency vet straight away. See our <a href="{R}disclaimer.html">disclaimer</a>.</p>
 <h2>Our content</h2><p>The text, illustrations, design, and the SnoutsWise name and logo are owned by Joshua Israel Ventures LLC unless stated otherwise. You are welcome to link to any page and to quote short passages with a credit and a link back. Please do not republish substantial parts of the site without our written permission.</p>
@@ -712,6 +714,7 @@ def trust(page):
 <h2>No vet or professional relationship</h2><p>We are not veterinarians. Reading the site, using its tools or contacting us does not create a veterinarian, client and patient relationship or any other professional relationship. Do not delay getting veterinary care, or ignore advice from your vet, because of something you read on SnoutsWise. For behavior problems such as aggression, ask your vet or a qualified veterinary behaviorist.</p>
 <h2>Tools and calculators</h2><p>The food table, dog age calculator and chocolate dose estimator give general estimates for information only. They cannot account for your dog's health, the exact product eaten or other factors a vet would consider.</p>
 <h2>Affiliate and advertising disclosure</h2><p>SnoutsWise may show advertising served by Google AdSense, which is labelled as advertising and is separate from our content. We have no affiliate links or sponsored content, and we are not paid to mention any product, organization or website. If that changes, we will add a clear disclosure, as required by the US Federal Trade Commission, on the affected pages and update this page and our <a href="{R}privacy.html">privacy policy</a>.</p>
+<p><b>Ownership.</b> SnoutsWise is owned and operated by Joshua Israel Ventures LLC, a Florida limited liability company.</p>
 <h2>Who is responsible</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC, which owns and operates the site. Use of the site is also governed by our <a href="{R}terms.html">terms of use</a>, under the laws of the State of Florida. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
 """, h1="Disclaimer", kind="webpage",
          related=[("terms.html", "Terms of use"), ("privacy.html", "Privacy policy"), ("health.html", "Dog health basics")],

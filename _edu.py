@@ -30,7 +30,7 @@ GUIDES = [
 RSPCA = ("Understanding your dog's body language", "RSPCA", "https://www.rspca.org.uk/adviceandwelfare/pets/dogs/behaviour/understanding")
 ASPCAPRO = ("Canine Body Language Tips", "ASPCApro (ASPCA)", "https://www.aspcapro.org/resource/canine-body-language-tips")
 AKC_COLOR = ("Can Dogs See Color?", "American Kennel Club", "https://www.akc.org/expert-advice/health/are-dogs-color-blind/")
-NOADS = '<p class="gnote noprint">Free to print and copy for classroom use. No sign up and no student data collected. &copy; 2026 Joshua Israel Ventures LLC.</p>'
+NOADS = '<p class="gnote noprint">Free to print and copy for classroom use. No sign up and no student data collected. &copy; 2026 SnoutsWise.</p>'
 PRINT = '<p class="noprint"><button class="btn" onclick="window.print()">Print this page</button></p>'
 
 

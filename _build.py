@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static site builder for SnoutsWise (Joshua Israel Ventures LLC).
+"""Static site builder for SnoutsWise.
 
 Run:  python3 _build.py
 Outputs plain HTML at the repo root (GitHub Pages, deploy from branch main /).
@@ -43,10 +43,20 @@ DOODLE_BONE = ('<svg class="doodle" aria-hidden="true" focusable="false" viewBox
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Nunito:wght@400;700&display=swap">')
 
-# SnoutsWise is a brand only (not a DBA); the publisher/organization is the LLC.
+# SnoutsWise is the publisher in metadata; the LLC is named on legal pages only.
 BRAND = {"@type": "Brand", "name": SITE_NAME, "url": SITE_URL, "logo": SITE_URL + "logo.png"}
-ORG = {"@type": "Organization", "name": LEGAL_NAME, "legalName": LEGAL_NAME, "url": SITE_URL,
-       "email": CONTACT_EMAIL, "logo": SITE_URL + "logo.png", "brand": BRAND}
+ORG = {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL,
+       "email": CONTACT_EMAIL, "logo": SITE_URL + "logo.png"}  # brand only in metadata (owner rule 23 Oct 2026); LLC named on legal pages only
+
+VET_PAGES = {"blog/dog-ate-chocolate.html", "blog/dog-vaccine-schedule.html", "blog/is-my-dog-overweight.html",
+             "blog/why-do-dogs-eat-grass.html", "blog/dog-dementia-brain-study.html", "blog/puppy-socialization-window.html",
+             "health.html", "care.html", "can-dogs-eat.html"}
+# Numbers checked on the official sites 24 Oct 2026 (aspca.org/pet-care/animal-poison-control, petpoisonhelpline.com)
+VET_BLOCK = ('<aside class="card vetcall" id="vet-help"><h2>When to get veterinary help</h2>'
+             '<p><b>Call your vet or an emergency vet right away</b> if your dog may have eaten something toxic, has trouble breathing, collapses, has a seizure, is bleeding heavily, has a swollen or hard belly, keeps vomiting, or seems in severe pain. Call your vet for any change that worries you.</p>'
+             '<p><b>Poison help in the US, 24 hours:</b> ASPCA Animal Poison Control Center <a href="tel:+18884264435">(888) 426&#8209;4435</a>; Pet Poison Helpline <a href="tel:+18557647661">(855) 764&#8209;7661</a>. A consultation fee may apply.</p>'
+             '<p><b>In the UK and elsewhere:</b> call your nearest vet or emergency vet.</p>'
+             '<p class="gnote">SnoutsWise is educational and is not a substitute for professional veterinary advice.</p></aside>')
 
 PAGES = []      # filled by _content.py: dicts
 SITEMAP = []    # (url, lastmod)
@@ -115,7 +125,7 @@ def render(p):
     if GSC_TOKEN and p["path"] == "index.html":
         head.append('<meta name="google-site-verification" content="%s">' % GSC_TOKEN)
     head.append('<meta name="google-adsense-account" content="ca-pub-5681559774142917"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script>')
-    head.append('<title>%s</title><meta name="description" content="%s">' % (esc(p["title"]), esc(p["desc"])))
+    head.append('<title>%s</title><meta name="author" content="SnoutsWise"><meta name="description" content="%s">' % (esc(p["title"]), esc(p["desc"])))
     if p["index"]:
         head.append('<link rel="canonical" href="%s">' % canon)
     else:
@@ -157,6 +167,8 @@ def render(p):
     if p["related"]:
         out.append('<aside class="card related"><h2>Keep exploring</h2><ul>' + "".join(
             '<li><a href="{R}%s">%s</a></li>' % (u, esc(n)) for u, n in p["related"]) + "</ul></aside>")
+    if p["path"] in VET_PAGES:
+        out.append(VET_BLOCK)
     if p["sources"]:
         out.append('<section class="sources"><h2>Sources</h2><ol>' + "".join(
             '<li><a href="%s" rel="noopener">%s</a>, %s</li>' % (esc(u), esc(t), esc(pub)) for t, pub, u in p["sources"]) + "</ol></section>")
@@ -169,16 +181,16 @@ def render(p):
                    '<p><b>MLA:</b> &ldquo;%s.&rdquo; <i>%s</i>, %s, %d %s %d, %s.</p>'
                    '<p><b>Chicago:</b> %s. &ldquo;%s.&rdquo; %s. Last modified %s %d, %d. %s.</p>'
                    '<p class="gnote">Add the date you accessed the page if your teacher or style guide asks for it.</p></aside>' % (
-                       SITE_NAME, d.year, d.strftime("%B"), d.day, t, LEGAL_NAME, u,
-                       t, SITE_NAME, LEGAL_NAME, d.day, (d.strftime("%b") + "." if d.month not in (5, 6, 7) else d.strftime("%B")) if d.month != 9 else "Sept.", d.year, u.replace("https://", ""),
-                       SITE_NAME, t, LEGAL_NAME, d.strftime("%B"), d.day, d.year, u))
+                       SITE_NAME, d.year, d.strftime("%B"), d.day, t, SITE_NAME, u,
+                       t, SITE_NAME, SITE_NAME, d.day, (d.strftime("%b") + "." if d.month not in (5, 6, 7) else d.strftime("%B")) if d.month != 9 else "Sept.", d.year, u.replace("https://", ""),
+                       SITE_NAME, t, SITE_NAME, d.strftime("%B"), d.day, d.year, u))
     if p["kind"] in ("article", "post") and p["path"] not in ("about.html",):
         out.append('<p class="note">General education only, not veterinary advice. If you are worried about your dog, contact your vet; in an emergency, contact an emergency vet straight away.</p>')
     out.append("</main>")
     out.append('<footer>' + DOODLE_BONE + '<section class="contact-us" aria-labelledby="cu"><h2 id="cu">Contact us</h2><p>Email <a href="mailto:%s">%s</a> or use our <a href="%scontact.html">contact form</a>.</p></section>'
                '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; %s<a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a></p>'
                '<p>%s: original educational content about dogs. All text and illustrations are original. Not a substitute for advice from your vet.</p>'
-               '<p class="op">&copy; 2026 %s. All rights reserved. %s is owned and operated by %s.</p></footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, SITE_NAME, LEGAL_NAME, SITE_NAME, LEGAL_NAME))
+               '<p class="op">&copy; 2026 %s. All rights reserved.</p></footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, SITE_NAME, SITE_NAME))
     if p["script"]:
         out.append("<script>%s</script>" % p["script"])
     if CF_BEACON_TOKEN:
