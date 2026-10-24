@@ -60,6 +60,7 @@ S = {
  "newsci2026bouba": ("Woodford J (14 October 2026). Dogs are susceptible to the bouba-kiki effect. New Scientist.", "New Scientist", "https://www.newscientist.com/article/2593290-dogs-are-susceptible-to-the-bouba-kiki-effect/"),
  "quaranta2007": ("Quaranta A, Siniscalchi M, Vallortigara G (2007). Asymmetric tail-wagging responses by dogs to different emotive stimuli. Current Biology 17(6): R199-R201. DOI 10.1016/j.cub.2007.02.008", "Current Biology", "https://doi.org/10.1016/j.cub.2007.02.008"),
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
+ "balint2020": ("Bálint A, Andics A, Gácsi M, Gábor A, Czeibert K, Luce CM, Miklósi Á, Kröger RHH (2020). Dogs can sense weak thermal radiation. Scientific Reports 10: 3736. DOI 10.1038/s41598-020-60439-y", "Scientific Reports", "https://doi.org/10.1038/s41598-020-60439-y"),
  "horowitz2017": ("Horowitz A (2017). Smelling themselves: Dogs investigate their own odours longer when modified in an 'olfactory mirror' test. Behavioural Processes 143: 17-24. DOI 10.1016/j.beproc.2017.08.001", "Behavioural Processes", "https://doi.org/10.1016/j.beproc.2017.08.001"),
  "gallup1970": ("Gallup GG Jr (1970). Chimpanzees: self-recognition. Science 167(3914): 86-87. DOI 10.1126/science.167.3914.86", "Science", "https://doi.org/10.1126/science.167.3914.86"),
  "leonetti2024": ("Leonetti S, Cimarelli G, Hersh TA, Ravignani A (2024). Why do dogs wag their tails? Biology Letters 20(1): 20230407. DOI 10.1098/rsbl.2023.0407", "Biology Letters", "https://doi.org/10.1098/rsbl.2023.0407"),
@@ -110,6 +111,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/can-dogs-sense-heat-with-their-nose.html">Can dogs sense heat with their nose? A 2020 study says yes</a></li>
 <li><a href="{R}blog/do-dogs-recognize-themselves-in-mirror.html">Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell</a></li>
 <li><a href="{R}blog/why-do-dogs-wag-their-tails.html">Why do dogs wag their tails? It signals arousal, not just happiness</a></li>
 <li><a href="{R}blog/how-do-dogs-drink-water.html">How do dogs drink water? A fast tongue pulls up a column of water</a></li>
@@ -1257,6 +1259,31 @@ def blog(page):
          sources=src("leonetti2024", "quaranta2007", "siniscalchi2013"),
          related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
          published="2026-10-20")
+
+    # 17 daily fact: heat sensing nose (25 Oct 2026)
+    post(page, "can-dogs-sense-heat-with-their-nose", "Can Dogs Sense Heat With Their Nose? | SnoutsWise",
+         "Can dogs sense heat with their nose? A 2020 Scientific Reports study found dogs can detect weak radiant heat from a distance. What it found.",
+         "Can dogs sense heat with their nose? A 2020 study says yes",
+         "The bare, often moist skin at the tip of a dog's nose, called the rhinarium, is cold and packed with nerves. A 2020 study in Scientific Reports found that dogs can tell a warm object from a neutral one by its radiating heat alone, and that warm stimuli light up a part of the dog brain that handles touch and body sensation. The authors call it a sensory ability not described before in a carnivore.",
+         """
+<h2>What the rhinarium is</h2>
+<p>The rhinarium is the naked, often moist skin on the tip of the nose. In dogs it is prominent and richly supplied with nerves, which suggested to researchers that it does more than help with smell. The study also notes that the nose tips of carnivores are considerably colder than those of plant eaters such as horses and cattle, and the team guessed that this coldness could make the dog nose especially sensitive to radiant heat.</p>
+<h2>The training test</h2>
+<p>Researchers in Hungary and Sweden trained three dogs to choose between two objects placed at a distance. One object was about room temperature. The other was warmed to about the surface temperature of a furry mammal. The dogs could not tell them apart by sight or smell, only by the heat the warm one gave off, and they learned to pick it out.</p>
+<h2>The brain scans</h2>
+<p>The team then scanned 13 awake, trained dogs with functional MRI while showing them heat stimuli at similar temperatures. The warm stimulus caused a stronger response in the left somatosensory association cortex, a brain area that processes body sensations, than the neutral one did.</p>
+<h2>What this does and does not show</h2>
+<p>The study shows that dogs can detect weak radiant heat and that their brains respond to it. It does not prove how dogs use this sense in daily life. The authors suggest it may have helped dogs' wild ancestors find warm prey, but that idea still needs testing, and the behaviour experiment used only three dogs.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>The nose is a whole sensing organ.</b> Beyond smell, the nose tip also seems to pick up warmth, one more reason dogs explore the world nose first (see <a href="{R}behavior.html">dog behavior</a>).</li>
+<li><b>Health questions go to your vet.</b> This research is about sensing, not health, so ask your vet about any change in your dog's nose such as cracking, bleeding or discharge (see <a href="{R}health.html">dog health</a>).</li></ul>
+""",
+         faq=[("Can dogs sense heat with their nose?", "Yes. A 2020 Scientific Reports study trained dogs to pick a warm object from a neutral one by its radiant heat alone."),
+              ("Why is a dog's nose cold?", "The study notes that the nose tips of carnivores like dogs are much colder than those of plant eaters, and suggests the coldness may help the nose detect radiant heat."),
+              ("What part of the dog brain responds to heat?", "In brain scans of 13 awake dogs, warm stimuli caused a stronger response in the left somatosensory association cortex.")],
+         sources=src("balint2020"),
+         related=[("behavior.html", "Dog behavior"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/do-dogs-recognize-themselves-in-mirror.html", "Do dogs recognize themselves in a mirror?"), ("blog/can-dogs-see-color.html", "Can dogs see color?")],
+         published="2026-10-25")
 
     # 16 daily fact: mirror self-recognition (21 Oct 2026)
     post(page, "do-dogs-recognize-themselves-in-mirror", "Do Dogs Recognize Themselves in a Mirror? | SnoutsWise",
