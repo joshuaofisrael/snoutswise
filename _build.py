@@ -190,7 +190,7 @@ def render(p):
     out.append('<footer>' + DOODLE_BONE + '<section class="contact-us" aria-labelledby="cu"><h2 id="cu">Contact us</h2><p>Email <a href="mailto:%s">%s</a> or use our <a href="%scontact.html">contact form</a>.</p></section>'
                '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; %s<a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a></p>'
                '<p>%s: original educational content about dogs. All text and illustrations are original. Not a substitute for advice from your vet.</p>'
-               '<p class="op">&copy; 2026 %s. All rights reserved.</p></footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, SITE_NAME, SITE_NAME))
+               '</footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, SITE_NAME))
     if p["script"]:
         out.append("<script>%s</script>" % p["script"])
     if CF_BEACON_TOKEN:

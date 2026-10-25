@@ -3,7 +3,7 @@
 Facts come from sources opened on 9 Oct 2026 (RSPCA, ASPCApro, AKC) or the already sourced food table."""
 import json, re, html
 
-COPY = '<p class="copyline">Games are original works &copy; 2026 SnoutsWise.</p>'
+COPY = '<p class="copyline">All games are original works made for SnoutsWise.</p>'
 SAFE = ('<p class="gnote">No sign up. The game itself sets no cookies. Your best score is saved only in this browser '
         '(localStorage) and is never sent to us. Sound is off unless you switch it on.</p>')
 
