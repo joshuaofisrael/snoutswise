@@ -175,3 +175,4 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Daily fact: blog/can-dogs-learn-toy-names.html (Fugazza et al. 2021 Scientific Reports 11:2222, DOI 10.1038/s41598-021-81699-2 verified via Crossref, abstract read via Europe PMC). Article and FAQPage JSON-LD, linked from home latest, blog index, sitemap and llms.txt.
 - SEO: two-way internal linking with the head-tilt article (topic cluster on dog word learning); fixed a source-key collision before publish so the head-tilt article keeps its own Fugazza 2021 citation.
 - News: none (no verified candidate in the slot). Outreach emails: skipped (no Joshua yes saved in my chat). No browser use, no expenses.
+- 2026-10-26 09:05 slot: NamedScan fixes (commit b6e077b): visible SnoutsWise Editorial Team byline linking to about, Article/BlogPosting author is Organization SnoutsWise Editorial Team; no sameAs since no verified profiles; AdSense, ads.txt, Cloudflare untouched; live verified.
