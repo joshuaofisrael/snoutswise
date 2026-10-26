@@ -61,6 +61,7 @@ S = {
  "quaranta2007": ("Quaranta A, Siniscalchi M, Vallortigara G (2007). Asymmetric tail-wagging responses by dogs to different emotive stimuli. Current Biology 17(6): R199-R201. DOI 10.1016/j.cub.2007.02.008", "Current Biology", "https://doi.org/10.1016/j.cub.2007.02.008"),
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
  "balint2020": ("Bálint A, Andics A, Gácsi M, Gábor A, Czeibert K, Luce CM, Miklósi Á, Kröger RHH (2020). Dogs can sense weak thermal radiation. Scientific Reports 10: 3736. DOI 10.1038/s41598-020-60439-y", "Scientific Reports", "https://doi.org/10.1038/s41598-020-60439-y"),
+ "fugazza2021rapid": ("Fugazza C, Andics A, Magyari L, Dror S, Zempléni A, Miklósi Á (2021). Rapid learning of object names in dogs. Scientific Reports 11: 2222. DOI 10.1038/s41598-021-81699-2", "Scientific Reports", "https://doi.org/10.1038/s41598-021-81699-2"),
  "horowitz2017": ("Horowitz A (2017). Smelling themselves: Dogs investigate their own odours longer when modified in an 'olfactory mirror' test. Behavioural Processes 143: 17-24. DOI 10.1016/j.beproc.2017.08.001", "Behavioural Processes", "https://doi.org/10.1016/j.beproc.2017.08.001"),
  "gallup1970": ("Gallup GG Jr (1970). Chimpanzees: self-recognition. Science 167(3914): 86-87. DOI 10.1126/science.167.3914.86", "Science", "https://doi.org/10.1126/science.167.3914.86"),
  "leonetti2024": ("Leonetti S, Cimarelli G, Hersh TA, Ravignani A (2024). Why do dogs wag their tails? Biology Letters 20(1): 20230407. DOI 10.1098/rsbl.2023.0407", "Biology Letters", "https://doi.org/10.1098/rsbl.2023.0407"),
@@ -111,6 +112,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/can-dogs-learn-toy-names.html">Can dogs learn the names of their toys? A few gifted dogs can, fast</a></li>
 <li><a href="{R}blog/can-dogs-sense-heat-with-their-nose.html">Can dogs sense heat with their nose? A 2020 study says yes</a></li>
 <li><a href="{R}blog/do-dogs-recognize-themselves-in-mirror.html">Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell</a></li>
 <li><a href="{R}blog/why-do-dogs-wag-their-tails.html">Why do dogs wag their tails? It signals arousal, not just happiness</a></li>
@@ -1066,7 +1068,7 @@ def blog(page):
               ("Can all dogs learn the names of toys?", "Very few can. In a 2021 study, only 1 of 34 typical family dogs learned two toy names after three months of training, while a handful of rare gifted dogs learned many."),
               ("When is a head tilt a sign of a health problem?", "When it stays even when nothing is going on, or comes with stumbling, circling, falling, flicking eyes, head shaking or vomiting. These can be signs of vestibular (balance) disease or an inner ear problem, so contact your vet.")],
          sources=src("sommese2022", "fugazza2021", "ratcliffe2014", "mertens2023"),
-         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/can-dogs-learn-toy-names.html", "Can dogs learn toy names?"), ("health.html", "Dog health basics"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
          published="2026-10-12")
 
 
@@ -1259,6 +1261,32 @@ def blog(page):
          sources=src("leonetti2024", "quaranta2007", "siniscalchi2013"),
          related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
          published="2026-10-20")
+
+    # 18 daily fact: toy name learning (26 Oct 2026)
+    post(page, "can-dogs-learn-toy-names", "Can Dogs Learn the Names of Their Toys? | SnoutsWise",
+         "Can dogs learn toy names? A 2021 Scientific Reports study found two gifted dogs learned new toy names in four tries, but 20 family dogs did not.",
+         "Can dogs learn the names of their toys? A few gifted dogs can, fast",
+         "Most dogs learn words like sit and walk, but learning the names of objects is different. A 2021 study in Scientific Reports found that two dogs who already knew many toy names could learn a new toy's name after hearing it just four times while playing with their owner. The same test with 20 ordinary family dogs found no sign of learning, which suggests this is a rare talent.",
+         """
+<h2>The gifted dogs</h2>
+<p>Researchers in Hungary tested two dogs that already knew the names of multiple toys. Each dog heard a new toy's name four times and was then tested on whether it had learned which toy the name belonged to.</p>
+<h2>Play beats puzzles</h2>
+<p>The dogs met new names in two ways. In one, the owner named the toy while playing with the dog. In the other, the dog had to work out which unfamiliar toy matched a new word by ruling out the toys it already knew. Both dogs succeeded after the social play sessions but not after the exclusion task, so the authors suggest that fast word learning in dogs depends on a social setting.</p>
+<h2>Memory fades without practice</h2>
+<p>The dogs still remembered the new names after two minutes, but their memory tended to fade after 10 minutes and after an hour. Four exposures seem to be enough to learn a name, but not enough to keep it for long.</p>
+<h2>Most dogs could not do it</h2>
+<p>The team ran the same play-based procedure with 20 typical family dogs. None showed evidence of learning the new names. The authors say future studies should find out whether the skill comes from rare individual talent or from earlier practice with object names.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Do not worry if your dog does not learn toy names.</b> In this study ordinary family dogs did not learn them, so it is not a sign that anything is wrong.</li>
+<li><b>If you want to try, keep it playful.</b> The gifted dogs learned best when names came up during play with their owner, which fits the <a href="{R}training.html">reward based training</a> approach.</li>
+<li><b>Head tilts may be part of it.</b> A separate study linked frequent head tilting to dogs that know toy names (see <a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</li></ul>
+""",
+         faq=[("Can dogs learn the names of their toys?", "A few can. In a 2021 Scientific Reports study, two dogs that already knew many toy names learned a new one after four exposures during play, but 20 typical family dogs did not."),
+              ("How do gifted dogs learn toy names best?", "In the study, the dogs learned new names when the owner named the toy while playing, not when they had to work it out by ruling out familiar toys."),
+              ("Do dogs remember new toy names?", "The gifted dogs remembered them after two minutes, but memory tended to fade after 10 minutes and one hour, so more practice may be needed.")],
+         sources=src("fugazza2021rapid"),
+         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs and the bouba-kiki effect")],
+         published="2026-10-26")
 
     # 17 daily fact: heat sensing nose (25 Oct 2026)
     post(page, "can-dogs-sense-heat-with-their-nose", "Can Dogs Sense Heat With Their Nose? | SnoutsWise",

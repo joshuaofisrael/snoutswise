@@ -43,6 +43,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [Can dogs learn the names of their toys? A few gifted dogs can, fast]({u}blog/can-dogs-learn-toy-names.html)
 - [Can dogs sense heat with their nose? A 2020 study says yes]({u}blog/can-dogs-sense-heat-with-their-nose.html)
 - [Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell]({u}blog/do-dogs-recognize-themselves-in-mirror.html)
 - [Why do dogs wag their tails? It signals arousal, not just happiness]({u}blog/why-do-dogs-wag-their-tails.html)
