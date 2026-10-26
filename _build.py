@@ -46,7 +46,11 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="
 # SnoutsWise is the publisher in metadata; the LLC is named on legal pages only.
 BRAND = {"@type": "Brand", "name": SITE_NAME, "url": SITE_URL, "logo": SITE_URL + "logo.png"}
 ORG = {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL,
-       "email": CONTACT_EMAIL, "logo": SITE_URL + "logo.png"}  # brand only in metadata (owner rule 23 Oct 2026); LLC named on legal pages only
+       "email": CONTACT_EMAIL, "logo": SITE_URL + "logo.png"}  # no sameAs: no verified SnoutsWise social profiles exist yet (26 Oct 2026); brand only in metadata (owner rule 23 Oct 2026); LLC named on legal pages only
+
+# Byline author is the brand editorial team, never an invented person (NamedScan fix 26 Oct 2026)
+EDITORIAL = {"@type": "Organization", "name": SITE_NAME + " Editorial Team", "url": SITE_URL + "about.html",
+             "parentOrganization": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL}}
 
 VET_PAGES = {"blog/dog-ate-chocolate.html", "blog/dog-vaccine-schedule.html", "blog/is-my-dog-overweight.html",
              "blog/why-do-dogs-eat-grass.html", "blog/dog-dementia-brain-study.html", "blog/puppy-socialization-window.html",
@@ -103,7 +107,7 @@ def render(p):
     elif p["kind"] in ("article", "post"):
         graphs.append({"@context": "https://schema.org", "@type": "BlogPosting" if p["kind"] == "post" else "Article",
                        "headline": strip_tags(p["headline"])[:110], "description": p["desc"],
-                       "author": ORG,
+                       "author": EDITORIAL,
                        "publisher": ORG, "datePublished": p["published"], "dateModified": p["updated"],
                        "image": SITE_URL + ("img/" + _aiimg.src(p["path"]) if _aiimg.has(p["path"]) else OG_IMAGE), "mainEntityOfPage": canon, "inLanguage": "en"})
     elif p["kind"] == "webpage":
@@ -152,7 +156,7 @@ def render(p):
         meta = "Last reviewed %s" % nice_date(p["updated"])
         if p["kind"] == "post":
             meta = "Published %s &middot; %s" % (nice_date(p["published"]), meta)
-        out.append('<p class="meta">%s &middot; By the %s team</p>' % (meta, SITE_NAME))
+        out.append('<p class="meta byline">%s &middot; By <a href="%sabout.html" rel="author">%s Editorial Team</a></p>' % (meta, R, SITE_NAME))
     if p["lead"]:
         out.append('<p class="lead">%s</p>' % p["lead"])
     body = p["body"]
