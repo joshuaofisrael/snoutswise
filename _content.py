@@ -71,6 +71,12 @@ S = {
  "crompton2011": ("Crompton AW, Musinsky C (2011). How dogs lap: ingestion and intraoral transport in Canis familiaris. Biology Letters 7(6): 882-884. DOI 10.1098/rsbl.2011.0336", "Biology Letters", "https://doi.org/10.1098/rsbl.2011.0336"),
  "reis2010": ("Reis PM, Jung S, Aristoff JM, Stocker R (2010). How cats lap: water uptake by Felis catus. Science 330(6008): 1231-1234. DOI 10.1126/science.1195421", "Science", "https://doi.org/10.1126/science.1195421"),
  "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
+ "merck_nutr": ("Sanderson SL. Nutritional Requirements of Small Animals (full review Nov 2023, updated Sept 2024)", "Merck Veterinary Manual", "https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutritional-requirements-of-small-animals"),
+ "aaha_box1": ("2021 AAHA Nutrition and Weight Management Guidelines for Dogs and Cats, Box 1: Energy Requirement Calculations (PDF)", "American Animal Hospital Association", "https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2021-nutrition-and-weight-management/resourcepdfs/nutritiongl_box1.pdf"),
+ "aaha_feed": ("Feeding Plans for Healthy, Appropriate Weight Cats and Dogs (2021 AAHA Nutrition and Weight Management Guidelines)", "American Animal Hospital Association", "https://www.aaha.org/resources/2021-aaha-nutrition-and-weight-management-guidelines/feeding-plans-for-healthy-appropriate-weight-cats-and-dogs/"),
+ "cline2021": ("Cline MG, Burns KM, Coe JB, Downing R, Durzi T, Murphy M, Parker V (2021). 2021 AAHA Nutrition and Weight Management Guidelines for Dogs and Cats. Journal of the American Animal Hospital Association 57(4): 153-178. DOI 10.5326/JAAHA-MS-7232", "JAAHA", "https://doi.org/10.5326/JAAHA-MS-7232"),
+ "wsava_assess": ("WSAVA Nutritional Assessment Guidelines Task Force: Freeman L, Becvarova I, Cave N, et al. (2011). WSAVA Nutritional Assessment Guidelines. Journal of Small Animal Practice 52(7): 385-396. DOI 10.1111/j.1748-5827.2011.01079.x", "World Small Animal Veterinary Association", "https://wsava.org/wp-content/uploads/2020/01/WSAVA-Nutrition-Assessment-Guidelines-2011-JSAP.pdf"),
+ "nrc_dog": ("Your Dog's Nutritional Needs: A Science Based Guide for Pet Owners (2006), based on Nutrient Requirements of Dogs and Cats", "National Research Council, The National Academies", "https://nap.nationalacademies.org/resource/10668/dog_nutrition_final_fix.pdf"),
 }
 import datetime
 def nice(d):
@@ -81,17 +87,18 @@ def src(*keys):
 
 def register(page):
     home(page); breeds(page); care(page); health(page); training(page); behavior(page)
-    can_dogs_eat(page); age_calc(page); faq(page); glossary(page); trust(page); blog(page)
+    can_dogs_eat(page); age_calc(page); feed_calc(page); faq(page); glossary(page); trust(page); blog(page)
 
 # ------------------------------------------------------------------ HOME
 def home(page):
     body = """
 <section class="hero"><h1>SnoutsWise: plain answers about breeds, care, health, training and behavior</h1>
 <p class="lead">SnoutsWise is a free, independent guide for dog owners. It explains breed groups, everyday care, health basics such as vaccines and normal vital signs, reward based training and dog behavior, and every page lists the veterinary and kennel club sources it relies on. Start with the tools below if you have an urgent question.</p>
-<a class="btn" href="{R}can-dogs-eat.html">Can my dog eat this? Food lookup</a> <a class="btn alt" href="{R}dog-age-calculator.html">Dog age calculator</a></section>
+<a class="btn" href="{R}can-dogs-eat.html">Can my dog eat this? Food lookup</a> <a class="btn alt" href="{R}how-much-to-feed-a-dog.html">How much to feed a dog</a> <a class="btn alt" href="{R}dog-age-calculator.html">Dog age calculator</a></section>
 <h2>Tools</h2>
 <div class="grid">
 <a class="tile" href="{R}can-dogs-eat.html"><h3>Can my dog eat this?</h3><p>Our signature lookup: about 70 foods rated Safe, Caution or Toxic, with the reason, the source and what to do if eaten.</p></a>
+<a class="tile" href="{R}how-much-to-feed-a-dog.html"><h3>How much to feed a dog</h3><p>Daily calorie calculator and chart by weight, using the RER formula and AAHA life stage factors, with cups or grams from your food label.</p></a>
 <a class="tile" href="{R}dog-age-calculator.html"><h3>Dog age in human years</h3><p>Calculator based on the 2020 epigenetic clock study, not the old "times seven" rule.</p></a>
 <a class="tile" href="{R}blog/dog-ate-chocolate.html"><h3>Dog ate chocolate?</h3><p>Estimate the dose from the type and amount, then call your vet.</p></a>
 <a class="tile" href="{R}games/"><h3>Dog games</h3><p>Three free, original games: sort safe and toxic snacks, read dog body language and play fetch.</p></a>""" + ("" if __import__("os").environ.get("SW_NO_EDU") else "<a class=\"tile\" href=\"{R}teachers/\"><h3>For teachers</h3><p>Free printable dog worksheets and fact sheets with answer keys, lesson ideas and classroom games.</p></a>") + """
@@ -139,9 +146,9 @@ def home(page):
 </ul></section>
 <p class="note">SnoutsWise is general education, not veterinary advice. If your dog may have eaten something toxic or seems unwell, contact your vet or an emergency vet now. In the US, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p>
 """
-    page("index.html", "SnoutsWise: Dog Breeds, Care, Health, Training & Behavior",
-         "Free, sourced guide for dog owners: breed groups, care, health basics, reward based training, behavior, a can dogs eat this food table and a dog age calculator.",
-         body, kind="home", updated="2026-10-20")
+    page("index.html", "SnoutsWise: Sourced Dog Care Tips for New Owners",
+         "Vet sourced dog care tips for new and experienced owners: feeding calculator, foods dogs can and can't eat, normal vital signs, dog age calculator and training.",
+         body, kind="home", updated="2026-10-27")
 
 # ------------------------------------------------------------------ BREEDS
 def breeds(page):
@@ -184,8 +191,8 @@ def breeds(page):
 <section id="mixed"><h2>Mixed breeds and rescue dogs</h2>
 <p>Breed groups describe tendencies, not guarantees: individual dogs vary, and many wonderful dogs are mixes. When you meet a rescue dog, the rescue's notes on how that particular dog behaves with people, other dogs, children and being left alone usually tell you more than a guess at its ancestry. Whatever dog you choose, early <a href="{R}behavior.html#socialization">socialization</a> and <a href="{R}training.html">reward based training</a> matter more than the label.</p></section>
 """
-    page("breeds.html", "Dog Breed Groups: AKC vs Royal Kennel Club | SnoutsWise",
-         "The seven AKC and seven Royal Kennel Club dog breed groups compared side by side, what each was bred for, and a practical checklist for choosing a breed.",
+    page("breeds.html", "Dog Breed Groups Explained: AKC vs Kennel Club | SnoutsWise",
+         "Dog breed groups explained: the seven AKC and seven Royal Kennel Club groups side by side, what each group was bred for, and a checklist for choosing a breed.",
          body, h1="Dog breeds and breed groups explained",
          lead="Kennel clubs sort dog breeds into groups based on the work they were originally bred to do. The American Kennel Club uses seven groups (Sporting, Hound, Working, Terrier, Toy, Non-Sporting and Herding) and The Royal Kennel Club in the UK also uses seven (Gundog, Hound, Pastoral, Terrier, Toy, Utility and Working). A breed's original job is one of the best clues to how much exercise, training and company it will need.",
          sources=src("akc_groups", "rkc_groups", "rspca_heat"),
@@ -198,6 +205,7 @@ def care(page):
 <nav class="jump" aria-label="On this page"><b>Jump to:</b> <a href="#feeding">Feeding</a> &middot; <a href="#weight">Weight</a> &middot; <a href="#exercise">Exercise and enrichment</a> &middot; <a href="#teeth">Teeth</a> &middot; <a href="#grooming">Grooming</a> &middot; <a href="#id">ID and microchips</a> &middot; <a href="#heat">Hot weather</a> &middot; <a href="#home">Home hazards</a></nav>
 <section id="feeding"><h2>Feeding</h2>
 <p>Most dogs do best on a complete and balanced dog food as their main diet; the American Kennel Club advises that people food should only ever be an occasional, plain treat and never a replacement for it. Introduce any new food slowly, one at a time, in small amounts. Fresh water should always be available.</p>
+<p>How much to feed depends on your dog's weight, life stage and activity rather than the bag alone. Vets estimate daily calories from the resting energy requirement and a life stage factor; our <a href="{R}how-much-to-feed-a-dog.html">dog feeding calculator and calorie chart</a> does the sums and converts them into cups or grams, then you fine tune by body condition.</p>
 <p>Some common foods are dangerous to dogs: chocolate, grapes and raisins, onions, garlic and chives, macadamia nuts, alcohol, raw yeast dough and anything sweetened with xylitol all appear on the ASPCA's list of foods to avoid. Our <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table covers more than 50 foods.</p></section>
 <section id="weight"><h2>Keeping a healthy weight</h2>
 <p>Vets assess weight with a body condition score rather than the scale alone. On the 9 point scale used on the WSAVA chart, an ideal dog (score 4 to 5) has ribs you can feel without excess fat, a waist visible from above and a tucked up belly seen from the side. Keeping dogs lean matters: in a 14 year study of 48 Labrador retrievers, the dogs fed 25 percent less than their littermates lived a median of 13 years compared with 11.2 years, and developed hip osteoarthritis later. See <a href="{R}blog/is-my-dog-overweight.html">how to body condition score your dog</a>.</p></section>
@@ -222,13 +230,13 @@ def care(page):
 <li>Bins containing bones, corn cobs, fruit pits or grapes; the AKC warns that cobs, pits and cooked poultry bones can cause blockages or injuries.</li>
 <li>Raw bread dough, which can expand in the stomach and produce alcohol, according to the ASPCA.</li></ul></section>
 """
-    page("care.html", "Dog Care Basics: Feeding, Weight and Grooming | SnoutsWise",
-         "Everyday dog care with sources: feeding, healthy weight, exercise, brushing teeth, grooming, microchip rules and how to cool a dog with heatstroke.",
+    page("care.html", "Dog Care Tips for Beginners: Food, Teeth, Coat | SnoutsWise",
+         "Dog care tips for beginners, with vet sources: how much to feed, keeping a healthy weight, exercise, brushing teeth, grooming, microchips and hot weather care.",
          body, h1="Dog care basics",
          lead="Good everyday care comes down to a complete and balanced diet, keeping your dog lean, daily exercise and mental stimulation, regular tooth brushing, grooming suited to the coat, permanent ID, and protecting your dog from heat and household toxins. The sections below explain each one and link to the veterinary sources behind the advice.",
          sources=src("akc_food", "aspca_foods", "wsava_bcs", "penn_kealy", "avsab_puppy", "avma_dental", "gov_chip", "rspca_heat"),
-         related=[("health.html", "Dog health basics"), ("blog/how-do-dogs-drink-water.html", "How dogs drink water"), ("can-dogs-eat.html", "Can dogs eat this? food table"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("breeds.html", "Breed groups"), ("training.html", "Training")],
-         crumbs=[("index.html", "Home"), ("care.html", "Care")])
+         related=[("how-much-to-feed-a-dog.html", "How much to feed a dog"), ("health.html", "Dog health basics"), ("blog/how-do-dogs-drink-water.html", "How dogs drink water"), ("can-dogs-eat.html", "Can dogs eat this? food table"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("breeds.html", "Breed groups"), ("training.html", "Training")],
+         crumbs=[("index.html", "Home"), ("care.html", "Care")], updated="2026-10-27")
 
 # ------------------------------------------------------------------ HEALTH
 def health(page):
@@ -265,17 +273,17 @@ def health(page):
 <section id="teeth"><h2>Teeth</h2>
 <p>Periodontal disease is the most common dental condition in dogs, according to the AVMA, which recommends an annual dental check by your vet and regular tooth brushing at home. <a href="{R}care.html#teeth">More on dental care</a>.</p></section>
 <section id="weight"><h2>Weight</h2>
-<p>Extra weight shortens lives. In the Kealy lifetime study, Labradors kept lean lived a median 1.8 years longer than their heavier littermates and needed treatment for osteoarthritis later. Use the <a href="{R}blog/is-my-dog-overweight.html">body condition score guide</a> to check your dog.</p></section>
+<p>Extra weight shortens lives. In the Kealy lifetime study, Labradors kept lean lived a median 1.8 years longer than their heavier littermates and needed treatment for osteoarthritis later. Use the <a href="{R}blog/is-my-dog-overweight.html">body condition score guide</a> to check your dog, and the <a href="{R}how-much-to-feed-a-dog.html">feeding calculator</a> to estimate daily calories.</p></section>
 <section id="checkups"><h2>Routine checkups</h2>
 <p>Regular checkups let your vet review vaccines, parasite prevention, teeth, weight and any lumps or changes you have noticed. The AAHA guidelines say each dog's vaccine needs should be reassessed at least once a year. Write down questions beforehand, and mention changes in appetite, thirst, energy, toileting or behavior; behavior changes can be a sign of pain or illness.</p></section>
 """
-    page("health.html", "Dog Health Basics: Vital Signs and Warning Signs | SnoutsWise",
-         "Normal dog temperature, heart rate and breathing rate, core vaccines and booster schedule, emergency warning signs, poisoning and heatstroke first steps.",
+    page("health.html", "Normal Dog Temperature and Vital Signs Chart | SnoutsWise",
+         "Normal dog temperature in F and C, resting heart and breathing rates from the Merck Vet Manual, plus core vaccines, warning signs, poisoning and heatstroke aid.",
          body, h1="Dog health basics",
          lead="A healthy adult dog has an average body temperature of 101 to 102.5&deg;F (38.3 to 39.2&deg;C), a heart rate of 70 to 120 beats per minute and a resting breathing rate of 18 to 34 breaths per minute, according to the Merck Veterinary Manual. The basics of keeping a dog healthy are core vaccines, a lean body weight, dental care, regular checkups and knowing which warning signs mean you should call a vet immediately.",
          sources=src("merck_vitals", "aaha_vax", "aaha_table", "aspca_foods", "merck_foodpet", "rspca_heat", "avma_dental", "penn_kealy"),
-         related=[("care.html", "Everyday care"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("can-dogs-eat.html", "Can dogs eat this?"), ("blog/dog-ate-chocolate.html", "Dog ate chocolate"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("dog-age-calculator.html", "Dog age calculator")],
-         crumbs=[("index.html", "Home"), ("health.html", "Health")], updated="2026-10-13")
+         related=[("care.html", "Everyday care"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("can-dogs-eat.html", "Can dogs eat this?"), ("blog/dog-ate-chocolate.html", "Dog ate chocolate"), ("how-much-to-feed-a-dog.html", "How much to feed a dog"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("dog-age-calculator.html", "Dog age calculator")],
+         crumbs=[("index.html", "Home"), ("health.html", "Health")], updated="2026-10-27")
 
 # ------------------------------------------------------------------ TRAINING
 def training(page):
@@ -316,8 +324,8 @@ def training(page):
 <section id="trainer"><h2>Choosing a trainer</h2>
 <p>AVSAB recommends trainers who are certified, humane and effective, and suggests watching a class before signing up. It specifically advises against hiring trainers who talk about "dominance", "leader of the pack" or "alpha" theories. For serious problems such as aggression or severe fear, start with your vet, who can rule out pain or illness and refer you to a veterinary behaviorist.</p></section>
 """
-    page("training.html", "Reward Based Dog Training: How It Works | SnoutsWise",
-         "Why vets recommend reward based dog training, how markers, luring and shaping work, step by step first skills (sit, recall, loose lead) and what tools to avoid.",
+    page("training.html", "Positive Reinforcement Dog Training Basics | SnoutsWise",
+         "Positive reinforcement dog training basics: why vets back reward based methods, how markers, luring and shaping work, first skills to teach and tools to avoid.",
          body, h1="Dog training: the reward based approach",
          lead="Veterinary behavior experts recommend reward based training for all dogs: you teach the behavior you want and reward it, instead of punishing mistakes. The American Veterinary Society of Animal Behavior says the evidence shows reward based methods are more effective than aversive ones and better for welfare and the dog and owner relationship, and that there is no evidence aversive training is ever necessary.",
          sources=src("avsab_train", "avsab_puppy", "mech", "kis2017", "bray2021"),
@@ -360,8 +368,8 @@ def behavior(page):
 <section id="help"><h2>When to get professional help</h2>
 <p>Seek help early for aggression, fear that is getting worse, behavior when left alone that leads to injury or damage, or any behavior that puts people or other animals at risk. AVSAB says animals with aggression should be treated with humane methods with no exceptions, and that trainers struggling with a case should refer to a vet, a board certified veterinary behaviorist or a certified applied animal behaviorist.</p></section>
 """
-    page("behavior.html", "Dog Behavior: Stress Signals and Socialization | SnoutsWise",
-         "How to read stress, fear and tail wags in dogs, why puppy socialization matters, what research says about alpha theory, and how to tackle problem behavior.",
+    page("behavior.html", "Dog Body Language and Stress Signals Explained | SnoutsWise",
+         "Read dog body language: stress and fear signals, what tail wags mean, why puppy socialization matters, and what research says about alpha theory and problems.",
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
          sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013"),
@@ -502,12 +510,12 @@ var h=location.hash.slice(1);if(h){var e=document.getElementById(h);if(e&&!e.cla
         ("Is a little garlic or onion OK for dogs?", "No. Onions, garlic, chives and leeks belong to the Allium family, which can damage a dog's red blood cells. The AKC says garlic is significantly more toxic to dogs than the other Alliums and that signs can be delayed for days."),
         ("What should I do if my dog ate something toxic?", "Call your vet, an emergency vet or a pet poison line straight away, even if your dog seems well. Note what was eaten, how much and when, and your dog's weight. Do not try to make your dog vomit unless a vet tells you to."),
     ]
-    page("can-dogs-eat.html", "Can My Dog Eat This? %d Foods Rated Safe, Caution or Toxic | SnoutsWise" % n,
+    page("can-dogs-eat.html", "Foods Dogs Can and Can't Eat: %d Foods Checked | SnoutsWise" % n,
          "Look up %d foods: which are toxic to dogs (grapes, chocolate, xylitol, onions), which need caution and which are safe, with sources and what to do if eaten." % n,
          body, h1="Can my dog eat this? %d foods rated Safe, Caution or Toxic" % n,
          lead="The foods most dangerous to dogs are chocolate and cocoa, grapes and raisins, onions, garlic and other Alliums, xylitol (in sugar free products), macadamia nuts, alcohol, raw yeast dough and caffeine. Many plain fruits and vegetables, such as apples, blueberries, carrots and green beans, are fine as occasional treats. Search the table below for a verdict and the veterinary or kennel club source behind it.",
          faq=faq, sources=src("aspca_foods", "akc_food", "akc_fruit", "merck_choc", "merck_xyl", "merck_foodpet", "cornell_xyl"),
-         related=[("blog/dog-ate-chocolate.html", "Dog ate chocolate? Dose estimator"), ("health.html#poisoning", "Poisoning: first steps"), ("care.html#feeding", "Feeding your dog"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("faq.html", "Dog FAQ")],
+         related=[("blog/dog-ate-chocolate.html", "Dog ate chocolate? Dose estimator"), ("health.html#poisoning", "Poisoning: first steps"), ("care.html#feeding", "Feeding your dog"), ("how-much-to-feed-a-dog.html", "How much to feed a dog"), ("blog/is-my-dog-overweight.html", "Is my dog overweight?"), ("faq.html", "Dog FAQ")],
          crumbs=[("index.html", "Home"), ("can-dogs-eat.html", "Can dogs eat this?")], script=script)
 
 # ------------------------------------------------------------------ AGE CALCULATOR
@@ -547,8 +555,128 @@ document.getElementById('go').addEventListener('click',calc);y.addEventListener(
          body, h1="Dog age calculator: dog years to human years",
          lead="The best evidence based conversion comes from a 2020 study of DNA methylation in 104 Labrador retrievers, which found that human age is roughly 16 &times; ln(dog age) + 31. By that formula a 1 year old dog is about 31 in human years, a 4 year old about 53, a 10 year old about 68 and a 14 year old about 73. Dogs age very quickly early in life and more slowly later, so the old times 7 rule is wrong at both ends.",
          faq=faq, sources=src("wang2020", "merck_vitals"),
-         related=[("health.html", "Dog health basics"), ("care.html", "Everyday care"), ("blog/is-my-dog-overweight.html", "Keeping your dog lean"), ("can-dogs-eat.html", "Can dogs eat this?"), ("faq.html", "Dog FAQ")],
+         related=[("health.html", "Dog health basics"), ("care.html", "Everyday care"), ("blog/is-my-dog-overweight.html", "Keeping your dog lean"), ("how-much-to-feed-a-dog.html", "How much to feed a dog"), ("can-dogs-eat.html", "Can dogs eat this?"), ("faq.html", "Dog FAQ")],
          crumbs=[("index.html", "Home"), ("dog-age-calculator.html", "Dog age calculator")], script=script)
+
+# ------------------------------------------------------------------ FEEDING CALCULATOR (27 Oct 2026)
+# Formulas and factors read on 27 Oct 2026: Merck Veterinary Manual (RER, MER table, 30% variation),
+# AAHA 2021 Box 1 PDF (life stage factors, 4.5 kg worked example), AAHA feeding plans page (90/10 rule, 4 to 7 day changes),
+# WSAVA 2011 assessment guidelines (treats over 10% a risk factor, 30% variation), NRC 2006 owner booklet (energy table, meals).
+def rer(kg):
+    return 70 * kg ** 0.75
+
+def feed_calc(page):
+    lb_rows = "".join(
+        "<tr><td>%d lb (%.1f kg)</td><td>%d</td><td>%d to %d</td><td>%d to %d</td><td>%d to %d</td></tr>" % (
+            lb, lb * 0.45359237, round(rer(lb * 0.45359237)),
+            round(rer(lb * 0.45359237) * 1.4), round(rer(lb * 0.45359237) * 1.6),
+            round(rer(lb * 0.45359237) * 1.6), round(rer(lb * 0.45359237) * 1.8),
+            round(rer(lb * 0.45359237) * 1.0), round(rer(lb * 0.45359237) * 1.2))
+        for lb in (5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100))
+    kg_rows = "".join(
+        "<tr><td>%d kg</td><td>%d</td><td>%d to %d</td><td>%d to %d</td><td>%d to %d</td></tr>" % (
+            kg, round(rer(kg)), round(rer(kg) * 1.4), round(rer(kg) * 1.6), round(rer(kg) * 1.6), round(rer(kg) * 1.8),
+            round(rer(kg) * 1.0), round(rer(kg) * 1.2))
+        for kg in (2, 5, 8, 10, 15, 20, 25, 30, 35, 40, 50))
+    ex10 = rer(10)
+    body = """
+<div class="tool"><h2 style="margin-top:0">Dog calorie and feeding calculator</h2>
+<div class="row"><div><label for="fw">Weight</label><input id="fw" type="number" min="0.5" max="120" step="0.1" value="10" inputmode="decimal" style="width:6rem"></div>
+<div><label for="fu">Unit</label><select id="fu"><option value="kg">kg</option><option value="lb">lb</option></select></div>
+<div><label for="fs">Life stage</label><select id="fs">
+<option value="1.4,1.6" selected>Neutered adult</option>
+<option value="1.6,1.8">Intact adult (not neutered)</option>
+<option value="1.0,1.2">Inactive or gains weight easily</option>
+<option value="1.0,1.0">Weight loss (use the target weight your vet sets)</option>
+<option value="3.0,3.0">Puppy under 4 months</option>
+<option value="2.0,2.0">Puppy 4 months or older</option>
+<option value="1.6,2.0">Working dog, light work</option>
+</select></div></div>
+<div class="row"><div><label for="fk">Food energy from the label (optional)</label><input id="fk" type="number" min="0" step="1" placeholder="e.g. 350" inputmode="numeric" style="width:7rem"></div>
+<div><label for="fku">Per</label><select id="fku"><option value="cup">kcal per cup</option><option value="kg">kcal per kg</option><option value="can">kcal per can</option></select></div></div>
+<p class="result" id="out" aria-live="polite"></p>
+<p class="note">Method: resting energy requirement (RER) = 70 &times; (body weight in kg)<sup>0.75</sup>, multiplied by the canine life stage factor from the 2021 AAHA guidelines. Results are a starting point, not a prescription: individual dogs can need about 30 percent more or less.</p></div>
+<section id="how"><h2>How the calculation works</h2>
+<p>Vets estimate a dog's daily calories in two steps. The Merck Veterinary Manual and the 2021 AAHA Nutrition and Weight Management Guidelines both start from the <b>resting energy requirement (RER)</b>, the energy a healthy dog uses at rest in a comfortable temperature:</p>
+<p style="font-size:1.15rem"><b>RER (kcal per day) = 70 &times; (body weight in kg)<sup>0.75</sup></b></p>
+<p>Merck notes that this exponential formula works for dogs of any size. A simpler straight line version, 30 &times; weight in kg + 70, is only meant for dogs heavier than 2 kg and lighter than 45 kg, because energy needs do not rise in a straight line with body weight.</p>
+<p>The second step multiplies RER by a <b>life stage factor</b> to get the <b>maintenance energy requirement (MER)</b>, the calories a dog needs each day to hold its weight with normal activity. AAHA's own worked example is a 10 lb (4.5 kg) neutered dog: RER is about 216 kcal, and 216 &times; 1.4 gives 302 kcal a day.</p>
+<p>A kilocalorie (kcal) is the same unit as the capital C "Calorie" printed on food labels, as both the Merck Veterinary Manual and the National Research Council explain.</p></section>
+<section id="factors"><h2>Life stage factors: AAHA and Merck compared</h2>
+<p>The two references use slightly different multipliers. AAHA gives a range for each group; Merck gives a single number. Both call the result a starting point.</p>
+<div class="tablewrap"><table><thead><tr><th>Dog</th><th>AAHA 2021 factor (&times; RER)</th><th>Merck Veterinary Manual factor (&times; RER)</th></tr></thead><tbody>
+<tr><td>Neutered adult</td><td>1.4 to 1.6</td><td>1.6</td></tr>
+<tr><td>Intact adult</td><td>1.6 to 1.8</td><td>1.8</td></tr>
+<tr><td>Inactive or obesity prone</td><td>1.0 to 1.2</td><td>1.4</td></tr>
+<tr><td>Weight loss</td><td>1.0</td><td>not listed</td></tr>
+<tr><td>Puppy under 4 months</td><td>3.0</td><td>3</td></tr>
+<tr><td>Puppy 4 months or older</td><td>2.0</td><td>2</td></tr>
+<tr><td>Pregnant (last 21 days)</td><td>3.0</td><td>not listed</td></tr>
+<tr><td>Nursing mother</td><td>3.0 to 6.0 or more, depending on litter size and week</td><td>not listed</td></tr>
+<tr><td>Working dog</td><td>light 1.6 to 2.0, moderate 2.0 to 5.0, heavy 5.0 to 11.0</td><td>not listed</td></tr>
+</tbody></table></div>
+<p>AAHA adds that sedentary and indoor pets may need less than these factors suggest. Merck makes a similar point: dogs living in households often need fewer calories a day than dogs kept in kennels, and breed matters too (Newfoundlands appear to need fewer calories than Great Danes). Pregnant, nursing and hard working dogs vary so much that their feeding plan should come from your vet, which is why the calculator above leaves them out.</p></section>
+<h2 id="chart">How much to feed a dog by weight: calorie chart</h2>
+<p>Daily calories worked out with the RER formula and the AAHA adult factors, rounded to the nearest whole kcal. Use the weight your dog should be, not just the weight it is, if it is carrying extra fat.</p>
+<div class="tablewrap"><table><thead><tr><th>Weight</th><th>RER (kcal per day)</th><th>Neutered adult (1.4 to 1.6)</th><th>Intact adult (1.6 to 1.8)</th><th>Inactive (1.0 to 1.2)</th></tr></thead><tbody>""" + lb_rows + """</tbody></table></div>
+<h3 id="chart-kg">Dog feeding chart in kg</h3>
+<div class="tablewrap"><table><thead><tr><th>Weight</th><th>RER (kcal per day)</th><th>Neutered adult</th><th>Intact adult</th><th>Inactive</th></tr></thead><tbody>""" + kg_rows + """</tbody></table></div>
+<section id="nrc"><h2>A cross check with the National Research Council table</h2>
+<p>The National Research Council (NRC) wrote the reference text <i>Nutrient Requirements of Dogs and Cats</i> (2006), and its free owner booklet <i>Your Dog's Nutritional Needs</i> gives average daily energy needs for adult dogs:</p>
+<div class="tablewrap"><table><thead><tr><th>Type of dog</th><th>10 lb</th><th>30 lb</th><th>50 lb</th><th>70 lb</th><th>90 lb</th></tr></thead><tbody>
+<tr><td>Inactive dogs</td><td>296</td><td>674</td><td>989</td><td>1,272</td><td>1,540</td></tr>
+<tr><td>Adult active dogs</td><td>404</td><td>922</td><td>1,353</td><td>1,740</td><td>2,100</td></tr>
+<tr><td>Young adult active dogs</td><td>436</td><td>993</td><td>1,451</td><td>1,876</td><td>2,264</td></tr>
+<tr><td>Older active dogs</td><td>327</td><td>745</td><td>1,093</td><td>1,407</td><td>1,700</td></tr>
+</tbody></table></div>
+<p class="note">Figures in kcal per day, from the NRC booklet (2006).</p>
+<p>We checked these numbers against the same weight to the power 0.75 scaling. Every figure in the inactive row is within 0.5 percent of 95 &times; kg<sup>0.75</sup>, and every figure in the active row is within 0.5 percent of 130 &times; kg<sup>0.75</sup>. In RER terms, that is about 1.36 &times; RER for inactive dogs and 1.86 &times; RER for active ones. So the NRC averages sit at the generous end: its inactive row is close to AAHA's neutered adult range rather than AAHA's 1.0 to 1.2 for inactive dogs, and its active row is just above the intact adult range. The experts agree on the method but not on one exact number, which is why every source says to treat the result as a starting point and adjust by body condition. The booklet describes active dogs as those with strong stimulus and ample chance to exercise, such as dogs in multi dog households, in the country or with a large yard.</p></section>
+<section id="cups"><h2>Turning calories into cups or grams</h2>
+<p>Calories only become useful once you know how much energy is in your dog's food. AAHA notes that AAFCO, the body behind US pet food rules, requires calorie content on dog food and treat labels (chews and bones are not included). If the packaging is not available, AAHA suggests the company's website or customer service line.</p>
+<ol><li>Find the daily calories from the calculator or chart.</li>
+<li>Find the food's calories per cup, can or kilogram on the label.</li>
+<li>Divide. For example, if a dog needs 550 kcal and a food provides 350 kcal per cup, that is 550 &divide; 350 = about 1.6 cups a day. If the label gives 3,500 kcal per kg, the same dog needs 550 &divide; 3,500 &times; 1,000 = about 157 g a day. (These label values are made up for the example; use your own food's numbers.)</li>
+<li>Split the total into meals. The NRC booklet says it is fine to feed an adult dog once or twice a day, while puppies need two to three meals a day.</li></ol>
+<p>A kitchen scale is more accurate than a scoop, because cups of kibble vary. AAHA points out that pet food feeding guides are not standardized, so the amount on the bag is also only a starting point. Merck adds that if a dog needs much less food than the label suggests (10 to 30 percent less) to stay at an ideal weight, a less energy dense food may suit it better, because feeding a small amount of a standard food also cuts every other nutrient.</p></section>
+<section id="treats" class="card"><h2>Treats: the 10 percent rule</h2>
+<p>The AAHA guidelines say a complete and balanced food should supply at least 90 percent of a dog's calories, with treats, chews and other foods making up no more than 10 percent. The WSAVA nutritional assessment guidelines list snacks, treats and table food above 10 percent of total calories as a nutritional risk factor. The calculator shows this treat budget for you; if you use it, cut the main food by the same amount. For low calorie treat ideas, check our <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table.</p></section>
+<section id="adjust"><h2>Check and adjust: why the number is only a start</h2>
+<p>Dogs of the same weight can need very different amounts. Merck says any given dog may need as much as 30 percent more or fewer calories than another dog of the same weight, and the WSAVA guidelines give the same 30 percent figure in either direction for dogs. So:</p>
+<ul><li><b>Weigh your dog regularly</b> on the same scale, and score its body condition. On the 9 point scale used by WSAVA, 4 to 5 is ideal; any score below 4 or above 5 is flagged as a risk factor. Our <a href="{R}blog/is-my-dog-overweight.html">body condition score guide</a> shows how to do it with your hands and eyes.</li>
+<li><b>Adjust gradually.</b> If your dog is gaining, feed a little less; if it is losing weight it should not, feed a little more, and ask your vet if the change is unexplained.</li>
+<li><b>Change foods slowly.</b> AAHA suggests moving to a new diet over 4 to 7 days, and WSAVA notes some dogs have fewer stomach upsets when food is changed over 7 to 10 days.</li>
+<li><b>Ask about unusually low needs.</b> Merck advises checking for medical causes such as an underactive thyroid (hypothyroidism) when a dog needs surprisingly few calories to stay at its ideal weight.</li></ul>
+<p>Keeping dogs lean pays off. In a 14 year study of 48 Labrador retrievers, dogs fed 25 percent less than their littermates lived a median of 13 years compared with 11.2 years (see <a href="{R}care.html#weight">healthy weight</a> and <a href="{R}health.html#weight">weight and health</a>).</p></section>
+<section id="limits" class="card"><h2>When not to rely on a calculator</h2>
+<p>This page is general information for healthy dogs, not veterinary advice. Ask your vet for a feeding plan if your dog is pregnant or nursing, a puppy of a large or giant breed, a working or sport dog, underweight or overweight, on a prescription or homemade diet, or has any medical condition such as kidney, liver, heart or digestive disease, diabetes or a thyroid problem. Sudden changes in appetite, thirst or weight are a reason to see your vet.</p></section>
+"""
+    script = """(function(){var w=document.getElementById('fw'),u=document.getElementById('fu'),s=document.getElementById('fs'),k=document.getElementById('fk'),ku=document.getElementById('fku'),o=document.getElementById('out');
+function r(x){return Math.round(x)}
+function amt(c){var e=+k.value||0;if(e<=0)return '';var lo=c[0]/e,hi=c[1]/e,t;
+if(ku.value=='kg'){t=r(lo*1000)==r(hi*1000)?r(lo*1000)+' g':r(lo*1000)+' to '+r(hi*1000)+' g';return '<br>That is about <b>'+t+' of food a day</b> at '+e+' kcal per kg.'}
+var n=ku.value=='cup'?'cups':'cans',f=function(x){return (Math.round(x*10)/10).toString()};t=f(lo)==f(hi)?f(lo):f(lo)+' to '+f(hi);
+return '<br>That is about <b>'+t+' '+n+' a day</b> at '+e+' kcal per '+ku.value+'.'}
+function calc(){var kg=(+w.value||0)*(u.value=='lb'?0.45359237:1);if(kg<0.5||kg>120){o.innerHTML='Enter a weight between 0.5 and 120 kg (about 1 to 265 lb).';return}
+var f=s.value.split(',').map(Number),R=70*Math.pow(kg,0.75),c=[R*f[0],R*f[1]],d=r(c[0])==r(c[1])?r(c[0]):r(c[0])+' to '+r(c[1]);
+o.innerHTML='Resting energy requirement: <b>'+r(R)+' kcal</b> a day.<br>Estimated daily need: <b>'+d+' kcal</b> a day.'+amt(c)+'<br>Treat budget (10 percent or less): about <b>'+r(c[1]*0.1)+' kcal</b>, taken out of the main food.'}
+[w,u,s,k,ku].forEach(function(el){el.addEventListener('input',calc);el.addEventListener('change',calc)});calc()})();"""
+    faq = [
+        ("How much should I feed my dog a day?", "Work out its daily calories, then divide by the calories in its food. For a healthy neutered adult, vets start from 70 &times; (weight in kg)<sup>0.75</sup> and multiply by 1.4 to 1.6 (AAHA 2021). A 10 kg neutered dog needs roughly %d to %d kcal a day, adjusted up or down by how its weight and body condition change." % (round(ex10 * 1.4), round(ex10 * 1.6))),
+        ("How many calories does a dog need per day by weight?", "Using the RER formula and AAHA factors, a neutered adult needs about %d to %d kcal at 5 kg, %d to %d kcal at 10 kg, %d to %d kcal at 20 kg and %d to %d kcal at 30 kg. Individual dogs can vary by about 30 percent either way." % (
+            round(rer(5) * 1.4), round(rer(5) * 1.6), round(ex10 * 1.4), round(ex10 * 1.6), round(rer(20) * 1.4), round(rer(20) * 1.6), round(rer(30) * 1.4), round(rer(30) * 1.6))),
+        ("What is RER for dogs?", "RER is the resting energy requirement, the calories a healthy dog uses at rest in a comfortable temperature. The Merck Veterinary Manual gives it as 70 &times; (body weight in kg)<sup>0.75</sup>, a formula that works for dogs of any size."),
+        ("How many treats can I give my dog?", "Keep treats, chews and table food to 10 percent or less of daily calories, as the AAHA guidelines advise, and reduce the main food to match. WSAVA treats more than 10 percent from snacks as a nutritional risk factor."),
+        ("Should I follow the feeding guide on the dog food bag?", "Use it as a starting point. AAHA notes feeding guides on pet food are not standardized, so check your dog's weight and body condition score every few weeks and adjust the amount."),
+        ("How many times a day should I feed my dog?", "The National Research Council says once or twice a day is fine for adult dogs, while puppies need two to three meals a day."),
+    ]
+    page("how-much-to-feed-a-dog.html", "How Much to Feed a Dog: Calorie Calculator | SnoutsWise",
+         "How much to feed a dog by weight: free calorie calculator and chart in kg and lb, using the RER formula with AAHA, Merck and NRC guidance, plus a treat budget.",
+         body, h1="How much to feed a dog: calorie calculator and chart",
+         lead="A healthy neutered adult dog needs roughly 70 &times; (its weight in kg)<sup>0.75</sup> &times; 1.4 to 1.6 kcal a day, the method used in the 2021 AAHA veterinary guidelines. That works out at about %d to %d kcal a day for a 10 kg (22 lb) dog. Enter your dog's weight below, add the calories from the food label to convert the result into cups or grams, then fine tune by watching weight and body condition." % (round(ex10 * 1.4), round(ex10 * 1.6)),
+         faq=faq, sources=src("aaha_box1", "aaha_feed", "cline2021", "merck_nutr", "wsava_assess", "nrc_dog", "wsava_bcs", "penn_kealy"),
+         related=[("blog/is-my-dog-overweight.html", "Is my dog overweight? Body condition score guide"), ("care.html#feeding", "Care: feeding basics"), ("health.html#weight", "Health: weight"), ("can-dogs-eat.html", "Can dogs eat this? food table"), ("dog-age-calculator.html", "Dog age calculator"), ("blog/how-do-dogs-drink-water.html", "How dogs drink water")],
+         crumbs=[("index.html", "Home"), ("care.html", "Care"), ("how-much-to-feed-a-dog.html", "How much to feed a dog")], script=script,
+         published="2026-10-27", updated="2026-10-27")
 
 # ------------------------------------------------------------------ FAQ
 def faq(page):
@@ -560,6 +688,7 @@ def faq(page):
         ("How often do dogs need vaccines?", "Under the AAHA guidelines, after the puppy series and a booster within a year, the distemper, adenovirus and parvovirus combination is boosted every 3 years, leptospirosis yearly, and rabies as local law requires. <a href=\"{R}blog/dog-vaccine-schedule.html\">Full explanation</a>."),
         ("When should I start socializing my puppy?", "Straight away. The AVSAB calls the first three months the primary socialization window and says puppy classes can start at 7 to 8 weeks once the puppy has had a first set of vaccines at least 7 days earlier and a first deworming. <a href=\"{R}blog/puppy-socialization-window.html\">How to do it safely</a>."),
         ("Is dominance or alpha training a good idea?", "No. Veterinary behaviorists at the AVSAB advise against dominance based and aversive methods, and wolf research shows wild packs are families rather than groups fighting for alpha status. <a href=\"{R}blog/alpha-dog-myth.html\">What the research says</a>."),
+        ("How much should I feed my dog?", "Start from its daily calories: vets use 70 &times; (weight in kg)<sup>0.75</sup>, multiplied by a life stage factor such as 1.4 to 1.6 for a neutered adult (AAHA 2021), then divide by the calories in the food. Adjust by weight and body condition. Try the <a href=\"{R}how-much-to-feed-a-dog.html\">feeding calculator</a>."),
         ("How do I know if my dog is overweight?", "Use a body condition score: at an ideal weight you can feel the ribs without excess fat and see a waist from above. <a href=\"{R}blog/is-my-dog-overweight.html\">Step by step guide</a>."),
         ("Why does my dog eat grass?", "Usually because it is normal dog behavior. In a 2008 survey of 1,571 plant eating dogs, 68% ate plants daily or weekly, only 9% often seemed ill beforehand and only 22% often vomited afterwards. See a vet if it suddenly increases or comes with vomiting, diarrhea or lethargy. <a href=\"{R}blog/why-do-dogs-eat-grass.html\">What the research says</a>."),
         ("Can dogs see color?", "Yes, mostly blues and yellows. Dogs have two types of cone cells instead of the three most people have, so their color vision is similar to a person with red green color blindness. <a href=\"{R}blog/can-dogs-see-color.html\">How dogs see color</a>."),
@@ -575,13 +704,13 @@ def faq(page):
         ("Does my dog legally need a microchip?", "In the UK, yes: all dogs must be microchipped and registered by 8 weeks old, and must wear a collar and tag with the owner's name and address in public. Other countries have their own rules."),
         ("What should I do if my dog has heatstroke?", "Cool first, transport second, says the RSPCA: stop activity, move to shade, pour water cooler than the dog over its body (not the head), fan it, then go to a vet in a cool car. Do not cover the dog with wet towels."),
     ]
-    page("faq.html", "Dog FAQ: Quick, Sourced Answers | SnoutsWise",
-         "Short, sourced answers to common dog questions: tail wagging, yawning, jealousy, dreaming, grass eating, color vision, vaccines, weight and heatstroke.",
+    page("faq.html", "Dog Questions and Answers: Quick Sourced FAQ | SnoutsWise",
+         "Dog questions and answers with sources: how much to feed, normal temperature, tail wagging, yawning, dreaming, eating grass, color vision, vaccines and heat.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
-         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
+         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "aaha_box1", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
          related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-20")
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-27")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -696,10 +825,10 @@ def trust(page):
     page("terms.html", "Terms of Use | SnoutsWise",
          "Terms of use for SnoutsWise, owned and operated by Joshua Israel Ventures LLC: general information only, no warranties, limitation of liability, Florida law.",
          """
-<p class="meta">Last updated 23 October 2026</p>
+<p class="meta">Last updated 27 October 2026</p>
 <p class="op">&copy; 2026 Joshua Israel Ventures LLC. All rights reserved. SnoutsWise is a trade name of Joshua Israel Ventures LLC, a Florida limited liability company.</p>
 <h2>Who you are dealing with</h2><p>These terms of use govern your use of snoutswise.com (the "site"). The site is owned and operated by Joshua Israel Ventures LLC ("we", "us", "our"), which is the contracting party for everything on the site. SnoutsWise is a brand owned by Joshua Israel Ventures LLC; it is not a separate company. By using the site you agree to these terms. If you do not agree, please do not use the site.</p>
-<h2>General information only, not professional advice</h2><p>Everything on the site, including articles, the food table, the dog age calculator and the chocolate dose estimator, is general educational information about dogs. It is not veterinary, medical or other professional advice, and it is not a substitute for an examination by a vet who knows your dog. Using the site does not create a veterinarian, client and patient relationship or any other professional relationship. If your dog may be ill, injured or poisoned, contact your vet or an emergency vet straight away. See our <a href="{R}disclaimer.html">disclaimer</a>.</p>
+<h2>General information only, not professional advice</h2><p>Everything on the site, including articles, the food table, the dog age calculator, the feeding calculator and the chocolate dose estimator, is general educational information about dogs. It is not veterinary, medical or other professional advice, and it is not a substitute for an examination by a vet who knows your dog. Using the site does not create a veterinarian, client and patient relationship or any other professional relationship. If your dog may be ill, injured or poisoned, contact your vet or an emergency vet straight away. See our <a href="{R}disclaimer.html">disclaimer</a>.</p>
 <h2>Our content</h2><p>The text, illustrations, design, and the SnoutsWise name and logo are owned by Joshua Israel Ventures LLC unless stated otherwise. You are welcome to link to any page and to quote short passages with a credit and a link back. Please do not republish substantial parts of the site without our written permission.</p>
 <h2>Using the site</h2><p>Do not use the site for any unlawful purpose or try to disrupt it or the services that host it.</p>
 <h2>Links to other sites</h2><p>We link to outside sources so you can check our facts. We do not control those sites and are not responsible for their content, availability or privacy practices.</p>
@@ -715,11 +844,11 @@ def trust(page):
     page("disclaimer.html", "Disclaimer | SnoutsWise",
          "SnoutsWise disclaimer: general information only, no vet relationship, what to do in an emergency, and our advertising and affiliate disclosure.",
          """
-<p class="meta">Last updated 23 October 2026</p>
+<p class="meta">Last updated 27 October 2026</p>
 <p class="call"><b>Emergency? Call your vet, an emergency vet, or the ASPCA Animal Poison Control Center: <a href="tel:+18884264435">(888) 426-4435</a></b>. Outside the US, call your vet or local emergency vet.</p>
 <h2>Accuracy</h2><p>We research every page and link the veterinary, welfare and kennel club sources it relies on, and we review pages when guidance changes. Even so, information can be incomplete, out of date or wrong, guidelines differ between organizations and countries, and every dog is different. Joshua Israel Ventures LLC makes no guarantee that the content is accurate, complete or suitable for your dog. Please check the linked sources and ask your vet before acting on anything you read here. If you spot an error, <a href="{R}contact.html">tell us</a>.</p>
 <h2>No vet or professional relationship</h2><p>We are not veterinarians. Reading the site, using its tools or contacting us does not create a veterinarian, client and patient relationship or any other professional relationship. Do not delay getting veterinary care, or ignore advice from your vet, because of something you read on SnoutsWise. For behavior problems such as aggression, ask your vet or a qualified veterinary behaviorist.</p>
-<h2>Tools and calculators</h2><p>The food table, dog age calculator and chocolate dose estimator give general estimates for information only. They cannot account for your dog's health, the exact product eaten or other factors a vet would consider.</p>
+<h2>Tools and calculators</h2><p>The food table, dog age calculator, feeding calculator and chocolate dose estimator give general estimates for information only. They cannot account for your dog's health, the exact product eaten or other factors a vet would consider.</p>
 <h2>Affiliate and advertising disclosure</h2><p>SnoutsWise may show advertising served by Google AdSense, which is labelled as advertising and is separate from our content. We have no affiliate links or sponsored content, and we are not paid to mention any product, organization or website. If that changes, we will add a clear disclosure, as required by the US Federal Trade Commission, on the affected pages and update this page and our <a href="{R}privacy.html">privacy policy</a>.</p>
 <p class="op">&copy; 2026 Joshua Israel Ventures LLC. All rights reserved. SnoutsWise is a trade name of Joshua Israel Ventures LLC, a Florida limited liability company.</p>
 <h2>Who is responsible</h2><p>SnoutsWise is a brand of Joshua Israel Ventures LLC, which owns and operates the site. Use of the site is also governed by our <a href="{R}terms.html">terms of use</a>, under the laws of the State of Florida. Contact: <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a>.</p>
@@ -949,7 +1078,7 @@ def blog(page):
 <p>One study in one breed cannot predict exactly what will happen to your dog, but it is strong evidence that keeping dogs lean, with ribs you can feel and a visible waist, is one of the most valuable things an owner can do.</p>
 <h2>If your dog scores 6 or more</h2>
 <ol><li><b>See your vet first.</b> They can confirm the score, set a target weight and safe rate of loss, and check for medical causes.</li>
-<li><b>Measure food.</b> Weigh or measure every meal rather than estimating, and feed for the target weight your vet suggests rather than the current weight.</li>
+<li><b>Measure food.</b> Weigh or measure every meal rather than estimating, and feed for the target weight your vet suggests rather than the current weight. Our <a href="{R}how-much-to-feed-a-dog.html">dog calorie calculator</a> shows how vets estimate daily calories.</li>
 <li><b>Count treats.</b> Treats, chews and table scraps add up. Use part of the daily food allowance as training treats, or low calorie options such as green beans or carrot pieces (see the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table).</li>
 <li><b>Add activity gradually</b>, especially for older or very overweight dogs: longer sniffy walks, gentle play and food puzzle toys.</li>
 <li><b>Re-score every couple of weeks</b> and weigh regularly on the same scale.</li></ol>
@@ -959,7 +1088,7 @@ def blog(page):
               ("Can I tell if my dog is overweight just by weighing it?", "Not reliably on its own, because healthy weight varies between individual dogs. A body condition score, done with your hands and eyes, tells you how much fat your dog carries. Use both, and ask your vet for a target weight."),
               ("Do lean dogs live longer?", "In a 14 year study of 48 Labrador retrievers, dogs fed 25 percent less than their littermates lived a median of 13 years versus 11.2 years and developed osteoarthritis later.")],
          sources=src("wsava_bcs", "penn_kealy"),
-         related=[("care.html#weight", "Care: healthy weight"), ("health.html#weight", "Health: weight"), ("can-dogs-eat.html", "Low calorie treat ideas"), ("dog-age-calculator.html", "Dog age calculator")])
+         related=[("how-much-to-feed-a-dog.html", "How much to feed a dog"), ("care.html#weight", "Care: healthy weight"), ("health.html#weight", "Health: weight"), ("can-dogs-eat.html", "Low calorie treat ideas"), ("dog-age-calculator.html", "Dog age calculator")])
 
     # 6 daily fact: color vision (8 Oct 2026)
     post(page, "can-dogs-see-color", "Can Dogs See Color? Yes, Mostly Blues and Yellows | SnoutsWise",
@@ -1478,8 +1607,8 @@ def blog(page):
 
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
-    page("blog/index.html", "SnoutsWise Blog: Answer First Dog Care Articles | SnoutsWise",
-         "Answer first dog articles on tail wagging, drinking, pointing, smelling fear, yawning, jealousy, dreaming, head tilting, grass eating and color vision.",
+    page("blog/index.html", "Dog Facts Explained by Research | SnoutsWise Blog",
+         "Dog facts explained by research: why dogs tilt their heads, eat grass, yawn and dream, and whether they like baby talk or see color, answered with sources.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
          crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-20")

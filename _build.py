@@ -54,7 +54,7 @@ EDITORIAL = {"@type": "Organization", "name": SITE_NAME + " Editorial Team", "ur
 
 VET_PAGES = {"blog/dog-ate-chocolate.html", "blog/dog-vaccine-schedule.html", "blog/is-my-dog-overweight.html",
              "blog/why-do-dogs-eat-grass.html", "blog/dog-dementia-brain-study.html", "blog/puppy-socialization-window.html",
-             "health.html", "care.html", "can-dogs-eat.html"}
+             "health.html", "care.html", "can-dogs-eat.html", "how-much-to-feed-a-dog.html"}
 # Numbers checked on the official sites 24 Oct 2026 (aspca.org/pet-care/animal-poison-control, petpoisonhelpline.com)
 VET_BLOCK = ('<aside class="card vetcall" id="vet-help"><h2>When to get veterinary help</h2>'
              '<p><b>Call your vet or an emergency vet right away</b> if your dog may have eaten something toxic, has trouble breathing, collapses, has a seizure, is bleeding heavily, has a swollen or hard belly, keeps vomiting, or seems in severe pain. Call your vet for any change that worries you.</p>'

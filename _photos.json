@@ -118,5 +118,17 @@
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "checked": "2026-10-09",
   "changes": "cropped to 3:2, resized, converted to WebP"
+ },
+ {
+  "slug": "kibble-measuring-cup",
+  "alt": "A steel measuring cup filled with dry dog kibble",
+  "page": "how-much-to-feed-a-dog.html",
+  "title": "Kibbles How Others See Me.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Kibbles_How_Others_See_Me.jpg",
+  "author": "carterse",
+  "licence": "CC BY-SA 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "checked": "2026-10-27",
+  "changes": "cropped to 3:2, resized, converted to WebP"
  }
 ]

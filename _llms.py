@@ -34,6 +34,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Can dogs eat this? food table]({u}can-dogs-eat.html): searchable verdicts (toxic, caution, safe in moderation) with reasons, sources and what to do if eaten for about 70 foods
   - Categories: [Sweets and snacks]({u}can-dogs-eat.html#sweets-and-snacks), [Drinks]({u}can-dogs-eat.html#drinks), [Fruit]({u}can-dogs-eat.html#fruit), [Vegetables]({u}can-dogs-eat.html#vegetables), [Nuts and seeds]({u}can-dogs-eat.html#nuts-and-seeds), [Meat, fish and eggs]({u}can-dogs-eat.html#meat-fish-and-eggs), [Dairy]({u}can-dogs-eat.html#dairy), [Grains and baking]({u}can-dogs-eat.html#grains-and-baking)
 - [Dog age calculator]({u}dog-age-calculator.html): dog years to human years using human age = 16 ln(dog age) + 31 (Wang et al., Cell Systems 2020), with a table and limitations
+- [How much to feed a dog: calorie calculator]({u}how-much-to-feed-a-dog.html): daily calories by weight using RER = 70 x kg^0.75 and AAHA 2021 life stage factors, with charts in lb and kg, cups or grams from the label, a 10 percent treat budget and an NRC cross check
 - [Chocolate dose estimator]({u}blog/dog-ate-chocolate.html): methylxanthine dose by chocolate type and dog weight, using Merck Veterinary Manual figures
 
 ## Games
