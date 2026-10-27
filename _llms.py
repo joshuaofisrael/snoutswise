@@ -43,6 +43,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [Do dogs like baby talk? Puppies do, and adult dogs like it with dog words]({u}blog/do-dogs-like-baby-talk.html)
 - [Can dogs learn the names of their toys? A few gifted dogs can, fast]({u}blog/can-dogs-learn-toy-names.html)
 - [Can dogs sense heat with their nose? A 2020 study says yes]({u}blog/can-dogs-sense-heat-with-their-nose.html)
 - [Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell]({u}blog/do-dogs-recognize-themselves-in-mirror.html)

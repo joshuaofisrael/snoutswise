@@ -62,6 +62,8 @@ S = {
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
  "balint2020": ("Bálint A, Andics A, Gácsi M, Gábor A, Czeibert K, Luce CM, Miklósi Á, Kröger RHH (2020). Dogs can sense weak thermal radiation. Scientific Reports 10: 3736. DOI 10.1038/s41598-020-60439-y", "Scientific Reports", "https://doi.org/10.1038/s41598-020-60439-y"),
  "fugazza2021rapid": ("Fugazza C, Andics A, Magyari L, Dror S, Zempléni A, Miklósi Á (2021). Rapid learning of object names in dogs. Scientific Reports 11: 2222. DOI 10.1038/s41598-021-81699-2", "Scientific Reports", "https://doi.org/10.1038/s41598-021-81699-2"),
+ "benaderet2017": ("Ben-Aderet T, Gallego-Abenza M, Reby D, Mathevon N (2017). Dog-directed speech: why do we use it and do dogs pay attention to it? Proceedings of the Royal Society B 284: 20162429. DOI 10.1098/rspb.2016.2429", "Proceedings of the Royal Society B", "https://doi.org/10.1098/rspb.2016.2429"),
+ "benjamin2018": ("Benjamin A, Slocombe K (2018). 'Who's a good boy?!' Dogs prefer naturalistic dog-directed speech. Animal Cognition 21: 353-364. DOI 10.1007/s10071-018-1172-4", "Animal Cognition", "https://doi.org/10.1007/s10071-018-1172-4"),
  "horowitz2017": ("Horowitz A (2017). Smelling themselves: Dogs investigate their own odours longer when modified in an 'olfactory mirror' test. Behavioural Processes 143: 17-24. DOI 10.1016/j.beproc.2017.08.001", "Behavioural Processes", "https://doi.org/10.1016/j.beproc.2017.08.001"),
  "gallup1970": ("Gallup GG Jr (1970). Chimpanzees: self-recognition. Science 167(3914): 86-87. DOI 10.1126/science.167.3914.86", "Science", "https://doi.org/10.1126/science.167.3914.86"),
  "leonetti2024": ("Leonetti S, Cimarelli G, Hersh TA, Ravignani A (2024). Why do dogs wag their tails? Biology Letters 20(1): 20230407. DOI 10.1098/rsbl.2023.0407", "Biology Letters", "https://doi.org/10.1098/rsbl.2023.0407"),
@@ -112,6 +114,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-like-baby-talk.html">Do dogs like baby talk? Puppies do, and adult dogs like it with dog words</a></li>
 <li><a href="{R}blog/can-dogs-learn-toy-names.html">Can dogs learn the names of their toys? A few gifted dogs can, fast</a></li>
 <li><a href="{R}blog/can-dogs-sense-heat-with-their-nose.html">Can dogs sense heat with their nose? A 2020 study says yes</a></li>
 <li><a href="{R}blog/do-dogs-recognize-themselves-in-mirror.html">Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell</a></li>
@@ -1262,6 +1265,32 @@ def blog(page):
          related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
          published="2026-10-20")
 
+    # 19 daily fact: dog-directed speech (27 Oct 2026)
+    post(page, "do-dogs-like-baby-talk", "Do Dogs Like Baby Talk? What Studies Show | SnoutsWise",
+         "Do dogs like baby talk? Puppies react strongly to high-pitched dog-directed speech, and a 2018 study found adult dogs prefer it when paired with dog words.",
+         "Do dogs like baby talk? Puppies do, and adult dogs like it with dog words",
+         "Most people talk to dogs in a higher, slower, sing-song voice, much like the way adults speak to babies. Studies suggest it is not wasted effort. A 2017 study found that puppies react strongly to this dog-directed speech, and a 2018 study found that adult dogs paid more attention to, and preferred to spend time near, a person using it, as long as the words were about dogs too.",
+         """
+<h2>We all do it</h2>
+<p>In a 2017 study in Proceedings of the Royal Society B, French and British researchers recorded adults speaking to photos of puppies, adult dogs and old dogs. People used dog-directed speech with dogs of every age. The voice pattern was much the same for all ages, except that pitch went highest for puppies.</p>
+<h2>Puppies respond strongly</h2>
+<p>The team then played recordings to dogs with no person in sight. Puppies were highly reactive to dog-directed speech, and pitch was a key factor in how they responded. Older dogs in this setup did not react any differently to dog-directed speech than to normal speech.</p>
+<h2>Adult dogs prefer it in real life</h2>
+<p>A 2018 study in Animal Cognition from the University of York used a more natural setup, with real speakers in the room. Adult dogs paid more attention to, and showed more friendly behavior toward, a person using dog-directed speech than a person using normal adult speech.</p>
+<h2>It is the voice plus the words</h2>
+<p>In a second experiment the researchers mixed things up, using a dog-directed voice with ordinary adult words and a normal voice with dog words like "good boy" and "walkies". Neither mix made a clear difference on its own. The authors suggest it is the combination of the sing-song voice and dog-relevant words that dogs like.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Talking to your dog in a warm, high voice is fine.</b> It may help get a puppy's attention and may strengthen your bond with an adult dog.</li>
+<li><b>Use words that matter to your dog.</b> In the 2018 study, the voice worked best together with dog-related words. This fits with <a href="{R}training.html">reward based training</a> and with research on <a href="{R}blog/can-dogs-learn-toy-names.html">dogs learning words</a>.</li>
+<li><b>Watch your dog's response.</b> Every dog is different, so notice what gets a relaxed, interested reaction (see <a href="{R}behavior.html">dog behavior</a> and <a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</li></ul>
+""",
+         faq=[("Do dogs like baby talk?", "Studies suggest many do. A 2017 study found puppies react strongly to high-pitched dog-directed speech, and a 2018 study found adult dogs paid more attention to and preferred a person using it with dog-related words."),
+              ("Why do people talk to dogs in a high voice?", "A 2017 study found people use dog-directed speech with dogs of all ages, with the highest pitch for puppies. The authors suggest it is a natural way of trying to connect with listeners who do not speak."),
+              ("Do older dogs respond to dog-directed speech?", "In recorded playback tests, older dogs did not react differently, but in a 2018 study with real speakers, adult dogs preferred a person using dog-directed speech with dog words.")],
+         sources=src("benaderet2017", "benjamin2018"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/can-dogs-learn-toy-names.html", "Can dogs learn toy names?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs and the bouba-kiki effect")],
+         published="2026-10-27")
+
     # 18 daily fact: toy name learning (26 Oct 2026)
     post(page, "can-dogs-learn-toy-names", "Can Dogs Learn the Names of Their Toys? | SnoutsWise",
          "Can dogs learn toy names? A 2021 Scientific Reports study found two gifted dogs learned new toy names in four tries, but 20 family dogs did not.",
@@ -1285,7 +1314,7 @@ def blog(page):
               ("How do gifted dogs learn toy names best?", "In the study, the dogs learned new names when the owner named the toy while playing, not when they had to work it out by ruling out familiar toys."),
               ("Do dogs remember new toy names?", "The gifted dogs remembered them after two minutes, but memory tended to fade after 10 minutes and one hour, so more practice may be needed.")],
          sources=src("fugazza2021rapid"),
-         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs and the bouba-kiki effect")],
+         related=[("training.html", "Reward based training"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs and the bouba-kiki effect")],
          published="2026-10-26")
 
     # 17 daily fact: heat sensing nose (25 Oct 2026)

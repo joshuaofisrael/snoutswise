@@ -176,3 +176,8 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - SEO: two-way internal linking with the head-tilt article (topic cluster on dog word learning); fixed a source-key collision before publish so the head-tilt article keeps its own Fugazza 2021 citation.
 - News: none (no verified candidate in the slot). Outreach emails: skipped (no Joshua yes saved in my chat). No browser use, no expenses.
 - 2026-10-26 09:05 slot: NamedScan fixes (commit b6e077b): visible SnoutsWise Editorial Team byline linking to about, Article/BlogPosting author is Organization SnoutsWise Editorial Team; no sameAs since no verified profiles; AdSense, ads.txt, Cloudflare untouched; live verified.
+
+## 27 Oct 2026
+- Daily fact: blog/do-dogs-like-baby-talk.html (Ben-Aderet et al. 2017 Proc R Soc B 284: 20162429, DOI 10.1098/rspb.2016.2429; Benjamin & Slocombe 2018 Animal Cognition 21: 353-364, DOI 10.1007/s10071-018-1172-4; both DOIs verified via Crossref, abstracts read via Europe PMC). Article and FAQPage JSON-LD, linked from home latest, blog index, sitemap and llms.txt.
+- SEO: grew the dog word-learning topic cluster (baby talk, toy names, head tilt) with two-way internal links; new People Also Ask style FAQ targets "do dogs like baby talk".
+- News: none (no verified candidate in the slot). Outreach emails: skipped (no Joshua yes saved in my chat). No browser use, no expenses.
