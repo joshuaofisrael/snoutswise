@@ -62,6 +62,8 @@ S = {
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
  "balint2020": ("Bálint A, Andics A, Gácsi M, Gábor A, Czeibert K, Luce CM, Miklósi Á, Kröger RHH (2020). Dogs can sense weak thermal radiation. Scientific Reports 10: 3736. DOI 10.1038/s41598-020-60439-y", "Scientific Reports", "https://doi.org/10.1038/s41598-020-60439-y"),
  "fugazza2021rapid": ("Fugazza C, Andics A, Magyari L, Dror S, Zempléni A, Miklósi Á (2021). Rapid learning of object names in dogs. Scientific Reports 11: 2222. DOI 10.1038/s41598-021-81699-2", "Scientific Reports", "https://doi.org/10.1038/s41598-021-81699-2"),
+ "kaminski2019": ("Kaminski J, Waller BM, Diogo R, Hartstone-Rose A, Burrows AM (2019). Evolution of facial muscle anatomy in dogs. Proceedings of the National Academy of Sciences 116(29): 14677-14681. DOI 10.1073/pnas.1820653116", "PNAS", "https://doi.org/10.1073/pnas.1820653116"),
+ "kaminski2017": ("Kaminski J, Hynds J, Morris P, Waller BM (2017). Human attention affects facial expressions in domestic dogs. Scientific Reports 7: 12914. DOI 10.1038/s41598-017-12781-x", "Scientific Reports", "https://doi.org/10.1038/s41598-017-12781-x"),
  "benaderet2017": ("Ben-Aderet T, Gallego-Abenza M, Reby D, Mathevon N (2017). Dog-directed speech: why do we use it and do dogs pay attention to it? Proceedings of the Royal Society B 284: 20162429. DOI 10.1098/rspb.2016.2429", "Proceedings of the Royal Society B", "https://doi.org/10.1098/rspb.2016.2429"),
  "benjamin2018": ("Benjamin A, Slocombe K (2018). 'Who's a good boy?!' Dogs prefer naturalistic dog-directed speech. Animal Cognition 21: 353-364. DOI 10.1007/s10071-018-1172-4", "Animal Cognition", "https://doi.org/10.1007/s10071-018-1172-4"),
  "horowitz2017": ("Horowitz A (2017). Smelling themselves: Dogs investigate their own odours longer when modified in an 'olfactory mirror' test. Behavioural Processes 143: 17-24. DOI 10.1016/j.beproc.2017.08.001", "Behavioural Processes", "https://doi.org/10.1016/j.beproc.2017.08.001"),
@@ -121,6 +123,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/why-do-dogs-make-puppy-dog-eyes.html">Why do dogs make puppy dog eyes? A muscle wolves mostly lack</a></li>
 <li><a href="{R}blog/do-dogs-like-baby-talk.html">Do dogs like baby talk? Puppies do, and adult dogs like it with dog words</a></li>
 <li><a href="{R}blog/can-dogs-learn-toy-names.html">Can dogs learn the names of their toys? A few gifted dogs can, fast</a></li>
 <li><a href="{R}blog/can-dogs-sense-heat-with-their-nose.html">Can dogs sense heat with their nose? A 2020 study says yes</a></li>
@@ -1200,7 +1203,7 @@ def blog(page):
               ("Can all dogs learn the names of toys?", "Very few can. In a 2021 study, only 1 of 34 typical family dogs learned two toy names after three months of training, while a handful of rare gifted dogs learned many."),
               ("When is a head tilt a sign of a health problem?", "When it stays even when nothing is going on, or comes with stumbling, circling, falling, flicking eyes, head shaking or vomiting. These can be signs of vestibular (balance) disease or an inner ear problem, so contact your vet.")],
          sources=src("sommese2022", "fugazza2021", "ratcliffe2014", "mertens2023"),
-         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/can-dogs-learn-toy-names.html", "Can dogs learn toy names?"), ("health.html", "Dog health basics"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/why-do-dogs-make-puppy-dog-eyes.html", "Why do dogs make puppy dog eyes?"), ("blog/can-dogs-learn-toy-names.html", "Can dogs learn toy names?"), ("health.html", "Dog health basics"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
          published="2026-10-12")
 
 
@@ -1394,6 +1397,32 @@ def blog(page):
          related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
          published="2026-10-20")
 
+    # 20 daily fact: puppy dog eyes (28 Oct 2026)
+    post(page, "why-do-dogs-make-puppy-dog-eyes", "Why Do Dogs Make Puppy Dog Eyes? The Science | SnoutsWise",
+         "Why do dogs make puppy dog eyes? A 2019 PNAS study found dogs have an eyebrow-raising muscle wolves lack, and dogs make more faces when people watch.",
+         "Why do dogs make puppy dog eyes? A muscle wolves mostly lack",
+         "That pleading look, with the inner eyebrows raised and the eyes looking bigger, has a real anatomical basis. A 2019 study in PNAS found that dogs have a small muscle for raising the inner eyebrow that wolves do not have in the same way, and a 2017 study found that dogs make more facial movements when a person is paying attention to them.",
+         """
+<h2>A muscle for raising the eyebrows</h2>
+<p>In the 2019 study, researchers from the UK and US dissected the heads of dogs and wolves. A muscle called the levator anguli oculi medialis, which raises the inner eyebrow intensely, was present in all the dogs studied but not in the wolves in the same way.</p>
+<h2>Dogs use the movement more than wolves</h2>
+<p>The team also filmed dogs and wolves meeting a person. Dogs raised their inner eyebrows more often and more intensely than wolves did, and the most intense movements were seen only in dogs.</p>
+<h2>Why it might matter to people</h2>
+<p>The movement makes the eyes look bigger and more baby-like, and it resembles the face humans make when sad. The authors suggest it may trigger a nurturing response in people. Their hypothesis is that, during domestication, dogs with expressive eyebrows had an advantage and that puppy dog eyes are the result of selection based on human preferences. This is a hypothesis, not a proven cause.</p>
+<h2>Dogs make more faces when we are watching</h2>
+<p>A 2017 study in Scientific Reports, from the University of Portsmouth, placed dogs in front of a person who was either facing them or turned away, with or without food. Dogs made significantly more facial movements, including the eyebrow raise, when the person was paying attention. Food on its own made no difference. The researchers say this suggests dog facial expressions may be active attempts to communicate, not just automatic displays of emotion.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>The look is partly aimed at you.</b> It is one way dogs communicate with people, so read it together with the rest of your dog's <a href="{R}behavior.html">body language</a>.</li>
+<li><b>It is not proof of guilt or sadness.</b> The studies measured facial movements, not feelings. See also <a href="{R}blog/do-dogs-feel-jealousy.html">what research says about dog emotions</a>.</li>
+<li><b>Puppy eyes at mealtimes are not hunger proof.</b> Stick to a measured portion with our <a href="{R}how-much-to-feed-a-dog.html">dog feeding calculator</a> and keep treats to about 10 percent of daily calories.</li></ul>
+""",
+         faq=[("Why do dogs make puppy dog eyes?", "A 2019 PNAS study found dogs have a muscle that raises the inner eyebrow intensely, which wolves lack in the same form. The authors suggest people may have favored dogs with this expression during domestication."),
+              ("Do wolves make puppy dog eyes?", "Rarely. In the 2019 study, wolves raised their inner eyebrows less often and less intensely than dogs, and the most intense movements were seen only in dogs."),
+              ("Do dogs make faces on purpose?", "A 2017 study found dogs made more facial movements when a person was watching them than when the person was turned away, which suggests the expressions may be partly meant to communicate.")],
+         sources=src("kaminski2019", "kaminski2017"),
+         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("how-much-to-feed-a-dog.html", "How much to feed a dog")],
+         published="2026-10-28")
+
     # 19 daily fact: dog-directed speech (27 Oct 2026)
     post(page, "do-dogs-like-baby-talk", "Do Dogs Like Baby Talk? What Studies Show | SnoutsWise",
          "Do dogs like baby talk? Puppies react strongly to high-pitched dog-directed speech, and a 2018 study found adult dogs prefer it when paired with dog words.",
@@ -1417,7 +1446,7 @@ def blog(page):
               ("Why do people talk to dogs in a high voice?", "A 2017 study found people use dog-directed speech with dogs of all ages, with the highest pitch for puppies. The authors suggest it is a natural way of trying to connect with listeners who do not speak."),
               ("Do older dogs respond to dog-directed speech?", "In recorded playback tests, older dogs did not react differently, but in a 2018 study with real speakers, adult dogs preferred a person using dog-directed speech with dog words.")],
          sources=src("benaderet2017", "benjamin2018"),
-         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/can-dogs-learn-toy-names.html", "Can dogs learn toy names?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs and the bouba-kiki effect")],
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/why-do-dogs-make-puppy-dog-eyes.html", "Why do dogs make puppy dog eyes?"), ("blog/can-dogs-learn-toy-names.html", "Can dogs learn toy names?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/dogs-bouba-kiki-effect-study.html", "Dogs and the bouba-kiki effect")],
          published="2026-10-27")
 
     # 18 daily fact: toy name learning (26 Oct 2026)
