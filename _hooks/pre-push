@@ -1,0 +1,13 @@
+#!/bin/sh
+# SnoutsWise legal hold gate: blocks any push whose changed or added HTML fails _hold_check.py (RULE.md 27 Oct 2026).
+# Install: cp _hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+cd "$(git rev-parse --show-toplevel)" || exit 1
+z=0000000000000000000000000000000000000000
+while read lref lsha rref rsha; do
+  [ "$lsha" = "$z" ] && continue
+  if [ "$rsha" = "$z" ]; then files=$(git ls-files '*.html'); else files=$(git diff --name-only --diff-filter=AM "$rsha" "$lsha" -- '*.html'); fi
+  files=$(echo "$files" | while read f; do [ -n "$f" ] && [ -f "$f" ] && echo "$f"; done)
+  [ -z "$files" ] && continue
+  python3 _hold_check.py check $files || { echo "PUSH BLOCKED: HOLD_REVIEW. Hold the file with: python3 _hold_check.py hold FILE \"Title\" and revert the commit. HIGH items need Joshua's approval of the exact sha256 in /workspace/content-review/approvals.jsonl; MODERATE items need a fix plus a SAFE review (python3 _hold_check.py moderate FILE \"rule + fix\")."; exit 1; }
+done
+exit 0

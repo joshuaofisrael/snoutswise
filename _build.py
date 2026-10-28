@@ -8,7 +8,7 @@ SWITCHING TO A CUSTOM DOMAIN: change SITE_URL below (one line), add a CNAME file
 containing the bare domain, rebuild, commit, push. All internal links are relative.
 """
 import json, math, os, re, html, datetime
-import _photos, _aiimg
+import _photos, _aiimg, _hold_check
 
 SITE_URL = "https://snoutswise.com/"   # <- the ONE line that sets the base URL (was https://joshuaofisrael.github.io/snoutswise/ before the domain)
 SITE_NAME = "SnoutsWise"
@@ -17,6 +17,7 @@ CONTACT_EMAIL = "joshuaofisrael@gmail.com"
 GSC_TOKEN = "gtxJlcQd6hl6x20ZXICq7jrsH6cutKkniTG-J_7hrZM"          # Google Search Console HTML tag token (content="..."); empty = no tag
 CF_BEACON_TOKEN = "08276d2c8a2b42c9a5a0c936cc20ca7b"    # Cloudflare Web Analytics beacon token; empty = no beacon. NOTE: update privacy.html before enabling.
 INDEXNOW_KEY = "f82447b1414b64e38975376b34f684d7"
+GA4_ID = "G-GRC8LBNEX4"   # GA4 measurement ID; gtag.js loads only after the visitor accepts the analytics banner (consent.js)
 TODAY = "2026-10-08"
 OG_IMAGE = "og-image.png"
 
@@ -62,8 +63,33 @@ VET_BLOCK = ('<aside class="card vetcall" id="vet-help"><h2>When to get veterina
              '<p><b>In the UK and elsewhere:</b> call your nearest vet or emergency vet.</p>'
              '<p class="gnote">SnoutsWise is educational and is not a substitute for professional veterinary advice.</p></aside>')
 
+# Consent Mode v2 defaults (28 Oct 2026). EEA, UK and CH: all four signals denied until Google's consent message (ads)
+# or our analytics banner updates them. Everyone: analytics_storage denied until the banner is accepted.
+EEA_UK_CH = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL",
+             "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]
+CONSENT_HEAD = ('<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
+                'gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",region:%s,wait_for_update:500});'
+                'gtag("consent","default",{analytics_storage:"denied"});window.swGA="%s";</script>' % (json.dumps(EEA_UK_CH, separators=(",", ":")), GA4_ID))
+
+# Analytics banner (same behaviour as the SnakeWise banner; /workspace/ga-test.py checks it). gtag.js loads only after Accept.
+CONSENT_JS = """(function(){var K='mtm-analytics-consent',G='GA4_ID',d=document,L=false;
+function load(){if(L)return;L=true;gtag('consent','update',{analytics_storage:'granted'});var s=d.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+G;d.head.appendChild(s);gtag('js',new Date());gtag('config',G);}
+function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+function set(v){try{localStorage.setItem(K,v)}catch(e){}}
+function close(){var b=d.getElementById('mtm-consent');if(b)b.remove();}
+function show(){if(d.getElementById('mtm-consent'))return;var b=d.createElement('div');b.id='mtm-consent';b.setAttribute('role','dialog');b.setAttribute('aria-label','Analytics consent');
+b.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:9999;max-width:560px;margin:0 auto;background:#2A2BD1;color:#fff;padding:10px 12px;border-radius:10px;font:15px/1.4 Nunito,system-ui,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.3)';
+b.innerHTML='May we use Google Analytics cookies to see how SnoutsWise is used? <a href="/privacy.html#analytics" style="color:#FFE600">Details</a> <span style="white-space:nowrap"><button class="acc" type="button" style="margin-left:6px;padding:4px 12px;border-radius:6px;border:0;background:#FFE600;color:#111;font-weight:700">Accept</button> <button class="rej" type="button" style="padding:4px 12px;border-radius:6px;border:1px solid #fff;background:transparent;color:#fff">Decline</button></span>';
+b.querySelector('.acc').onclick=function(){set('granted');close();load();};
+b.querySelector('.rej').onclick=function(){set('denied');close();gtag('consent','update',{analytics_storage:'denied'});var x=d.cookie.split(';');for(var i=0;i<x.length;i++){var n=x[i].split('=')[0].trim();if(n.indexOf('_ga')===0){d.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.'+location.hostname.replace(/^www\\./,'');d.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';}}};
+d.body.appendChild(b);}
+d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-consent-open]');if(t){e.preventDefault();try{localStorage.removeItem(K)}catch(x){}show();}});
+var c=get();if(c==='granted')load();else if(c!=='denied')show();})();
+"""
+
 PAGES = []      # filled by _content.py: dicts
 SITEMAP = []    # (url, lastmod)
+HELD = []       # (path, draft, findings) pulled by the legal hold gate
 
 
 def esc(s):
@@ -125,7 +151,7 @@ def render(p):
         json.loads(json.dumps(g))
 
     nav = "".join('<a href="%s%s"%s>%s</a>' % (R, u, ' aria-current="page"' if (p["nav"] == u or (u.endswith("/") and p["nav"].startswith(u))) else "", esc(n)) for u, n in NAV)
-    head = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">']
+    head = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + (CONSENT_HEAD if GA4_ID else "")]
     if GSC_TOKEN and p["path"] == "index.html":
         head.append('<meta name="google-site-verification" content="%s">' % GSC_TOKEN)
     head.append('<meta name="google-adsense-account" content="ca-pub-5681559774142917"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script>')
@@ -192,13 +218,15 @@ def render(p):
         out.append('<p class="note">General education only, not veterinary advice. If you are worried about your dog, contact your vet; in an emergency, contact an emergency vet straight away.</p>')
     out.append("</main>")
     out.append('<footer>' + DOODLE_BONE + '<section class="contact-us" aria-labelledby="cu"><h2 id="cu">Contact us</h2><p>Email <a href="mailto:%s">%s</a> or use our <a href="%scontact.html">contact form</a>.</p></section>'
-               '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; %s<a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a></p>'
+               '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; %s<a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a> &middot; <a href="%sprivacy.html#analytics" data-consent-open>Cookie settings</a></p>'
                '<p>%s: original educational content about dogs. All text and illustrations are original. Not a substitute for advice from your vet.</p>'
-               '</footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, SITE_NAME))
+               '</footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, R, SITE_NAME))
     if p["script"]:
         out.append("<script>%s</script>" % p["script"])
     if CF_BEACON_TOKEN:
         out.append("<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"%s\"}'></script><!-- End Cloudflare Web Analytics -->" % CF_BEACON_TOKEN)
+    if GA4_ID:
+        out.append('<script defer src="%sconsent.js"></script>' % R)
     out.append("</body></html>\n")
     doc = "\n".join(out).replace("{R}", R).replace("SITE_URL_PLACEHOLDER", SITE_URL)
     if "\u2014" in doc or "\u2013" in doc:
@@ -207,6 +235,12 @@ def render(p):
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     with open(dest, "w", encoding="utf-8") as f:
         f.write(doc)
+    # Legal hold gate (RULE.md 27 Oct 2026): a flagged page is pulled from the site and saved as a HOLD_REVIEW draft.
+    bad, findings = _hold_check.blocked(dest)
+    if bad:
+        d, _ = _hold_check.hold(dest, strip_tags(p["title"]), findings)
+        HELD.append((p["path"], d, findings))
+        return
     if p["index"]:
         SITEMAP.append((canon, p["updated"]))
 
@@ -239,6 +273,8 @@ curl -s -o /tmp/indexnow.out -w "IndexNow HTTP %{http_code} ($# URLs)\\n" -X POS
 cat /tmp/indexnow.out; echo
 """)
     os.chmod(os.path.join(ROOT, "indexnow.sh"), 0o755)
+    if GA4_ID:
+        write("consent.js", CONSENT_JS.replace("GA4_ID", GA4_ID))
 
 
 if __name__ == "__main__":
@@ -256,3 +292,7 @@ if __name__ == "__main__":
     import _llms
     write("llms.txt", _llms.text(SITE_URL, SITE_NAME, LEGAL_NAME))
     print("built %d pages, %d sitemap urls" % (len(PAGES), len(SITEMAP) + 1))
+    if HELD:
+        for path, d, f in HELD:
+            print("HOLD_REVIEW %s -> %s : %s" % (path, d, "; ".join("rule %d %r" % (n, x) for n, x, _ in f)))
+        raise SystemExit(3)  # stop: do not commit or push until held pages are fixed, cleared or approved
