@@ -189,3 +189,6 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 - Daily fact: blog/why-do-dogs-make-puppy-dog-eyes.html (Kaminski et al. 2019 PNAS 116(29): 14677-14681, DOI 10.1073/pnas.1820653116; Kaminski et al. 2017 Scientific Reports 7: 12914, DOI 10.1038/s41598-017-12781-x; both DOIs verified via Crossref, abstracts read via Europe PMC). Article and FAQPage JSON-LD, linked from home latest, blog index, sitemap and llms.txt.
 - SEO: new dog-human communication cluster link (two-way with baby talk, plus tilt-head related list); internal link to the feeding calculator page to pass authority to the new tool page.
 - Legal hold check against RULE.md: no hold rule hit (no allegations, no personal info, no images, claims sourced and framed as hypothesis where the authors do). News: none. Outreach: skipped (no Joshua yes saved in my chat). No browser, no expenses.
+
+## 2026-10-28 legal hold gate + GA4
+- Commit 210606e: _hold_check.py gate at build step (held pages pulled, HOLD_REVIEW draft, exit 3) + _hooks/pre-push (installed); GA4 G-GRC8LBNEX4 opt in via consent.js, Consent Mode v2 defaults denied (EEA/UK/CH all signals, everyone analytics); privacy policy GA4 section dated 28 Oct 2026. AdSense, ads.txt, Cloudflare unchanged. ga-test.py passed. Gate test evidence in /workspace/content-review/tests/snoutswise-gate-test-2026-10-28.txt.
