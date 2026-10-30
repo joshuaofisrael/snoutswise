@@ -192,3 +192,8 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 
 ## 2026-10-28 legal hold gate + GA4
 - Commit 210606e: _hold_check.py gate at build step (held pages pulled, HOLD_REVIEW draft, exit 3) + _hooks/pre-push (installed); GA4 G-GRC8LBNEX4 opt in via consent.js, Consent Mode v2 defaults denied (EEA/UK/CH all signals, everyone analytics); privacy policy GA4 section dated 28 Oct 2026. AdSense, ads.txt, Cloudflare unchanged. ga-test.py passed. Gate test evidence in /workspace/content-review/tests/snoutswise-gate-test-2026-10-28.txt.
+
+## 30 Oct 2026
+- Daily fact: blog/do-dogs-know-when-you-are-sad.html (Custance & Mayer 2012 Animal Cognition 15(5): 851-859, DOI 10.1007/s10071-012-0510-1; Albuquerque et al. 2016 Biology Letters 12(1): 20150883, DOI 10.1098/rsbl.2015.0883; both DOIs verified via Crossref, abstracts read via Europe PMC). Article and FAQPage JSON-LD, linked from home latest, blog index, sitemap and llms.txt.
+- SEO: dog emotion cluster links (two-way with puppy dog eyes; behavior hub related list now links the new post). Target query "do dogs know when you are sad".
+- Legal hold check against RULE.md and _hold_check.py: clear (no allegations, no personal info, no images; empathy framed as the authors' open question). News: none. Outreach: skipped (no Joshua yes saved in my chat). No browser, no expenses. 29 Oct slot skipped by the usage freeze.

@@ -62,6 +62,8 @@ S = {
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
  "balint2020": ("Bálint A, Andics A, Gácsi M, Gábor A, Czeibert K, Luce CM, Miklósi Á, Kröger RHH (2020). Dogs can sense weak thermal radiation. Scientific Reports 10: 3736. DOI 10.1038/s41598-020-60439-y", "Scientific Reports", "https://doi.org/10.1038/s41598-020-60439-y"),
  "fugazza2021rapid": ("Fugazza C, Andics A, Magyari L, Dror S, Zempléni A, Miklósi Á (2021). Rapid learning of object names in dogs. Scientific Reports 11: 2222. DOI 10.1038/s41598-021-81699-2", "Scientific Reports", "https://doi.org/10.1038/s41598-021-81699-2"),
+ "custance2012": ("Custance D, Mayer J (2012). Empathic-like responding by domestic dogs (Canis familiaris) to distress in humans: an exploratory study. Animal Cognition 15(5): 851-859. DOI 10.1007/s10071-012-0510-1", "Animal Cognition", "https://doi.org/10.1007/s10071-012-0510-1"),
+ "albuquerque2016": ("Albuquerque N, Guo K, Wilkinson A, Savalli C, Otta E, Mills D (2016). Dogs recognize dog and human emotions. Biology Letters 12(1): 20150883. DOI 10.1098/rsbl.2015.0883", "Biology Letters", "https://doi.org/10.1098/rsbl.2015.0883"),
  "kaminski2019": ("Kaminski J, Waller BM, Diogo R, Hartstone-Rose A, Burrows AM (2019). Evolution of facial muscle anatomy in dogs. Proceedings of the National Academy of Sciences 116(29): 14677-14681. DOI 10.1073/pnas.1820653116", "PNAS", "https://doi.org/10.1073/pnas.1820653116"),
  "kaminski2017": ("Kaminski J, Hynds J, Morris P, Waller BM (2017). Human attention affects facial expressions in domestic dogs. Scientific Reports 7: 12914. DOI 10.1038/s41598-017-12781-x", "Scientific Reports", "https://doi.org/10.1038/s41598-017-12781-x"),
  "benaderet2017": ("Ben-Aderet T, Gallego-Abenza M, Reby D, Mathevon N (2017). Dog-directed speech: why do we use it and do dogs pay attention to it? Proceedings of the Royal Society B 284: 20162429. DOI 10.1098/rspb.2016.2429", "Proceedings of the Royal Society B", "https://doi.org/10.1098/rspb.2016.2429"),
@@ -123,6 +125,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-know-when-you-are-sad.html">Do dogs know when you are sad? They respond to crying</a></li>
 <li><a href="{R}blog/why-do-dogs-make-puppy-dog-eyes.html">Why do dogs make puppy dog eyes? A muscle wolves mostly lack</a></li>
 <li><a href="{R}blog/do-dogs-like-baby-talk.html">Do dogs like baby talk? Puppies do, and adult dogs like it with dog words</a></li>
 <li><a href="{R}blog/can-dogs-learn-toy-names.html">Can dogs learn the names of their toys? A few gifted dogs can, fast</a></li>
@@ -376,7 +379,7 @@ def behavior(page):
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
          sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013"),
-         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-know-when-you-are-sad.html", "Do dogs know when you are sad?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
          crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-20")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
@@ -1397,6 +1400,32 @@ def blog(page):
          related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("training.html", "Reward based training")],
          published="2026-10-20")
 
+    # 21 daily fact: dogs and human sadness (30 Oct 2026)
+    post(page, "do-dogs-know-when-you-are-sad", "Do Dogs Know When You Are Sad? What Studies Show | SnoutsWise",
+         "Do dogs know when you are sad? Studies found dogs approach and nuzzle people who pretend to cry, and match happy or angry voices to the right human face.",
+         "Do dogs know when you are sad? They respond to crying",
+         "Many owners say their dog comes over when they are upset. Research backs part of that up. A 2012 study found dogs approached people who were pretending to cry more than people who were talking or humming, and a 2016 study found dogs can match a happy or angry human voice to the matching face. Whether dogs feel sympathy the way people do is still an open question.",
+         """
+<h2>Dogs go to people who are crying</h2>
+<p>In the 2012 study in Animal Cognition, researchers at Goldsmiths, University of London adapted a test first used with human babies. Each dog's owner and a stranger took turns talking, humming and pretending to cry. Dogs looked at or went to the person more often when that person was crying than when they were talking or humming.</p>
+<h2>They comforted strangers too</h2>
+<p>When the stranger pretended to cry, dogs did not run to their owner for comfort. They went to the stranger instead and sniffed, nuzzled and licked them. Observers who did not know what the study was testing more often described the dogs' approaches during crying as submissive rather than playful, alert or calm.</p>
+<h2>Is it empathy?</h2>
+<p>The authors say the dogs behaved in a way that fits empathic concern, but that the simplest explanation is emotional contagion (picking up on someone else's emotional state) plus learning: many dogs have been rewarded in the past for going to upset people. So the study shows dogs respond to crying, not that they understand sadness as we do.</p>
+<h2>Dogs can match voices to faces</h2>
+<p>A 2016 study in Biology Letters, by a team from the University of Lincoln and the University of São Paulo, showed dogs two photos of the same person or dog side by side, one happy or playful and one angry or aggressive, while playing a single sound. Dogs looked longer at the face whose expression matched the emotion in the voice, for both human and dog faces. The researchers say this means dogs combine what they see and hear to tell positive from negative emotions, an ability previously known only in humans.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Your dog notices your mood.</b> Changes in your voice, face and behavior are signals your dog can pick up on. See our guide to <a href="{R}behavior.html">dog body language</a> for the other side of the conversation.</li>
+<li><b>A stressed household can stress a dog.</b> If your dog seems anxious when people are upset, give them a quiet space and keep routines steady.</li>
+<li><b>Not a replacement for support.</b> Dogs can be good company, but if you are struggling, talk to someone you trust or a health professional.</li></ul>
+""",
+         faq=[("Do dogs know when you are sad?", "Dogs respond to signs of sadness. In a 2012 study, dogs approached people more when they pretended to cry than when they talked or hummed, and they often nuzzled or licked them. Whether dogs understand sadness the way people do is not known."),
+              ("Do dogs comfort people who are crying?", "Often, yes. In the 2012 study, dogs went to a crying stranger rather than to their own owner, and sniffed, nuzzled and licked them. The authors think learning and emotional contagion explain this best."),
+              ("Can dogs tell if you are happy or angry?", "A 2016 study found dogs looked longer at a happy or angry human face when it matched the emotion of a voice they heard, which suggests they can tell positive from negative emotions in people.")],
+         sources=src("custance2012", "albuquerque2016"),
+         related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-make-puppy-dog-eyes.html", "Why do dogs make puppy dog eyes?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?")],
+         published="2026-10-30")
+
     # 20 daily fact: puppy dog eyes (28 Oct 2026)
     post(page, "why-do-dogs-make-puppy-dog-eyes", "Why Do Dogs Make Puppy Dog Eyes? The Science | SnoutsWise",
          "Why do dogs make puppy dog eyes? A 2019 PNAS study found dogs have an eyebrow-raising muscle wolves lack, and dogs make more faces when people watch.",
@@ -1420,7 +1449,7 @@ def blog(page):
               ("Do wolves make puppy dog eyes?", "Rarely. In the 2019 study, wolves raised their inner eyebrows less often and less intensely than dogs, and the most intense movements were seen only in dogs."),
               ("Do dogs make faces on purpose?", "A 2017 study found dogs made more facial movements when a person was watching them than when the person was turned away, which suggests the expressions may be partly meant to communicate.")],
          sources=src("kaminski2019", "kaminski2017"),
-         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("how-much-to-feed-a-dog.html", "How much to feed a dog")],
+         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-know-when-you-are-sad.html", "Do dogs know when you are sad?"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("how-much-to-feed-a-dog.html", "How much to feed a dog")],
          published="2026-10-28")
 
     # 19 daily fact: dog-directed speech (27 Oct 2026)
