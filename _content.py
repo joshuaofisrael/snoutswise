@@ -21,6 +21,8 @@ S = {
  "wsava_bcs": ("Body Condition Score: Dog (chart)", "World Small Animal Veterinary Association", "https://wsava.org/wp-content/uploads/2020/01/Body-Condition-Score-Dog.pdf"),
  "penn_kealy": ("Study finds dogs fed a reduced calorie diet live nearly two years longer (Kealy et al., 2002)", "Penn Today, University of Pennsylvania", "https://penntoday.upenn.edu/news/study-finds-dogs-fed-reduced-calorie-diet-live-nearly-two-years-longer-dogs-unrestricted-diet"),
  "avma_dental": ("Pet dental care", "American Veterinary Medical Association", "https://www.avma.org/resources-tools/pet-owners/petcare/pet-dental-care"),
+ "akc_pant": ("Why Does My Dog Pant? What to Know", "American Kennel Club", "https://www.akc.org/expert-advice/health/why-do-dogs-pant/"),
+ "robertshaw2006": ("Mechanisms for the control of respiratory evaporative heat loss in panting animals (Robertshaw, 2006)", "Journal of Applied Physiology", "https://doi.org/10.1152/japplphysiol.01380.2005"),
  "rspca_heat": ("Heatstroke in dogs", "RSPCA", "https://www.rspca.org.uk/adviceandwelfare/pets/dogs/health/heatstroke"),
  "gov_chip": ("Get your dog or cat microchipped", "GOV.UK", "https://www.gov.uk/get-your-dog-microchipped"),
  "wang2020": ("Wang T, et al. (2020). Quantitative Translation of Dog-to-Human Aging by Conserved Remodeling of the DNA Methylome. Cell Systems 11:176 to 185", "PubMed Central (open access)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7484147/"),
@@ -1691,6 +1693,35 @@ def blog(page):
          sources=src("biffi2026", "newsci2026bouba"),
          related=[("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("training.html", "Reward based training"), ("behavior.html", "Dog behavior")],
          published="2026-10-16")
+
+
+    # evergreen: why do dogs pant (scheduled 6 Nov 2026)
+    post(page, "why-do-dogs-pant", "Why Do Dogs Pant? Normal Panting vs Warning Signs | SnoutsWise",
+         "Why do dogs pant? Mostly to cool down, because sweating plays only a minor role. How panting works and when heavy panting means a vet visit.",
+         "Why do dogs pant? How panting cools a dog, and when to worry",
+         "Dogs pant mainly to cool down. Sweating plays only a minor role for dogs, so they lose heat by evaporating moisture from the tongue and airways. Dogs also pant after exercise, when excited or stressed, and sometimes when in pain.",
+         """
+<h2>How panting cools a dog</h2>
+<p>Dogs sweat only through their paw pads, which is not enough to cool a whole body. Instead, a panting dog moves air quickly over the wet surfaces of its tongue, mouth and airways. As that moisture evaporates it carries heat away, and blood vessels near the surface widen so warm blood can shed heat too (AKC).</p>
+<p>Panting is fast, shallow breathing. Physiologist David Robertshaw explains that shallow breaths mostly move air in and out of the airways rather than deep into the lungs, so a dog can lose a lot of heat without upsetting the balance of gases in its blood. Under severe heat stress, panting becomes slower and deeper, and that deeper breathing can start to disturb blood chemistry. That is one reason heavy, labored panting on a hot day is a warning sign (Robertshaw, 2006).</p>
+<h2>Normal reasons dogs pant</h2>
+<ul><li><b>Exercise and play.</b> Panting after a run is normal and should settle with rest, shade and water.</li>
+<li><b>Warm weather.</b> Panting is how dogs control body temperature. A normal temperature for dogs is about 99.5 to 102.5 °F (AKC).</li>
+<li><b>Excitement.</b> Visitors, walks and games can all bring on a short burst of panting.</li></ul>
+<h2>When panting is a warning sign</h2>
+<ul><li><b>Heatstroke.</b> Heavy or noisy panting with thick drool, red gums, weakness, confusion, vomiting or collapse needs urgent action. Follow the steps in our <a href="{R}care.html#heat">hot weather advice</a> and call a vet (RSPCA).</li>
+<li><b>Stress and fear.</b> Dogs often pant at the vet or during thunder and fireworks. Look for other stress signals such as lip licking or a tucked tail (see <a href="{R}behavior.html#stress">reading stress and fear</a>).</li>
+<li><b>Pain.</b> A vet quoted by the AKC notes that dogs with arthritis often come in panting, and panting can follow an injury.</li>
+<li><b>Flat faced breeds.</b> Brachycephalic dogs cannot pant as effectively and are at higher risk of overheating (RSPCA).</li></ul>
+<p>If your dog pants heavily at rest, in a cool room, or with other changes such as restlessness or reluctance to move, call your vet.</p>
+""",
+         faq=[("Is it normal for a dog to pant a lot?", "After exercise, in warm weather or when excited, yes. Panting should ease with rest and shade. Heavy panting at rest or in a cool place is a reason to call your vet."),
+              ("Do dogs sweat?", "Only a little, through their paw pads. Panting does most of the cooling work (AKC)."),
+              ("Why does my dog pant at night?", "It can be warmth or excitement, but panting at rest can also come from pain or anxiety. If it is new or frequent, ask your vet."),
+              ("Which dogs are most at risk from overheating?", "The RSPCA lists flat faced breeds, dogs with thick coats, puppies, older dogs and dogs with breathing problems.")],
+         sources=src("akc_pant", "robertshaw2006", "rspca_heat"),
+         related=[("care.html", "Dog care"), ("health.html", "Dog health"), ("behavior.html", "Dog behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?")],
+         published="2026-11-06")
 
 
     # blog index
