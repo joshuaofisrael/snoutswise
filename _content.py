@@ -62,6 +62,8 @@ S = {
  "siniscalchi2013": ("Siniscalchi M, Lusito R, Vallortigara G, Quaranta A (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. Current Biology 23(22): 2279-2282. DOI 10.1016/j.cub.2013.09.027", "Current Biology", "https://doi.org/10.1016/j.cub.2013.09.027"),
  "balint2020": ("Bálint A, Andics A, Gácsi M, Gábor A, Czeibert K, Luce CM, Miklósi Á, Kröger RHH (2020). Dogs can sense weak thermal radiation. Scientific Reports 10: 3736. DOI 10.1038/s41598-020-60439-y", "Scientific Reports", "https://doi.org/10.1038/s41598-020-60439-y"),
  "fugazza2021rapid": ("Fugazza C, Andics A, Magyari L, Dror S, Zempléni A, Miklósi Á (2021). Rapid learning of object names in dogs. Scientific Reports 11: 2222. DOI 10.1038/s41598-021-81699-2", "Scientific Reports", "https://doi.org/10.1038/s41598-021-81699-2"),
+ "cook2016": ("Cook PF, Prichard A, Spivak M, Berns GS (2016). Awake canine fMRI predicts dogs' preference for praise vs food. Social Cognitive and Affective Neuroscience 11(12): 1853-1862. DOI 10.1093/scan/nsw102", "Social Cognitive and Affective Neuroscience", "https://doi.org/10.1093/scan/nsw102"),
+ "feuerbacher2012": ("Feuerbacher EN, Wynne CDL (2012). Relative efficacy of human social interaction and food as reinforcers for domestic dogs and hand-reared wolves. Journal of the Experimental Analysis of Behavior 98(1): 105-129. DOI 10.1901/jeab.2012.98-105", "Journal of the Experimental Analysis of Behavior", "https://doi.org/10.1901/jeab.2012.98-105"),
  "custance2012": ("Custance D, Mayer J (2012). Empathic-like responding by domestic dogs (Canis familiaris) to distress in humans: an exploratory study. Animal Cognition 15(5): 851-859. DOI 10.1007/s10071-012-0510-1", "Animal Cognition", "https://doi.org/10.1007/s10071-012-0510-1"),
  "albuquerque2016": ("Albuquerque N, Guo K, Wilkinson A, Savalli C, Otta E, Mills D (2016). Dogs recognize dog and human emotions. Biology Letters 12(1): 20150883. DOI 10.1098/rsbl.2015.0883", "Biology Letters", "https://doi.org/10.1098/rsbl.2015.0883"),
  "kaminski2019": ("Kaminski J, Waller BM, Diogo R, Hartstone-Rose A, Burrows AM (2019). Evolution of facial muscle anatomy in dogs. Proceedings of the National Academy of Sciences 116(29): 14677-14681. DOI 10.1073/pnas.1820653116", "PNAS", "https://doi.org/10.1073/pnas.1820653116"),
@@ -125,6 +127,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/do-dogs-prefer-praise-or-food.html">Do dogs prefer praise or food? Most work harder for treats</a></li>
 <li><a href="{R}blog/do-dogs-know-when-you-are-sad.html">Do dogs know when you are sad? They respond to crying</a></li>
 <li><a href="{R}blog/why-do-dogs-make-puppy-dog-eyes.html">Why do dogs make puppy dog eyes? A muscle wolves mostly lack</a></li>
 <li><a href="{R}blog/do-dogs-like-baby-talk.html">Do dogs like baby talk? Puppies do, and adult dogs like it with dog words</a></li>
@@ -335,7 +338,7 @@ def training(page):
          body, h1="Dog training: the reward based approach",
          lead="Veterinary behavior experts recommend reward based training for all dogs: you teach the behavior you want and reward it, instead of punishing mistakes. The American Veterinary Society of Animal Behavior says the evidence shows reward based methods are more effective than aversive ones and better for welfare and the dog and owner relationship, and that there is no evidence aversive training is ever necessary.",
          sources=src("avsab_train", "avsab_puppy", "mech", "kis2017", "bray2021"),
-         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/alpha-dog-myth.html", "The alpha dog myth"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/do-dogs-dream.html", "Do dogs dream? Sleep and learning"), ("breeds.html", "Breed groups"), ("faq.html", "Dog FAQ")],
+         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-prefer-praise-or-food.html", "Do dogs prefer praise or food?"), ("blog/do-dogs-understand-pointing.html", "Do dogs understand pointing?"), ("blog/alpha-dog-myth.html", "The alpha dog myth"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/do-dogs-dream.html", "Do dogs dream? Sleep and learning"), ("breeds.html", "Breed groups"), ("faq.html", "Dog FAQ")],
          crumbs=[("index.html", "Home"), ("training.html", "Training")], updated="2026-10-18")
 
 # ------------------------------------------------------------------ BEHAVIOR
@@ -1423,8 +1426,35 @@ def blog(page):
               ("Do dogs comfort people who are crying?", "Often, yes. In the 2012 study, dogs went to a crying stranger rather than to their own owner, and sniffed, nuzzled and licked them. The authors think learning and emotional contagion explain this best."),
               ("Can dogs tell if you are happy or angry?", "A 2016 study found dogs looked longer at a happy or angry human face when it matched the emotion of a voice they heard, which suggests they can tell positive from negative emotions in people.")],
          sources=src("custance2012", "albuquerque2016"),
-         related=[("behavior.html", "Dog behavior"), ("blog/why-do-dogs-make-puppy-dog-eyes.html", "Why do dogs make puppy dog eyes?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?")],
+         related=[("behavior.html", "Dog behavior"), ("blog/do-dogs-prefer-praise-or-food.html", "Do dogs prefer praise or food?"), ("blog/why-do-dogs-make-puppy-dog-eyes.html", "Why do dogs make puppy dog eyes?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?")],
          published="2026-10-30")
+
+    # 22 daily fact: praise vs food (1 Nov 2026)
+    post(page, "do-dogs-prefer-praise-or-food", "Do Dogs Prefer Praise or Food? What Studies Show | SnoutsWise",
+         "Do dogs prefer praise or food? A brain scan study found some dogs value praise as much as food, but in training tests most dogs worked harder for treats.",
+         "Do dogs prefer praise or food? Most work harder for treats",
+         "It depends on the dog, and on what you measure. A 2016 brain scan study found that in most of the 15 dogs tested, the brain's reward area responded about as strongly, or more strongly, to a signal for praise as to a signal for food. But in a 2012 training study, brief petting and praise were a much weaker reward than a small piece of food for most shelter dogs, pet dogs and hand-reared wolves.",
+         """
+<h2>What dogs' brains show</h2>
+<p>In the 2016 study in Social Cognitive and Affective Neuroscience, researchers at Emory University trained 15 dogs to lie still, awake, in an MRI scanner. Different objects told each dog that food, praise from its owner, or nothing was coming. The researchers measured activity in the ventral caudate, a brain area linked with reward. In 13 of the 15 dogs, the caudate responded about as much or more to the praise signal as to the food signal.</p>
+<h2>Food or owner? Dogs differed</h2>
+<p>The same dogs then chose, again and again, between a bowl of food and their owner at the ends of a Y-shaped maze. Dogs whose brains had responded more to praise went to their owner more often, and dogs whose brains had responded more to food went to the bowl more often. The authors say preference was stable within each dog but varied a lot between dogs.</p>
+<h2>In training, food usually wins</h2>
+<p>A 2012 study in the Journal of the Experimental Analysis of Behavior, by researchers at the University of Florida, tested how hard dogs would work for each reward. Dogs and hand-reared wolves had to touch their nose to a target. For most of them, a few seconds of social interaction from a person produced fewer responses and slower responses than a small piece of food did. This held for shelter dogs, owned dogs and wolves.</p>
+<h2>Why the studies seem to disagree</h2>
+<p>They measured different things. The brain scan study looked at how rewarding a signal felt and which option a dog walked to. The training study looked at how much effort a dog would put in for a brief reward. A dog can enjoy praise and still find a treat a stronger reason to repeat a trick.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>Use food when teaching something new.</b> For most dogs, small soft treats are the strongest everyday reward. See our guide to <a href="{R}training.html">reward based training</a>.</li>
+<li><b>Pair praise with treats.</b> Praise is cheap and always with you, so pair it with food and keep using it once a behavior is learned.</li>
+<li><b>Watch your dog.</b> Some dogs really do prefer attention or play. Notice what your own dog chooses.</li>
+<li><b>Count the treats.</b> Keep treats to about 10 percent of daily calories with our <a href="{R}how-much-to-feed-a-dog.html">dog feeding calculator</a>.</li></ul>
+""",
+         faq=[("Do dogs prefer praise or food?", "It varies by dog. In a 2016 brain scan study, 13 of 15 dogs showed about as much or more reward-area activity for a praise signal as for a food signal. But in a 2012 training study, most dogs worked harder for a small piece of food than for brief praise and petting."),
+              ("Is praise a good reward for dogs?", "Praise helps, but on its own it was a weak reward for most dogs in a 2012 study, compared with a small treat. Pairing praise with food is a common approach in reward based training."),
+              ("Do some dogs like their owners more than food?", "Some do. In the 2016 study, dogs whose brains responded more to praise chose their owner over a bowl of food more often in a Y-maze test.")],
+         sources=src("cook2016", "feuerbacher2012"),
+         related=[("training.html", "Reward based training"), ("behavior.html", "Dog behavior"), ("blog/do-dogs-know-when-you-are-sad.html", "Do dogs know when you are sad?"), ("blog/do-dogs-like-baby-talk.html", "Do dogs like baby talk?"), ("how-much-to-feed-a-dog.html", "How much to feed a dog")],
+         published="2026-11-01")
 
     # 20 daily fact: puppy dog eyes (28 Oct 2026)
     post(page, "why-do-dogs-make-puppy-dog-eyes", "Why Do Dogs Make Puppy Dog Eyes? The Science | SnoutsWise",
