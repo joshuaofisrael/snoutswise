@@ -32,6 +32,11 @@ a{color:var(--link);text-decoration-thickness:2px;text-underline-offset:2px}a:ho
 .lead{font-size:1.12rem;color:var(--ink);border-left:6px solid var(--orange);padding:.55rem .95rem;background:#FFF4E5;border-radius:0 18px 18px 0}
 .hero .lead{background:rgba(255,255,255,.85)}
 .meta{color:var(--muted);font-size:.9rem;margin-top:-.5rem}.note{font-style:italic;color:var(--muted);font-size:.93rem}
+/* blog post thumbnails (hero image reused as a small card/list image, 2 Nov 2026) */
+ul.thumblist{list-style:none;padding:0;margin:.4rem 0 0;display:grid;gap:.5rem}
+ul.thumblist li a{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+ul.thumblist img.thumb{flex:none;width:96px;height:54px;border-radius:10px;object-fit:cover;box-shadow:var(--glow-y)}
+.blogcard{overflow:hidden}.blogcard img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:16px;margin:0 0 .6rem}
 .crumbs{font-size:.9rem;color:var(--muted);margin-bottom:.5rem}.crumbs a{color:var(--link)}
 /* photos */
 figure.photo{margin:1.2rem auto;max-width:720px;background:#fff;border-radius:26px;padding:.55rem;box-shadow:var(--glow-y)}

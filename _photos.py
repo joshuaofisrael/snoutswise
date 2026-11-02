@@ -23,6 +23,14 @@ def figure(path, R, eager=False):
             'sizes="(max-width: 820px) 92vw, {z}" width="900" height="600" alt="{a}" {l}><figcaption>{c}</figcaption></figure>').format(
             R=R, s=s, a=e(p["alt"]), l=load, c=credit(p, R), z="340px" if eager else "720px")
 
+def thumb(path, R, w=320, h=180):
+    """Small lazy-loaded card/list thumbnail using the existing photo's 450px version, no caption."""
+    p = BY_PAGE.get(path)
+    if not p:
+        return ""
+    return '<img class="thumb" src="{R}img/{s}-450.webp" width="{w}" height="{h}" alt="{a}" loading="lazy" decoding="async">'.format(
+        R=R, s=p["slug"], w=w, h=h, a=e(p["alt"]))
+
 def register(page, live_paths):
     rows = "".join(
         '<tr><td><img src="{R}img/%s-450.webp" width="150" height="100" alt="%s" loading="lazy"></td><td><b>%s</b><br>Used on: <a href="{R}%s">%s</a></td>'

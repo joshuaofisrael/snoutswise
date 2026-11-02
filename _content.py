@@ -1,5 +1,11 @@
 """Page content for SnoutsWise. Original writing; every factual claim is tied to a listed source."""
-import math
+import math, re
+import _photos, _aiimg
+
+def thumb(slug_, R, w=320, h=180):
+    """Lazy-loaded hero-image thumbnail for a blog post card/list entry (owner rule: every post needs one)."""
+    path = "blog/%s.html" % slug_
+    return _photos.thumb(path, R, w, h) or _aiimg.thumb(path, R, w, h)
 
 S = {
  "aspca_foods": ("People Foods to Avoid Feeding Your Pets", "ASPCA Animal Poison Control", "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets"),
@@ -129,7 +135,7 @@ def home(page):
 <li>The American Veterinary Society of Animal Behavior calls the first three months of life the primary window for puppy socialization (<a href="{R}blog/puppy-socialization-window.html">how to use it safely</a>).</li>
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
-<section class="card"><h2>Latest from the blog</h2><ul>
+<section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
 <li><a href="{R}blog/why-do-dogs-circle-before-lying-down.html">Why do dogs circle before lying down? The evidence is thin</a></li>
 <li><a href="{R}blog/do-dogs-prefer-praise-or-food.html">Do dogs prefer praise or food? Most work harder for treats</a></li>
 <li><a href="{R}blog/do-dogs-know-when-you-are-sad.html">Do dogs know when you are sad? They respond to crying</a></li>
@@ -159,6 +165,8 @@ def home(page):
 </ul></section>
 <p class="note">SnoutsWise is general education, not veterinary advice. If your dog may have eaten something toxic or seems unwell, contact your vet or an emergency vet now. In the US, the ASPCA Animal Poison Control Center is on (888) 426-4435.</p>
 """
+    body = re.sub(r'<li><a href="\{R\}blog/([a-z0-9-]+)\.html">',
+                  lambda m: '<li><a href="{R}blog/%s.html">%s' % (m.group(1), thumb(m.group(1), "{R}", 96, 54)), body)
     page("index.html", "SnoutsWise: Sourced Dog Care Tips for New Owners",
          "Vet sourced dog care tips for new and experienced owners: feeding calculator, foods dogs can and can't eat, normal vital signs, dog age calculator and training.",
          body, kind="home", updated="2026-10-27")
@@ -1734,7 +1742,7 @@ def blog(page):
          published="2026-11-02")
 
     # blog index
-    items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
+    items = "".join('<article class="card blogcard">%s<h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (thumb(s, "{R}"), s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "Dog Facts Explained by Research | SnoutsWise Blog",
          "Dog facts explained by research: why dogs tilt their heads, eat grass, yawn and dream, and whether they like baby talk or see color, answered with sources.",
          items, h1="SnoutsWise blog", kind="webpage",
