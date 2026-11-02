@@ -83,7 +83,10 @@ S = {
  "cline2021": ("Cline MG, Burns KM, Coe JB, Downing R, Durzi T, Murphy M, Parker V (2021). 2021 AAHA Nutrition and Weight Management Guidelines for Dogs and Cats. Journal of the American Animal Hospital Association 57(4): 153-178. DOI 10.5326/JAAHA-MS-7232", "JAAHA", "https://doi.org/10.5326/JAAHA-MS-7232"),
  "wsava_assess": ("WSAVA Nutritional Assessment Guidelines Task Force: Freeman L, Becvarova I, Cave N, et al. (2011). WSAVA Nutritional Assessment Guidelines. Journal of Small Animal Practice 52(7): 385-396. DOI 10.1111/j.1748-5827.2011.01079.x", "World Small Animal Veterinary Association", "https://wsava.org/wp-content/uploads/2020/01/WSAVA-Nutrition-Assessment-Guidelines-2011-JSAP.pdf"),
  "nrc_dog": ("Your Dog's Nutritional Needs: A Science Based Guide for Pet Owners (2006), based on Nutrient Requirements of Dogs and Cats", "National Research Council, The National Academies", "https://nap.nationalacademies.org/resource/10668/dog_nutrition_final_fix.pdf"),
-}
+ "coren2016": ("Coren S (27 January 2016). Why Do Dogs Turn in Circles Before Lying Down? Canine Corner (magazine blog, not a peer reviewed journal)", "Psychology Today", "https://www.psychologytoday.com/us/blog/canine-corner/201601/why-do-dogs-turn-in-circles-lying-down"),
+ "coren2026": ("Coren S (28 April 2026). Why Do Dogs Circle Before Lying Down? An Experimental Test. Canine Corner (magazine blog, not a peer reviewed journal)", "Psychology Today", "https://www.psychologytoday.com/us/blog/canine-corner/202604/why-do-dogs-circle-before-lying-down-an-experimental-test"),
+ "darwin1872": ("Darwin C (1872). The Expression of the Emotions in Man and Animals, Chapter 1 (on dogs turning round before lying down)", "Darwin Online, public domain text", "https://brocku.ca/MeadProject/Darwin/Darwin_1872_01.html"),
+ "merck_neuro": ("The Neurologic Evaluation of Dogs", "Merck Veterinary Manual (dog owner version)", "https://www.merckvetmanual.com/dog-owners/brain-spinal-cord-and-nerve-disorders-of-dogs/the-neurologic-evaluation-of-dogs"),}
 import datetime
 def nice(d):
     return datetime.date.fromisoformat(d).strftime("%-d %B %Y")
@@ -127,6 +130,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul>
+<li><a href="{R}blog/why-do-dogs-circle-before-lying-down.html">Why do dogs circle before lying down? The evidence is thin</a></li>
 <li><a href="{R}blog/do-dogs-prefer-praise-or-food.html">Do dogs prefer praise or food? Most work harder for treats</a></li>
 <li><a href="{R}blog/do-dogs-know-when-you-are-sad.html">Do dogs know when you are sad? They respond to crying</a></li>
 <li><a href="{R}blog/why-do-dogs-make-puppy-dog-eyes.html">Why do dogs make puppy dog eyes? A muscle wolves mostly lack</a></li>
@@ -370,6 +374,7 @@ def behavior(page):
 <li><b>Teach and reward an alternative.</b> Sit to greet instead of jumping; go to the mat when the doorbell rings; chew a toy instead of the sofa.</li>
 <li><b>Meet the underlying need.</b> More exercise, sniffing, chewing outlets or company, depending on the cause.</li></ol>
 <p>Not every odd habit is a problem. Eating grass, for example, is common and usually normal: in a survey of 1,571 plant eating dogs, most did not seem ill beforehand or vomit afterwards (<a href="{R}blog/why-do-dogs-eat-grass.html">why dogs eat grass and when to call a vet</a>).</p>
+<p>Turning in a circle once or twice before lying down is another everyday habit, and a surprisingly understudied one: the clearest test found it tracks comfort on an uneven surface, not a "checking for danger" instinct, which has never actually been tested. Repeated circling in one direction, or a dog that cannot seem to settle, is different and worth a vet visit (<a href="{R}blog/why-do-dogs-circle-before-lying-down.html">why dogs circle before lying down</a>).</p>
 <p>Head tilting is another everyday habit. In a 2021 study of 40 dogs, dogs that knew the names of their toys tilted their heads on 43% of requests, against 2% for typical dogs, which suggests the tilt goes with listening closely to meaningful words. A tilt that stays, or comes with stumbling or circling, is a reason to see a vet (<a href="{R}blog/why-do-dogs-tilt-their-heads.html">why dogs tilt their heads</a>).</p>
 <p>Twitching, soft barks or paddling paws during a nap are usually REM sleep, not a behavior problem. Dogs have measurable REM with rapid eye movements and low muscle tone; whether that equals human-style dreaming is still unproven. After learning new commands, sleep can help performance improve (<a href="{R}blog/do-dogs-dream.html">do dogs dream and what REM research shows</a>).</p>
 <p>Pushing in when you pet another dog is often jealousy-like behaviour, not "dominance". In experiments, dogs push, get between and sometimes snap more when owners affectionately attend to a rival dog (or a stuffed dog) than to a nonsocial object or a book (<a href="{R}blog/do-dogs-feel-jealousy.html">do dogs feel jealousy</a>).</p>
@@ -382,8 +387,8 @@ def behavior(page):
          body, h1="Dog behavior explained",
          lead="Most dog behavior makes sense once you ask what the dog is feeling and what the behavior gets it. Learn to spot stress signals such as lip licking, yawning, a lowered body and tucked tail; socialize puppies carefully during their first three months; and set aside the old dominance or alpha model, which wolf research and veterinary behaviorists no longer support.",
          sources=src("avsab_train", "avsab_puppy", "mech", "sueda2008", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013"),
-         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-know-when-you-are-sad.html", "Do dogs know when you are sad?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-10-20")
+         related=[("training.html", "Reward based training"), ("blog/why-do-dogs-circle-before-lying-down.html", "Why do dogs circle before lying down?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/alpha-dog-myth.html", "Is the alpha dog idea true?"), ("blog/puppy-socialization-window.html", "Puppy socialization window"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-know-when-you-are-sad.html", "Do dogs know when you are sad?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-see-color.html", "Can dogs see color?"), ("health.html", "Health basics"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("behavior.html", "Behavior")], updated="2026-11-02")
 
 # ------------------------------------------------------------------ CAN DOGS EAT
 FOODS = [
@@ -705,6 +710,7 @@ def faq(page):
         ("Do dogs dream?", "Dogs have clear REM sleep with rapid eye movements and low muscle tone, which is why they twitch in naps. Dream content is unproven. Sleep after learning new commands can improve performance. <a href=\"{R}blog/do-dogs-dream.html\">What REM research shows</a>."),
         ("Do dogs feel jealousy?", "They show jealousy-like behaviour: more pushing, getting between and sometimes snapping when owners pet a rival dog than a toy or book. Human-style conscious jealousy is still debated. <a href=\"{R}blog/do-dogs-feel-jealousy.html\">What experiments show</a>."),
         ("Why do dogs yawn?", "Often from tiredness, but yawning is also a stress signal when it comes with lip licking or a lowered body. Some dogs catch human yawns: 21 of 29 dogs did in a 2008 study, more from owners than strangers in a 2013 study. <a href=\"{R}blog/why-do-dogs-yawn.html\">What the studies found</a>."),
+        ("Why do dogs circle before lying down?", "Almost nobody has studied it. The only experiment that has tested it found dogs circled more on a lumpy surface (55%) than a smooth one (19%), which fits a comfort explanation better than the popular idea that dogs are scanning for danger, which has never actually been tested. <a href=\"{R}blog/why-do-dogs-circle-before-lying-down.html\">What studies show</a>."),
         ("Do dogs understand pointing?", "Most dogs do. A 2021 study of 375 eight-week-old puppies found they followed human gestures well with no sign of needing to learn it, and over 40% of the variation was genetic. Hand-raised wolves do worse. <a href=\"{R}blog/do-dogs-understand-pointing.html\">What the studies show</a>."),
         ("Why do dogs wag their tails?", "Mainly to communicate. A wag shows a dog is aroused or engaged, and research links it with both positive and negative states, so a wagging dog is not always a friendly one. Dogs also tend to wag more to the right for their owner and more to the left for an unfamiliar dominant dog. <a href=\"{R}blog/why-do-dogs-wag-their-tails.html\">What the research shows</a>."),
         ("How do dogs drink water?", "By lapping. A dog curls its tongue backward, dips it in and pulls it up very fast, which lifts a column of water that the dog bites off before it falls. The backward curl helps the dog drink more per lap, and also explains the splashing. <a href=\"{R}blog/how-do-dogs-drink-water.html\">The physics of lapping</a>."),
@@ -717,9 +723,9 @@ def faq(page):
          "Dog questions and answers with sources: how much to feed, normal temperature, tail wagging, yawning, dreaming, eating grass, color vision, vaccines and heat.",
          '<p>Each answer links to a fuller page with the sources.</p>', h1="Dog FAQ",
          lead="Quick answers to the questions dog owners ask most, drawn from veterinary and welfare sources such as the Merck Veterinary Manual, AAHA, AVSAB, AVMA, the ASPCA and the RSPCA.",
-         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "aaha_box1", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat"),
-         related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
-         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-10-27")
+         faq=qs, sources=src("merck_vitals", "aspca_foods", "merck_choc", "aaha_table", "avsab_puppy", "avsab_train", "wsava_bcs", "aaha_box1", "sueda2008", "neitz1989", "sommese2022", "kis2014", "kis2017", "harris2014", "abdai2018", "joly2008", "romero2013", "wang2020", "avma_dental", "gov_chip", "rspca_heat", "coren2016", "coren2026"),
+         related=[("health.html", "Health basics"), ("care.html", "Everyday care"), ("training.html", "Training"), ("behavior.html", "Behavior"), ("blog/why-do-dogs-circle-before-lying-down.html", "Why do dogs circle before lying down?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("glossary.html", "Glossary")],
+         crumbs=[("index.html", "Home"), ("faq.html", "FAQ")], updated="2026-11-02")
 
 # ------------------------------------------------------------------ GLOSSARY
 def glossary(page):
@@ -737,6 +743,7 @@ def glossary(page):
         ("Luring", "Guiding a dog into a position with a treat, then fading the treat into a hand signal."),
         ("Marker", "A click or word that tells the dog the exact moment it earned a reward."),
         ("Methylxanthines", "Stimulant compounds, including theobromine and caffeine, that make chocolate, coffee and caffeine toxic to dogs."),
+        ("Nesting behavior", "Turning in a circle and pressing down bedding before lying down. The only experimental test points to comfort on an uneven surface rather than a safety check. See <a href=\"{R}blog/why-do-dogs-circle-before-lying-down.html\">why dogs circle before lying down</a>."),
         ("Non core vaccine", "A vaccine recommended for some dogs depending on lifestyle, location and risk, such as Bordetella, Lyme disease or canine influenza."),
         ("Parvovirus", "A serious viral disease of dogs; one of the core vaccines."),
         ("Pastoral", "Royal Kennel Club group of herding dogs; broadly equivalent to the AKC Herding group."),
@@ -753,8 +760,8 @@ def glossary(page):
          body, h1="Dog glossary",
          lead="Short, plain English definitions of terms you will meet on vet visits, in training classes and on kennel club sites, each linked to the page that explains it in more depth.",
          sources=src("aaha_table", "avsab_train", "rspca_heat", "avma_dental", "merck_choc", "wsava_bcs", "rkc_groups"),
-         related=[("faq.html", "Dog FAQ"), ("breeds.html", "Breed groups"), ("health.html", "Health basics"), ("training.html", "Training")],
-         crumbs=[("index.html", "Home"), ("glossary.html", "Glossary")])
+         related=[("faq.html", "Dog FAQ"), ("breeds.html", "Breed groups"), ("health.html", "Health basics"), ("training.html", "Training"), ("blog/why-do-dogs-circle-before-lying-down.html", "Why do dogs circle before lying down?")],
+         crumbs=[("index.html", "Home"), ("glossary.html", "Glossary")], updated="2026-11-02")
 
 # ------------------------------------------------------------------ TRUST PAGES
 def trust(page):
@@ -1250,7 +1257,7 @@ def blog(page):
               ("Does sleep help dogs learn?", "Yes. After dogs learned new command words, their sleep EEG changed and performance improved after a three hour nap. A second study found that sleep, a quiet walk or play all allowed long-term gains a week later, while learning an unrelated task in the same hour blocked that improvement."),
               ("When should I worry about my dog's sleep?", "If your dog violently acts out dreams, snores with pauses and is exhausted by day, or collapses into sleep during excitement, contact your vet. Soft REM twitches alone are usually normal.")],
          sources=src("kis2014", "kis2017", "bodizs2020"),
-         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?")],
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-circle-before-lying-down.html", "Why do dogs circle before lying down?")],
          published="2026-10-13")
 
 
@@ -1316,7 +1323,7 @@ def blog(page):
               ("Do puppies catch yawns?", "Madsen and Persson (2013) tested 35 dogs aged 4 to 14 months and found contagious yawning only in dogs older than about 7 months."),
               ("Is yawning a sign my dog is stressed?", "It can be, especially with other signals such as lip licking, a tucked tail or lifting a paw. A single yawn at bedtime is just tiredness. See <a href=\"{R}behavior.html#stress\">reading stress</a>.")],
          sources=src("joly2008", "harr2009", "romero2013", "madsen2013", "avsab_train"),
-         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?")],
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/why-do-dogs-circle-before-lying-down.html", "Why do dogs circle before lying down?")],
          published="2026-10-15")
 
 
@@ -1692,6 +1699,39 @@ def blog(page):
          related=[("blog/why-do-dogs-tilt-their-heads.html", "Why do dogs tilt their heads?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("training.html", "Reward based training"), ("behavior.html", "Dog behavior")],
          published="2026-10-16")
 
+
+    # 23 daily fact: why do dogs circle before lying down (2 Nov 2026)
+    post(page, "why-do-dogs-circle-before-lying-down", "Why Do Dogs Circle Before Lying Down? | SnoutsWise",
+         "Dogs often circle before lying down, but there is almost no published research on why. Here is the one real test and the claims that remain unproven.",
+         "Why do dogs circle before lying down? The evidence is thin",
+         "Dogs circling once or twice before lying down is one of the most common and most asked about dog behaviors, yet it has almost no published science behind it. A search of the research turns up no peer reviewed study that set out to explain it. The one actual experiment, reported only in a magazine blog and never published in a journal, found dogs circled far more often on a lumpy surface than a smooth one, which fits a comfort explanation better than the popular idea that dogs are scanning for danger, an idea nobody has ever tested.",
+         """
+<h2>A common behavior with almost no published research</h2>
+<p>Turning around once, twice or more before curling up to rest is one of the most familiar things dogs do, so it is reasonable to expect a body of research explaining it. There is not one. Psychologist Stanley Coren, who studies dog cognition and behavior, wrote in a 2016 Psychology Today column that his search of the published research found no studies that specifically addressed this circling, apart from the separate and much rarer cases where excessive, prolonged circling is a sign of obsessive compulsive disorder in a small number of dogs. The explanations people repeat, that a dog is checking for danger, chasing off pests, flattening grass into a nest, marking the spot with paw scent, finding the direction of the wind, or adjusting its temperature, are older folk ideas rather than tested findings.</p>
+<h2>The one real experiment: comfort versus a smooth floor</h2>
+<p>Coren decided to test the nest making idea directly: if dogs circle to flatten an uneven surface, they should circle less on a surface that has nothing to flatten. He set up a small pen with two floor conditions, a flat, densely woven carpet and a loosely woven shag carpet left lumpy and uneven on purpose, and watched 62 pet dogs (31 per surface) to see whether each one turned a full circle before lying down. On the smooth carpet, 19% of dogs circled at least once before lying down. On the uneven shag carpet, 55% did, and dogs on the shag carpet were also far more likely to circle more than once; some poked or dug at the surface first, which no dog did on the smooth carpet. Coren reported this as a large, statistically significant difference and concluded that making a more comfortable, nest like surface is at least one real reason dogs circle, while being careful to say his data cannot rule out every other explanation.</p>
+<figure class="photo ai"><img src="{R}img/ai-dog-circling-paws.webp" width="1280" height="720" alt="Close up of a dog's front paws pressing down into a rumpled blanket mid turn before lying down" loading="lazy" decoding="async"><figcaption>AI generated image, made for SnoutsWise. It is an illustration in a photo style, not a real photograph of a real event. <a href="{R}credits/">About our images</a></figcaption></figure>
+<p>This remains the only identified experimental test of why dogs circle before lying down. It was reported in Coren's own magazine column, not in a peer reviewed journal, and the sample was modest: 62 dogs tested at one dog show. That does not make the finding wrong, but it means "what studies show" here really means "what one unpublished test, by one researcher, suggests."</p>
+<h2>The "safety scan" idea: popular, but never tested</h2>
+<p>In April 2026, Coren revisited the topic after a reporter told him an "expert" had said the newest data showed circling was an instinctual safety check: dogs taking a last look around for predators before lying down in a vulnerable position, and that an online AI tool had repeated the claim as settled fact. Coren could not get a journal reference for it, because there is not one. He pointed out that the predator scanning idea, the scent marking idea, the idea that dogs position themselves to catch scent on the wind, and the idea that circling helps regulate body temperature by uncovering cooler or warmer ground all lack any experimental data. Only the comfort hypothesis has an actual test behind it, and that test is his own. A claim being repeated often, including by an AI summary, is not the same as it being supported by research.</p>
+<h2>What Darwin noticed in 1872</h2>
+<p>The behavior is old news to observers. In <i>The Expression of the Emotions in Man and Animals</i>, Charles Darwin described dogs on a carpet or other hard surface turning round and round and scratching at the ground with their forepaws "as if they intended to trample down the grass and scoop out a hollow," a leftover, he guessed, from wild ancestors that lived on open, grassy ground. Oddly, Darwin noted that keepers at the Zoological Gardens who watched jackals and fennecs treat their straw this way had never, after months of observing, seen the wolves there do the same, a detail that sits awkwardly with the common claim that this is simply "wolf behavior" carried over into dogs. Darwin also mentioned one dog that reportedly circled a full 13 times before settling, a reminder that individual dogs vary enormously in how much they turn.</p>
+<h2>When circling is not about getting comfortable</h2>
+<p>A quick turn before lying down is normal and not a reason to worry. Watch for a different pattern instead. The Merck Veterinary Manual lists circling in one direction as a possible sign of disease in the cerebrum or diencephalon (the higher brain centers), separate from a head tilt, which points more toward the vestibular system or cerebellum. Dogs with idiopathic vestibular syndrome, most often older dogs, can develop a sudden head tilt, loss of balance and circling or falling to one side, usually easing within days to a few weeks. Repeated, prolonged circling that looks compulsive, or a dog that seems unable to settle or get comfortable at all, can also point to pain such as arthritis rather than an ordinary bedtime routine. None of this describes the ordinary single turn most dogs do before a nap, but a sudden change, circling that stays in only one direction, stumbling, or circling that will not stop is a reason to call your vet rather than wait it out.</p>
+<h2>What this means for owners</h2>
+<ul><li><b>One or two turns before lying down is normal.</b> It is one of the least studied common dog behaviors, and the best available evidence points to comfort, not vigilance.</li>
+<li><b>Be skeptical of confident "the science shows" claims</b> about this behavior, including from AI summaries. As Coren found out in 2026, a claim can sound authoritative and still have no study behind it.</li>
+<li><b>Watch the pattern, not the behavior itself.</b> A dog that struggles to settle, circles repeatedly in one direction, or shows a new head tilt or stumbling needs a vet visit, not just a more comfortable bed.</li>
+<li><b>Give dogs room to settle their own way.</b> A bed big enough to turn around in, with bedding that can be nosed into shape, lets dogs do what looks like a very old habit, whatever its exact origin turns out to be.</li></ul>
+""",
+         faq=[("Why do dogs circle before lying down?", "Nobody knows for certain. The only experiment that has tested it found dogs circled more often on an uneven, lumpy surface than a smooth one, which fits a comfort or nest making explanation better than the popular idea that dogs are scanning for danger, an idea that has never actually been tested."),
+              ("Is there scientific research on dogs circling before lying down?", "Very little. A 2016 search by psychologist Stanley Coren found no published studies on it. The only data come from his own unpublished test of 62 dogs, reported in a magazine column rather than a peer reviewed journal."),
+              ("Do dogs circle to check for danger before lying down?", "That is a popular idea, repeated by some articles and AI summaries, but it has never actually been tested. The comfort explanation, backed by an actual (if small and unpublished) experiment, is better supported."),
+              ("Did Darwin write about dogs turning in circles?", "Yes. In 1872, Charles Darwin described dogs scratching and turning before lying down as if trampling down grass, a habit he guessed came from wild ancestors, though he also noted zoo keepers had never seen wolves do the same thing."),
+              ("Should I worry if my dog circles a lot before lying down?", "A single turn or two is normal. Repeated circling in only one direction, stumbling, a new head tilt, or a dog that cannot seem to settle can point to vestibular disease, pain or a compulsive disorder, so call your vet rather than assuming it is just a bedtime habit.")],
+         sources=src("coren2016", "coren2026", "darwin1872", "merck_neuro", "mertens2023"),
+         related=[("behavior.html", "Dog behavior"), ("blog/index.html", "Blog"), ("faq.html", "Dog FAQ"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("glossary.html", "Glossary")],
+         published="2026-11-02")
 
     # blog index
     items = "".join('<article class="card"><h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))

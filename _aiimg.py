@@ -13,6 +13,9 @@ AI = {
     "faq.html": ("ai-dog-head-tilt", "A Jack Russell terrier tilting its head in curiosity against a soft green background"),
     "glossary.html": ("ai-dog-eye-closeup", "Close up of a dog's amber eye, ear and fur texture"),
     "research/index.html": ("ai-dog-study", "A focused border collie sitting calmly on a plain mat in a bright room"),
+    "blog/why-do-dogs-circle-before-lying-down.html": ("ai-dog-circling-bed", "A scruffy terrier mix mid turn, circling on a round dog bed in a sunlit living room before lying down"),
+    # registration only (second in-body image for the circling post; not a real page path, see _photos.py-style figure call in _content.py)
+    "blog/why-do-dogs-circle-before-lying-down.html#paws": ("ai-dog-circling-paws", "Close up of a dog's front paws pressing down into a rumpled blanket mid turn before lying down"),
 }
 
 def has(path):
