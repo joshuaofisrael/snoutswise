@@ -97,3 +97,10 @@ figure.photo.ai:hover img{transform:scale(1.015)}
 figure.photo.ai figcaption a{color:inherit;text-decoration:underline}
 @media (max-width:820px){figure.photo.ai{border-radius:20px;padding:.4rem}figure.photo.ai img{border-radius:15px}}
 @media (prefers-reduced-motion:reduce){figure.photo.ai img{transition:none}figure.photo.ai:hover img{transform:none}}
+
+/* style-pass 2026-11-05 */
+:focus-visible{outline:3px solid #38bdf8;outline-offset:3px}
+main p,article p{max-width:68ch;line-height:1.7}
+.card img,figure img,.tile img{aspect-ratio:3/2;object-fit:cover;width:100%;height:auto;display:block}
+footer{display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:center}
+@media(max-width:640px){main{padding:1rem .85rem}.grid{grid-template-columns:1fr}}
