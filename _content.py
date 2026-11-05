@@ -83,6 +83,9 @@ S = {
  "crompton2011": ("Crompton AW, Musinsky C (2011). How dogs lap: ingestion and intraoral transport in Canis familiaris. Biology Letters 7(6): 882-884. DOI 10.1098/rsbl.2011.0336", "Biology Letters", "https://doi.org/10.1098/rsbl.2011.0336"),
  "reis2010": ("Reis PM, Jung S, Aristoff JM, Stocker R (2010). How cats lap: water uptake by Felis catus. Science 330(6008): 1231-1234. DOI 10.1126/science.1195421", "Science", "https://doi.org/10.1126/science.1195421"),
  "prato2018": ("Prato-Previde E, Nicotra V, Pelosi A, Valsecchi P (2018). Pet dogs' behavior when the owner and an unfamiliar person attend to a faux rival. PLoS ONE 13(4): e0194577. DOI 10.1371/journal.pone.0194577", "PLoS ONE (open access)", "https://doi.org/10.1371/journal.pone.0194577"),
+ "akc_lick": ("Why Do Dogs Lick People?", "American Kennel Club", "https://www.akc.org/expert-advice/lifestyle/why-do-dogs-lick-people/"),
+ "akc_pant": ("Why Do Dogs Pant?", "American Kennel Club", "https://www.akc.org/expert-advice/health/why-do-dogs-pant/"),
+ "merck_heat": ("Heatstroke in Animals (Hyperthermia)", "Merck Veterinary Manual", "https://www.merckvetmanual.com/emergency-medicine-and-critical-care/heatstroke-and-hypothermia/heatstroke-in-animals"),
  "merck_nutr": ("Sanderson SL. Nutritional Requirements of Small Animals (full review Nov 2023, updated Sept 2024)", "Merck Veterinary Manual", "https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutritional-requirements-of-small-animals"),
  "aaha_box1": ("2021 AAHA Nutrition and Weight Management Guidelines for Dogs and Cats, Box 1: Energy Requirement Calculations (PDF)", "American Animal Hospital Association", "https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2021-nutrition-and-weight-management/resourcepdfs/nutritiongl_box1.pdf"),
  "aaha_feed": ("Feeding Plans for Healthy, Appropriate Weight Cats and Dogs (2021 AAHA Nutrition and Weight Management Guidelines)", "American Animal Hospital Association", "https://www.aaha.org/resources/2021-aaha-nutrition-and-weight-management-guidelines/feeding-plans-for-healthy-appropriate-weight-cats-and-dogs/"),
@@ -1741,10 +1744,81 @@ def blog(page):
          related=[("behavior.html", "Dog behavior"), ("blog/index.html", "Blog"), ("faq.html", "Dog FAQ"), ("blog/do-dogs-dream.html", "Do dogs dream?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("glossary.html", "Glossary")],
          published="2026-11-02")
 
+
+
+    # evergreen 5 Nov 2026: why do dogs pant / can dogs sweat
+    post(page, "why-do-dogs-pant", "Why Do Dogs Pant? Cooling, Not Sweating | SnoutsWise",
+         "Why do dogs pant? Panting is their main way to cool down. Dogs barely sweat through their skin. When panting turns into heatstroke signs, cool and call a vet.",
+         "Why do dogs pant? It is how they cool down",
+         "Dogs pant to move air across the moist surfaces of the tongue, mouth and upper airway so heat can leave the body as water evaporates. They have sweat glands in the paw pads, but those glands are not enough to cool a whole dog the way human skin sweat does. Panting after play or on a warm day is often normal. Heavy, noisy panting with thick drool, weakness or collapse is a heatstroke emergency.",
+         """
+<h2>Panting is evaporative cooling</h2>
+<p>When a dog pants, air flows over wet tissues in the mouth and throat. Evaporation takes heat with it. That is why a dog that has been running on a cool day may pant hard for a few minutes, then settle once body temperature drops. The American Kennel Club explains panting as the main way dogs regulate temperature, and the RSPCA treats heavy panting as an early heatstroke warning when it comes with other signs (see our <a href="{R}care.html#heat">hot weather advice</a>).</p>
+<h2>Can dogs sweat?</h2>
+<p>Dogs have sweat glands concentrated in the paw pads. Those glands help a little with cooling and leave damp prints on hot pavement, but they do not replace panting. If someone asks "can dogs sweat?", the accurate short answer is: a little through the paws, not enough to cool the body the way people do. Relying on shade, water and rest still matters more than any paw sweat.</p>
+<h2>Normal panting vs heatstroke</h2>
+<p>Normal panting often follows exercise, excitement or a warm room, and slows when the dog rests in a cooler place with water available. The RSPCA lists heatstroke risk especially for flat faced (brachycephalic) breeds, thick coated dogs, puppies, older dogs and dogs with breathing problems. Warning signs include heavy or noisy panting, thick drooling, red gums and tongue, weakness, confusion, vomiting or diarrhea, muscle spasms, seizures and collapse. Cool the dog with lukewarm water and air flow, then get veterinary help. Do not use ice water baths that can shock circulation.</p>
+<ul>
+<li><b>After play:</b> expect panting; offer water and a rest stop.</li>
+<li><b>In a hot car or sun:</b> never leave a dog; cabin heat rises fast.</li>
+<li><b>Flat faced breeds:</b> shorter airways make panting less efficient; keep walks cooler.</li>
+</ul>
+<h2>Other reasons dogs pant</h2>
+<p>Panting is also a stress signal when it comes with lip licking, a tucked tail or a lowered body (see <a href="{R}behavior.html#stress">reading stress</a>). Pain, fever, heart or lung disease, and some medicines can raise panting too. If panting starts suddenly at rest, or seems out of proportion to heat and exercise, contact your vet (see <a href="{R}health.html">health basics</a>).</p>
+<h2>Practical takeaways</h2>
+<ul>
+<li>Panting cools dogs; paw sweat is minor.</li>
+<li>Match activity to temperature and breed risk.</li>
+<li>Know the heatstroke list and act early.</li>
+</ul>
+""",
+         faq=[("Why do dogs pant?", "Panting moves air over moist mouth and airway surfaces so evaporation can remove heat. It is the main cooling method dogs use."),
+              ("Can dogs sweat to cool down?", "Dogs have sweat glands mainly in the paw pads. That helps a little, but it is not enough to cool the whole body. Panting does the real work."),
+              ("Is panting after a walk normal?", "Yes when it slows with rest, water and cooler air. If panting stays heavy with thick drool, red gums, weakness or collapse, treat it as possible heatstroke and contact a vet."),
+              ("Which dogs overheat fastest?", "The RSPCA flags flat faced breeds, thick coats, puppies, seniors and dogs with breathing disease as higher risk."),
+              ("Can stress make a dog pant?", "Yes. Panting with other stress signals such as lip licking or a tucked tail can mean the dog needs space, a quieter setting or veterinary advice if it is sudden and unexplained.")],
+         sources=src("rspca_heat", "akc_pant", "merck_vitals"),
+         related=[("care.html", "Everyday care"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/can-dogs-sense-heat-with-their-nose.html", "Can dogs sense heat with their nose?"), ("behavior.html", "Dog behavior")],
+         published="2026-11-05")
+
+
+    # evergreen 5 Nov 2026: why do dogs lick people
+    post(page, "why-do-dogs-lick-people", "Why Do Dogs Lick People? Affection, Taste and Stress | SnoutsWise",
+         "Why do dogs lick people? Licking can mean greeting, taste, attention seeking or stress. When licking turns obsessive, check with a vet.",
+         "Why do dogs lick people? Greeting, taste and sometimes stress",
+         "Dogs lick people for several overlapping reasons: as a friendly greeting learned from puppyhood, because skin tastes of salt and lotion, to get attention, and sometimes as a stress or appeasement signal. Soft face or hand licks when you come home are usually social. Constant licking of floors, carpets or walls is different and has been linked to gastrointestinal disease in veterinary research.",
+         """
+<h2>Greeting and social bonding</h2>
+<p>Puppies lick the mouths of adult dogs during food sharing and greeting. That early pattern often carries into life with people: a lick on the hand or face can be a polite hello. The American Kennel Club lists affection and greeting among the common reasons dogs lick owners, along with exploration and taste. Reward based training still works if you prefer less licking: calmly turn away, then reward a sit when the dog stops (see <a href="{R}training.html">reward based training</a>).</p>
+<h2>Taste, salt and leftover food smells</h2>
+<p>Human skin carries salt from sweat, plus lotions, food crumbs and toothpaste residue. Dogs explore the world with their tongues and noses. A lick can simply be information gathering, the same way sniffing hands is. That does not make dog saliva a disinfectant myth; it is exploration, not a cleaning product.</p>
+<h2>Attention and learned habits</h2>
+<p>If licking reliably earns pets, laughs or food, dogs will do more of it. That is ordinary learning, not spite. Teach an alternate greeting such as sit, then reward that instead. Keep sessions short and consistent.</p>
+<h2>Stress, appeasement and lip licking</h2>
+<p>Quick lip licks when no food is around are classic stress signals, listed alongside yawning and a lowered body in behaviour guidance (see <a href="{R}behavior.html#stress">reading stress</a> and <a href="{R}blog/why-do-dogs-yawn.html">why dogs yawn</a>). Full body licking of a person can also show up when a dog is unsure. Give space, lower the pressure, and avoid forcing cuddles.</p>
+<h2>When licking needs a vet</h2>
+<p>In a 2012 study in the <i>Journal of Veterinary Behavior</i>, Becuwe-Bonnet and colleagues examined 19 dogs that licked surfaces excessively. Fourteen had gastrointestinal problems such as inflammation, delayed stomach emptying, pancreatitis or giardia. After treatment, licking improved in many of the dogs followed up. Sudden frantic licking of people, paws or surfaces, plus vomiting, diarrhea, weight loss or appetite change, is a reason to call your vet (see <a href="{R}health.html">health basics</a> and <a href="{R}blog/why-do-dogs-eat-grass.html">why dogs eat grass</a>).</p>
+<ul>
+<li><b>Soft greeting licks:</b> usually social; redirect if you prefer less.</li>
+<li><b>Lip licks in tense moments:</b> read as stress, not guilt.</li>
+<li><b>Obsessive surface licking:</b> ask a vet about medical causes.</li>
+</ul>
+""",
+         faq=[("Why do dogs lick people?", "Common reasons include friendly greeting, exploring taste and smell on skin, seeking attention, and sometimes stress or appeasement. Context tells you which fits."),
+              ("Is dog licking always affection?", "No. Licking can also be taste seeking, a learned way to get attention, or a stress signal. Soft greeting licks are often social; frantic or constant licking needs a closer look."),
+              ("Should I let my dog lick my face?", "That is a personal choice. Mouths carry bacteria. If you prefer not to, turn away calmly and reward a sit instead of scolding."),
+              ("When is licking a medical problem?", "Excessive licking of floors, carpets or walls has been linked to gastrointestinal disease in a 2012 veterinary behaviour study. Sudden obsessive licking with other illness signs needs a vet."),
+              ("How do I stop unwanted licking?", "Do not punish. Remove the reward by stepping back, then reward an alternate behaviour such as sit. Keep practice short and consistent.")],
+         sources=src("akc_lick", "becuwe2012", "avsab_train"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/why-do-dogs-eat-grass.html", "Why do dogs eat grass?"), ("blog/why-do-dogs-pant.html", "Why do dogs pant?"), ("health.html", "Dog health basics")],
+         published="2026-11-05")
+
+
+
     # blog index
     items = "".join('<article class="card blogcard">%s<h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (thumb(s, "{R}"), s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "Dog Facts Explained by Research | SnoutsWise Blog",
          "Dog facts explained by research: why dogs tilt their heads, eat grass, yawn and dream, and whether they like baby talk or see color, answered with sources.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-10-20")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-11-05")

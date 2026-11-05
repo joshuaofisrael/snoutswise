@@ -4,6 +4,8 @@ import html
 e = lambda s: html.escape(s, quote=True)
 W, H = 1280, 720
 AI = {
+    "blog/why-do-dogs-pant.html": ("ai-dog-panting", "A golden retriever sitting on a porch with its mouth open and tongue out"),
+    "blog/why-do-dogs-lick-people.html": ("ai-dog-licking", "A beagle gently licking a person's hand outdoors"),
     "blog/do-dogs-recognize-themselves-in-mirror.html": ("ai-dog-mirror", "A golden retriever sitting on a rug in a bright room, looking at its own reflection in a tall floor mirror"),
     "blog/why-do-dogs-wag-their-tails.html": ("ai-dog-tail-wag", "A black and white border collie running across a park lawn with its tail in mid wag"),
     "blog/how-do-dogs-drink-water.html": ("ai-dog-drinking", "A yellow Labrador lapping water from a steel bowl, with its tongue curled and droplets splashing"),
