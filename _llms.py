@@ -44,6 +44,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Fetch Spotter]({u}games/fetch-spotter/): fetch timing game teaching which ball colors dogs see best (AKC)
 
 ## Blog
+- [Why do dogs circle before lying down? What studies show]({u}blog/why-do-dogs-circle-before-lying-down.html)
 - [Do dogs prefer praise or food? Most work harder for treats]({u}blog/do-dogs-prefer-praise-or-food.html)
 - [Do dogs know when you are sad? They respond to crying]({u}blog/do-dogs-know-when-you-are-sad.html)
 - [Why do dogs make puppy dog eyes? A muscle wolves mostly lack]({u}blog/why-do-dogs-make-puppy-dog-eyes.html)
