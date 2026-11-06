@@ -39,6 +39,9 @@ AI = {
     "blog/can-dogs-learn-toy-names.html": ("ai-dog-toys", "A dog lying among colorful plush toys scattered on a living room floor, sniffing one"),
     "blog/can-dogs-sense-heat-with-their-nose.html": ("ai-dog-nose-closeup", "An extreme close up of a dog's wet black nose in soft directional light"),
     "blog/dogs-bouba-kiki-effect-study.html": ("ai-dog-shapes", "A dog looking curiously at two simple wooden shapes, one round and one spiky, on the floor"),
+    "blog/why-do-dogs-howl-at-sirens.html": ("ai-dog-howling", "A mixed-breed dog outdoors with its head tilted up mid howl"),
+    # registration only (mid-body ears image for the howl post)
+    "blog/why-do-dogs-howl-at-sirens.html#ears": ("ai-dog-ears-up", "A small terrier with ears perked up and its head cocked, sitting on a rug indoors"),
 }
 
 def has(path):
