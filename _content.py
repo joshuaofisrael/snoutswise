@@ -95,7 +95,14 @@ S = {
  "coren2016": ("Coren S (27 January 2016). Why Do Dogs Turn in Circles Before Lying Down? Canine Corner (magazine blog, not a peer reviewed journal)", "Psychology Today", "https://www.psychologytoday.com/us/blog/canine-corner/201601/why-do-dogs-turn-in-circles-lying-down"),
  "coren2026": ("Coren S (28 April 2026). Why Do Dogs Circle Before Lying Down? An Experimental Test. Canine Corner (magazine blog, not a peer reviewed journal)", "Psychology Today", "https://www.psychologytoday.com/us/blog/canine-corner/202604/why-do-dogs-circle-before-lying-down-an-experimental-test"),
  "darwin1872": ("Darwin C (1872). The Expression of the Emotions in Man and Animals, Chapter 1 (on dogs turning round before lying down)", "Darwin Online, public domain text", "https://brocku.ca/MeadProject/Darwin/Darwin_1872_01.html"),
- "merck_neuro": ("The Neurologic Evaluation of Dogs", "Merck Veterinary Manual (dog owner version)", "https://www.merckvetmanual.com/dog-owners/brain-spinal-cord-and-nerve-disorders-of-dogs/the-neurologic-evaluation-of-dogs"),}
+ "merck_neuro": ("The Neurologic Evaluation of Dogs", "Merck Veterinary Manual (dog owner version)", "https://www.merckvetmanual.com/dog-owners/brain-spinal-cord-and-nerve-disorders-of-dogs/the-neurologic-evaluation-of-dogs"),
+ "harrington1979": ("Harrington FH, Mech LD (1979). Wolf Howling and Its Role in Territory Maintenance. Behaviour 68(3-4): 207-249. DOI 10.1163/156853979X00322", "Behaviour", "https://doi.org/10.1163/156853979X00322"),
+ "pongracz2005": ("Pongrácz P, Molnár C, Miklósi Á, Csányi V (2005). Human Listeners Are Able to Classify Dog (Canis familiaris) Barks Recorded in Different Situations. Journal of Comparative Psychology 119(2): 136-144. DOI 10.1037/0735-7036.119.2.136", "Journal of Comparative Psychology", "https://doi.org/10.1037/0735-7036.119.2.136"),
+ "koranova2021": ("Kořanová D, Němcová L, Policht R, Hart V, Begall S, Burda H (2021). Wolf Howling and Emergency Sirens: A Hypothesis of Natural and Technical Convergence of Aposematic Signals. Acta Biotheoretica 69(1): 53-65. DOI 10.1007/s10441-020-09389-6", "Acta Biotheoretica", "https://doi.org/10.1007/s10441-020-09389-6"),
+ "barber2020": ("Barber ALA, Wilkinson A, Montealegre-Z F, Ratcliffe VF, Guo K, Mills DS (2020). A comparison of hearing and auditory functioning between dogs and humans. Comparative Cognition & Behavior Reviews 15: 45-94. DOI 10.3819/ccbr.2020.150007", "Comparative Cognition & Behavior Reviews", "https://doi.org/10.3819/ccbr.2020.150007"),
+ "akc_howl": ("Why Do Dogs Howl?", "American Kennel Club", "https://www.akc.org/expert-advice/advice/why-do-dogs-howl/"),
+ "akc_stress": ("How Can You Tell if Your Dog Is Stressed?", "American Kennel Club", "https://www.akc.org/expert-advice/health/how-to-tell-if-your-dog-is-stressed/"),
+}
 import datetime
 def nice(d):
     return datetime.date.fromisoformat(d).strftime("%-d %B %Y")
@@ -1815,10 +1822,91 @@ def blog(page):
 
 
 
+    # evergreen 6 Nov 2026: why do dogs howl at sirens
+    post(page, "why-do-dogs-howl-at-sirens", "Why Do Dogs Howl at Sirens? Instinct, Sound and When to Worry | SnoutsWise",
+         "Why do dogs howl at sirens? Canine instincts and sound sensitivity may explain this behaviour, and when to worry.",
+         "Why do dogs howl at sirens?",
+         "Dogs howl at sirens because their natural communication instincts may be triggered by the loud, sustained, changing tones. Sirens share some acoustic characteristics with canine howls, potentially encouraging dogs to respond vocally. However, scientists have not proven that dogs mistake sirens for other animals. Some dogs may howl from excitement, curiosity or sensitivity to unusual sounds. Howling alone does not mean a dog is frightened or experiencing pain.",
+         """
+<h2>Why sirens trigger a dog's howling instinct</h2>
+<p>Howling is a natural canine behaviour with roots in the communication systems of wild canids.</p>
+<p>Wolves howl to communicate across distances, maintain contact and help manage territorial interactions. Harrington and Mech (1979) investigated how wolves responded to simulated howls and demonstrated the importance of vocal communication in territorial behaviour.</p>
+<p>Domestic dogs retain the ability to howl, although their social environments and communication patterns differ from those of wolves. That shared vocal toolkit sits alongside other <a href="{R}behavior.html">dog behaviour</a> patterns owners notice day to day.</p>
+<p>Emergency sirens often produce prolonged tones that rise and fall in pitch. These characteristics resemble certain features of animal vocalisations. Kořanová and colleagues (2021) proposed that emergency sirens and wolf howls show acoustic overlap, and that this resemblance can help explain why sirens sometimes provoke howling. Their paper frames the idea as a hypothesis of natural and technical signal convergence, not a finished proof for every dog.</p>
+<p>One plausible explanation is that dogs respond to these sounds through an inherited vocal communication mechanism. The American Kennel Club similarly describes sustained sounds as potential triggers for howling.</p>
+<p>Direct experimental evidence establishing precisely why dogs howl at sirens remains limited. Acoustic resemblance offers a reasonable hypothesis, not a confirmed explanation for every dog.</p>
+<figure class="photo ai"><img src="{R}img/ai-dog-ears-up.webp" width="1280" height="720" alt="A small terrier with ears perked up and its head cocked, sitting on a rug indoors" loading="lazy" decoding="async"><figcaption>AI generated image, made for SnoutsWise. It is an illustration in a photo style, not a real photograph of a real event. <a href="{R}credits/">About our images</a></figcaption></figure>
+<h2>Do dogs think sirens are other dogs?</h2>
+<p>Possibly, but there is no reliable evidence that dogs consistently interpret sirens as other dogs howling.</p>
+<p>A siren might activate a vocal response without the dog actually believing another animal is present.</p>
+<p>Dogs can also howl for reasons unrelated to communicating with other dogs, including seeking attention or expressing emotional arousal.</p>
+<p>Research by Pongrácz and colleagues (2005) found that human listeners could distinguish different contexts from recorded dog barks. This suggests canine vocalisations can convey meaningful information.</p>
+<p>However, that study examined barking, not howling at sirens. Its findings cannot establish what dogs perceive when hearing emergency vehicles.</p>
+<p>The distinction matters: a dog's response to a sound does not necessarily reveal what the dog thinks produced it.</p>
+<h2>Do sirens hurt dogs' ears?</h2>
+<p>Not necessarily. A dog howling at a siren is not proof that the sound hurts.</p>
+<p>Dogs have sensitive hearing, including the ability to detect higher frequencies than humans. Barber and colleagues (2020) summarise typical hearing ranges of about 65 Hz to about 45 kHz in dogs, compared with roughly 20 Hz to 20 kHz in humans. Hearing range alone does not establish whether a particular sound causes discomfort.</p>
+<p>Noise intensity, exposure duration and distance from the source all matter.</p>
+<p>A siren heard several streets away is different from one operating immediately beside a dog.</p>
+<p>Very loud sounds can potentially cause discomfort or harm, so owners should avoid deliberately exposing dogs to intense noise.</p>
+<p>Nevertheless, many dogs howl without showing any indication of distress.</p>
+<p>If your dog howls briefly and immediately returns to normal activities, the behaviour is generally less concerning than howling accompanied by panic or persistent agitation.</p>
+<h2>How to tell whether your dog is distressed</h2>
+<p>Observe your dog's entire body rather than interpreting the howl in isolation.</p>
+<p>A relaxed dog might lift its head, howl several times and settle down again.</p>
+<p>A frightened dog may display additional behaviours.</p>
+<p>According to AKC guidance on canine stress, warning signs can include:</p>
+<ul>
+<li>Trembling, pacing or restlessness</li>
+<li>A tucked tail or lowered posture</li>
+<li>Excessive panting unrelated to heat or exercise (see also <a href="{R}blog/why-do-dogs-pant.html">why dogs pant</a>)</li>
+<li>Lip licking, yawning or avoiding eye contact</li>
+<li>Attempts to hide or escape</li>
+</ul>
+<p>These signs require interpretation in context. Panting and yawning, for example, can occur for reasons unrelated to anxiety. More on reading stress signals is in our <a href="{R}behavior.html">behaviour guide</a>.</p>
+<p>Pay attention to how quickly your dog recovers after the siren disappears.</p>
+<p>A dog that remains fearful long afterward may need additional support.</p>
+<h2>Why do some dogs howl while others stay quiet?</h2>
+<p>Individual differences are normal.</p>
+<p>Breed background, temperament, learning history and previous exposure to sounds may influence how frequently a dog howls.</p>
+<p>Some dogs are naturally more vocal, while others rarely howl at all.</p>
+<p>The AKC explains that howling serves several possible communication functions and that dogs vary in their vocal behaviour.</p>
+<p>A dog that ignores sirens is not necessarily hearing impaired. Similarly, a dog that howls frequently is not automatically anxious.</p>
+<p>There is insufficient evidence to identify one universal reason why certain dogs respond strongly to emergency sirens.</p>
+<h2>What should you do when your dog howls?</h2>
+<p>If your dog appears comfortable, occasional howling generally requires no intervention.</p>
+<p>If the behaviour becomes disruptive or appears associated with fear, try these humane approaches:</p>
+<ol>
+<li><b>Reduce noise exposure.</b> Close windows or offer access to a quieter room.</li>
+<li><b>Provide a safe retreat.</b> Allow your dog to choose a familiar, comfortable resting place.</li>
+<li><b>Reward calm responses.</b> Offer treats or praise when your dog remains relaxed around distant sounds.</li>
+<li><b>Avoid punishment.</b> Shouting or startling your dog may increase fear.</li>
+<li><b>Consider gradual training.</b> Carefully controlled desensitisation and counterconditioning may help dogs with noise sensitivity (see <a href="{R}training.html">reward based training</a>).</li>
+</ol>
+<p>Never force a frightened dog to endure loud siren recordings.</p>
+<p>If anxiety is substantial, seek guidance from a veterinarian or qualified reward based behaviour professional.</p>
+<h2>When should you consult a veterinarian?</h2>
+<p>Occasional siren howling is usually normal.</p>
+<p>However, veterinary assessment is appropriate when howling begins suddenly, becomes persistent or accompanies other concerning symptoms.</p>
+<p>Watch for unexplained vocalisation, suspected pain, hearing changes, disorientation, severe panic or attempts to escape.</p>
+<p>A veterinarian can investigate medical contributors and recommend behavioural support when needed. Start with our <a href="{R}health.html">health basics</a> if you are unsure what to watch for.</p>
+<p>The goal is not necessarily to stop all howling, but to ensure your dog remains comfortable and safe.</p>
+""",
+         faq=[("Why does my dog howl at ambulances but not police sirens?", "Different sirens produce different acoustic patterns. Your dog may respond more strongly to particular pitches or sound sequences. Previous experiences may also influence the reaction."),
+              ("Are dogs howling at sirens because they are scared?", "Not always. Some dogs howl while appearing relaxed. Fear is more likely when howling accompanies trembling, hiding, pacing or other stress signals."),
+              ("Should I howl along with my dog?", "You can interact vocally if your dog appears comfortable, although doing so may encourage further howling. Avoid stimulating a dog that already seems frightened."),
+              ("Can dogs be trained not to howl at sirens?", "Training may reduce howling through positive reinforcement and gradual sound exposure. Results vary, and punishment is not recommended."),
+              ("Why has my dog suddenly started howling at sirens?", "Changes in experience, environment or sound sensitivity may contribute. If the change is abrupt or accompanied by other unusual behaviour, consult your veterinarian.")],
+         sources=src("harrington1979", "koranova2021", "pongracz2005", "barber2020", "akc_howl", "akc_stress"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-pant.html", "Why do dogs pant?"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/why-do-dogs-lick-people.html", "Why do dogs lick people?")],
+         published="2026-11-06")
+
+
+
     # blog index
     items = "".join('<article class="card blogcard">%s<h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (thumb(s, "{R}"), s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "Dog Facts Explained by Research | SnoutsWise Blog",
          "Dog facts explained by research: why dogs tilt their heads, eat grass, yawn and dream, and whether they like baby talk or see color, answered with sources.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-11-05")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-11-06")
