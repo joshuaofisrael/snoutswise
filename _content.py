@@ -102,6 +102,9 @@ S = {
  "barber2020": ("Barber ALA, Wilkinson A, Montealegre-Z F, Ratcliffe VF, Guo K, Mills DS (2020). A comparison of hearing and auditory functioning between dogs and humans. Comparative Cognition & Behavior Reviews 15: 45-94. DOI 10.3819/ccbr.2020.150007", "Comparative Cognition & Behavior Reviews", "https://doi.org/10.3819/ccbr.2020.150007"),
  "akc_howl": ("Why Do Dogs Howl?", "American Kennel Club", "https://www.akc.org/expert-advice/advice/why-do-dogs-howl/"),
  "akc_stress": ("How Can You Tell if Your Dog Is Stressed?", "American Kennel Club", "https://www.akc.org/expert-advice/health/how-to-tell-if-your-dog-is-stressed/"),
+ "akc_sniff_butts": ('Why do dogs sniff butts?', "American Kennel Club", 'https://www.akc.org/expert-advice/training/why-do-dogs-sniff-butts/'),
+ "akc_sniff_walks": ('Why sniff walks are so good for your dog', "American Kennel Club", 'https://www.akc.org/expert-advice/health/is-sniffing-a-dog-s-version-of-social-media/'),
+ "akc_greet_strange": ("How to greet a dog you don't know", "American Kennel Club", 'https://www.akc.org/expert-advice/advice/how-to-safely-greet-a-strange-dog/')
 }
 import datetime
 def nice(d):
@@ -146,6 +149,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
+<li><a href="{R}blog/why-do-dogs-sniff-each-others-butts.html">Why do dogs sniff each other's butts? It is a scent greeting</a></li>
 <li><a href="{R}blog/why-do-dogs-circle-before-lying-down.html">Why do dogs circle before lying down? The evidence is thin</a></li>
 <li><a href="{R}blog/do-dogs-prefer-praise-or-food.html">Do dogs prefer praise or food? Most work harder for treats</a></li>
 <li><a href="{R}blog/do-dogs-know-when-you-are-sad.html">Do dogs know when you are sad? They respond to crying</a></li>
@@ -1903,10 +1907,44 @@ def blog(page):
 
 
 
+    # evergreen 9 Nov 2026: why do dogs sniff each other's butts
+    post(page, "why-do-dogs-sniff-each-others-butts", "Why Do Dogs Sniff Each Other's Butts? Scent Greetings Explained | SnoutsWise",
+         "Dogs sniff under one another's tails to gather scent information during greetings. Relaxed body language tells you when to let them.",
+         "Why do dogs sniff each other's butts?",
+         "Dogs sniff each other's rear ends because scent is an important part of canine communication. Anal-sac secretions carry odor cues, and a brief, relaxed sniff can be a normal greeting.",
+         """
+<h2>A greeting guided by scent</h2>
+<p>Humans tend to recognize acquaintances by their faces and voices. Dogs depend much more heavily on odor, so a greeting that looks awkward to us is entirely ordinary to them. The American Kennel Club explains that secretions from anal sacs near the anus carry chemical information, and sniffing this area helps dogs investigate another dog.</p>
+<p>The comparison to a handshake is useful, but incomplete. A dog is not consciously following human etiquette, and sniffing does not guarantee friendship. It is a way to gather information while deciding how to interact. The other dog's comfort matters as much as the curious dog's enthusiasm.</p>
+<h2>What is special about the scent?</h2>
+<p>Dogs have scent-producing anal sacs near the anus. Their secretions contribute to an individual animal's odor, and the AKC describes them as part of canine chemical communication. Dogs also learn from odors on fur, the ground, and objects along a walk. A rear-end sniff is therefore a concentrated opportunity to investigate another dog rather than the only way dogs identify one another.</p>
+<p>It is easy to overstate what a sniff reveals. Popular explanations sometimes claim a dog can read an exact biography, mood, diet, or medical record from a single greeting. The scientific basis for such precise claims is not established by the sources used here. A safer explanation is that scent conveys cues about an individual and may influence subsequent behavior.</p>
+<figure class="photo ai"><img src="{R}img/ai-dogs-trail-sniff.webp" width="1280" height="720" alt="Two friendly dogs calmly sniffing near each other on a shaded trail" loading="lazy" decoding="async"><figcaption>AI generated image, made for SnoutsWise. It is an illustration in a photo style, not a real photograph of a real event. <a href="{R}credits/">About our images</a></figcaption></figure>
+<h2>What a comfortable greeting looks like</h2>
+<p>Watch the whole animal, not just the nose. Relaxed dogs often move with loose bodies, approach without prolonged stiffness, and can break away naturally. A brief sniff followed by disengagement is perfectly normal. Neither dog needs to remain still for an extended inspection.</p>
+<p>An uneasy dog may freeze, tuck its tail, pin its ears, move away, or otherwise look tense. The AKC advises giving dogs space when they show discomfort. Do not hold a reluctant dog in place to complete a greeting. A calm departure is a successful interaction too. Dogs do not need to greet every dog they encounter to enjoy a walk.</p>
+<h2>Why leashes can complicate greetings</h2>
+<p>Leashes are essential for safety in many places, but they also limit movement. A dog that would normally curve away or leave may feel trapped if another dog approaches directly. Tension from a handler can further change the interaction. This is why allowing unrestricted face-to-face contact with unfamiliar dogs on a narrow sidewalk is not always wise.</p>
+<p>Ask the other handler before allowing a greeting. Keep enough distance for both dogs to choose whether to approach. Avoid tightening the leash to pull a dog into contact. If either animal becomes stiff, vocal, or uncomfortable, create distance calmly. The purpose of a walk is not to collect as many greetings as possible; it is to provide a safe, enriching experience.</p>
+<h2>When sniffing is not the real problem</h2>
+<p>Ordinary investigative sniffing is not a sign of bad manners or dominance. However, a dog that persistently harasses another animal despite clear avoidance signals needs gentle interruption and management. Similarly, scooting, excessive licking around the rear, swelling, or a strong new odor from your own dog may signal an anal-sac or skin problem rather than a social behavior issue.</p>
+<p>A veterinarian should evaluate suspected discomfort or disease. For training concerns, a qualified reward-based trainer can help with calm approaches and disengagement. Give dogs opportunities to explore scents on walks, but do not use forced greetings as a substitute for social confidence.</p>
+<h2>Helping a dog enjoy sniffing without forced greetings</h2>
+<p>A dog does not have to meet another dog to enjoy using its nose. Sniffing grass, trees, and paths can be an enriching part of a walk. The AKC describes sniff walks as an opportunity for dogs to explore their surroundings through scent. Giving a dog time to investigate a safe patch of ground can be more useful than insisting on an uncomfortable greeting.</p>
+<p>For dogs that become excited around others, practice moving away calmly and rewarding attention to the handler. Start at a distance where the dog can remain relaxed. Progress depends on the individual, and a trainer can help when barking or lunging is persistent. The goal is not to suppress curiosity; it is to allow curiosity without making other animals feel cornered.</p>
+""",
+         faq=[('Is butt sniffing a sign of dominance?', 'Not by itself. It is a normal scent-investigation behavior.'), ('Should I let my dog sniff every dog?', 'No. Both dogs should be comfortable, and greetings should be optional.'), ('What if the other dog freezes?', 'Create space calmly and end the greeting.'), ('Can anal-sac problems cause a strong smell?', 'Yes. If your dog is scooting, licking excessively, or appears uncomfortable, consult a veterinarian.')],
+         sources=src('akc_sniff_butts', 'akc_sniff_walks', 'akc_greet_strange'),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/can-dogs-sense-heat-with-their-nose.html", "Can dogs sense heat with their nose?")],
+         published="2026-11-09")
+
+
+
+
     # blog index
     items = "".join('<article class="card blogcard">%s<h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (thumb(s, "{R}"), s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
     page("blog/index.html", "Dog Facts Explained by Research | SnoutsWise Blog",
          "Dog facts explained by research: why dogs tilt their heads, eat grass, yawn and dream, and whether they like baby talk or see color, answered with sources.",
          items, h1="SnoutsWise blog", kind="webpage",
          lead="Each article answers one dog question directly at the top, then explains the detail and the sources behind it.",
-         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-11-06")
+         crumbs=[("index.html", "Home"), ("blog/index.html", "Blog")], nav="blog/", updated="2026-11-09")
