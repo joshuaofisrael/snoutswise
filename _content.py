@@ -104,7 +104,11 @@ S = {
  "akc_stress": ("How Can You Tell if Your Dog Is Stressed?", "American Kennel Club", "https://www.akc.org/expert-advice/health/how-to-tell-if-your-dog-is-stressed/"),
  "akc_sniff_butts": ('Why do dogs sniff butts?', "American Kennel Club", 'https://www.akc.org/expert-advice/training/why-do-dogs-sniff-butts/'),
  "akc_sniff_walks": ('Why sniff walks are so good for your dog', "American Kennel Club", 'https://www.akc.org/expert-advice/health/is-sniffing-a-dog-s-version-of-social-media/'),
- "akc_greet_strange": ("How to greet a dog you don't know", "American Kennel Club", 'https://www.akc.org/expert-advice/advice/how-to-safely-greet-a-strange-dog/')
+ "akc_greet_strange": ("How to greet a dog you don't know", "American Kennel Club", 'https://www.akc.org/expert-advice/advice/how-to-safely-greet-a-strange-dog/'),
+ "pmc_olfaction_review": ('The Role of Olfaction in Dogs: Evolution, Biology, and Human-Oriented Work', 'PubMed Central', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12897092/'),
+ "craven2010": ('Craven BA, Paterson EG, Settles GS (2010). The fluid dynamics of canine olfaction: unique nasal airflow patterns as an explanation of macrosmia. Journal of the Royal Society Interface 7(47): 933-943. DOI 10.1098/rsif.2009.0490', 'Journal of the Royal Society Interface', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2871809/'),
+ "vca_sniff_walks": ('Mental Stimulation for Dogs: Sniffing Walks', 'VCA Animal Hospitals', 'https://vcahospitals.com/resources/preventive-dog/weight-exercise/sniffing-walks-for-dogs'),
+ "fountain2025": ('Fountain J, Fernandez EJ, McWhorter T, Hazel S (2025). The value of sniffing: a scoping review of scent activities for canines. Applied Animal Behaviour Science 282. DOI 10.1016/j.applanim.2024.106485', 'Applied Animal Behaviour Science', 'https://doi.org/10.1016/j.applanim.2024.106485'),
 }
 import datetime
 def nice(d):
@@ -149,6 +153,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
+<li><a href="{R}blog/why-do-dogs-sniff-so-much-on-walks.html">Why do dogs sniff so much on walks? Let them</a></li>
 <li><a href="{R}blog/why-do-dogs-sniff-each-others-butts.html">Why do dogs sniff each other's butts? It is a scent greeting</a></li>
 <li><a href="{R}blog/why-do-dogs-circle-before-lying-down.html">Why do dogs circle before lying down? The evidence is thin</a></li>
 <li><a href="{R}blog/do-dogs-prefer-praise-or-food.html">Do dogs prefer praise or food? Most work harder for treats</a></li>
@@ -1937,6 +1942,36 @@ def blog(page):
          sources=src('akc_sniff_butts', 'akc_sniff_walks', 'akc_greet_strange'),
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/can-dogs-sense-heat-with-their-nose.html", "Can dogs sense heat with their nose?")],
          published="2026-11-09")
+
+
+
+
+    # evergreen 11 Nov 2026: why do dogs sniff so much on walks
+    post(page, 'why-do-dogs-sniff-so-much-on-walks', 'Why Do Dogs Sniff So Much on Walks? Let Them, Here Is Why | SnoutsWise',
+         'Dogs sniff on walks because scent is how they read the world. What the science says about their noses and why sniff breaks help.',
+         'Why do dogs sniff so much on walks?',
+         'Dogs sniff on walks because smell is their main way of reading the world. With roughly 125 to 300 million scent receptors, against about 5 to 6 million in people, a lamppost can tell a dog who passed by and when.',
+         """
+
+<h2>A nose built for information</h2>
+<p>A recent review of canine olfaction reports that dogs have between 125 and 300 million olfactory receptors, while humans have only about 5 million. VCA Animal Hospitals says the figure is up to 300 million depending on the breed. Dogs also have a complex system of nasal turbinates, thin bony structures in the nose, that help process air.</p>
+<p>In 2009 Craven, Paterson and Settles used MRI scans and airflow modelling to show that sniffing sends odor samples into each nostril separately, which may help a dog compare odor strength and work out where a smell is coming from. The same paper gives dogs' detection of odor concentrations at 1 to 2 parts per trillion.</p>
+
+<h2>Why sniffing matters on a walk</h2>
+<p>To a dog, the walk is not just exercise. VCA describes scent as how dogs learn who or what is around, and says a dog can pick apart the individual smells that make up a general odor, which lets it work out who has recently passed through an area. When your dog stops at a patch of grass, it is collecting that information.</p>
+<p>VCA also says sniffing walks give dogs mental enrichment and that letting a dog stop to sniff can improve its mental wellbeing.</p>
+
+<h2>What research still has to learn</h2>
+<p>A 2025 scoping review in Applied Animal Behaviour Science looked at 27 studies of scent activities. It found plenty of work on working dogs' performance but a notable gap in research on how scent tasks affect the behavior, physiology and welfare of dogs themselves. In other words, the idea that sniffing is good for dogs is widely accepted by vets, but the direct evidence is still being built.</p>
+
+<h2>How to give your dog a better sniff walk</h2>
+<p>Let your dog choose the pace sometimes and pause when it stops to sniff, as VCA suggests. Use a long, comfortable lead where it is safe. Keep your dog away from litter, spilled food, dead animals and anything that might be toxic, and call it off if it starts eating something. For greetings between dogs, see why <a href="../blog/why-do-dogs-sniff-each-others-butts.html">dogs sniff each other's rear ends</a>.</p>
+
+""",
+         faq=[('Why does my dog stop to sniff every few steps?', 'Scent is the main way dogs gather information. Each stop is a chance to learn who has passed by.'), ('Is it okay to let my dog sniff on walks?', 'Yes, in safe places. Vets describe sniffing walks as mental enrichment, but keep your dog from eating or touching hazards.'), ('How many scent receptors do dogs have?', 'Estimates range from about 125 to 300 million, compared with roughly 5 to 6 million in people. The number varies by breed.'), ('Should I pull my dog away from smells?', 'Short pulls to keep a dog safe are fine, but constant pulling stops the dog from using its nose. Build in sniff breaks.')],
+         sources=src('pmc_olfaction_review', 'craven2010', 'vca_sniff_walks', 'fountain2025'),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-sniff-each-others-butts.html", "Why do dogs sniff each other's butts?"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/can-dogs-sense-heat-with-their-nose.html", "Can dogs sense heat with their nose?")],
+         published="2026-11-11")
 
 
 
