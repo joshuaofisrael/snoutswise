@@ -42,6 +42,7 @@ AI = {
     "blog/why-do-dogs-howl-at-sirens.html": ("ai-dog-howling", "A mixed-breed dog outdoors with its head tilted up mid howl"),
     # registration only (mid-body ears image for the howl post)
     "blog/why-do-dogs-howl-at-sirens.html#ears": ("ai-dog-ears-up", "A small terrier with ears perked up and its head cocked, sitting on a rug indoors"),
+    "blog/why-do-dogs-get-the-zoomies.html": ("ai-dog-tail-wag", "A black and white border collie running across a park lawn with its tail in mid wag"),
     "blog/why-do-dogs-sniff-so-much-on-walks.html": ("ai-dogs-trail-sniff", 'Two friendly dogs calmly sniffing near each other on a shaded trail'),
     "blog/why-do-dogs-sniff-each-others-butts.html": ("ai-dogs-greeting-sniff", "Two relaxed dogs greeting nose to tail on a grassy park path"),
     # registration only (mid-body trail image for the sniffing post)
