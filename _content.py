@@ -109,6 +109,9 @@ S = {
  "craven2010": ('Craven BA, Paterson EG, Settles GS (2010). The fluid dynamics of canine olfaction: unique nasal airflow patterns as an explanation of macrosmia. Journal of the Royal Society Interface 7(47): 933-943. DOI 10.1098/rsif.2009.0490', 'Journal of the Royal Society Interface', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2871809/'),
  "vca_sniff_walks": ('Mental Stimulation for Dogs: Sniffing Walks', 'VCA Animal Hospitals', 'https://vcahospitals.com/resources/preventive-dog/weight-exercise/sniffing-walks-for-dogs'),
  "fountain2025": ('Fountain J, Fernandez EJ, McWhorter T, Hazel S (2025). The value of sniffing: a scoping review of scent activities for canines. Applied Animal Behaviour Science 282. DOI 10.1016/j.applanim.2024.106485', 'Applied Animal Behaviour Science', 'https://doi.org/10.1016/j.applanim.2024.106485'),
+ "cornell_zoomies": ('What are zoomies?', 'Cornell University College of Veterinary Medicine', 'https://www.vet.cornell.edu/departments-centers-and-institutes/canine-health-center/health-info/what-are-zoomies'),
+ "petmd_zoomies": ('Why do dogs get the zoomies?', 'PetMD', 'https://www.petmd.com/dog/behavior/why-do-dogs-get-the-zoomies'),
+ "kcra_zoomies": ('Expert explains the science behind dog zoomies', 'KCRA (Hearst Television)', 'https://www.kcra.com/article/expert-explains-science-behind-dog-zoomies/61130355')
 }
 import datetime
 def nice(d):
@@ -153,6 +156,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
+<li><a href="{R}blog/why-do-dogs-get-the-zoomies.html">Why do dogs get the zoomies? It is a burst of pent up energy</a></li>
 <li><a href="{R}blog/why-do-dogs-sniff-so-much-on-walks.html">Why do dogs sniff so much on walks? Let them</a></li>
 <li><a href="{R}blog/why-do-dogs-sniff-each-others-butts.html">Why do dogs sniff each other's butts? It is a scent greeting</a></li>
 <li><a href="{R}blog/why-do-dogs-circle-before-lying-down.html">Why do dogs circle before lying down? The evidence is thin</a></li>
@@ -1942,6 +1946,50 @@ def blog(page):
          sources=src('akc_sniff_butts', 'akc_sniff_walks', 'akc_greet_strange'),
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/can-dogs-sense-heat-with-their-nose.html", "Can dogs sense heat with their nose?")],
          published="2026-11-09")
+
+
+
+
+    # evergreen 12 Nov 2026: why do dogs get the zoomies
+    post(page, 'why-do-dogs-get-the-zoomies', 'Why Do Dogs Get the Zoomies? FRAPs Explained | SnoutsWise',
+         'Zoomies, or frenetic random activity periods (FRAPs), are normal bursts of running that release pent up energy or stress. When they happen and how to keep them safe.',
+         'Why do dogs get the zoomies?',
+         'Dogs get the zoomies to burn off pent up energy, excitement or stress. Vets call these sudden laps of wild running frenetic random activity periods, or FRAPs. They are normal, most common in puppies and young dogs, and usually over within a few minutes.',
+         """
+
+<h2>What the zoomies are</h2>
+<p>Cornell University College of Veterinary Medicine describes the zoomies as a dog suddenly getting a wild look, tucking its rear and racing laps around the house or yard. Owners have many nicknames for it, but the scientific term is frenetic random activity periods, usually shortened to FRAPs.</p>
+<p>PetMD describes a typical episode as running in big circles in a hunched, low position, sometimes mixed with spins and play bows, where the dog drops its elbows and raises its rear. Then it often stops as suddenly as it started.</p>
+
+<h2>Why dogs do it</h2>
+<p>Nobody knows the exact cause. Dr. Pamela J. Perry, a behavior resident quoted by Cornell, says there is no known specific cause of FRAPs, but they appear to be a way to release pent up energy or perhaps to relieve stress. A dog that has been home alone all day with nothing to do may need to zoom around to use up that energy. PetMD gives the same explanation: the assumption is that zoomies are a quick way to let off excess energy, excitement, or even stress and nervous energy.</p>
+
+<h2>Common triggers</h2>
+<p>Cornell lists times when FRAPs often happen:</p>
+<ul>
+<li>When you get home from work</li>
+<li>Late in the evening</li>
+<li>During play</li>
+<li>During training, if the dog becomes overstimulated</li>
+<li>After pooping</li>
+<li>When something exciting happens</li>
+</ul>
+<p>PetMD adds a few more, including the end of a bath or grooming session, keep away games, and dogs that are overtired or have not had enough exercise for body and brain. Elsa Stuart, a veterinarian quoted by KCRA, says FRAPs often happen at transition times in the day, such as when an owner arrives home or a guest comes over.</p>
+
+<h2>Which dogs get them</h2>
+<p>Cornell says FRAPs are most common in puppies and young dogs, but many dogs keep getting the zoomies now and then for their whole lives. Some owners can even set off an episode with a certain kind of play or a particular sound.</p>
+
+<h2>Happy zoomies or a sign of a problem?</h2>
+<p>Most zoomies are simply play. Stuart told KCRA that a loose, wiggly, carefree dog is having a happy zoomie. She said pinned back ears, wide worried eyes or a tense body can instead point to anxiety or pain. If your dog's running looks frightened rather than playful, or comes with stumbling or other unusual signs, talk to your vet.</p>
+
+<h2>How to keep zoomies safe</h2>
+<p>You do not need to stop normal zoomies, but you can make them safer. Cornell advises keeping a zooming dog away from stairs, slippery floors, obstacles and roads. Grass is the best footing for hard running, with carpet and packed dirt as good options. Hard floors, ice, gravel and sand make slips and falls more likely. If your dog zooms because it is bored, more walks, play and sniffing time can help; see why <a href="../blog/why-do-dogs-sniff-so-much-on-walks.html">sniff breaks on walks</a> matter.</p>
+
+""",
+         faq=[('Are zoomies normal in dogs?', 'Yes. Vets describe frenetic random activity periods as normal behavior, especially in puppies and young dogs.'), ('What does FRAP stand for?', 'Frenetic random activity period, the scientific term for the zoomies.'), ('Why does my dog get the zoomies after a bath?', 'PetMD lists the end of a bath or grooming session as a common trigger, probably as a release of stress and energy.'), ('Should I stop my dog having the zoomies?', 'Usually not. Move your dog to safe footing such as grass, away from stairs, slippery floors and roads.'), ('When are zoomies a concern?', 'If your dog looks anxious, tense or in pain while running, or stumbles or falls, contact your vet.')],
+         sources=src('cornell_zoomies', 'petmd_zoomies', 'kcra_zoomies'),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("blog/why-do-dogs-sniff-so-much-on-walks.html", "Why do dogs sniff so much on walks?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("health.html", "Dog health basics")],
+         published="2026-11-12")
 
 
 
