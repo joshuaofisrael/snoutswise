@@ -111,7 +111,11 @@ S = {
  "fountain2025": ('Fountain J, Fernandez EJ, McWhorter T, Hazel S (2025). The value of sniffing: a scoping review of scent activities for canines. Applied Animal Behaviour Science 282. DOI 10.1016/j.applanim.2024.106485', 'Applied Animal Behaviour Science', 'https://doi.org/10.1016/j.applanim.2024.106485'),
  "cornell_zoomies": ('What are zoomies?', 'Cornell University College of Veterinary Medicine', 'https://www.vet.cornell.edu/departments-centers-and-institutes/canine-health-center/health-info/what-are-zoomies'),
  "petmd_zoomies": ('Why do dogs get the zoomies?', 'PetMD', 'https://www.petmd.com/dog/behavior/why-do-dogs-get-the-zoomies'),
- "kcra_zoomies": ('Expert explains the science behind dog zoomies', 'KCRA (Hearst Television)', 'https://www.kcra.com/article/expert-explains-science-behind-dog-zoomies/61130355')
+ "kcra_zoomies": ('Expert explains the science behind dog zoomies', 'KCRA (Hearst Television)', 'https://www.kcra.com/article/expert-explains-science-behind-dog-zoomies/61130355'),
+ 'vca_eyeshine': ("Why do my pet's eyes glow in the dark?", 'VCA Animal Hospitals', 'https://vcahospitals.com/resources/conditions-dog/eyes-ears-nose/why-do-pet-s-eyes-glow-in-the-dark'),
+ 'acvo_eyeshine': ("Why do my dog's eyes shine at night?", 'American College of Veterinary Ophthalmologists', 'https://www.acvo.org/tips-treatments-tricks/why-do-my-dogs-eyes-shine-at-night'),
+ 'stvo_eyeshine': ('The ghostly green glow', 'South Texas Veterinary Ophthalmology', 'https://stvopets.com/articles/eyes-shine/'),
+ 'uwm_night_vision': ('Curiosities: How well do dogs see at night?', 'University of Wisconsin Madison News', 'https://news.wisc.edu/curiosities-how-well-do-dogs-see-at-night/')
 }
 import datetime
 def nice(d):
@@ -156,6 +160,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
+<li><a href="{R}blog/why-do-dogs-eyes-glow-in-the-dark.html">Why do dogs' eyes glow in the dark? It is a mirror layer called the tapetum</a></li>
 <li><a href="{R}blog/why-do-dogs-get-the-zoomies.html">Why do dogs get the zoomies? It is a burst of pent up energy</a></li>
 <li><a href="{R}blog/why-do-dogs-sniff-so-much-on-walks.html">Why do dogs sniff so much on walks? Let them</a></li>
 <li><a href="{R}blog/why-do-dogs-sniff-each-others-butts.html">Why do dogs sniff each other's butts? It is a scent greeting</a></li>
@@ -1946,6 +1951,42 @@ def blog(page):
          sources=src('akc_sniff_butts', 'akc_sniff_walks', 'akc_greet_strange'),
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/can-dogs-smell-fear.html", "Can dogs smell fear?"), ("blog/why-do-dogs-wag-their-tails.html", "Why do dogs wag their tails?"), ("blog/can-dogs-sense-heat-with-their-nose.html", "Can dogs sense heat with their nose?")],
          published="2026-11-09")
+
+
+
+
+    # evergreen 13 Nov 2026: why do dogs eyes glow in the dark
+    post(page, 'why-do-dogs-eyes-glow-in-the-dark', "Why Do Dogs' Eyes Glow in the Dark? The Tapetum Explained | SnoutsWise",
+         'Dog eyes glow because a mirror like layer called the tapetum lucidum reflects light. Why color varies, why some dogs get red eye, and when to see a vet.',
+         "Why do dogs' eyes glow in the dark?",
+         "Dogs' eyes glow because of the tapetum lucidum, a mirror like layer at the back of the eye that bounces light back through the retina for a second chance to be detected. It helps dogs see in dim light, and it is what lights up when a flashlight or camera flash hits their eyes in the dark.",
+         """
+
+<h2>What the tapetum lucidum is</h2>
+<p>VCA Animal Hospitals explains that the glow comes from incoming light reflecting off the tapetum lucidum, Latin for shining layer. It is a layer of reflective cells that acts like a mirror and sends light back toward the retina. The American College of Veterinary Ophthalmologists says it sits just in front of the blood filled layer called the choroid and reflects light back onto the retina a second time to amplify light in dark conditions.</p>
+<p>South Texas Veterinary Ophthalmology describes it as giving the retina's photoreceptors a second chance to register light that has already entered the eye. It adds that most dogs have a partial tapetum that covers only about half of the back of the eye.</p>
+
+<h2>Why dogs have it</h2>
+<p>VCA says the tapetum is important for animals active at twilight or at night, and that dogs and cats share it with horses, cows, coyotes and owls. Brighter light in the retina helps a dog notice changes in light and movement when it is dark.</p>
+<p>A University of Wisconsin Madison veterinary ophthalmologist, Dr. Miller, told the university's news service that dogs can probably see in light about five times dimmer than people can. Other dog adaptations include a larger pupil and more of the dim light cells, called rods, in the center of the retina. He also notes a trade off: the tapetum scatters some light, which makes a dog's daytime detail vision blurrier than ours, roughly 20/80 compared with a person's 20/20.</p>
+
+<h2>Why the glow comes in different colors</h2>
+<p>VCA says a dog's eyeshine can look blue, green, orange, red or yellow, depending on the amount of pigment in the retina, substances in the tapetum and the dog's age. South Texas Veterinary Ophthalmology says most dogs have a yellow to green tapetum, while some breeds, notably Schnauzers, can have a blue one. Puppies' eyeshine can change color during their first months of life.</p>
+
+<h2>Why some dogs get red eye in photos</h2>
+<p>Some dogs have no tapetum at all. The American College of Veterinary Ophthalmologists says this is most common in dogs with blue eyes. With no tapetum to create a colored reflection, a camera flash lights up the red blood vessels at the back of the eye, producing the same red eye effect people get. South Texas Veterinary Ophthalmology gives the Siberian Husky as a breed that tends to have none.</p>
+
+<h2>When a change in the glow matters</h2>
+<p>Both VCA and the American College of Veterinary Ophthalmologists say to have your dog's eyes checked if the glow gets duller or brighter over time, or if one eye looks different from the other. That can be a sign of eye disease. Call your vet if you also see cloudiness, redness, squinting or bumping into things.</p>
+
+<h2>Tips for photos without the glow</h2>
+<p>South Texas Veterinary Ophthalmology suggests taking pictures in bright ambient light so you do not need a flash, because the pupil will be smaller and give the flash a smaller target. If you must use flash, shoot from a slight angle rather than straight at the eyes. See also our guide on <a href="../blog/can-dogs-see-color.html">whether dogs can see color</a>.</p>
+
+""",
+         faq=[("Why do dogs' eyes glow in the dark?", 'A reflective layer called the tapetum lucidum bounces light back through the retina, giving it a second chance to detect the light. That reflection is the glow.'), ("Why do some dogs' eyes look red in photos?", 'Dogs with no tapetum, most often blue eyed dogs, show the red blood vessels at the back of the eye instead of a colored glow.'), ("What color should my dog's eyeshine be?", 'It varies. Yellow and green are most common, but blue, orange and other colors occur. Color can change in puppies.'), ('Can dogs see in the dark?', 'Not in total darkness, but a university veterinary ophthalmologist estimates dogs can see in light about five times dimmer than people can.'), ("When should I worry about my dog's eyeshine?", 'If it becomes duller or brighter over time, or differs between the two eyes, ask your vet to examine the eyes.')],
+         sources=src('vca_eyeshine', 'acvo_eyeshine', 'stvo_eyeshine', 'uwm_night_vision'),
+         related=[('blog/can-dogs-see-color.html', 'Can dogs see color?'), ('blog/why-do-dogs-tilt-their-heads.html', 'Why do dogs tilt their heads?'), ('health.html', 'Dog health basics'), ('behavior.html', 'Dog behavior')],
+         published="2026-11-13")
 
 
 
