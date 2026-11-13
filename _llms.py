@@ -53,6 +53,7 @@ The content is general education, not veterinary advice; readers are told to con
 - [Can dogs sense heat with their nose? A 2020 study says yes]({u}blog/can-dogs-sense-heat-with-their-nose.html)
 - [Do dogs recognize themselves in a mirror? Not by sight, but maybe by smell]({u}blog/do-dogs-recognize-themselves-in-mirror.html)
 - [Why do dogs wag their tails? It signals arousal, not just happiness]({u}blog/why-do-dogs-wag-their-tails.html)
+- [Why do dogs' eyes glow in the dark? The tapetum explained]({u}blog/why-do-dogs-eyes-glow-in-the-dark.html): the tapetum lucidum reflects light behind the retina, causing eyeshine; colors vary; dogs without a tapetum show red eye; see a vet if the glow changes. (VCA, ACVO, South Texas Veterinary Ophthalmology, UW Madison)
 - [Why do dogs get the zoomies? FRAPs explained]({u}blog/why-do-dogs-get-the-zoomies.html): normal bursts of running that release pent up energy or stress; common triggers and safe footing (Cornell CVM, PetMD)
 - [How do dogs drink water? A fast tongue pulls up a column of water]({u}blog/how-do-dogs-drink-water.html)
 - [News: senior dogs with dementia show early Alzheimer's-like brain changes]({u}blog/dog-dementia-brain-study.html)
