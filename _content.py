@@ -111,6 +111,8 @@ S = {
  "fountain2025": ('Fountain J, Fernandez EJ, McWhorter T, Hazel S (2025). The value of sniffing: a scoping review of scent activities for canines. Applied Animal Behaviour Science 282. DOI 10.1016/j.applanim.2024.106485', 'Applied Animal Behaviour Science', 'https://doi.org/10.1016/j.applanim.2024.106485'),
  "cornell_zoomies": ('What are zoomies?', 'Cornell University College of Veterinary Medicine', 'https://www.vet.cornell.edu/departments-centers-and-institutes/canine-health-center/health-info/what-are-zoomies'),
  "petmd_zoomies": ('Why do dogs get the zoomies?', 'PetMD', 'https://www.petmd.com/dog/behavior/why-do-dogs-get-the-zoomies'),
+ "aspca_sepanx": ('Separation anxiety', 'ASPCA', 'https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety'),
+ "aspca_older": ('Behavior problems in older dogs', 'ASPCA', 'https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/behavior-problems-older-dogs'),
  "kcra_zoomies": ('Expert explains the science behind dog zoomies', 'KCRA (Hearst Television)', 'https://www.kcra.com/article/expert-explains-science-behind-dog-zoomies/61130355'),
  'vca_eyeshine': ("Why do my pet's eyes glow in the dark?", 'VCA Animal Hospitals', 'https://vcahospitals.com/resources/conditions-dog/eyes-ears-nose/why-do-pet-s-eyes-glow-in-the-dark'),
  'acvo_eyeshine': ("Why do my dog's eyes shine at night?", 'American College of Veterinary Ophthalmologists', 'https://www.acvo.org/tips-treatments-tricks/why-do-my-dogs-eyes-shine-at-night'),
@@ -160,6 +162,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
+<li><a href="{R}blog/dog-separation-anxiety-what-helps.html">Dog separation anxiety: what helps? Look for a pattern, then go slowly</a></li>
 <li><a href="{R}blog/why-do-dogs-eyes-glow-in-the-dark.html">Why do dogs' eyes glow in the dark? It is a mirror layer called the tapetum</a></li>
 <li><a href="{R}blog/why-do-dogs-get-the-zoomies.html">Why do dogs get the zoomies? It is a burst of pent up energy</a></li>
 <li><a href="{R}blog/why-do-dogs-sniff-so-much-on-walks.html">Why do dogs sniff so much on walks? Let them</a></li>
@@ -2064,6 +2067,37 @@ def blog(page):
 
 
 
+
+    # evergreen 16 Nov 2026: dog separation anxiety
+    post(page, 'dog-separation-anxiety-what-helps', 'Dog Separation Anxiety: Signs, Safe Training and When to Get Help' + ' | SnoutsWise',
+         'Understand dog separation anxiety, how to distinguish it from boredom and how to build calm alone-time with professional guidance.',
+         'Dog separation anxiety: what helps?',
+         'Separation anxiety is a distress response to being apart from a person, not spite or poor training. Look for a pattern of distress soon after you leave, rule out medical causes with your vet, and build tolerable absences very gradually with professional help for moderate or severe cases.',
+         """
+
+<h2>What separation anxiety actually means</h2>
+<p>A dog that dislikes being alone is not necessarily being stubborn, spiteful or badly trained. Separation anxiety describes distress associated with being apart from an attachment figure. The <a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety">ASPCA guide</a> describes behaviours such as persistent barking, pacing, attempts to escape, destruction around exits and indoor elimination during absences. Crucially, the same behaviour can have different causes. A chewed cushion might reflect normal puppy exploration; barking might be a reaction to sounds outside. Proper treatment starts with identifying the trigger, not simply finding a stronger lock or a more durable sofa. For dogs that injure themselves trying to escape, prompt professional assessment is especially important. This is a welfare issue rather than a contest between an owner and a misbehaving pet.</p>
+
+<h2>Look for a pattern, not one incident</h2>
+<p>A short video of your dog after you leave can be more informative than the damage you discover on returning. Look for how soon distress starts, whether it subsides, and whether the dog rests, eats or remains on alert. Repeated howling, frantic scratching and drooling can support concern about separation-related distress. A dog that becomes excited at coat and key routines before the owner leaves may have learned to anticipate the departure. Write down the time of day, duration, preceding exercise and behaviour. These observations can help a veterinarian or behaviour specialist assess severity and identify other possibilities. Avoid assuming that a dog is fine because the barking stops: some distressed animals become quiet but continue pacing or freezing. Equally, one isolated bark is not sufficient evidence of a disorder.</p>
+
+<h2>Rule out illness and other behaviour causes</h2>
+<p>Medical causes must be considered, particularly when a previously settled dog develops new signs. Urinary accidents can arise from bladder, kidney or endocrine problems rather than separation anxiety. Older dogs may experience pain, sensory changes or cognitive issues that alter behaviour. The ASPCA discusses these possibilities in its <a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety">separation anxiety guidance</a> and <a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/behavior-problems-older-dogs">senior dog guide</a>. A veterinarian can assess health and recommend appropriate next steps. Also ask whether the dog is bored, under-exercised, frightened by neighbourhood noise or simply not yet house-trained. The treatment for a medical problem differs from the treatment for fear of isolation. Punishment after an accident will not answer any of these questions and can increase an anxious animal's distress.</p>
+
+<h2>Build tolerable absences very gradually</h2>
+<p>For true separation anxiety, the core idea is to practise alone-time that stays below the dog's fear threshold. A departure lasting a few seconds may be challenging enough at first. Increase the duration only when the dog remains relaxed, and go back to shorter sessions if signs of distress appear. Some dogs also need practice with departure cues: picking up keys or putting on shoes without actually leaving. Over repeated calm experiences, these signals can become less threatening. The <a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety">ASPCA</a> describes graduated departures and desensitisation, but stresses that moderate or severe cases should be supervised by a trained professional. Do not use a preset schedule that forces every dog to endure progressively longer panic. The dog's response, rather than a timer alone, determines whether a step was successful.</p>
+
+<h2>Food puzzles, exercise and safe management</h2>
+<p>Activity and enrichment can support a treatment plan. Sniffing walks, play, suitable chews and food-dispensing toys may help a dog settle. For a mildly anxious dog, giving a special food toy around a short departure can create a pleasant association. A severely distressed dog may refuse food entirely; that is useful information, not an invitation to withhold meals. While treatment is underway, try to arrange a trusted sitter, suitable daycare or another humane plan so the dog is not repeatedly left to panic. Crates are not automatically a solution. Some dogs find them comforting after positive training; others attempt desperate escapes and may injure themselves. Observe the individual. The objective is to keep the animal safe while it learns, not to suppress visible distress.</p>
+
+<h2>When professional treatment or medication helps</h2>
+<p>Ask a veterinarian for help if distress is severe, sudden, worsening or associated with injury. A board-certified veterinary behaviourist or suitably experienced positive-reinforcement behaviour practitioner can help design an individual programme. Medication may be appropriate in some cases, alongside behaviour modification, but prescribing is a veterinary decision. Never give human anxiety medication or improvised sedatives without veterinary direction. A practical treatment plan will consider household work schedules, the dog's health, ability to tolerate care from others and the speed at which calm absences can be built. The ASPCA explicitly warns against scolding and punishment: anxious behaviour reflects distress rather than revenge. Progress is measured by the dog's comfort during departures, not by the absence of complaints from neighbours alone. Keep a written record of comfortable departures and setbacks, including what the dog did rather than simply how long the owner was away. If a training change consistently increases distress, stop advancing and review the plan with the professional supporting the case. A workable plan protects welfare during ordinary life, even when progress is slow. Family members should agree on the approach so that one person does not use fear-based methods while another is building positive associations.</p>
+
+""",
+         faq=[('Will my dog grow out of separation anxiety?', 'Do not assume so; seek assessment if distress continues.'), ('Does another dog cure it?', "Not reliably, because the fear may be tied to a particular person's absence."), ('Can a crate make it worse?', 'Yes, if confinement causes panic.'), ('Should I ignore severe barking?', 'No; change the plan and seek qualified help.'), ('Can medication help?', 'Sometimes, with veterinary supervision and behavioural treatment.')],
+         sources=src('aspca_sepanx', 'aspca_older'),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("care.html", "Dog care basics"), ("blog/puppy-socialization-window.html", "The puppy socialization window")],
+         published="2026-11-16")
 
     # blog index
     items = "".join('<article class="card blogcard">%s<h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (thumb(s, "{R}"), s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
