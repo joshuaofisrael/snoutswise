@@ -4,6 +4,9 @@ import html
 e = lambda s: html.escape(s, quote=True)
 W, H = 1280, 720
 SOURCE_LABEL = {"blog/dog-separation-anxiety-what-helps.html", "blog/why-do-dogs-eyes-glow-in-the-dark.html"}  # small Source link to the image policy page (13 Nov 2026 rule)
+SOURCE_LINK_TEXT = {
+    "blog/why-does-my-dog-stare-at-me.html": "Source: AI-generated image",
+}
 AI = {
     "blog/why-do-dogs-pant.html": ("ai-dog-panting", "A golden retriever sitting on a porch with its mouth open and tongue out"),
     "blog/why-do-dogs-lick-people.html": ("ai-dog-licking", "A beagle gently licking a person's hand outdoors"),
@@ -45,6 +48,7 @@ AI = {
     "blog/why-do-dogs-howl-at-sirens.html#ears": ("ai-dog-ears-up", "A small terrier with ears perked up and its head cocked, sitting on a rug indoors"),
     "blog/why-do-dogs-eyes-glow-in-the-dark.html": ("ai-dog-eye-closeup", "Close up of a dog's amber eye with fur around it"),
     "blog/dog-separation-anxiety-what-helps.html": ("ai-dog-living-room", "A shaggy terrier mix lying on a woven rug in a sunlit living room and looking at the camera"),
+    "blog/why-does-my-dog-stare-at-me.html": ("ai-dog-study", "A black and white border collie sitting upright on a grey mat in a bright room, looking toward the camera"),
     "blog/why-do-dogs-get-the-zoomies.html": ("ai-dog-tail-wag", "A black and white border collie running across a park lawn with its tail in mid wag"),
     "blog/why-do-dogs-sniff-so-much-on-walks.html": ("ai-dogs-trail-sniff", 'Two friendly dogs calmly sniffing near each other on a shaded trail'),
     "blog/why-do-dogs-sniff-each-others-butts.html": ("ai-dogs-greeting-sniff", "Two relaxed dogs greeting nose to tail on a grassy park path"),
@@ -64,7 +68,9 @@ def figure(path, R):
     s, alt = AI[path]
     return ('<figure class="photo ai"><img src="{R}img/{s}.webp" width="{w}" height="{h}" alt="{a}" loading="lazy" decoding="async">'
             '<figcaption>AI generated image, made for SnoutsWise. It is an illustration in a photo style, not a real photograph of a real event. '
-            '<a href="{R}credits/">{L}</a></figcaption></figure>').format(R=R, s=s, w=W, h=H, a=e(alt), L=('Source' if path in SOURCE_LABEL else 'About our images'))
+            '<a href="{R}credits/">{L}</a></figcaption></figure>').format(
+                R=R, s=s, w=W, h=H, a=e(alt),
+                L=(SOURCE_LINK_TEXT.get(path) or ("Source" if path in SOURCE_LABEL else "About our images")))
 
 def thumb(path, R, w=320, h=180):
     """Small lazy-loaded card/list thumbnail using the same hero image as figure(), no caption."""

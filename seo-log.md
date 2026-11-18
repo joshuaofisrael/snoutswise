@@ -205,3 +205,6 @@ Built as a sibling of SnakeWise (same plain static HTML approach, relative links
 
 ## 2026-11-16 — Evergreen: Dog separation anxiety, what helps?
 - Published /blog/dog-separation-anxiety-what-helps.html (ChatGPT draft, ASPCA pages checked 16 Nov 2026; wording aligned to what ASPCA says: counterconditioning for mild cases, desensitization for moderate/severe, vet first, no punishment) with 1 reused AI image (ai-dog-living-room, Source link to credits), blog index/homepage card, sitemap, llms.txt.
+
+## 2026-11-18 — Evergreen: Why does my dog stare at me?
+- Published /blog/why-does-my-dog-stare-at-me.html (AKC stare guide, National Geographic account of Nagasawa et al. Science 2015, ASPCA food guarding, VCA seizures, VCA cognitive dysfunction page; all five URLs fetched 18 Nov 2026, HTTP 200) with 1 reused AI image (img/ai-dog-study.webp, link text "Source: AI-generated image" to /credits/), blog index and homepage cards, sitemap lastmod 2026-11-18, llms.txt.
