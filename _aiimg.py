@@ -3,10 +3,6 @@ No real people, no text in the images. Every figure carries an honest 'AI genera
 import html
 e = lambda s: html.escape(s, quote=True)
 W, H = 1280, 720
-SOURCE_LABEL = {"blog/dog-separation-anxiety-what-helps.html", "blog/why-do-dogs-eyes-glow-in-the-dark.html"}  # small Source link to the image policy page (13 Nov 2026 rule)
-SOURCE_LINK_TEXT = {
-    "blog/why-does-my-dog-stare-at-me.html": "Source: AI-generated image",
-}
 AI = {
     "blog/why-do-dogs-pant.html": ("ai-dog-panting", "A golden retriever sitting on a porch with its mouth open and tongue out"),
     "blog/why-do-dogs-lick-people.html": ("ai-dog-licking", "A beagle gently licking a person's hand outdoors"),
@@ -68,9 +64,8 @@ def figure(path, R):
     s, alt = AI[path]
     return ('<figure class="photo ai"><img src="{R}img/{s}.webp" width="{w}" height="{h}" alt="{a}" loading="lazy" decoding="async">'
             '<figcaption>AI generated image, made for SnoutsWise. It is an illustration in a photo style, not a real photograph of a real event. '
-            '<a href="{R}credits/">{L}</a></figcaption></figure>').format(
-                R=R, s=s, w=W, h=H, a=e(alt),
-                L=(SOURCE_LINK_TEXT.get(path) or ("Source" if path in SOURCE_LABEL else "About our images")))
+            '<a href="{R}image-policy/">Image policy</a></figcaption></figure>').format(
+                R=R, s=s, w=W, h=H, a=e(alt))
 
 def thumb(path, R, w=320, h=180):
     """Small lazy-loaded card/list thumbnail using the same hero image as figure(), no caption."""

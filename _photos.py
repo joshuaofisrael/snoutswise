@@ -10,8 +10,8 @@ def credit(p, R):
     lic = e(p["licence"])
     if p["licence_url"]:
         lic = '<a href="%s" rel="noopener license">%s</a>' % (e(p["licence_url"]), lic)
-    return 'Photo: <a href="%s" rel="noopener">%s</a>, %s, via Wikimedia Commons (cropped). <a href="%scredits/">All photo credits</a>' % (
-        e(p["source"]), e(p["author"]), lic, R)
+    return 'Photo: <a href="%s" rel="noopener">%s</a>, %s, via Wikimedia Commons (cropped). <a href="%simage-policy/">Image policy</a> &middot; <a href="%scredits/">All photo credits</a>' % (
+        e(p["source"]), e(p["author"]), lic, R, R)
 
 def figure(path, R, eager=False):
     p = BY_PAGE.get(path)
@@ -42,7 +42,7 @@ def register(page, live_paths):
     page("credits/index.html", "Photo Credits and Licences | SnoutsWise",
          "Every photo on SnoutsWise with its source, author and licence. All photos are public domain or Creative Commons licensed from Wikimedia Commons.",
          """
-<p>Every photo on SnoutsWise is used under a free licence that allows commercial use. We opened each file's own page on Wikimedia Commons to check the licence before using it, and we credit each photographer here and in the caption under the photo. We cropped, resized and converted each photo to WebP; our edited versions are shared under the same licence as the original. Photos marked CC BY or CC BY-SA require attribution; public domain photos do not, but we credit them anyway.</p>
+<p>Every photo on SnoutsWise is used under a free licence that allows commercial use. We opened each file's own page on Wikimedia Commons to check the licence before using it, and we credit each photographer here and in the caption under the photo. We cropped, resized and converted each photo to WebP; our edited versions are shared under the same licence as the original. Photos marked CC BY or CC BY-SA require attribution; public domain photos do not, but we credit them anyway. See our <a href="{R}image-policy/">image policy</a> for how we use these real photographs alongside AI generated images.</p>
 <div class="tablewrap"><table><thead><tr><th>Photo</th><th>File and page</th><th>Source</th><th>Author</th><th>Licence</th><th>Our changes</th></tr></thead><tbody>%s</tbody></table></div>
 <h2>Illustrations, logo and games</h2><p>The logo, paw and bone doodles, icons and all game art are original drawings made for SnoutsWise by Joshua Israel Ventures LLC. Some pages also carry AI generated images in a photo style, made for SnoutsWise with an AI image tool. They show no real people, real places or real events, and each one is captioned as AI generated. Fonts are Fredoka and Nunito from Google Fonts, both under the SIL Open Font License.</p>
 <p>If you believe a photo is credited incorrectly, please email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> and we will fix or remove it.</p>

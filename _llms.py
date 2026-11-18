@@ -81,5 +81,6 @@ The content is general education, not veterinary advice; readers are told to con
 - [Privacy]({u}privacy.html): data controller and ownership details; hosting logs, Google Fonts and the FormSubmit contact form only
 - [Terms of use]({u}terms.html): owner and contracting party; general information only; Florida law
 - [Photo credits]({u}credits/): source, author and licence for every photo (Wikimedia Commons, CC BY, CC BY-SA, public domain)
+- [Image policy]({u}image-policy/): AI generated images are labelled as such; licensed real photographs are credited on the photo credits page
 - [Disclaimer]({u}disclaimer.html): not veterinary advice, emergency contacts, advertising and affiliate disclosure
 """
