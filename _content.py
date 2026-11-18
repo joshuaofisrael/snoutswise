@@ -117,7 +117,12 @@ S = {
  'vca_eyeshine': ("Why do my pet's eyes glow in the dark?", 'VCA Animal Hospitals', 'https://vcahospitals.com/resources/conditions-dog/eyes-ears-nose/why-do-pet-s-eyes-glow-in-the-dark'),
  'acvo_eyeshine': ("Why do my dog's eyes shine at night?", 'American College of Veterinary Ophthalmologists', 'https://www.acvo.org/tips-treatments-tricks/why-do-my-dogs-eyes-shine-at-night'),
  'stvo_eyeshine': ('The ghostly green glow', 'South Texas Veterinary Ophthalmology', 'https://stvopets.com/articles/eyes-shine/'),
- 'uwm_night_vision': ('Curiosities: How well do dogs see at night?', 'University of Wisconsin Madison News', 'https://news.wisc.edu/curiosities-how-well-do-dogs-see-at-night/')
+ 'uwm_night_vision': ('Curiosities: How well do dogs see at night?', 'University of Wisconsin Madison News', 'https://news.wisc.edu/curiosities-how-well-do-dogs-see-at-night/'),
+ "akc_stare": ("Why does my dog stare at me?", "American Kennel Club", "https://www.akc.org/expert-advice/advice/why-does-my-dog-stare-at-me/"),
+ "natgeo_gaze": ("Yong E (16 April 2015). Through this chemical loop, dogs win our hearts. Account of Nagasawa et al., Science 2015. DOI 10.1126/science.1261022", "National Geographic", "https://www.nationalgeographic.com/science/article/through-this-chemical-loop-dogs-win-our-hearts"),
+ "aspca_guard": ("Food guarding", "ASPCA", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/food-guarding"),
+ "vca_seizures": ("Seizures in dogs", "VCA Animal Hospitals", "https://vcahospitals.com/know-your-pet/seizures-general-for-dogs"),
+ "vca_cds": ("Treating CDS in cats and dogs", "VCA Animal Hospitals", "https://vcahospitals.com/vca-voice/brain-awareness-month"),
 }
 import datetime
 def nice(d):
@@ -162,6 +167,7 @@ def home(page):
 <li>In a 14 year study of Labrador retrievers, dogs fed 25 percent less than their littermates lived a median 1.8 years longer (<a href="{R}blog/is-my-dog-overweight.html">how to check your dog's weight</a>).</li>
 </ul></section>
 <section class="card"><h2>Latest from the blog</h2><ul class="thumblist">
+<li><a href="{R}blog/why-does-my-dog-stare-at-me.html">Why does my dog stare at me? A request, a bond, or a warning</a></li>
 <li><a href="{R}blog/dog-separation-anxiety-what-helps.html">Dog separation anxiety: what helps? Look for a pattern, then go slowly</a></li>
 <li><a href="{R}blog/why-do-dogs-eyes-glow-in-the-dark.html">Why do dogs' eyes glow in the dark? It is a mirror layer called the tapetum</a></li>
 <li><a href="{R}blog/why-do-dogs-get-the-zoomies.html">Why do dogs get the zoomies? It is a burst of pent up energy</a></li>
@@ -2098,6 +2104,45 @@ def blog(page):
          sources=src('aspca_sepanx', 'aspca_older'),
          related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("care.html", "Dog care basics"), ("blog/puppy-socialization-window.html", "The puppy socialization window")],
          published="2026-11-16")
+
+    # evergreen 18 Nov 2026: why does my dog stare at me
+    post(page, "why-does-my-dog-stare-at-me", "Why Does My Dog Stare at Me? What It Means | SnoutsWise",
+         "Why does your dog stare at you? It can be a request, affection, or a warning. How to read the gaze, and when blank staring needs a vet.",
+         "Why does my dog stare at me?",
+         "A dog staring at you is usually paying attention: waiting for a cue, asking for something, or staying socially close. A relaxed gaze during calm time together fits bonding. A stiff, unblinking stare over food or a toy is a warning to give space. Staring blankly at a wall, or a dazed stare with shaking or lip licking, is a reason to call your vet.",
+         """
+<h2>Most stares mean your dog is waiting or asking</h2>
+<p>The <a href="https://www.akc.org/expert-advice/advice/why-does-my-dog-stare-at-me/">American Kennel Club</a> says there is no single reason a dog stares. Most of the time the dog is communicating, or waiting for a person to communicate. Dogs watch people for what happens next. They learn that a leash comes out before a walk, that the kitchen gets busy before meals, and that certain movements mean play or a car ride. A dog that locks eyes with you then is often reading the room.</p>
+<p>Dogs trained with rewards watch closely for cues such as sit or down, because those cues can earn a treat, a toy, or a game. Dogs also read people by following a <a href="{R}blog/do-dogs-understand-pointing.html">pointed hand</a>.</p>
+<p>Staring is also a request. The AKC gives ordinary examples: a dog that needs to go out may sit by the door and look at you, and a dog that wants your food may stare while you eat. If the stare is rewarded, it gets stronger. At first the dog may only be curious. If a person feels guilty and hands over food, the dog learns that staring works. The AKC suggests ignoring that stare and rewarding a behavior you want instead, such as chewing a bone on a bed during meals, or ringing a bell to ask to go outside.</p>
+
+<h2>A soft gaze can be part of bonding</h2>
+<p>Not every long look is a request. The AKC describes a lot of staring as affectionate eye contact, and it links a mutual gaze with oxytocin, a hormone involved in social bonding.</p>
+<p><a href="https://www.nationalgeographic.com/science/article/through-this-chemical-loop-dogs-win-our-hearts">National Geographic's account</a> of a 2015 Science study by Miho Nagasawa and colleagues at Azabu University goes further than that general claim. In the account, 30 owners spent half an hour with their dogs, with urine collected from both before and after. Owners whose dogs looked at them the longest had the largest rises in oxytocin. Those owners then spent more time looking back, touching, and talking, and the dogs that received the most of that attention also showed the largest oxytocin rises.</p>
+<p>The same account says wolves did not show this pattern. Eleven hand-reared wolves with daily human contact did not make regular eye contact, and their gaze was not tied to a rise in oxytocin. Among wolves, a direct look is often a threat. In a follow-up with 27 dogs, only the females spent more time gazing at their owners after receiving oxytocin, and those owners then showed a rise as well.</p>
+<p>This does not mean every stare is affection. The eyebrow lift people call <a href="{R}blog/why-do-dogs-make-puppy-dog-eyes.html">puppy dog eyes</a> is a separate topic.</p>
+
+<h2>A hard stare is a warning</h2>
+<p>The AKC separates a soft look from a hard stare: unblinking eyes and a stiff posture. It advises people not to stare down an unfamiliar dog, and not to hold a dog still to look into its eyes. If you get that hard stare, back away and break eye contact. It often appears around a bone or another valued item. The AKC says resource guarding commonly includes a hard stare plus other tense body language, and that this is a reason to consult a trainer or behaviorist.</p>
+<p>The <a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/food-guarding">ASPCA</a> describes guarding as a range, from running off with an item or growling when someone approaches, to biting or chasing a person away. Some dogs guard chews or toys, some guard stolen items such as socks, and many guard food. Its food guarding page lists staring among signs to take seriously, with standing stiffly over the bowl, gulping, freezing, growling, snapping, snarling, biting, or chasing people off. If those signs appear, the ASPCA says to stop and contact a certified applied animal behaviorist, a board-certified veterinary behaviorist, or a qualified certified professional dog trainer.</p>
+<p>A home with children and a guarding dog is especially risky, the ASPCA says, because children are less likely to notice warnings. A freeze or a hard stare is information. Give space, and get qualified help before the warning becomes a bite.</p>
+
+<h2>When staring needs a veterinarian</h2>
+<p>Some staring is not aimed at you. <a href="https://vcahospitals.com/know-your-pet/seizures-general-for-dogs">VCA Animal Hospitals</a> says that during a seizure a dog may show only mild changes: a dazed look, mild shaking, staring aimlessly, and licking the lips. Other seizures affect the whole body and consciousness. A generalized seizure usually lasts one to two minutes, VCA says. If it does not stop within five minutes, VCA calls that status epilepticus and says the dog needs urgent veterinary treatment. Afterward a dog may seem confused, pace, drool, or seem briefly blind. A short video, taken from a safe distance, helps the vet. Do not put your hands in the dog's mouth.</p>
+<p>A blank stare at a wall is different from watching a person. <a href="https://vcahospitals.com/vca-voice/brain-awareness-month">VCA</a> describes cognitive dysfunction, an age-related brain disease, using the sign list DISHAAL. Disorientation on that list includes getting stuck in corners, trouble moving around familiar objects, and staring blankly at walls or into space, along with not recognizing people. Other signs include sleep changes, house soiling, activity changes, new anxiety, and trouble with known cues. An older dog that newly stares into space should see a vet, so pain, illness, and seizures can be told apart from cognitive change. See <a href="{R}health.html">health basics</a> and a <a href="{R}blog/dog-dementia-brain-study.html">2026 study of senior dog brains</a>.</p>
+
+<h2>What to do about everyday staring</h2>
+<p>You do not need to stop a relaxed dog from looking at you. The AKC notes that a dog who is watching you is easier to train, and it suggests teaching a cue such as "watch me" for moments when you want that focus. If the stare is a bid for food from your plate, do not pay it. Reward a calm alternative instead, using <a href="{R}training.html">reward based training</a>.</p>
+<p>Judge the whole dog. Relaxed muscles and easy breathing fit the calm picture the ASPCA describes. A stiff body over a bowl does not. A dog that stares at nothing, or seems lost in a familiar room, needs a vet, not a new cue.</p>
+""",
+         faq=[("Why does my dog stare at me while I eat?", "The stare has often been rewarded with food. Reward a different behavior and do not hand over food for the look."),
+              ("Is it rude to look my dog in the eyes?", "A relaxed look with a dog you know is usually fine. Do not stare down a stiff or unfamiliar dog."),
+              ("Why does my dog stare at the wall?", "VCA lists blank staring as a possible sign of cognitive dysfunction or, with a dazed look, of a seizure. Ask a vet if it is new."),
+              ("Does a long stare mean my dog loves me?", "It can be affectionate. One study linked longer mutual gaze with oxytocin changes, but a stare can also be a request."),
+              ("When should I call a vet about staring?", "Call if the stare is aimless, comes with shaking or lip licking, or an older dog newly stares at walls.")],
+         sources=src("akc_stare", "natgeo_gaze", "aspca_guard", "vca_seizures", "vca_cds"),
+         related=[("behavior.html", "Dog behavior"), ("training.html", "Reward based training"), ("health.html", "Dog health basics"), ("blog/why-do-dogs-make-puppy-dog-eyes.html", "Why do dogs make puppy dog eyes?"), ("blog/do-dogs-know-when-you-are-sad.html", "Do dogs know when you are sad?"), ("blog/dog-dementia-brain-study.html", "Senior dogs and dementia-like brain changes")],
+         published="2026-11-18")
 
     # blog index
     items = "".join('<article class="card blogcard">%s<h2><a href="{R}blog/%s.html">%s</a></h2><p>%s</p><p class="meta">Published %s</p></article>' % (thumb(s, "{R}"), s, h, d, nice(pd)) for s, h, d, pd in sorted(POSTS, key=lambda x: x[3], reverse=True))
