@@ -122,6 +122,77 @@ def url_of(path):
     return SITE_URL + path
 
 
+def thumb_for(path, R):
+    """Hero thumbnail for a related page, licensed photo or labelled AI image. Empty if neither exists."""
+    if path.endswith("/"):
+        cands = [path + "index.html", path]
+    elif path.endswith(".html"):
+        cands = [path]
+    else:
+        cands = [path + "/index.html", path + ".html", path]
+    for c in cands:
+        t = _photos.thumb(c, R, 160, 90) or _aiimg.thumb(c, R, 160, 90)
+        if t:
+            return t
+    return ""
+
+
+def split_reads(related, R, current):
+    """Up to 4 image-backed next reads, then any remaining related links as plain text."""
+    cur = current.split("#")[0]
+    cards, used, seen = [], set(), set()
+    for u, n in related:
+        base = u.split("#")[0]
+        if base == cur:
+            used.add(u)
+            continue
+        img = thumb_for(base, R)
+        if img and base not in seen and len(cards) < 4:
+            cards.append((u, n, img))
+            seen.add(base)
+            used.add(u)
+    more = [(u, n) for u, n in related if u not in used]
+    return cards, more
+
+
+def reads_html(cards, R, heading):
+    items = "".join(
+        '<li><a href="%s%s">%s<span>%s</span></a></li>' % (R, u, img, esc(n))
+        for u, n, img in cards)
+    return '<aside class="nextreads"><h2>%s</h2><ul>%s</ul></aside>' % (esc(heading), items)
+
+
+def insert_mid(body, block):
+    """Place a next-read block after the second section, or after the first block if the page has no headings."""
+    if not block:
+        return body
+    positions, start = [], 0
+    while True:
+        h = body.find("</h2>", start)
+        if h < 0:
+            break
+        positions.append(h)
+        start = h + 5
+    if positions:
+        h = positions[1] if len(positions) > 1 else positions[0]
+        rest = body[h + 5:]
+        best = None
+        for tag in ("</p>", "</ul>", "</ol>", "</div>", "</table>"):
+            j = rest.find(tag)
+            if j >= 0 and (best is None or j < best[0]):
+                best = (j, len(tag))
+        if best:
+            cut = h + 5 + best[0] + best[1]
+            return body[:cut] + "\n" + block + body[cut:]
+        return body[:h + 5] + "\n" + block + body[h + 5:]
+    for tag in ("</p>", "</ul>", "</ol>", "</div>", "</dl>", "</table>"):
+        j = body.find(tag)
+        if j >= 0:
+            cut = j + len(tag)
+            return body[:cut] + "\n" + block + body[cut:]
+    return body + "\n" + block
+
+
 def render(p):
     depth = p["path"].count("/")
     R = SITE_URL if p["abs_links"] else "../" * depth
@@ -183,7 +254,7 @@ def render(p):
         meta = "Last reviewed %s" % nice_date(p["updated"])
         if p["kind"] == "post":
             meta = "Published %s &middot; %s" % (nice_date(p["published"]), meta)
-        out.append('<p class="meta byline">%s &middot; By <a href="%sabout.html" rel="author">%s Editorial Team</a></p>' % (meta, R, SITE_NAME))
+        out.append('<p class="meta byline">%s &middot; By <a href="%sabout.html" rel="author">%s Editorial Team</a> &middot; <a href="%seditorial/">Editorial policy</a></p>' % (meta, R, SITE_NAME, R))
     if p["lead"]:
         out.append('<p class="lead">%s</p>' % p["lead"])
     body = p["body"]
@@ -191,13 +262,21 @@ def render(p):
         body = body.replace('<section class="hero">', '<section class="hero">' + DOODLE_PAWS + _photos.figure(p["path"], R, eager=True), 1)
     elif p["lead"] or p["h1"]:
         out.append(_photos.figure(p["path"], R) or _aiimg.figure(p["path"], R))
+    reads, more = ([], [])
+    if p["kind"] in ("article", "post") and p["related"]:
+        reads, more = split_reads(p["related"], R, p["path"])
+        if len(reads) >= 3:
+            body = insert_mid(body, reads_html(reads[:3] if len(reads) > 3 else reads, R, "Read next"))
     out.append(body)
     if p["faq"]:
         out.append('<section class="card" id="faq"><h2>Frequently asked questions</h2>' + "".join(
             "<h3>%s</h3><p>%s</p>" % (q, a) for q, a in p["faq"]) + "</section>")
-    if p["related"]:
-        out.append('<aside class="card related"><h2>Keep exploring</h2><ul>' + "".join(
-            '<li><a href="{R}%s">%s</a></li>' % (u, esc(n)) for u, n in p["related"]) + "</ul></aside>")
+    if len(reads) >= 3:
+        out.append(reads_html(reads, R, "Keep reading"))
+    text_related = more if len(reads) >= 3 else (p["related"] or [])
+    if text_related:
+        out.append('<aside class="card related"><h2>%s</h2><ul>' % ("More on this site" if len(reads) >= 3 else "Keep exploring") + "".join(
+            '<li><a href="{R}%s">%s</a></li>' % (u, esc(n)) for u, n in text_related) + "</ul></aside>")
     if p["path"] in VET_PAGES:
         out.append(VET_BLOCK)
     if p["sources"]:
@@ -219,9 +298,9 @@ def render(p):
         out.append('<p class="note">General education only, not veterinary advice. If you are worried about your dog, contact your vet; in an emergency, contact an emergency vet straight away.</p>')
     out.append("</main>")
     out.append('<footer>' + DOODLE_BONE + '<section class="contact-us" aria-labelledby="cu"><h2 id="cu">Contact us</h2><p>Email <a href="mailto:%s">%s</a> or use our <a href="%scontact.html">contact form</a>.</p></section>'
-               '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; <a href="%simage-policy/">Image policy</a> &middot; %s<a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a> &middot; <a href="%sprivacy.html#analytics" data-consent-open>Cookie settings</a></p>'
+               '<p class="flinks"><a href="%sterms.html">Terms</a> &middot; <a href="%sprivacy.html">Privacy</a> &middot; <a href="%sdisclaimer.html">Disclaimer</a> &middot; <a href="%scontact.html">Contact</a> &middot; <a href="%scredits/">Photo credits</a> &middot; <a href="%simage-policy/">Image policy</a> &middot; %s<a href="%seditorial/">Editorial policy</a> &middot; <a href="%sabout.html">About</a> &middot; <a href="%sblog/">Blog</a> &middot; <a href="%ssitemap.xml">Sitemap</a> &middot; <a href="%sprivacy.html#analytics" data-consent-open>Cookie settings</a></p>'
                '<p>%s: original educational content about dogs. All text and illustrations are original. Not a substitute for advice from your vet.</p>'
-               '</footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, R, SITE_NAME))
+               '</footer>' % (CONTACT_EMAIL, CONTACT_EMAIL, R, R, R, R, R, R, R, ("" if os.environ.get("SW_NO_EDU") else '<a href="%steachers/">Teachers</a> &middot; <a href="%sresearch/">Research</a> &middot; ' % (R, R)), R, R, R, R, R, SITE_NAME))
     if p["script"]:
         out.append("<script>%s</script>" % p["script"])
     if CF_BEACON_TOKEN:
@@ -253,7 +332,7 @@ def write(name, text):
 
 def extras():
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-          "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (u, d) for u, d in SITEMAP + [(SITE_URL + "llms.txt", TODAY)]) + "</urlset>\n")
+          "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (u, d) for u, d in SITEMAP + [(SITE_URL + "llms.txt", max([d for _, d in SITEMAP] or [TODAY]))]) + "</urlset>\n")
     bots = ["CCBot", "anthropic-ai", "Bytespider", "Meta-ExternalAgent", "cohere-ai", "Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User", "ClaudeBot",
             "Claude-SearchBot", "Claude-User", "Google-Extended", "Applebot", "Applebot-Extended", "DuckAssistBot", "Amazonbot"]
     # robots.txt is served at the custom domain root (https://snoutswise.com/robots.txt).
