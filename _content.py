@@ -23,7 +23,10 @@ S = {
  "aaha_cdv": ("Key Vaccination: Canine Distemper Virus", "American Animal Hospital Association", "https://www.aaha.org/resources/2022-aaha-canine-vaccination-guidelines/canine-distemper-virus-cdv/"),
  "avsab_puppy": ("Position Statement on Puppy Socialization", "American Veterinary Society of Animal Behavior", "https://avsab.org/wp-content/uploads/2019/01/Puppy-Socialization-Position-Statement-FINAL.pdf"),
  "avsab_train": ("Position Statement on Humane Dog Training (2021)", "American Veterinary Society of Animal Behavior", "https://avsab.org/wp-content/uploads/2021/08/AVSAB-Humane-Dog-Training-Position-Statement-2021.pdf"),
- "mech": ("Mech LD (1999). Alpha status, dominance, and division of labor in wolf packs. Canadian Journal of Zoology 77(8):1196 to 1203", "U.S. Geological Survey record", "https://pubs.usgs.gov/publication/1001725"),
+ "mech": ("Mech LD (1999). Alpha status, dominance, leadership, and division of labor in wolf packs. Canadian Journal of Zoology 77(8):1196 to 1203. DOI 10.1139/z99-099", "U.S. Geological Survey record", "https://pubs.usgs.gov/publication/1001725"),
+ "mech_doi": ("Publisher record for Mech 1999, DOI 10.1139/z99-099", "NRC Research Press via doi.org", "https://doi.org/10.1139/z99-099"),
+ "avsab_dom": ("Position Statement on the Use of Dominance Theory in Behavior Modification of Animals (2008)", "American Veterinary Society of Animal Behavior", "https://avsab.org/wp-content/uploads/2024/12/Dominance_Position_Statement-download.pdf"),
+ "avsab_positions": ("Position statements, including the board note labelled 2025 on the 2021 humane dog training statement", "American Veterinary Society of Animal Behavior", "https://avsab.org/resources/position-statements/"),
  "wsava_bcs": ("Body Condition Score: Dog (chart)", "World Small Animal Veterinary Association", "https://wsava.org/wp-content/uploads/2020/01/Body-Condition-Score-Dog.pdf"),
  "penn_kealy": ("Study finds dogs fed a reduced calorie diet live nearly two years longer (Kealy et al., 2002)", "Penn Today, University of Pennsylvania", "https://penntoday.upenn.edu/news/study-finds-dogs-fed-reduced-calorie-diet-live-nearly-two-years-longer-dogs-unrestricted-diet"),
  "avma_dental": ("Pet dental care", "American Veterinary Medical Association", "https://www.avma.org/resources-tools/pet-owners/petcare/pet-dental-care"),
@@ -822,13 +825,15 @@ def trust(page):
 <li>Every page lists its sources, and facts and figures are attributed to the organization that published them. We do not invent statistics, quotes, experts or personal experiences.</li>
 <li>We are not veterinarians, and nothing here replaces an examination by a vet who knows your dog. Health and safety pages say so and point to emergency help.</li>
 <li>Each page shows when it was last updated. We review pages when guidelines change.</li></ul>
+<p>The rules for sources, corrections and images are written out on the <a href="{R}editorial/">editorial and sourcing policy</a>.</p>
 <h2>Money</h2>
 <p>The site is free to read. It may show advertising through Google AdSense. It carries no sponsored content or affiliate links, and ads never change what we write. Details are in our <a href="{R}disclaimer.html">disclaimer</a> and in our <a href="{R}privacy.html">privacy policy</a>. See also our <a href="{R}terms.html">terms of use</a>.</p>
 <h2>Corrections</h2>
 <p>Spotted an error or an outdated guideline? Please email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> or use the <a href="{R}contact.html">contact form</a> with the page and the source, and we will check and correct it.</p>
 """, h1="About SnoutsWise", kind="webpage",
+         related=[("editorial/", "Editorial and sourcing policy"), ("contact.html", "Contact us"), ("image-policy/", "Image policy"), ("disclaimer.html", "Disclaimer")],
          lead="SnoutsWise is a free, independent reference for dog owners. We turn veterinary and kennel club guidance into clear, practical pages and show the sources behind every claim.",
-         crumbs=[("index.html", "Home"), ("about.html", "About")])
+         crumbs=[("index.html", "Home"), ("about.html", "About")], updated="2026-11-20")
 
     page("contact.html", "Contact SnoutsWise | SnoutsWise",
          "Contact SnoutsWise by email or form with questions, corrections or suggestions.",
@@ -938,6 +943,35 @@ def trust(page):
          crumbs=[("index.html", "Home"), ("image-policy/", "Image policy")],
          published="2026-11-18", updated="2026-11-18")
 
+    page("editorial/index.html", "Editorial and Sourcing Policy | SnoutsWise",
+         "How SnoutsWise chooses sources, checks a claim against the document, labels images and corrects a mistake.",
+         """
+<h2>Who the byline is</h2>
+<p>Articles are signed <a href="{R}about.html">SnoutsWise Editorial Team</a>. That is the site, not a named person with a veterinary degree. We do not invent writers, clinic jobs or a review board. Reading a page is not a vet visit.</p>
+<h2>What we will cite</h2>
+<p>A fact is published only after the document it comes from has been opened. The documents we use are veterinary manuals and guidelines, welfare and poison control pages, kennel club explainers, and peer reviewed papers.</p>
+<ul>
+<li>The Merck Veterinary Manual, AAHA guidelines, WSAVA charts and the National Research Council booklet on dog nutrition, for physiology, vaccines and feeding.</li>
+<li>AVSAB position statements, the AVMA and the RSPCA, for behavior, training and welfare.</li>
+<li>ASPCA Animal Poison Control, for foods and plants. On a toxic item the page leads with a call to your vet or a poison line. It does not give a home dose.</li>
+<li>The American Kennel Club and The Royal Kennel Club, for breed groups and owner explainers.</li>
+<li>A peer reviewed paper only after the DOI resolves and the abstract or the open full text has been read. A university newsroom can be the second source on a news piece. It is not enough on its own.</li>
+</ul>
+<h2>What we leave out</h2>
+<p>We do not invent numbers, quotations or case stories. We do not give a drug dose or a home treatment plan. A pet blog, a social post or a roundup that names no document is not a source for a health or behavior claim. If two solid sources disagree, the page says so.</p>
+<h2>How a page is built</h2>
+<p>The title answers the question. The first paragraph gives that answer. The rest says what the study or the guideline did, what it found, and where the evidence stops. Health pages include a block on when to call a vet. Each article lists its sources and shows a published date and a last reviewed date. The reviewed date moves when the words or the sources change, not when the site is rebuilt.</p>
+<h2>Images</h2>
+<p>A picture is either an AI generated illustration, labelled as such and linked to the <a href="{R}image-policy/">image policy</a>, or a licensed photograph credited on <a href="{R}credits/">photo credits</a>. We do not present a picture of a real person as a news photo of an event.</p>
+<h2>Corrections and ads</h2>
+<p>If a source has moved or a sentence is wrong, use the <a href="{R}contact.html">contact form</a> and name the page and the source. We check it and correct the page. The site may show Google AdSense advertising. The ads are separate from the article and do not change the words. There are no affiliate links. See the <a href="{R}disclaimer.html">disclaimer</a> and the <a href="{R}privacy.html">privacy policy</a>.</p>
+<p class="meta">Last updated 20 November 2026.</p>
+""", h1="Editorial and sourcing policy", kind="webpage",
+         lead="How SnoutsWise decides what to publish, which documents count as a source, and how to ask for a correction.",
+         related=[("about.html", "About SnoutsWise"), ("contact.html", "Contact us"), ("image-policy/", "Image policy"), ("research/", "Research behind the site")],
+         crumbs=[("index.html", "Home"), ("editorial/", "Editorial policy")],
+         published="2026-11-20", updated="2026-11-20")
+
     page("404.html", "Page Not Found | SnoutsWise", "That page could not be found.",
          '<p>We could not find that page. Try the <a href="{R}index.html">home page</a>, the <a href="{R}can-dogs-eat.html">Can dogs eat this?</a> table or the <a href="{R}faq.html">dog FAQ</a>.</p>',
          h1="This page wandered off", kind="webpage", index=False, abs_links=True, nav="")
@@ -945,10 +979,10 @@ def trust(page):
 # ------------------------------------------------------------------ BLOG
 POSTS = []
 
-def post(page, slug_, title, desc, h1, lead, body, faq=None, sources=None, related=None, script="", published="2026-10-08"):
+def post(page, slug_, title, desc, h1, lead, body, faq=None, sources=None, related=None, script="", published="2026-10-08", updated=None):
     POSTS.append((slug_, h1, desc, published))
     page("blog/%s.html" % slug_, title, desc, body, h1=h1, lead=lead, kind="post", faq=faq, sources=sources,
-         related=related, script=script, published=published, updated=published, crumbs=[("index.html", "Home"), ("blog/index.html", "Blog"), ("blog/%s.html" % slug_, h1)])
+         related=related, script=script, published=published, updated=updated or published, crumbs=[("index.html", "Home"), ("blog/index.html", "Blog"), ("blog/%s.html" % slug_, h1)])
 
 CHOC_JS = """(function(){var C={cocoa:28.5,baking:15.5,dark:5.6,milk:2.3,white:0.04};
 var w=document.getElementById('cw'),wu=document.getElementById('cwu'),t=document.getElementById('ct'),pc=document.getElementById('cpct'),a=document.getElementById('ca'),au=document.getElementById('cau'),o=document.getElementById('cout'),pr=document.getElementById('pctrow');
@@ -1021,6 +1055,7 @@ def blog(page):
 <h2>Why the window matters</h2>
 <p>Puppies are born ready to learn what is normal in their world. During roughly the first three months, new people, animals, sounds and places are more likely to be met with curiosity than fear. The AVSAB position statement warns that incomplete or improper socialization during this time increases the risk of fear, avoidance and aggression later in life.</p>
 <p>The stakes are high. The same statement says behavior problems are the greatest threat to the bond between owners and dogs, the number one cause of dogs being given up to shelters, and, in AVSAB's words, the number one cause of death for dogs under three years old, ahead of infectious disease.</p>
+<p>Those three claims are not equally sourced inside the PDF, which was opened again on 20 November 2026. The shelter claim is tied to Miller, Stats, Partlo and colleagues, Journal of the American Veterinary Medical Association, 1996. The three month window is tied to Freedman, King and Elliot, Science, 1961, and to Serpell and Jagoe in <i>The Domestic Dog</i> (1995). The sentence about death under three years old is AVSAB's own wording and has no numbered reference in the statement. This page repeats it as AVSAB's claim. Freedman 1961 and the Serpell chapter were not re-read on 20 November 2026, so nothing here is added from them.</p>
 <h2>But what about vaccines?</h2>
 <p>This is the dilemma every new owner faces: puppies are not fully vaccinated until about 16 weeks, but the best socialization window closes around 12 weeks. AVSAB's position is clear: it should be the standard of care for puppies to be socialized <i>before</i> they are fully vaccinated. It explains that maternal immunity, the first vaccines and sensible care make the risk of infection relatively small compared with the risk of death from a behavior problem.</p>
 <p>The practical compromise AVSAB recommends:</p>
@@ -1047,13 +1082,16 @@ def blog(page):
 <li><b>Keep sessions short</b> and end on a good note.</li>
 <li><b>Use reward based training.</b> AVSAB says positive, consistent training is associated with fewer behavior problems and better obedience than methods involving punishment or human dominance. Start with the <a href="{R}training.html#first">first skills</a>.</li></ol>
 <h2>After 12 weeks</h2>
-<p>The window does not slam shut. AVSAB strongly encourages owners to keep socializing beyond three months and to continue offering a wide variety of experiences throughout the first year, which it links to a lower risk of separation related behavior. If your puppy is showing fear, AVSAB advises seeking veterinary guidance early rather than waiting for it to grow out of it.</p>
+<p>The window does not slam shut. AVSAB strongly encourages owners to keep socializing beyond three months and to continue offering a wide variety of experiences throughout the first year, which it links to a lower risk of <a href="{R}blog/dog-separation-anxiety-what-helps.html">separation related behavior</a>. If your puppy is showing fear, AVSAB advises seeking veterinary guidance early rather than waiting for it to grow out of it.</p>
+<p>The socialization PDF is marked 2008. The training method it prefers still matches the later standard. The <a href="https://avsab.org/wp-content/uploads/2021/08/AVSAB-Humane-Dog-Training-Position-Statement-2021.pdf">2021 humane dog training statement</a> says only reward based methods should be used, including for behavior problems, and it tells veterinarians not to refer clients to trainers who teach "dominance", "leader of the pack" or "alpha" theories. A board note on the <a href="https://avsab.org/resources/position-statements/">AVSAB position statements page</a>, labelled 2025 and opened 20 November 2026, calls that 2021 statement "the most current and authoritative expression of our views." The steps are in the <a href="{R}training.html">reward based training guide</a>. The case against alpha rolls is in <a href="{R}blog/alpha-dog-myth.html">is the alpha dog idea true?</a></p>
+<p class="note">Sources checked 20 November 2026: the AVSAB puppy socialization PDF (2008), the AVSAB 2021 humane training PDF, and the AVSAB position statements page.</p>
 """,
-         faq=[("When does the puppy socialization window close?", "The AVSAB describes the first three months of life as the primary socialization window. Socialization should continue after that, but the early weeks are the most important."),
+         faq=[("When does the puppy socialization window close?", "The 2008 AVSAB statement calls the first three months the primary socialization window, citing Freedman, King and Elliot (Science, 1961) and Serpell and Jagoe (1995). Socialization should continue after that."),
               ("Can I take my puppy to classes before it is fully vaccinated?", "AVSAB says puppies can start classes as early as 7 to 8 weeks if they have had at least one set of vaccines at least 7 days before the first class and a first deworming, with classes held on easily disinfected surfaces. Avoid dog parks and areas used by dogs of unknown vaccination status until your vet says otherwise."),
               ("What if my puppy is scared of new things?", "Go slower, increase distance and pair new experiences with treats and play. If fear persists or worsens, AVSAB recommends seeking veterinary guidance.")],
-         sources=src("avsab_puppy", "avsab_train"),
-         related=[("behavior.html#socialization", "Behavior: socialization"), ("training.html", "Reward based training"), ("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("blog/alpha-dog-myth.html", "The alpha dog myth")])
+         sources=src("avsab_puppy", "avsab_train", "avsab_positions"),
+         related=[("blog/dog-vaccine-schedule.html", "Dog vaccine schedule"), ("behavior.html", "Behavior and socialization"), ("training.html", "Reward based training"), ("blog/dog-separation-anxiety-what-helps.html", "Separation anxiety: what helps"), ("blog/alpha-dog-myth.html", "The alpha dog myth")],
+         updated="2026-11-20")
 
     # 3 vaccines
     post(page, "dog-vaccine-schedule", "Dog Vaccines: How Often? Core vs Non Core | SnoutsWise",
@@ -1092,23 +1130,28 @@ def blog(page):
 
     # 4 alpha
     post(page, "alpha-dog-myth", "Is the Alpha Dog Idea True? What Research Says | SnoutsWise",
-         "Do you need to be the alpha? Where the dominance idea came from, what L. David Mech's wolf research found and why vet behaviorists reject it.",
+         "No. Mech's 1999 wolf paper and AVSAB reject the idea that your dog is climbing a rank and that you must be the alpha.",
          "Is the \"alpha dog\" idea true? What the research says about dominance",
          "No. The popular idea that your dog is trying to dominate you, and that you must act as the \"alpha\", is not supported by modern research. Wolf biologist L. David Mech found that wild wolf packs are families led by the parents rather than groups fighting for rank, and the American Veterinary Society of Animal Behavior advises against trainers who rely on dominance, pack leader or alpha theories and against forceful techniques such as alpha rolls.",
          """
 <h2>Where the alpha idea came from</h2>
-<p>The classic picture of a wolf pack is a group of individuals constantly competing for rank, kept in check by an "alpha" male and female. In his 1999 paper in the <i>Canadian Journal of Zoology</i>, Mech points out that most research on wolf pack social dynamics had been done on "non natural assortments of captive wolves", unrelated adults housed together. Dog training borrowed that picture and concluded that dogs, as descendants of wolves, must be trying to climb a hierarchy in the home, and that owners should win by force.</p>
+<p>The classic picture of a wolf pack is a group of individuals constantly competing for rank, kept in check by an "alpha" male and female. In his 1999 paper in the <i>Canadian Journal of Zoology</i>, <a href="https://pubs.usgs.gov/publication/1001725">L. David Mech</a> writes that most research on wolf pack social dynamics had been done on "non-natural assortments of captive wolves", unrelated adults housed together. Dog training borrowed that picture and concluded that dogs, as descendants of wolves, must be trying to climb a hierarchy in the home, and that owners should win by force. The USGS record, including that abstract, was opened on 20 November 2026. The publisher record is DOI <a href="https://doi.org/10.1139/z99-099">10.1139/z99-099</a>.</p>
 <h2>What wild wolves actually do</h2>
-<p>Mech based his paper on a literature review and 13 summers of observing free living wolves on Ellesmere Island in the Canadian Arctic. He concluded that the typical wolf pack is a family: the adult parents guide the group's activities through a division of labor, with the female mainly leading pup care and defense and the male mainly leading foraging, food provision and travel. In other words, the "alphas" are simply the parents, and their status comes from being the parents, not from winning fights.</p>
-<h2>Dogs are not wolves anyway</h2>
-<p>Even if captive wolf studies had been right about wolves, dogs living with people are a different situation: a different species relationship, a different environment, and thousands of years of domestication. Explaining a dog's behavior toward its owner with a model built on unrelated captive wolves stacks one shaky assumption on another.</p>
-<h2>What veterinary behaviorists say</h2>
-<p>The American Veterinary Society of Animal Behavior's 2021 position statement on humane dog training:</p>
-<ul><li>advises that clients should be steered away from trainers who discuss out dated ideas such as "dominance", "leader of the pack" or "alpha" theories;</li>
+<p>Mech based the paper on a literature review and 13 summers watching free living wolves on Ellesmere Island, Northwest Territories, Canada. The abstract's conclusion is that the typical wolf pack is a family. The adult parents guide the group through a division of labor: the female predominates in pup care and defense, and the male predominates during foraging, food provisioning and the travel that goes with them. In that account the "alphas" are the parents. The rank comes from being the parents, not from winning fights against a pile of unrelated adults.</p>
+<h2>A pet dog is not that wolf pack</h2>
+<p>Even if the captive wolf studies had been right about wolves, a dog in a house is a different case. <a href="https://avsab.org/wp-content/uploads/2024/12/Dominance_Position_Statement-download.pdf">AVSAB's 2008 statement on dominance theory</a> says the best model for understanding domestic dogs is domestic dogs, and that dogs have diverged significantly from wolves in the last 15,000 years. Explaining a dog's behavior toward its owner with a model built on unrelated captive wolves stacks one shaky assumption on another. For the day to day reading of dog behavior, see <a href="{R}behavior.html#dominance">the behavior guide</a> and <a href="{R}blog/do-dogs-feel-jealousy.html">what the jealousy experiments found</a>.</p>
+<h2>What veterinary behaviorists say now</h2>
+<p>The <a href="https://avsab.org/wp-content/uploads/2021/08/AVSAB-Humane-Dog-Training-Position-Statement-2021.pdf">AVSAB 2021 position statement on humane dog training</a>, PDF opened 20 November 2026:</p>
+<ul><li>advises that clients should be steered away from trainers who discuss out of date ideas such as "dominance", "leader of the pack" or "alpha" theories;</li>
 <li>lists forceful manipulation such as "alpha rolls" and "dominance downs" among intimidation techniques to avoid, along with shouting, staring and physical corrections;</li>
-<li>notes that aversive methods are associated with increased anxiety, fear related aggression, avoidance and learned helplessness;</li>
-<li>says reward based methods are more effective and that there is no evidence aversive training is necessary.</li></ul>
-<p>An earlier AVSAB puppy socialization statement made the same point: positive, consistent training is associated with fewer behavior problems and greater obedience than methods involving punishment or encouraging human dominance.</p>
+<li>says the documented fallout of aversive methods includes increased anxiety, fear related aggression, avoidance and learned helplessness;</li>
+<li>says there is no evidence that aversive training is necessary, and that reward based methods should be used for ordinary skills and for behavior problems. The statement's FAQ on aggression says there are no exceptions.</li></ul>
+<p>On 20 November 2026 the <a href="https://avsab.org/resources/position-statements/">AVSAB position statements page</a> still carried a board note labelled 2025. That note calls the 2021 statement "the most current and authoritative expression of our views." It also says an older AVSAB document, which had suggested aversives might be acceptable in some situations, has been rescinded, and that AVSAB does not support the use of aversives in any context.</p>
+<p>The earlier <a href="https://avsab.org/wp-content/uploads/2019/01/Puppy-Socialization-Position-Statement-FINAL.pdf">2008 puppy socialization statement</a> already preferred the same direction: positive, consistent training is associated with fewer behavior problems and greater obedience than methods that use punishment or encourage human dominance. How to use the early months is in <a href="{R}blog/puppy-socialization-window.html">when the socialization window closes</a>.</p>
+<h2>Dominance, in the 2008 statement, is a narrow idea</h2>
+<p>The same 2008 PDF, opened again on 20 November 2026, defines dominance as a relationship between individual animals that is established by force or aggression and by submission, so one of them has priority access to resources such as food, resting spots and mates. It cites Bernstein (1981) and Drews (1993) for that definition, and it says the relationship does not exist until one animal consistently defers.</p>
+<p>Most of what owners call dominance fails that test. AVSAB's examples are excessive barking, unruly greetings and not coming when called. Those persist because they were rewarded, and because a different behavior was never taught. Jumping up gets attention. Ignoring a recall means something else is paying better. Stealing food while nobody is watching is, in the statement, an alternate strategy for getting the resource, not a bid for higher rank. The standard of care it sets for veterinarians who specialize in behavior is that dominance theory should not be the general guide for changing behavior.</p>
+<p>On the alpha roll, the statement says higher ranking wolves do not flip lower ranking wolves onto their backs. A wolf that rolls is offering the posture. AVSAB cites a 2008 conference report by Herron, Shofer and Reisner for the finding that confrontational techniques, including an alpha roll, staring a dog down and a "dominance down", frequently elicited an aggressive response. That citation is a conference abstract as AVSAB describes it. A full journal version was not re-read on 20 November 2026, so this page does not turn it into percentages.</p>
 <h2>So what is going on when my dog...</h2>
 <div class="tablewrap"><table><thead><tr><th>Behavior often called "dominant"</th><th>A more useful explanation</th><th>What helps</th></tr></thead><tbody>
 <tr><td>Pulling on the lead</td><td>Pulling gets the dog where it wants to go, so it is reinforced every walk.</td><td>Reward a loose lead; stop when the lead goes tight (<a href="{R}training.html#first">how to</a>).</td></tr>
@@ -1117,15 +1160,17 @@ def blog(page):
 <tr><td>Growling over food or toys</td><td>Worry about losing something valuable (resource guarding).</td><td>Do not snatch or punish; trade for something better and ask your vet or a qualified behavior professional for help.</td></tr>
 <tr><td>Not coming when called</td><td>Something else is more rewarding than you right now.</td><td>Make coming back the best deal in the park; use a long line while training.</td></tr>
 </tbody></table></div>
-<p>Punishing a growl is risky: it can suppress the warning without changing the worry behind it. For any aggression, AVSAB says to use humane methods with no exceptions and to involve a vet or a qualified behavior professional.</p>
-<h2>Leadership without force</h2>
-<p>Dogs do need structure. AVSAB is explicit that reward based training does not mean letting dogs do whatever they want: animals learn best with structure, routine and guidelines, taught without fear, intimidation or pain. Think of yourself less as an alpha and more as a good teacher or parent: you control the resources, set up the environment so the right choice is easy, and reward the behavior you want to see more of. Start with our <a href="{R}training.html">training guide</a>.</p>
+<p>Punishing a growl can hide the warning without changing the worry behind it. For aggression, the 2021 statement says humane methods have no exceptions, and a trainer who is stuck should refer to a veterinarian, a board certified veterinary behaviorist or a certified applied animal behaviorist. <a href="{R}blog/why-do-dogs-yawn.html">Yawning, a tucked tail and a sudden freeze</a> are stress signals that often show up before a growl.</p>
+<h2>Structure without force</h2>
+<p>Dogs do need structure. The 2021 statement is explicit that reward based training does not mean letting dogs do whatever they want. Animals learn best with structure, routine and guidelines, taught without fear, intimidation or pain. You control the resources, set the room up so the right choice is easy, and reward the behavior you want to see again. Start with the <a href="{R}training.html">training guide</a>.</p>
+<p class="note">Sources checked 20 November 2026: the USGS record of Mech 1999 (abstract), DOI 10.1139/z99-099, the AVSAB 2021 humane training PDF, the AVSAB 2008 dominance PDF, the AVSAB 2008 puppy socialization PDF, and the AVSAB position statements page.</p>
 """,
-         faq=[("Should I be the alpha or pack leader for my dog?", "No. Veterinary behaviorists at AVSAB advise against dominance or alpha based training. Be a consistent teacher instead: provide structure and reward the behavior you want."),
-              ("Did the scientist who studied alpha wolves change his mind?", "L. David Mech's 1999 paper, based on 13 summers watching wild wolves, concluded that a typical wild pack is a family led by the parents, and that most earlier research on pack dominance came from unnatural groups of captive wolves."),
-              ("Is an alpha roll ever OK?", "AVSAB lists alpha rolls and dominance downs among intimidation techniques that should be avoided, because aversive methods are linked to fear, anxiety and aggression.")],
-         sources=src("mech", "avsab_train", "avsab_puppy"),
-         related=[("training.html", "Reward based training"), ("behavior.html#dominance", "Behavior: the dominance myth"), ("behavior.html#problems", "Problem behaviors"), ("blog/puppy-socialization-window.html", "Puppy socialization window")])
+         faq=[("Should I be the alpha or pack leader for my dog?", "No. AVSAB's 2021 humane training statement, which its board note labelled 2025 still calls the current view, says not to hire trainers who teach dominance or alpha theories. Teach with structure and rewards instead."),
+              ("Did the scientist who studied alpha wolves change his mind?", "L. David Mech's 1999 paper, based on 13 summers watching wild wolves on Ellesmere Island, concluded that a typical wild pack is a family led by the parents. The USGS abstract, rechecked 20 November 2026, says most earlier research used non natural groups of captive wolves."),
+              ("Is an alpha roll ever OK?", "No. The 2021 AVSAB statement lists alpha rolls and dominance downs among intimidation techniques to avoid. The 2008 dominance statement says wolves do not pin subordinates that way, and that confrontational methods often drew aggression.")],
+         sources=src("mech", "mech_doi", "avsab_train", "avsab_dom", "avsab_positions", "avsab_puppy"),
+         related=[("training.html", "Reward based training"), ("behavior.html", "Behavior and the dominance myth"), ("blog/puppy-socialization-window.html", "The puppy socialization window"), ("blog/why-do-dogs-yawn.html", "Why do dogs yawn?"), ("blog/do-dogs-feel-jealousy.html", "Do dogs feel jealousy?")],
+         updated="2026-11-20")
 
     # 5 weight
     post(page, "is-my-dog-overweight", "Is My Dog Overweight? Body Condition Score Guide | SnoutsWise",

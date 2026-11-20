@@ -104,3 +104,12 @@ main p,article p{max-width:68ch;line-height:1.7}
 .card img,figure img,.tile img{aspect-ratio:3/2;object-fit:cover;width:100%;height:auto;display:block}
 footer{display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:center}
 @media(max-width:640px){main{padding:1rem .85rem}.grid{grid-template-columns:1fr}}
+/* Related next-reads: content links with the page's own photo, not buttons (20 Nov 2026) */
+.nextreads{margin:1.5rem 0}
+.nextreads h2{font-size:1.15rem;margin:0 0 .55rem}
+.nextreads ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.nextreads a{display:flex;align-items:center;gap:.65rem;padding:.4rem;background:#fff;border-radius:16px;box-shadow:0 0 0 1px var(--line);text-decoration:none;color:inherit}
+.nextreads img.thumb{flex:none;width:112px;height:63px;aspect-ratio:16/9;object-fit:cover;border-radius:10px}
+.nextreads a span{color:var(--link);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:2px;line-height:1.3;font-size:.95rem}
+@media(max-width:600px){.nextreads ul{grid-template-columns:1fr}}
+@media print{.nextreads{display:none!important}}

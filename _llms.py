@@ -77,6 +77,7 @@ The content is general education, not veterinary advice; readers are told to con
 
 ## Optional
 - [About]({u}about.html): who operates the site and how content is researched and sourced
+- [Editorial and sourcing policy]({u}editorial/): which documents count as sources, how a claim is checked, how images are labelled, and how to ask for a correction
 - [Contact]({u}contact.html): email joshuaofisrael@gmail.com or use the contact form
 - [Privacy]({u}privacy.html): data controller and ownership details; hosting logs, Google Fonts and the FormSubmit contact form only
 - [Terms of use]({u}terms.html): owner and contracting party; general information only; Florida law
